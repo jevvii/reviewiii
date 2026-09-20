@@ -146,10 +146,71 @@ export const SUBJECTS: Subject[] = [
     description: 'Mathematical foundations of computation: deterministic and non-deterministic finite automata (DFA/NFA), regular expressions, context-free grammars, pushdown automata, and Turing machines.',
     term: 'Year III — 1st Semester',
     category: 'core',
-    status: 'upcoming',
+    status: 'active',
     accentColor: '#a89f91',
     tag: 'Theoretical Computer Science',
-    modules: []
+    modules: [
+      {
+        id: 'atfl311-m1',
+        number: 1,
+        title: 'Introduction to Automata Theory & Chomsky Hierarchy',
+        description: 'Foundations of automata theory, Alan Turing & Turing Machines, McCulloch-Pitts neural models, Mealy & Moore transducers, Chomsky Hierarchy, and real-world automata applications.',
+        itemCount: 40,
+        topics: ['Automata Theory', 'Turing Machine', 'McCulloch & Pitts', 'Mealy & Moore', 'Chomsky Hierarchy', 'Real-World Applications'],
+        quizPath: 'quizzes/atfl311/module1.html',
+        downloads: {
+          pdf: 'downloads/atfl311/Module 1 - Introduction to Automata Theory - Questionnaire.pdf',
+          docx: 'downloads/atfl311/Module 1 - Introduction to Automata Theory - Questionnaire.docx',
+          json: 'downloads/atfl311/ATFL311_Module_1_Quiz.json',
+          md: 'downloads/atfl311/ATFL311_Module_1_Quiz.md'
+        }
+      },
+      {
+        id: 'atfl311-m2',
+        number: 2,
+        title: 'Finite State Machines & Prerequisites',
+        description: 'FSM definitions, symbols, alphabets (Σ), strings, languages, powers of sigma (Σ^n), cardinality formulas (2^n), Kleene star (Σ*), FA with output (Moore/Mealy), and the formal 5-tuple (Q, Σ, q0, F, δ).',
+        itemCount: 48,
+        topics: ['FSM Concepts', 'Alphabets & Strings', 'Powers of Sigma', 'Cardinality', 'Kleene Star', 'Moore & Mealy', 'FSM 5-Tuple'],
+        quizPath: 'quizzes/atfl311/module2.html',
+        downloads: {
+          pdf: 'downloads/atfl311/Module 2 - Finite State Machines and Prerequisites - Questionnaire.pdf',
+          docx: 'downloads/atfl311/Module 2 - Finite State Machines and Prerequisites - Questionnaire.docx',
+          json: 'downloads/atfl311/ATFL311_Module_2_Quiz.json',
+          md: 'downloads/atfl311/ATFL311_Module_2_Quiz.md'
+        }
+      },
+      {
+        id: 'atfl311-m3',
+        number: 3,
+        title: 'Deterministic Finite Automata (DFA)',
+        description: 'Deterministic transition constraints, no ε-moves, DFA state design, prefix matching (strings starting with 0), exact length constraints (length 2), substring matching ("aabb"), state traps, and DFA complementation via state flipping.',
+        itemCount: 41,
+        topics: ['DFA Definition', 'Prefix Matching', 'Length Constraints', 'Substring Matching', 'DFA Complementation', 'State Inversion', 'Trap States'],
+        quizPath: 'quizzes/atfl311/module3.html',
+        downloads: {
+          pdf: 'downloads/atfl311/Module 3 - Deterministic Finite Automata - Questionnaire.pdf',
+          docx: 'downloads/atfl311/Module 3 - Deterministic Finite Automata - Questionnaire.docx',
+          json: 'downloads/atfl311/ATFL311_Module_3_Quiz.json',
+          md: 'downloads/atfl311/ATFL311_Module_3_Quiz.md'
+        }
+      },
+      {
+        id: 'atfl311-m4',
+        number: 4,
+        title: 'Non-Deterministic Finite Automata & Subset Construction',
+        description: 'Non-deterministic state transitions, ε-transitions and ε-closure, dead configurations, DFA vs NFA equivalence, subset (powerset) construction algorithm, dead state handling, and NFA-to-DFA conversion proofs.',
+        itemCount: 45,
+        topics: ['NFA Definition', 'Epsilon Transitions', 'DFA vs NFA Equivalence', 'Subset Construction', 'Dead Configurations', 'Powerset Transitions', 'Activity 3 Problems'],
+        quizPath: 'quizzes/atfl311/module4.html',
+        downloads: {
+          pdf: 'downloads/atfl311/Module 4 - Non-Deterministic Finite Automata - Questionnaire.pdf',
+          docx: 'downloads/atfl311/Module 4 - Non-Deterministic Finite Automata - Questionnaire.docx',
+          json: 'downloads/atfl311/ATFL311_Module_4_Quiz.json',
+          md: 'downloads/atfl311/ATFL311_Module_4_Quiz.md'
+        }
+      }
+    ]
   },
   {
     code: 'SFCR311',
