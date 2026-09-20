@@ -1,0 +1,1351 @@
+---
+import { SUBJECTS } from '../data/subjects';
+
+interface Props {
+  embedded?: boolean;
+}
+
+const { embedded = false } = Astro.props;
+---
+
+<div class={`focus-timer-container ${embedded ? 'embedded' : ''}`} id="focus-timer-root">
+  <div class="timer-card">
+    <!-- Top Phase & Status Header -->
+    <div class="timer-header">
+      <div class="phase-indicator" id="timer-phase-badge">
+        <span class="phase-emoji" id="timer-phase-emoji">🎯</span>
+        <span class="phase-title" id="timer-phase-title">FOCUS</span>
+        <span class="session-counter" id="timer-session-counter">· Session 1</span>
+      </div>
+
+      <div class="header-tools">
+        <button type="button" class="sound-toggle-btn" id="timer-sound-toggle" title="Toggle sound chimes" aria-label="Toggle sound">
+          <span id="sound-icon">🔊</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- SVG Circular Progress Ring -->
+    <div class="ring-wrapper">
+      <svg class="timer-svg" viewBox="0 0 260 260" role="timer" aria-label="Pomodoro focus countdown">
+        <!-- Background track -->
+        <circle
+          cx="130"
+          cy="130"
+          r="116"
+          class="ring-bg"
+        />
+        <!-- Animated progress stroke -->
+        <circle
+          cx="130"
+          cy="130"
+          r="116"
+          class="ring-progress"
+          id="timer-ring-stroke"
+        />
+      </svg>
+
+      <div class="ring-content">
+        <div class="countdown-digits" id="timer-digits">25:00</div>
+        <div class="status-caption" id="timer-status-caption">ready to focus</div>
+      </div>
+    </div>
+
+    <!-- Timer Control Buttons -->
+    <div class="controls-row">
+      <button type="button" class="btn-timer-primary" id="timer-start-pause-btn" aria-label="Start or pause timer">
+        <span id="btn-icon">▶</span>
+        <span id="btn-text">Start</span>
+      </button>
+      <button type="button" class="btn-timer-outline" id="timer-reset-btn" aria-label="Reset timer">
+        Reset
+      </button>
+      <button type="button" class="btn-timer-outline" id="timer-skip-btn" aria-label="Skip to next segment">
+        Skip &rarr;
+      </button>
+    </div>
+
+    <!-- Subject & Task Attribution -->
+    <div class="attribution-box">
+      <label for="focus-subject-select" class="attr-label">
+        <span>Attributed Course / Subject</span>
+        <span class="lock-indicator" id="attr-lock-msg" style="display: none;">🔒 Locked for active session</span>
+      </label>
+      <select id="focus-subject-select" class="attr-select">
+        <optgroup label="Core Year III Reviewers">
+          {SUBJECTS.filter(s => s.status === 'active').map(s => (
+            <>
+              {s.modules.map(m => (
+                <option value={`${s.code}|${m.title}`}>
+                  {s.code} &bull; M{m.number}: {m.title}
+                </option>
+              ))}
+            </>
+          ))}
+        </optgroup>
+        <optgroup label="General Year III Subjects">
+          {SUBJECTS.filter(s => s.status === 'upcoming').map(s => (
+            <option value={`${s.code}|${s.title}`}>
+              {s.code} &bull; {s.title}
+            </option>
+          ))}
+          <option value="General Study|Comprehensive Review" selected>
+            General Study &bull; Comprehensive Review
+          </option>
+        </optgroup>
+      </select>
+    </div>
+
+    <!-- Durations Customization Accordion -->
+    <div class="durations-accordion">
+      <button type="button" class="durations-toggle-btn" id="durations-toggle" aria-expanded="false">
+        <span class="arrow-indicator" id="durations-arrow">▸</span>
+        <span>Custom Durations</span>
+      </button>
+
+      <div class="durations-panel" id="durations-panel" style="display: none;">
+        <div class="duration-fields-grid">
+          <!-- Focus -->
+          <div class="duration-group">
+            <span class="duration-group-label">Focus</span>
+            <div class="hms-grid">
+              <label>
+                <span>H</span>
+                <input type="number" min="0" max="23" value="0" id="dur-focus-h" class="dur-input" />
+              </label>
+              <label>
+                <span>M</span>
+                <input type="number" min="0" max="59" value="25" id="dur-focus-m" class="dur-input" />
+              </label>
+              <label>
+                <span>S</span>
+                <input type="number" min="0" max="59" value="0" id="dur-focus-s" class="dur-input" />
+              </label>
+            </div>
+          </div>
+
+          <!-- Short Break -->
+          <div class="duration-group">
+            <span class="duration-group-label">Short Break</span>
+            <div class="hms-grid">
+              <label>
+                <span>H</span>
+                <input type="number" min="0" max="23" value="0" id="dur-short-h" class="dur-input" />
+              </label>
+              <label>
+                <span>M</span>
+                <input type="number" min="0" max="59" value="5" id="dur-short-m" class="dur-input" />
+              </label>
+              <label>
+                <span>S</span>
+                <input type="number" min="0" max="59" value="0" id="dur-short-s" class="dur-input" />
+              </label>
+            </div>
+          </div>
+
+          <!-- Long Break -->
+          <div class="duration-group">
+            <span class="duration-group-label">Long Break</span>
+            <div class="hms-grid">
+              <label>
+                <span>H</span>
+                <input type="number" min="0" max="23" value="0" id="dur-long-h" class="dur-input" />
+              </label>
+              <label>
+                <span>M</span>
+                <input type="number" min="0" max="59" value="15" id="dur-long-m" class="dur-input" />
+              </label>
+              <label>
+                <span>S</span>
+                <input type="number" min="0" max="59" value="0" id="dur-long-s" class="dur-input" />
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="btn-save-durations" id="btn-save-durations">
+          Save Durations
+        </button>
+      </div>
+    </div>
+
+    <!-- Keyboard Shortcuts -->
+    <div class="shortcuts-note">
+      <kbd>Space</kbd> start/pause &bull; <kbd>R</kbd> reset &bull; <kbd>S</kbd> skip
+    </div>
+  </div>
+
+  <!-- Today's Study Log & Analytics -->
+  <div class="history-card">
+    <div class="history-header">
+      <div class="history-title-box">
+        <h3 class="history-title">Today's Study Activity</h3>
+        <span class="manila-tag">Asia/Manila (UTC+8)</span>
+      </div>
+
+      <button type="button" class="btn-quick-log-toggle" id="btn-quick-log-toggle">
+        + Quick Log Time
+      </button>
+    </div>
+
+    <!-- Quick Log Form (Hidden by default) -->
+    <div class="quick-log-panel" id="quick-log-panel" style="display: none;">
+      <div class="quick-log-inner">
+        <div class="quick-log-row">
+          <div class="quick-log-input-box">
+            <input type="number" min="1" max="600" value="25" id="quick-log-mins" class="quick-log-mins-input" />
+            <span class="mins-label">minutes</span>
+          </div>
+          <select id="quick-log-subject-select" class="quick-log-select">
+            {SUBJECTS.filter(s => s.status === 'active').map(s => (
+              <>
+                {s.modules.map(m => (
+                  <option value={`${s.code}|${m.title}`}>
+                    {s.code}: {m.title}
+                  </option>
+                ))}
+              </>
+            ))}
+            <option value="General Study|Comprehensive Review">General Study</option>
+          </select>
+        </div>
+
+        <div class="quick-log-actions">
+          <button type="button" class="btn-quick-log-cancel" id="btn-quick-log-cancel">Cancel</button>
+          <button type="button" class="btn-quick-log-submit" id="btn-quick-log-submit">Log Time &rarr;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats Summary Tiles -->
+    <div class="today-stats-grid">
+      <div class="stat-tile">
+        <span class="stat-label">Focus Time</span>
+        <span class="stat-val" id="stat-today-minutes">0m</span>
+      </div>
+      <div class="stat-tile">
+        <span class="stat-label">Completed Sessions</span>
+        <span class="stat-val" id="stat-today-sessions">0</span>
+      </div>
+      <div class="stat-tile">
+        <span class="stat-label">Active Set Progress</span>
+        <span class="stat-val" id="stat-set-progress">0 / 4</span>
+      </div>
+    </div>
+
+    <!-- Subject Breakdown Chips -->
+    <div class="subject-breakdown-row" id="subject-breakdown-row">
+      <!-- Injected via JavaScript -->
+    </div>
+
+    <!-- Sessions History List -->
+    <div class="sessions-feed-box">
+      <div class="feed-header">
+        <span class="feed-label">Recent Sessions</span>
+        <button type="button" class="btn-clear-logs" id="btn-clear-logs" title="Clear all local study logs">Clear</button>
+      </div>
+
+      <div class="sessions-list" id="sessions-list">
+        <div class="empty-sessions" id="empty-sessions-msg">
+          <span>No study time logged yet today.</span>
+          <span class="empty-sub">Start a focus session or use Quick Log to track study time.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .focus-timer-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto 3rem auto;
+  }
+
+  @media (min-width: 820px) {
+    .focus-timer-container {
+      grid-template-columns: 420px 1fr;
+      align-items: start;
+    }
+  }
+
+  /* Timer Card */
+  .timer-card {
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-lg);
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
+    position: relative;
+  }
+
+  .timer-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .phase-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-accent-primary);
+  }
+
+  .phase-emoji {
+    font-size: 1rem;
+  }
+
+  .session-counter {
+    color: var(--color-text-muted);
+    font-weight: 400;
+  }
+
+  .header-tools {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .sound-toggle-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-sm);
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    padding: 4px 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .sound-toggle-btn:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    color: var(--color-text-main);
+  }
+
+  /* Ring wrapper */
+  .ring-wrapper {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem 0 1.25rem 0;
+  }
+
+  .timer-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+  }
+
+  .ring-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.06);
+    stroke-width: 12;
+  }
+
+  .ring-progress {
+    fill: none;
+    stroke: var(--color-accent-primary);
+    stroke-width: 12;
+    stroke-linecap: round;
+    stroke-dasharray: 728.85; /* 2 * PI * 116 */
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s linear, stroke 0.4s ease;
+  }
+
+  .ring-content {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  .countdown-digits {
+    font-size: 3.4rem;
+    font-weight: 700;
+    font-family: 'Inter', monospace;
+    font-feature-settings: 'tnum';
+    font-variant-numeric: tabular-nums;
+    color: var(--color-text-main);
+    letter-spacing: -0.04em;
+    line-height: 1;
+  }
+
+  .status-caption {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 6px;
+  }
+
+  /* Controls */
+  .controls-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+  }
+
+  .btn-timer-primary {
+    background: var(--color-accent-primary);
+    color: #000000;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 0.92rem;
+    font-weight: 600;
+    padding: 10px 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 16px rgba(138, 154, 134, 0.25);
+  }
+
+  .btn-timer-primary:hover {
+    background: #99a995;
+    transform: translateY(-1px);
+  }
+
+  .btn-timer-outline {
+    background: transparent;
+    color: var(--color-text-muted);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-md);
+    font-size: 0.86rem;
+    font-weight: 500;
+    padding: 10px 18px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .btn-timer-outline:hover {
+    color: var(--color-text-main);
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  /* Attribution */
+  .attribution-box {
+    width: 100%;
+    margin-bottom: 1.25rem;
+  }
+
+  .attr-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-muted);
+    margin-bottom: 6px;
+  }
+
+  .lock-indicator {
+    color: #a89f91;
+    font-size: 0.68rem;
+    text-transform: none;
+    letter-spacing: normal;
+  }
+
+  .attr-select {
+    width: 100%;
+    background: #141414;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--color-text-main);
+    padding: 9px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 0.82rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .attr-select:focus {
+    border-color: var(--color-accent-primary);
+  }
+
+  .attr-select:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    background: #0f0f0f;
+  }
+
+  /* Durations Accordion */
+  .durations-accordion {
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 12px;
+    margin-bottom: 0.85rem;
+  }
+
+  .durations-toggle-btn {
+    background: transparent;
+    border: none;
+    color: var(--color-text-muted);
+    font-size: 0.74rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 0;
+  }
+
+  .durations-toggle-btn:hover {
+    color: var(--color-text-main);
+  }
+
+  .durations-panel {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .duration-fields-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .duration-group-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-text-subtle);
+    margin-bottom: 4px;
+    display: block;
+  }
+
+  .hms-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .hms-grid label {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    color: var(--color-text-subtle);
+  }
+
+  .dur-input {
+    background: #141414;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-text-main);
+    border-radius: var(--radius-xs);
+    padding: 6px 4px;
+    text-align: center;
+    font-size: 0.8rem;
+    font-family: inherit;
+  }
+
+  .btn-save-durations {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: var(--color-text-main);
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .btn-save-durations:hover {
+    border-color: var(--color-accent-primary);
+    background: rgba(138, 154, 134, 0.1);
+  }
+
+  .shortcuts-note {
+    font-size: 0.72rem;
+    color: var(--color-text-subtle);
+    text-align: center;
+  }
+
+  .shortcuts-note kbd {
+    background: #181818;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 3px;
+    padding: 1px 5px;
+    font-size: 0.68rem;
+    color: var(--color-text-muted);
+  }
+
+  /* History Card */
+  .history-card {
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-lg);
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
+  }
+
+  .history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .history-title {
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: var(--color-text-main);
+    letter-spacing: -0.01em;
+  }
+
+  .manila-tag {
+    font-size: 0.7rem;
+    color: var(--color-text-subtle);
+    display: block;
+    margin-top: 2px;
+  }
+
+  .btn-quick-log-toggle {
+    background: rgba(138, 154, 134, 0.1);
+    border: 1px solid rgba(138, 154, 134, 0.3);
+    color: var(--color-accent-primary);
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 0.76rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .btn-quick-log-toggle:hover {
+    background: rgba(138, 154, 134, 0.2);
+  }
+
+  /* Quick Log Panel */
+  .quick-log-panel {
+    background: #141414;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    padding: 14px;
+  }
+
+  .quick-log-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .quick-log-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .quick-log-input-box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .quick-log-mins-input {
+    width: 68px;
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--color-text-main);
+    padding: 6px 8px;
+    border-radius: var(--radius-xs);
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  .mins-label {
+    font-size: 0.76rem;
+    color: var(--color-text-muted);
+  }
+
+  .quick-log-select {
+    flex: 1;
+    min-width: 180px;
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--color-text-main);
+    padding: 6px 8px;
+    border-radius: var(--radius-xs);
+    font-size: 0.8rem;
+  }
+
+  .quick-log-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  .btn-quick-log-cancel {
+    background: transparent;
+    border: none;
+    color: var(--color-text-muted);
+    font-size: 0.78rem;
+    cursor: pointer;
+    padding: 4px 8px;
+  }
+
+  .btn-quick-log-submit {
+    background: var(--color-accent-primary);
+    color: #000000;
+    border: none;
+    border-radius: var(--radius-xs);
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    cursor: pointer;
+  }
+
+  /* Today Stats Grid */
+  .today-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .stat-tile {
+    background: #121212;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .stat-label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-subtle);
+  }
+
+  .stat-val {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-accent-primary);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Subject breakdown */
+  .subject-breakdown-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .subject-stat-pill {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-xs);
+    font-size: 0.72rem;
+    padding: 3px 8px;
+    color: var(--color-text-muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .subject-stat-pill strong {
+    color: var(--color-text-main);
+  }
+
+  /* Sessions feed */
+  .sessions-feed-box {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 12px;
+  }
+
+  .feed-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .feed-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-muted);
+  }
+
+  .btn-clear-logs {
+    background: transparent;
+    border: none;
+    color: var(--color-text-subtle);
+    font-size: 0.7rem;
+    cursor: pointer;
+  }
+
+  .btn-clear-logs:hover {
+    color: var(--color-text-muted);
+    text-decoration: underline;
+  }
+
+  .sessions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-height: 260px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+  }
+
+  .session-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-sm);
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.78rem;
+  }
+
+  .session-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .session-badge {
+    font-weight: 600;
+    color: var(--color-accent-primary);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .session-title {
+    color: var(--color-text-main);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .session-time {
+    color: var(--color-text-subtle);
+    font-size: 0.7rem;
+    white-space: nowrap;
+  }
+
+  .empty-sessions {
+    padding: 24px 12px;
+    text-align: center;
+    color: var(--color-text-subtle);
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .empty-sub {
+    font-size: 0.72rem;
+    opacity: 0.8;
+  }
+</style>
+
+<script>
+  import {
+    readFocusSnapshot,
+    saveFocusSnapshot,
+    subscribeFocus,
+    readSettings,
+    saveSettings,
+    playFocusChime,
+    readTimeLogs,
+    logTime,
+    getTodayTimeLogs,
+    getTodayMinutes,
+    getSubjectStats,
+    clearTimeLogs,
+    formatTime,
+    formatMinutes,
+    PHASE_LABELS,
+    PHASE_EMOJIS,
+    DEFAULT_SECONDS
+  } from '../lib/focus-system.js';
+
+  (function initFocusTimer() {
+    let settings = readSettings();
+    let snapshot = readFocusSnapshot() || {
+      v: 1,
+      phase: 'focus',
+      running: false,
+      focusCount: 0,
+      subjectCode: 'General Study',
+      moduleTitle: 'Comprehensive Review',
+      secondsLeft: settings.focusSeconds || DEFAULT_SECONDS.focus,
+      endsAt: null,
+      updatedAt: Date.now()
+    };
+
+    // DOM References
+    const digitsEl = document.getElementById('timer-digits');
+    const statusCaptionEl = document.getElementById('timer-status-caption');
+    const ringStrokeEl = document.getElementById('timer-ring-stroke');
+    const phaseEmojiEl = document.getElementById('timer-phase-emoji');
+    const phaseTitleEl = document.getElementById('timer-phase-title');
+    const sessionCounterEl = document.getElementById('timer-session-counter');
+    const startPauseBtn = document.getElementById('timer-start-pause-btn');
+    const btnIcon = document.getElementById('btn-icon');
+    const btnText = document.getElementById('btn-text');
+    const resetBtn = document.getElementById('timer-reset-btn');
+    const skipBtn = document.getElementById('timer-skip-btn');
+    const soundToggle = document.getElementById('timer-sound-toggle');
+    const soundIcon = document.getElementById('sound-icon');
+    const subjectSelect = document.getElementById('focus-subject-select');
+    const attrLockMsg = document.getElementById('attr-lock-msg');
+
+    // Durations accordion
+    const durationsToggle = document.getElementById('durations-toggle');
+    const durationsPanel = document.getElementById('durations-panel');
+    const durationsArrow = document.getElementById('durations-arrow');
+    const durFocusH = document.getElementById('dur-focus-h');
+    const durFocusM = document.getElementById('dur-focus-m');
+    const durFocusS = document.getElementById('dur-focus-s');
+    const durShortH = document.getElementById('dur-short-h');
+    const durShortM = document.getElementById('dur-short-m');
+    const durShortS = document.getElementById('dur-short-s');
+    const durLongH = document.getElementById('dur-long-h');
+    const durLongM = document.getElementById('dur-long-m');
+    const durLongS = document.getElementById('dur-long-s');
+    const btnSaveDurations = document.getElementById('btn-save-durations');
+
+    // Stats & History
+    const statTodayMinutesEl = document.getElementById('stat-today-minutes');
+    const statTodaySessionsEl = document.getElementById('stat-today-sessions');
+    const statSetProgressEl = document.getElementById('stat-set-progress');
+    const subjectBreakdownRow = document.getElementById('subject-breakdown-row');
+    const sessionsListEl = document.getElementById('sessions-list');
+    const btnClearLogs = document.getElementById('btn-clear-logs');
+
+    // Quick Log Panel
+    const btnQuickLogToggle = document.getElementById('btn-quick-log-toggle');
+    const quickLogPanel = document.getElementById('quick-log-panel');
+    const quickLogMins = document.getElementById('quick-log-mins');
+    const quickLogSubject = document.getElementById('quick-log-subject-select');
+    const btnQuickLogCancel = document.getElementById('btn-quick-log-cancel');
+    const btnQuickLogSubmit = document.getElementById('btn-quick-log-submit');
+
+    const CIRCUMFERENCE = 728.85; // 2 * PI * 116
+    let tickInterval = null;
+
+    function getPhaseDuration(phase) {
+      if (phase === 'short') return settings.shortBreakSeconds || DEFAULT_SECONDS.short;
+      if (phase === 'long') return settings.longBreakSeconds || DEFAULT_SECONDS.long;
+      return settings.focusSeconds || DEFAULT_SECONDS.focus;
+    }
+
+    function syncDurationInputs() {
+      if (!durFocusH) return;
+      const f = settings.focusSeconds;
+      durFocusH.value = Math.floor(f / 3600);
+      durFocusM.value = Math.floor((f % 3600) / 60);
+      durFocusS.value = f % 60;
+
+      const s = settings.shortBreakSeconds;
+      durShortH.value = Math.floor(s / 3600);
+      durShortM.value = Math.floor((s % 3600) / 60);
+      durShortS.value = s % 60;
+
+      const l = settings.longBreakSeconds;
+      durLongH.value = Math.floor(l / 3600);
+      durLongM.value = Math.floor((l % 3600) / 60);
+      durLongS.value = l % 60;
+    }
+
+    function renderUI() {
+      if (!digitsEl) return;
+      const currentTotal = getPhaseDuration(snapshot.phase);
+      const secs = Math.max(0, snapshot.secondsLeft);
+      digitsEl.textContent = formatTime(secs);
+
+      // SVG Dashoffset
+      const elapsed = Math.max(0, currentTotal - secs);
+      const frac = currentTotal > 0 ? elapsed / currentTotal : 0;
+      const offset = CIRCUMFERENCE - Math.min(1, frac) * CIRCUMFERENCE;
+      if (ringStrokeEl) {
+        ringStrokeEl.style.strokeDashoffset = String(offset);
+        ringStrokeEl.style.stroke = snapshot.phase === 'focus' ? 'var(--color-accent-primary)' : '#a89f91';
+      }
+
+      // Phase Header
+      if (phaseEmojiEl) phaseEmojiEl.textContent = PHASE_EMOJIS[snapshot.phase] || '🎯';
+      if (phaseTitleEl) phaseTitleEl.textContent = PHASE_LABELS[snapshot.phase] || 'FOCUS';
+      if (sessionCounterEl) {
+        if (snapshot.phase === 'focus') {
+          sessionCounterEl.textContent = `· Session ${snapshot.focusCount + 1}`;
+          sessionCounterEl.style.display = 'inline';
+        } else {
+          sessionCounterEl.style.display = 'none';
+        }
+      }
+
+      // Status text & Button
+      if (statusCaptionEl) {
+        statusCaptionEl.textContent = snapshot.running ? 'running' : 'paused';
+      }
+      if (btnText && btnIcon) {
+        if (snapshot.running) {
+          btnText.textContent = 'Pause';
+          btnIcon.textContent = '⏸';
+          startPauseBtn.style.background = '#a89f91';
+        } else {
+          btnText.textContent = 'Start';
+          btnIcon.textContent = '▶';
+          startPauseBtn.style.background = 'var(--color-accent-primary)';
+        }
+      }
+
+      // Sound toggle icon
+      if (soundIcon) {
+        soundIcon.textContent = settings.soundEnabled ? '🔊' : '🔇';
+      }
+
+      // Subject lock
+      const isLocked = snapshot.running && snapshot.phase === 'focus';
+      if (subjectSelect) {
+        subjectSelect.disabled = isLocked;
+      }
+      if (attrLockMsg) {
+        attrLockMsg.style.display = isLocked ? 'inline' : 'none';
+      }
+
+      renderStatsAndHistory();
+    }
+
+    function renderStatsAndHistory() {
+      const todayLogs = getTodayTimeLogs();
+      const totalMins = getTodayMinutes();
+      if (statTodayMinutesEl) statTodayMinutesEl.textContent = formatMinutes(totalMins);
+      if (statTodaySessionsEl) statTodaySessionsEl.textContent = String(todayLogs.length);
+      if (statSetProgressEl) statSetProgressEl.textContent = `${snapshot.focusCount % 4} / 4`;
+
+      // Subject pills
+      if (subjectBreakdownRow) {
+        const stats = getSubjectStats();
+        if (stats.length === 0) {
+          subjectBreakdownRow.innerHTML = '';
+        } else {
+          subjectBreakdownRow.innerHTML = stats.map(s => `
+            <div class="subject-stat-pill">
+              <span>${s.subjectCode}:</span>
+              <strong>${formatMinutes(s.totalMinutes)}</strong>
+            </div>
+          `).join('');
+        }
+      }
+
+      // Session list
+      if (sessionsListEl) {
+        if (todayLogs.length === 0) {
+          sessionsListEl.innerHTML = `
+            <div class="empty-sessions">
+              <span>No study time logged yet today.</span>
+              <span class="empty-sub">Start a focus session or use Quick Log to track study time.</span>
+            </div>
+          `;
+        } else {
+          sessionsListEl.innerHTML = todayLogs.slice(0, 15).map(l => {
+            const timeStr = new Date(l.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            return `
+              <div class="session-item">
+                <div class="session-left">
+                  <span class="session-badge">${l.minutes}m</span>
+                  <span class="session-title">${l.subjectCode} &bull; ${l.moduleTitle}</span>
+                </div>
+                <span class="session-time">${timeStr}</span>
+              </div>
+            `;
+          }).join('');
+        }
+      }
+    }
+
+    function tick() {
+      if (!snapshot.running || snapshot.endsAt == null) return;
+      const now = Date.now();
+      const remaining = Math.ceil((snapshot.endsAt - now) / 1000);
+
+      if (remaining <= 0) {
+        snapshot.secondsLeft = 0;
+        snapshot.endsAt = null;
+        completeSegment();
+      } else {
+        snapshot.secondsLeft = remaining;
+      }
+      renderUI();
+    }
+
+    function completeSegment() {
+      if (snapshot.phase === 'focus') {
+        playFocusChime('break');
+        // Automatically log focus time
+        const durationSecs = getPhaseDuration('focus');
+        const mins = Math.max(1, Math.round(durationSecs / 60));
+        logTime(mins, snapshot.subjectCode, snapshot.moduleTitle, 'pomodoro');
+
+        const nextCount = snapshot.focusCount + 1;
+        snapshot.focusCount = nextCount;
+        const breakPhase = nextCount % 4 === 0 ? 'long' : 'short';
+        snapshot.phase = breakPhase;
+        const breakDuration = getPhaseDuration(breakPhase);
+        snapshot.secondsLeft = breakDuration;
+        snapshot.endsAt = Date.now() + breakDuration * 1000;
+        snapshot.running = settings.autoStartBreaks !== false;
+      } else if (snapshot.phase === 'long') {
+        // Final long break just ended! Set complete
+        playFocusChime('set');
+        snapshot.focusCount = 0;
+        snapshot.phase = 'focus';
+        const focusDuration = getPhaseDuration('focus');
+        snapshot.secondsLeft = focusDuration;
+        snapshot.running = false;
+        snapshot.endsAt = null;
+      } else {
+        // Short break ended
+        playFocusChime('focus');
+        snapshot.phase = 'focus';
+        const focusDuration = getPhaseDuration('focus');
+        snapshot.secondsLeft = focusDuration;
+        snapshot.endsAt = Date.now() + focusDuration * 1000;
+        snapshot.running = settings.autoStartFocus !== false;
+      }
+      saveFocusSnapshot(snapshot);
+      renderUI();
+    }
+
+    function toggleStartPause() {
+      if (!snapshot.running) {
+        playFocusChime(snapshot.phase === 'focus' ? 'focus' : 'break');
+        snapshot.running = true;
+        snapshot.endsAt = Date.now() + snapshot.secondsLeft * 1000;
+      } else {
+        snapshot.running = false;
+        snapshot.endsAt = null;
+      }
+      saveFocusSnapshot(snapshot);
+      renderUI();
+    }
+
+    function resetTimer() {
+      snapshot.phase = 'focus';
+      snapshot.secondsLeft = getPhaseDuration('focus');
+      snapshot.running = false;
+      snapshot.endsAt = null;
+      saveFocusSnapshot(snapshot);
+      renderUI();
+    }
+
+    function skipSegment() {
+      const currentTotal = getPhaseDuration(snapshot.phase);
+      const elapsed = currentTotal - snapshot.secondsLeft;
+
+      if (snapshot.phase === 'focus') {
+        playFocusChime('break');
+        // Credit focus time if at least 60 seconds elapsed
+        if (elapsed >= 60) {
+          const mins = Math.max(1, Math.round(elapsed / 60));
+          logTime(mins, snapshot.subjectCode, snapshot.moduleTitle, 'pomodoro');
+        }
+        const breakPhase = snapshot.focusCount % 4 === 0 && snapshot.focusCount > 0 ? 'long' : 'short';
+        snapshot.phase = breakPhase;
+        const breakDuration = getPhaseDuration(breakPhase);
+        snapshot.secondsLeft = breakDuration;
+        snapshot.endsAt = Date.now() + breakDuration * 1000;
+        snapshot.running = true;
+      } else if (snapshot.phase === 'long') {
+        playFocusChime('set');
+        snapshot.focusCount = 0;
+        snapshot.phase = 'focus';
+        snapshot.secondsLeft = getPhaseDuration('focus');
+        snapshot.running = false;
+        snapshot.endsAt = null;
+      } else {
+        playFocusChime('focus');
+        snapshot.phase = 'focus';
+        const focusDuration = getPhaseDuration('focus');
+        snapshot.secondsLeft = focusDuration;
+        snapshot.endsAt = Date.now() + focusDuration * 1000;
+        snapshot.running = true;
+      }
+      saveFocusSnapshot(snapshot);
+      renderUI();
+    }
+
+    // Attach Event Listeners
+    if (startPauseBtn) startPauseBtn.addEventListener('click', toggleStartPause);
+    if (resetBtn) resetBtn.addEventListener('click', resetTimer);
+    if (skipBtn) skipBtn.addEventListener('click', skipSegment);
+
+    if (soundToggle) {
+      soundToggle.addEventListener('click', () => {
+        settings.soundEnabled = !settings.soundEnabled;
+        saveSettings({ soundEnabled: settings.soundEnabled });
+        if (settings.soundEnabled) playFocusChime('focus', true);
+        renderUI();
+      });
+    }
+
+    if (subjectSelect) {
+      subjectSelect.addEventListener('change', (e) => {
+        const parts = e.target.value.split('|');
+        snapshot.subjectCode = parts[0] || 'General Study';
+        snapshot.moduleTitle = parts[1] || 'Comprehensive Review';
+        saveFocusSnapshot(snapshot);
+      });
+    }
+
+    // Durations Panel Accordion
+    if (durationsToggle && durationsPanel) {
+      durationsToggle.addEventListener('click', () => {
+        const isHidden = durationsPanel.style.display === 'none';
+        durationsPanel.style.display = isHidden ? 'flex' : 'none';
+        durationsToggle.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+        if (durationsArrow) durationsArrow.textContent = isHidden ? '▾' : '▸';
+        if (isHidden) syncDurationInputs();
+      });
+    }
+
+    if (btnSaveDurations) {
+      btnSaveDurations.addEventListener('click', () => {
+        const fh = Number(durFocusH?.value) || 0;
+        const fm = Number(durFocusM?.value) || 0;
+        const fs = Number(durFocusS?.value) || 0;
+        const sh = Number(durShortH?.value) || 0;
+        const sm = Number(durShortM?.value) || 0;
+        const ss = Number(durShortS?.value) || 0;
+        const lh = Number(durLongH?.value) || 0;
+        const lm = Number(durLongM?.value) || 0;
+        const ls = Number(durLongS?.value) || 0;
+
+        const newFocus = Math.max(10, fh * 3600 + fm * 60 + fs);
+        const newShort = Math.max(5, sh * 3600 + sm * 60 + ss);
+        const newLong = Math.max(10, lh * 3600 + lm * 60 + ls);
+
+        settings.focusSeconds = newFocus;
+        settings.shortBreakSeconds = newShort;
+        settings.longBreakSeconds = newLong;
+        saveSettings(settings);
+
+        // Update current countdown if paused
+        if (!snapshot.running) {
+          snapshot.secondsLeft = getPhaseDuration(snapshot.phase);
+          saveFocusSnapshot(snapshot);
+        }
+
+        btnSaveDurations.textContent = 'Saved ✓';
+        setTimeout(() => {
+          btnSaveDurations.textContent = 'Save Durations';
+        }, 1200);
+        renderUI();
+      });
+    }
+
+    // Quick Log
+    if (btnQuickLogToggle && quickLogPanel) {
+      btnQuickLogToggle.addEventListener('click', () => {
+        const isHidden = quickLogPanel.style.display === 'none';
+        quickLogPanel.style.display = isHidden ? 'block' : 'none';
+      });
+    }
+
+    if (btnQuickLogCancel && quickLogPanel) {
+      btnQuickLogCancel.addEventListener('click', () => {
+        quickLogPanel.style.display = 'none';
+      });
+    }
+
+    if (btnQuickLogSubmit && quickLogMins && quickLogSubject) {
+      btnQuickLogSubmit.addEventListener('click', () => {
+        const mins = Number(quickLogMins.value) || 25;
+        const parts = quickLogSubject.value.split('|');
+        logTime(mins, parts[0], parts[1], 'quick-log');
+        btnQuickLogSubmit.textContent = 'Logged ✓';
+        setTimeout(() => {
+          btnQuickLogSubmit.textContent = 'Log Time →';
+          if (quickLogPanel) quickLogPanel.style.display = 'none';
+          renderStatsAndHistory();
+        }, 900);
+      });
+    }
+
+    if (btnClearLogs) {
+      btnClearLogs.addEventListener('click', () => {
+        if (confirm('Clear today\'s study logs from this browser?')) {
+          clearTimeLogs();
+          renderStatsAndHistory();
+        }
+      });
+    }
+
+    // Keyboard Shortcuts
+    window.addEventListener('keydown', (e) => {
+      const tag = (e.target && e.target.tagName) || '';
+      if (tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA') return;
+
+      if (e.key === ' ' || e.code === 'Space') {
+        e.preventDefault();
+        toggleStartPause();
+      } else if (e.key === 'r' || e.key === 'R') {
+        resetTimer();
+      } else if (e.key === 's' || e.key === 'S') {
+        skipSegment();
+      }
+    });
+
+    // Visibility sync
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible' && snapshot.running && snapshot.endsAt != null) {
+        tick();
+      }
+    });
+
+    // Subscribe to multi-tab focus events
+    subscribeFocus((newSnap) => {
+      if (!newSnap) return;
+      snapshot = newSnap;
+      renderUI();
+    });
+
+    // Start interval
+    tickInterval = setInterval(tick, 1000);
+
+    // Initial render
+    syncDurationInputs();
+    renderUI();
+  })();
+</script>

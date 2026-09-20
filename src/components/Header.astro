@@ -24,6 +24,16 @@ const baseUrl = import.meta.env.BASE_URL;
     </a>
 
     <div class="nav-right">
+      <!-- Live Synchronized Focus Pill (matches study-tracker FocusPill) -->
+      <a href={`${baseUrl}#focus-timer`} class="header-focus-pill idle" id="header-focus-pill" title="Jump to Pomodoro Focus Timer">
+        <span class="pill-ping" id="pill-ping-indicator" style="display: none;">
+          <span class="ping-wave"></span>
+          <span class="ping-dot"></span>
+        </span>
+        <span class="pill-icon" id="pill-phase-icon">⏱️</span>
+        <span class="pill-text" id="pill-display-text">Focus</span>
+      </a>
+
       <div class="stat-badge">
         <strong>{TOTAL_QUESTIONS}</strong> Items &bull; <strong>{TOTAL_MODULES}</strong> Modules
       </div>
@@ -44,9 +54,140 @@ const baseUrl = import.meta.env.BASE_URL;
     color: var(--color-accent-primary);
     font-weight: 500;
   }
+
+  /* Header Focus Pill */
+  .header-focus-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 9999px;
+    font-size: 0.76rem;
+    font-weight: 600;
+    font-family: 'Inter', monospace;
+    font-variant-numeric: tabular-nums;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--color-text-muted);
+  }
+
+  .header-focus-pill.idle:hover {
+    border-color: rgba(138, 154, 134, 0.4);
+    color: var(--color-text-main);
+    background: rgba(138, 154, 134, 0.08);
+  }
+
+  .header-focus-pill.running-focus {
+    border-color: rgba(138, 154, 134, 0.5);
+    background: rgba(138, 154, 134, 0.12);
+    color: var(--color-accent-primary);
+    box-shadow: 0 0 12px rgba(138, 154, 134, 0.18);
+  }
+
+  .header-focus-pill.running-break {
+    border-color: rgba(168, 159, 145, 0.5);
+    background: rgba(168, 159, 145, 0.12);
+    color: #a89f91;
+    box-shadow: 0 0 12px rgba(168, 159, 145, 0.18);
+  }
+
+  .pill-ping {
+    position: relative;
+    display: inline-flex;
+    width: 8px;
+    height: 8px;
+  }
+
+  .ping-wave {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: currentColor;
+    opacity: 0.6;
+    animation: pill-ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .ping-dot {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: currentColor;
+  }
+
+  @keyframes pill-ping {
+    75%, 100% {
+      transform: scale(2.2);
+      opacity: 0;
+    }
+  }
+
+  .pill-icon {
+    font-size: 0.85rem;
+  }
+
   @media (max-width: 640px) {
     .stat-badge {
       display: none;
     }
+    .header-focus-pill {
+      padding: 4px 9px;
+      font-size: 0.72rem;
+    }
   }
 </style>
+
+<script>
+  import {
+    readFocusSnapshot,
+    subscribeFocus,
+    formatTime,
+    PHASE_EMOJIS
+  } from '../lib/focus-system.js';
+
+  (function initHeaderFocusPill() {
+    const pillEl = document.getElementById('header-focus-pill');
+    const pingEl = document.getElementById('pill-ping-indicator');
+    const iconEl = document.getElementById('pill-phase-icon');
+    const textEl = document.getElementById('pill-display-text');
+
+    if (!pillEl) return;
+
+    function updatePill(snap) {
+      if (!snap || !snap.running) {
+        pillEl.className = 'header-focus-pill idle';
+        if (pingEl) pingEl.style.display = 'none';
+        if (iconEl) iconEl.textContent = '⏱️';
+        if (textEl) textEl.textContent = 'Focus';
+        return;
+      }
+
+      // Session is active
+      const now = Date.now();
+      const remaining = snap.endsAt ? Math.max(0, Math.ceil((snap.endsAt - now) / 1000)) : snap.secondsLeft;
+      const isFocus = snap.phase === 'focus';
+
+      pillEl.className = `header-focus-pill ${isFocus ? 'running-focus' : 'running-break'}`;
+      if (pingEl) pingEl.style.display = 'inline-flex';
+      if (iconEl) iconEl.textContent = PHASE_EMOJIS[snap.phase] || (isFocus ? '🎯' : '☕');
+      if (textEl) textEl.textContent = `${formatTime(remaining)}`;
+    }
+
+    // Subscribe to state changes
+    subscribeFocus(updatePill);
+
+    // Initial check
+    updatePill(readFocusSnapshot());
+
+    // Ticker to refresh time display while running
+    setInterval(() => {
+      const snap = readFocusSnapshot();
+      if (snap && snap.running) {
+        updatePill(snap);
+      }
+    }, 1000);
+  })();
+</script>
