@@ -5,22 +5,22 @@
       "question": "_____ 1. A finite state machine where for every state and for every input symbol there is exactly one unique next state, with no empty transitions allowed, is a ____ Finite Automaton.",
       "answerOptions": [
         {
-          "text": "a.) Deterministic",
+          "text": "Deterministic",
           "isCorrect": true,
           "rationale": "Correct! [DFA Core Definition] In a Deterministic Finite Automaton (DFA), the transition function is deterministic—for each state and input symbol, there is exactly one specified next state."
         },
         {
-          "text": "b.) Non-Deterministic",
+          "text": "Non-Deterministic",
           "isCorrect": false,
           "rationale": "Incorrect. 'Non-Deterministic' is a distractor. The correct answer is 'Deterministic'."
         },
         {
-          "text": "c.) Linear Bounded",
+          "text": "Linear Bounded",
           "isCorrect": false,
           "rationale": "Incorrect. 'Linear Bounded' is a distractor. The correct answer is 'Deterministic'."
         },
         {
-          "text": "d.) Pushdown",
+          "text": "Pushdown",
           "isCorrect": false,
           "rationale": "Incorrect. 'Pushdown' is a distractor. The correct answer is 'Deterministic'."
         }
@@ -31,22 +31,22 @@
       "question": "_____ 2. A fundamental rule of Deterministic Finite Automata is that empty moves (transitions without consuming an input symbol, known as ε-moves) are ____.",
       "answerOptions": [
         {
-          "text": "a.) required at every state",
+          "text": "required at every state",
           "isCorrect": false,
           "rationale": "Incorrect. 'required at every state' is a distractor. The correct answer is 'strictly prohibited (not allowed)'."
         },
         {
-          "text": "b.) unrestricted",
+          "text": "unrestricted",
           "isCorrect": false,
           "rationale": "Incorrect. 'unrestricted' is a distractor. The correct answer is 'strictly prohibited (not allowed)'."
         },
         {
-          "text": "c.) strictly prohibited (not allowed)",
+          "text": "strictly prohibited (not allowed)",
           "isCorrect": true,
           "rationale": "Correct! [No Epsilon Moves in DFA] DFAs never permit empty ε-transitions; every transition must consume exactly one symbol from the input alphabet."
         },
         {
-          "text": "d.) optional in final states",
+          "text": "optional in final states",
           "isCorrect": false,
           "rationale": "Incorrect. 'optional in final states' is a distractor. The correct answer is 'strictly prohibited (not allowed)'."
         }
@@ -57,22 +57,22 @@
       "question": "_____ 3. Because a DFA has exactly one transition for each (state, symbol) pair, the computational path for any given input string is completely ____.",
       "answerOptions": [
         {
-          "text": "a.) branching into parallel universes",
+          "text": "branching into parallel universes",
           "isCorrect": false,
           "rationale": "Incorrect. 'branching into parallel universes' is a distractor. The correct answer is 'unique and predictable'."
         },
         {
-          "text": "b.) unique and predictable",
+          "text": "unique and predictable",
           "isCorrect": true,
           "rationale": "Correct! [Deterministic Execution] Given an initial state and input string, a DFA follows a single, unambiguous sequence of state transitions."
         },
         {
-          "text": "c.) random",
+          "text": "random",
           "isCorrect": false,
           "rationale": "Incorrect. 'random' is a distractor. The correct answer is 'unique and predictable'."
         },
         {
-          "text": "d.) probabilistic",
+          "text": "probabilistic",
           "isCorrect": false,
           "rationale": "Incorrect. 'probabilistic' is a distractor. The correct answer is 'unique and predictable'."
         }
@@ -83,22 +83,22 @@
       "question": "_____ 4. A non-accepting state in a DFA from which the machine can never escape, looping on all input symbols, is known as a dead state or ____ state.",
       "answerOptions": [
         {
-          "text": "a.) transducer",
+          "text": "transducer",
           "isCorrect": false,
           "rationale": "Incorrect. 'transducer' is a distractor. The correct answer is 'trap'."
         },
         {
-          "text": "b.) trap",
+          "text": "trap",
           "isCorrect": true,
           "rationale": "Correct! [Trap / Dead State Concept] A dead state (or trap state) is an absorbing non-final state where all outgoing transitions loop back to itself, ensuring rejection of the string."
         },
         {
-          "text": "c.) subordinate",
+          "text": "subordinate",
           "isCorrect": false,
           "rationale": "Incorrect. 'subordinate' is a distractor. The correct answer is 'trap'."
         },
         {
-          "text": "d.) initial",
+          "text": "initial",
           "isCorrect": false,
           "rationale": "Incorrect. 'initial' is a distractor. The correct answer is 'trap'."
         }
@@ -109,22 +109,22 @@
       "question": "_____ 5. In the DFA that accepts all strings starting with '0' over Σ = {0, 1} (Example 1), what happens when the first symbol read from start state A is '0'?",
       "answerOptions": [
         {
-          "text": "a.) The machine transitions to accepting state B",
+          "text": "The machine transitions to accepting state B",
           "isCorrect": true,
           "rationale": "Correct! [Strings Starting with '0' Acceptance] In Example 1, on input '0' from start state A, the machine moves to state B (double circle), which is accepting."
         },
         {
-          "text": "b.) The machine halts and rejects",
+          "text": "The machine halts and rejects",
           "isCorrect": false,
           "rationale": "Incorrect. 'The machine halts and rejects' is a distractor. The correct answer is 'The machine transitions to accepting state B'."
         },
         {
-          "text": "c.) The machine resets to state A",
+          "text": "The machine resets to state A",
           "isCorrect": false,
           "rationale": "Incorrect. 'The machine resets to state A' is a distractor. The correct answer is 'The machine transitions to accepting state B'."
         },
         {
-          "text": "d.) The machine enters trap state C",
+          "text": "The machine enters trap state C",
           "isCorrect": false,
           "rationale": "Incorrect. 'The machine enters trap state C' is a distractor. The correct answer is 'The machine transitions to accepting state B'."
         }
@@ -135,22 +135,22 @@
       "question": "_____ 6. In the DFA for strings starting with '0' (Example 1), what happens when the first symbol read from start state A is '1'?",
       "answerOptions": [
         {
-          "text": "a.) The machine loops at state A",
+          "text": "The machine loops at state A",
           "isCorrect": false,
           "rationale": "Incorrect. 'The machine loops at state A' is a distractor. The correct answer is 'The machine transitions to dead/trap state C'."
         },
         {
-          "text": "b.) The machine transitions to dead/trap state C",
+          "text": "The machine transitions to dead/trap state C",
           "isCorrect": true,
           "rationale": "Correct! [Strings Starting with '0' Rejection] Any string beginning with '1' violates the condition and is routed immediately to trap state C, where it remains."
         },
         {
-          "text": "c.) The machine transitions to accepting state B",
+          "text": "The machine transitions to accepting state B",
           "isCorrect": false,
           "rationale": "Incorrect. 'The machine transitions to accepting state B' is a distractor. The correct answer is 'The machine transitions to dead/trap state C'."
         },
         {
-          "text": "d.) The machine produces an output token",
+          "text": "The machine produces an output token",
           "isCorrect": false,
           "rationale": "Incorrect. 'The machine produces an output token' is a distractor. The correct answer is 'The machine transitions to dead/trap state C'."
         }
@@ -161,22 +161,22 @@
       "question": "_____ 7. In the DFA for strings starting with '0' (Example 1), once the machine reaches accepting state B, what are its transitions on inputs 0 and 1?",
       "answerOptions": [
         {
-          "text": "a.) It returns to start state A on 0",
+          "text": "It returns to start state A on 0",
           "isCorrect": false,
           "rationale": "Incorrect. 'It returns to start state A on 0' is a distractor. The correct answer is 'It loops on state B for both 0 and 1'."
         },
         {
-          "text": "b.) It transitions to state C on 1",
+          "text": "It transitions to state C on 1",
           "isCorrect": false,
           "rationale": "Incorrect. 'It transitions to state C on 1' is a distractor. The correct answer is 'It loops on state B for both 0 and 1'."
         },
         {
-          "text": "c.) It loops on state B for both 0 and 1",
+          "text": "It loops on state B for both 0 and 1",
           "isCorrect": true,
           "rationale": "Correct! [State B Self-Loop] Once a string is confirmed to start with '0', any subsequent symbols (0 or 1) do not change the fact that it started with '0', so state B loops on 0,1."
         },
         {
-          "text": "d.) It halts immediately",
+          "text": "It halts immediately",
           "isCorrect": false,
           "rationale": "Incorrect. 'It halts immediately' is a distractor. The correct answer is 'It loops on state B for both 0 and 1'."
         }
@@ -187,22 +187,22 @@
       "question": "_____ 8. How many total states are required in the minimal DFA for the language L = {strings starting with '0'} over alphabet Σ = {0, 1}?",
       "answerOptions": [
         {
-          "text": "a.) 3 states (Start A, Final B, Trap C)",
+          "text": "3 states (Start A, Final B, Trap C)",
           "isCorrect": true,
           "rationale": "Correct! [State Count for Prefix Language] The minimal DFA requires exactly 3 states: A (start), B (accepting), and C (trap state for strings starting with 1)."
         },
         {
-          "text": "b.) 5 states",
+          "text": "5 states",
           "isCorrect": false,
           "rationale": "Incorrect. '5 states' is a distractor. The correct answer is '3 states (Start A, Final B, Trap C)'."
         },
         {
-          "text": "c.) 4 states",
+          "text": "4 states",
           "isCorrect": false,
           "rationale": "Incorrect. '4 states' is a distractor. The correct answer is '3 states (Start A, Final B, Trap C)'."
         },
         {
-          "text": "d.) 2 states",
+          "text": "2 states",
           "isCorrect": false,
           "rationale": "Incorrect. '2 states' is a distractor. The correct answer is '3 states (Start A, Final B, Trap C)'."
         }
@@ -213,22 +213,22 @@
       "question": "_____ 9. In DFA Example 2, the language consists of all strings over Σ = {0, 1} of length exactly 2. How many strings are in this language?",
       "answerOptions": [
         {
-          "text": "a.) 4 strings ({00, 01, 10, 11})",
+          "text": "4 strings ({00, 01, 10, 11})",
           "isCorrect": true,
           "rationale": "Correct! [Length 2 Language Cardinality] Over Σ = {0, 1}, the strings of length 2 are 00, 01, 10, and 11, giving a cardinality of 4."
         },
         {
-          "text": "b.) 16 strings",
+          "text": "16 strings",
           "isCorrect": false,
           "rationale": "Incorrect. '16 strings' is a distractor. The correct answer is '4 strings ({00, 01, 10, 11})'."
         },
         {
-          "text": "c.) 2 strings",
+          "text": "2 strings",
           "isCorrect": false,
           "rationale": "Incorrect. '2 strings' is a distractor. The correct answer is '4 strings ({00, 01, 10, 11})'."
         },
         {
-          "text": "d.) 8 strings",
+          "text": "8 strings",
           "isCorrect": false,
           "rationale": "Incorrect. '8 strings' is a distractor. The correct answer is '4 strings ({00, 01, 10, 11})'."
         }
@@ -239,22 +239,22 @@
       "question": "_____ 10. In the DFA for strings of exact length 2 (Example 2), state C represents having consumed a string of length ____.",
       "answerOptions": [
         {
-          "text": "a.) 3",
+          "text": "3",
           "isCorrect": false,
           "rationale": "Incorrect. '3' is a distractor. The correct answer is '2'."
         },
         {
-          "text": "b.) 2",
+          "text": "2",
           "isCorrect": true,
           "rationale": "Correct! [Length 2 Accepting State] State A represents length 0, state B represents length 1, and state C represents length 2 (accepting)."
         },
         {
-          "text": "c.) 0",
+          "text": "0",
           "isCorrect": false,
           "rationale": "Incorrect. '0' is a distractor. The correct answer is '2'."
         },
         {
-          "text": "d.) 1",
+          "text": "1",
           "isCorrect": false,
           "rationale": "Incorrect. '1' is a distractor. The correct answer is '2'."
         }
@@ -265,22 +265,22 @@
       "question": "_____ 11. In the DFA for strings of exact length 2 (Example 2), which state is the ONLY accepting / final state?",
       "answerOptions": [
         {
-          "text": "a.) State A",
+          "text": "State A",
           "isCorrect": false,
           "rationale": "Incorrect. 'State A' is a distractor. The correct answer is 'State C'."
         },
         {
-          "text": "b.) State B",
+          "text": "State B",
           "isCorrect": false,
           "rationale": "Incorrect. 'State B' is a distractor. The correct answer is 'State C'."
         },
         {
-          "text": "c.) State D",
+          "text": "State D",
           "isCorrect": false,
           "rationale": "Incorrect. 'State D' is a distractor. The correct answer is 'State C'."
         },
         {
-          "text": "d.) State C",
+          "text": "State C",
           "isCorrect": true,
           "rationale": "Correct! [Exact Length 2 Final State] State C is the only state designated with a double circle, representing acceptance of strings with length exactly 2."
         }
@@ -291,22 +291,22 @@
       "question": "_____ 12. In the DFA for strings of exact length 2 (Example 2), what happens if a third symbol is read after reaching state C?",
       "answerOptions": [
         {
-          "text": "a.) The machine remains in state C",
+          "text": "The machine remains in state C",
           "isCorrect": false,
           "rationale": "Incorrect. 'The machine remains in state C' is a distractor. The correct answer is 'The machine transitions to dead/trap state D'."
         },
         {
-          "text": "b.) The machine resets to state A",
+          "text": "The machine resets to state A",
           "isCorrect": false,
           "rationale": "Incorrect. 'The machine resets to state A' is a distractor. The correct answer is 'The machine transitions to dead/trap state D'."
         },
         {
-          "text": "c.) The machine accepts",
+          "text": "The machine accepts",
           "isCorrect": false,
           "rationale": "Incorrect. 'The machine accepts' is a distractor. The correct answer is 'The machine transitions to dead/trap state D'."
         },
         {
-          "text": "d.) The machine transitions to dead/trap state D",
+          "text": "The machine transitions to dead/trap state D",
           "isCorrect": true,
           "rationale": "Correct! [Exceeding Length 2] Reading a third symbol exceeds the required length of 2, transitioning the automaton to trap state D, which loops on 0,1."
         }
@@ -317,22 +317,22 @@
       "question": "_____ 13. In DFA Example 3, the language requires accepting all strings over Σ = {a, b} that contain the substring '____'.",
       "answerOptions": [
         {
-          "text": "a.) abab",
+          "text": "abab",
           "isCorrect": false,
           "rationale": "Incorrect. 'abab' is a distractor. The correct answer is 'aabb'."
         },
         {
-          "text": "b.) aabb",
+          "text": "aabb",
           "isCorrect": true,
           "rationale": "Correct! [Substring 'aabb' Language] Example 3 constructs a pattern matcher for the specific substring 'aabb'."
         },
         {
-          "text": "c.) abba",
+          "text": "abba",
           "isCorrect": false,
           "rationale": "Incorrect. 'abba' is a distractor. The correct answer is 'aabb'."
         },
         {
-          "text": "d.) bbaa",
+          "text": "bbaa",
           "isCorrect": false,
           "rationale": "Incorrect. 'bbaa' is a distractor. The correct answer is 'aabb'."
         }
@@ -343,22 +343,22 @@
       "question": "_____ 14. In the DFA for substring 'aabb', how many sequential prefix tracking states are used to reach the final state?",
       "answerOptions": [
         {
-          "text": "a.) 4 states",
+          "text": "4 states",
           "isCorrect": false,
           "rationale": "Incorrect. '4 states' is a distractor. The correct answer is '5 states (A, B, C, D, E)'."
         },
         {
-          "text": "b.) 6 states",
+          "text": "6 states",
           "isCorrect": false,
           "rationale": "Incorrect. '6 states' is a distractor. The correct answer is '5 states (A, B, C, D, E)'."
         },
         {
-          "text": "c.) 3 states",
+          "text": "3 states",
           "isCorrect": false,
           "rationale": "Incorrect. '3 states' is a distractor. The correct answer is '5 states (A, B, C, D, E)'."
         },
         {
-          "text": "d.) 5 states (A, B, C, D, E)",
+          "text": "5 states (A, B, C, D, E)",
           "isCorrect": true,
           "rationale": "Correct! [Substring Matching State Count] States correspond to prefix lengths: A (empty), B (saw 'a'), C (saw 'aa'), D (saw 'aab'), and E (saw 'aabb', accepting)."
         }
@@ -369,22 +369,22 @@
       "question": "_____ 15. In the DFA for substring 'aabb', what is the transition from state C (which represents having seen 'aa') on input 'a'?",
       "answerOptions": [
         {
-          "text": "a.) It loops back to state C",
+          "text": "It loops back to state C",
           "isCorrect": true,
           "rationale": "Correct! [State C Overlap Loop] If the automaton has seen 'aa' (state C) and receives another 'a', the longest relevant prefix is still 'aa', so it loops at state C."
         },
         {
-          "text": "b.) It resets to start state A",
+          "text": "It resets to start state A",
           "isCorrect": false,
           "rationale": "Incorrect. 'It resets to start state A' is a distractor. The correct answer is 'It loops back to state C'."
         },
         {
-          "text": "c.) It transitions to state B",
+          "text": "It transitions to state B",
           "isCorrect": false,
           "rationale": "Incorrect. 'It transitions to state B' is a distractor. The correct answer is 'It loops back to state C'."
         },
         {
-          "text": "d.) It advances to state D",
+          "text": "It advances to state D",
           "isCorrect": false,
           "rationale": "Incorrect. 'It advances to state D' is a distractor. The correct answer is 'It loops back to state C'."
         }
@@ -395,22 +395,22 @@
       "question": "_____ 16. In the DFA for substring 'aabb', from state D (having seen 'aab'), what happens if the next input is 'a'?",
       "answerOptions": [
         {
-          "text": "a.) It returns to state B (representing prefix 'a')",
+          "text": "It returns to state B (representing prefix 'a')",
           "isCorrect": true,
           "rationale": "Correct! [State D Mismatch Fallback] After 'aab', receiving 'a' yields suffix 'a', which is represented by state B (prefix 'a')."
         },
         {
-          "text": "b.) It loops at state D",
+          "text": "It loops at state D",
           "isCorrect": false,
           "rationale": "Incorrect. 'It loops at state D' is a distractor. The correct answer is 'It returns to state B (representing prefix 'a')'."
         },
         {
-          "text": "c.) It advances to final state E",
+          "text": "It advances to final state E",
           "isCorrect": false,
           "rationale": "Incorrect. 'It advances to final state E' is a distractor. The correct answer is 'It returns to state B (representing prefix 'a')'."
         },
         {
-          "text": "d.) It resets to start state A",
+          "text": "It resets to start state A",
           "isCorrect": false,
           "rationale": "Incorrect. 'It resets to start state A' is a distractor. The correct answer is 'It returns to state B (representing prefix 'a')'."
         }
@@ -421,22 +421,22 @@
       "question": "_____ 17. In the DFA for substring 'aabb', once final state E is reached, what are its outgoing transitions?",
       "answerOptions": [
         {
-          "text": "a.) It loops on both 'a' and 'b'",
+          "text": "It loops on both 'a' and 'b'",
           "isCorrect": true,
           "rationale": "Correct! [Substring Found Absorbing State] Once the substring 'aabb' has appeared anywhere in the string, the condition is satisfied forever, so state E loops on {a, b}."
         },
         {
-          "text": "b.) It transitions to a trap state",
+          "text": "It transitions to a trap state",
           "isCorrect": false,
           "rationale": "Incorrect. 'It transitions to a trap state' is a distractor. The correct answer is 'It loops on both 'a' and 'b''."
         },
         {
-          "text": "c.) It halts immediately",
+          "text": "It halts immediately",
           "isCorrect": false,
           "rationale": "Incorrect. 'It halts immediately' is a distractor. The correct answer is 'It loops on both 'a' and 'b''."
         },
         {
-          "text": "d.) It returns to state A on 'b'",
+          "text": "It returns to state A on 'b'",
           "isCorrect": false,
           "rationale": "Incorrect. 'It returns to state A on 'b'' is a distractor. The correct answer is 'It loops on both 'a' and 'b''."
         }
@@ -447,22 +447,22 @@
       "question": "_____ 18. To construct a DFA that accepts strings that DO NOT contain the substring 'aabb' (the complement language), what systematic transformation is applied to the DFA that accepts 'aabb'?",
       "answerOptions": [
         {
-          "text": "a.) Add an epsilon transition",
+          "text": "Add an epsilon transition",
           "isCorrect": false,
           "rationale": "Incorrect. 'Add an epsilon transition' is a distractor. The correct answer is 'Invert (flip) all final and non-final states'."
         },
         {
-          "text": "b.) Invert (flip) all final and non-final states",
+          "text": "Invert (flip) all final and non-final states",
           "isCorrect": true,
           "rationale": "Correct! [DFA Complementation Algorithm] To complement a DFA, keep the exact same state set and transitions, but set F' = Q \\ F (non-accepting states become accepting, and vice-versa)."
         },
         {
-          "text": "c.) Reverse all transition arrow directions",
+          "text": "Reverse all transition arrow directions",
           "isCorrect": false,
           "rationale": "Incorrect. 'Reverse all transition arrow directions' is a distractor. The correct answer is 'Invert (flip) all final and non-final states'."
         },
         {
-          "text": "d.) Remove all self-loops",
+          "text": "Remove all self-loops",
           "isCorrect": false,
           "rationale": "Incorrect. 'Remove all self-loops' is a distractor. The correct answer is 'Invert (flip) all final and non-final states'."
         }
@@ -473,22 +473,22 @@
       "question": "_____ 19. In Example 3a (the complement of 'aabb'), which states become the accepting (final) states?",
       "answerOptions": [
         {
-          "text": "a.) {A, B, C, D}",
+          "text": "{A, B, C, D}",
           "isCorrect": true,
           "rationale": "Correct! [Complement Accepting States] The original non-accepting states {A, B, C, D} all become accepting states (marked with double circles)."
         },
         {
-          "text": "b.) {B, C, D}",
+          "text": "{B, C, D}",
           "isCorrect": false,
           "rationale": "Incorrect. '{B, C, D}' is a distractor. The correct answer is '{A, B, C, D}'."
         },
         {
-          "text": "c.) {E}",
+          "text": "{E}",
           "isCorrect": false,
           "rationale": "Incorrect. '{E}' is a distractor. The correct answer is '{A, B, C, D}'."
         },
         {
-          "text": "d.) {A, E}",
+          "text": "{A, E}",
           "isCorrect": false,
           "rationale": "Incorrect. '{A, E}' is a distractor. The correct answer is '{A, B, C, D}'."
         }
@@ -499,22 +499,22 @@
       "question": "_____ 20. In Example 3a (the complement of 'aabb'), what state becomes the sole non-accepting (rejecting) state?",
       "answerOptions": [
         {
-          "text": "a.) State A",
+          "text": "State A",
           "isCorrect": false,
           "rationale": "Incorrect. 'State A' is a distractor. The correct answer is 'State E'."
         },
         {
-          "text": "b.) State E",
+          "text": "State E",
           "isCorrect": true,
           "rationale": "Correct! [Complement Rejecting State] State E (which previously accepted 'aabb') becomes the only non-accepting state."
         },
         {
-          "text": "c.) State C",
+          "text": "State C",
           "isCorrect": false,
           "rationale": "Incorrect. 'State C' is a distractor. The correct answer is 'State E'."
         },
         {
-          "text": "d.) State B",
+          "text": "State B",
           "isCorrect": false,
           "rationale": "Incorrect. 'State B' is a distractor. The correct answer is 'State E'."
         }
@@ -525,22 +525,22 @@
       "question": "_____ 21. The closure property of Regular Languages demonstrating that the complement of any regular language is also regular is proven by the ability to ____ a DFA.",
       "answerOptions": [
         {
-          "text": "a.) tokenize",
+          "text": "tokenize",
           "isCorrect": false,
           "rationale": "Incorrect. 'tokenize' is a distractor. The correct answer is 'invert (complement)'."
         },
         {
-          "text": "b.) nondeterminize",
+          "text": "nondeterminize",
           "isCorrect": false,
           "rationale": "Incorrect. 'nondeterminize' is a distractor. The correct answer is 'invert (complement)'."
         },
         {
-          "text": "c.) minimize",
+          "text": "minimize",
           "isCorrect": false,
           "rationale": "Incorrect. 'minimize' is a distractor. The correct answer is 'invert (complement)'."
         },
         {
-          "text": "d.) invert (complement)",
+          "text": "invert (complement)",
           "isCorrect": true,
           "rationale": "Correct! [Closure Under Complementation] Because flipping the accept/reject status of DFA states yields another valid DFA, Regular Languages are closed under complementation."
         }
@@ -551,22 +551,22 @@
       "question": "_____ 22. In Example 4, an automaton has start state A, intermediate states B and D, accepting states C and E, and dead state X. Tracing path A -> B -> C on inputs 1 then 0 accepts the string '____'.",
       "answerOptions": [
         {
-          "text": "a.) 01",
+          "text": "01",
           "isCorrect": false,
           "rationale": "Incorrect. '01' is a distractor. The correct answer is '10'."
         },
         {
-          "text": "b.) 00",
+          "text": "00",
           "isCorrect": false,
           "rationale": "Incorrect. '00' is a distractor. The correct answer is '10'."
         },
         {
-          "text": "c.) 10",
+          "text": "10",
           "isCorrect": true,
           "rationale": "Correct! [Example 4 Path Trace '10'] From A, on input 1 it reaches B; from B, on input 0 it reaches accepting state C. Thus '10' is accepted."
         },
         {
-          "text": "d.) 11",
+          "text": "11",
           "isCorrect": false,
           "rationale": "Incorrect. '11' is a distractor. The correct answer is '10'."
         }
@@ -577,22 +577,22 @@
       "question": "_____ 23. In Example 4, tracing path A -> D -> E on inputs 0 then 1 accepts the string '____'.",
       "answerOptions": [
         {
-          "text": "a.) 00",
+          "text": "00",
           "isCorrect": false,
           "rationale": "Incorrect. '00' is a distractor. The correct answer is '01'."
         },
         {
-          "text": "b.) 01",
+          "text": "01",
           "isCorrect": true,
           "rationale": "Correct! [Example 4 Path Trace '01'] From A, on input 0 it reaches D; from D, on input 1 it reaches accepting state E. Thus '01' is accepted."
         },
         {
-          "text": "c.) 10",
+          "text": "10",
           "isCorrect": false,
           "rationale": "Incorrect. '10' is a distractor. The correct answer is '01'."
         },
         {
-          "text": "d.) 11",
+          "text": "11",
           "isCorrect": false,
           "rationale": "Incorrect. '11' is a distractor. The correct answer is '01'."
         }
@@ -603,22 +603,22 @@
       "question": "_____ 24. In Example 4, what happens if any additional symbol is received after reaching accepting state C or E?",
       "answerOptions": [
         {
-          "text": "a.) The machine halts",
+          "text": "The machine halts",
           "isCorrect": false,
           "rationale": "Incorrect. 'The machine halts' is a distractor. The correct answer is 'The machine transitions to dead state X and rejects'."
         },
         {
-          "text": "b.) The machine transitions to dead state X and rejects",
+          "text": "The machine transitions to dead state X and rejects",
           "isCorrect": true,
           "rationale": "Correct! [Example 4 Transition to Dead State] States C and E have transitions on 0,1 pointing to dead state X, meaning only strings of length 2 ('10' and '01') are accepted."
         },
         {
-          "text": "c.) The machine resets to state A",
+          "text": "The machine resets to state A",
           "isCorrect": false,
           "rationale": "Incorrect. 'The machine resets to state A' is a distractor. The correct answer is 'The machine transitions to dead state X and rejects'."
         },
         {
-          "text": "d.) The machine loops in the accepting state",
+          "text": "The machine loops in the accepting state",
           "isCorrect": false,
           "rationale": "Incorrect. 'The machine loops in the accepting state' is a distractor. The correct answer is 'The machine transitions to dead state X and rejects'."
         }
@@ -629,22 +629,22 @@
       "question": "_____ 25. The language recognized by the DFA in Example 4 is L = {____}.",
       "answerOptions": [
         {
-          "text": "a.) {0, 1}",
+          "text": "{0, 1}",
           "isCorrect": false,
           "rationale": "Incorrect. '{0, 1}' is a distractor. The correct answer is '{01, 10}'."
         },
         {
-          "text": "b.) {01, 10}",
+          "text": "{01, 10}",
           "isCorrect": true,
           "rationale": "Correct! [Example 4 Language Identification] The DFA in Example 4 accepts strictly the two binary strings of length 2 with alternating digits: {01, 10}."
         },
         {
-          "text": "c.) {00, 11}",
+          "text": "{00, 11}",
           "isCorrect": false,
           "rationale": "Incorrect. '{00, 11}' is a distractor. The correct answer is '{01, 10}'."
         },
         {
-          "text": "d.) {01, 10, 00, 11}",
+          "text": "{01, 10, 00, 11}",
           "isCorrect": false,
           "rationale": "Incorrect. '{01, 10, 00, 11}' is a distractor. The correct answer is '{01, 10}'."
         }
@@ -655,22 +655,22 @@
       "question": "_____ 26. In Activity 1, a DFA is constructed to accept all strings over alphabet Σ = {a, b, c} of length exactly 3. How many total strings are in this language?",
       "answerOptions": [
         {
-          "text": "a.) 81 strings",
+          "text": "81 strings",
           "isCorrect": false,
           "rationale": "Incorrect. '81 strings' is a distractor. The correct answer is '27 strings (3^3)'."
         },
         {
-          "text": "b.) 9 strings",
+          "text": "9 strings",
           "isCorrect": false,
           "rationale": "Incorrect. '9 strings' is a distractor. The correct answer is '27 strings (3^3)'."
         },
         {
-          "text": "c.) 27 strings (3^3)",
+          "text": "27 strings (3^3)",
           "isCorrect": true,
           "rationale": "Correct! [Ternary Alphabet Length 3] With an alphabet of 3 symbols {a, b, c}, the number of strings of length 3 is 3^3 = 27."
         },
         {
-          "text": "d.) 8 strings",
+          "text": "8 strings",
           "isCorrect": false,
           "rationale": "Incorrect. '8 strings' is a distractor. The correct answer is '27 strings (3^3)'."
         }
@@ -681,22 +681,22 @@
       "question": "_____ 27. In Activity 2, for the language L2 = {strings that start with '0' and end with '1'}, what happens to any string starting with '1'?",
       "answerOptions": [
         {
-          "text": "a.) It loops at the start state",
+          "text": "It loops at the start state",
           "isCorrect": false,
           "rationale": "Incorrect. 'It loops at the start state' is a distractor. The correct answer is 'It transitions immediately from the start state to a trap state'."
         },
         {
-          "text": "b.) It transitions to the final state",
+          "text": "It transitions to the final state",
           "isCorrect": false,
           "rationale": "Incorrect. 'It transitions to the final state' is a distractor. The correct answer is 'It transitions immediately from the start state to a trap state'."
         },
         {
-          "text": "c.) It transitions immediately from the start state to a trap state",
+          "text": "It transitions immediately from the start state to a trap state",
           "isCorrect": true,
           "rationale": "Correct! [Start 0 End 1 Rejection] Since the string must start with '0', any string beginning with '1' violates the prefix requirement and is trapped."
         },
         {
-          "text": "d.) It is accepted",
+          "text": "It is accepted",
           "isCorrect": false,
           "rationale": "Incorrect. 'It is accepted' is a distractor. The correct answer is 'It transitions immediately from the start state to a trap state'."
         }
@@ -707,22 +707,22 @@
       "question": "_____ 28. In Activity 4, the given transition diagram has start state A looping on {0, 1}, transitioning on '1' to state B, and transitioning from B on {0, 1} to accepting state C. What language does this automaton recognize?",
       "answerOptions": [
         {
-          "text": "a.) All strings that end in '01'",
+          "text": "All strings that end in '01'",
           "isCorrect": false,
           "rationale": "Incorrect. 'All strings that end in '01'' is a distractor. The correct answer is 'All strings where the second symbol from the end is '1''."
         },
         {
-          "text": "b.) All strings of length 2",
+          "text": "All strings of length 2",
           "isCorrect": false,
           "rationale": "Incorrect. 'All strings of length 2' is a distractor. The correct answer is 'All strings where the second symbol from the end is '1''."
         },
         {
-          "text": "c.) All strings where the second symbol from the end is '1'",
+          "text": "All strings where the second symbol from the end is '1'",
           "isCorrect": true,
           "rationale": "Correct! [Second from Last Symbol '1'] Transitioning on 1 to B followed by any single symbol {0, 1} to final state C means the string must have '1' as its penultimate (second from end) symbol."
         },
         {
-          "text": "d.) All strings that start with '1'",
+          "text": "All strings that start with '1'",
           "isCorrect": false,
           "rationale": "Incorrect. 'All strings that start with '1'' is a distractor. The correct answer is 'All strings where the second symbol from the end is '1''."
         }
@@ -733,22 +733,22 @@
       "question": "_____ 29. In a DFA with alphabet Σ = {a, b, c} accepting strings containing substring 'abbc' (Activity 3), how many states are required in the forward matching sequence from start to final state?",
       "answerOptions": [
         {
-          "text": "a.) 3 states",
+          "text": "3 states",
           "isCorrect": false,
           "rationale": "Incorrect. '3 states' is a distractor. The correct answer is '5 states'."
         },
         {
-          "text": "b.) 6 states",
+          "text": "6 states",
           "isCorrect": false,
           "rationale": "Incorrect. '6 states' is a distractor. The correct answer is '5 states'."
         },
         {
-          "text": "c.) 4 states",
+          "text": "4 states",
           "isCorrect": false,
           "rationale": "Incorrect. '4 states' is a distractor. The correct answer is '5 states'."
         },
         {
-          "text": "d.) 5 states",
+          "text": "5 states",
           "isCorrect": true,
           "rationale": "Correct! [Substring 'abbc' State Count] Matching a 4-character substring 'abbc' requires 5 states in sequence: ε, 'a', 'ab', 'abb', 'abbc' (accepting)."
         }
@@ -759,22 +759,22 @@
       "question": "_____ 30. In a DFA, if the start state q0 is also an accepting state (q0 ∈ F), the automaton accepts the ____ string.",
       "answerOptions": [
         {
-          "text": "a.) dead",
+          "text": "dead",
           "isCorrect": false,
           "rationale": "Incorrect. 'dead' is a distractor. The correct answer is 'empty (ε)'."
         },
         {
-          "text": "b.) infinite",
+          "text": "infinite",
           "isCorrect": false,
           "rationale": "Incorrect. 'infinite' is a distractor. The correct answer is 'empty (ε)'."
         },
         {
-          "text": "c.) empty (ε)",
+          "text": "empty (ε)",
           "isCorrect": true,
           "rationale": "Correct! [Empty String Acceptance in DFA] If the initial state q0 is a member of F, the machine accepts without reading any input symbols, meaning ε ∈ L(M)."
         },
         {
-          "text": "d.) undefined",
+          "text": "undefined",
           "isCorrect": false,
           "rationale": "Incorrect. 'undefined' is a distractor. The correct answer is 'empty (ε)'."
         }
@@ -785,22 +785,22 @@
       "question": "_____ 31. The property of a DFA that requires EVERY state to have an outgoing transition defined for EVERY symbol in alphabet Σ is known as the ____ condition.",
       "answerOptions": [
         {
-          "text": "a.) completeness (totality)",
+          "text": "completeness (totality)",
           "isCorrect": true,
           "rationale": "Correct! [Completeness Condition of DFA] A DFA's transition function is total: for every state q ∈ Q and symbol a ∈ Σ, δ(q, a) must be explicitly defined."
         },
         {
-          "text": "b.) non-deterministic",
+          "text": "non-deterministic",
           "isCorrect": false,
           "rationale": "Incorrect. 'non-deterministic' is a distractor. The correct answer is 'completeness (totality)'."
         },
         {
-          "text": "c.) transductive",
+          "text": "transductive",
           "isCorrect": false,
           "rationale": "Incorrect. 'transductive' is a distractor. The correct answer is 'completeness (totality)'."
         },
         {
-          "text": "d.) recursive",
+          "text": "recursive",
           "isCorrect": false,
           "rationale": "Incorrect. 'recursive' is a distractor. The correct answer is 'completeness (totality)'."
         }
@@ -811,22 +811,22 @@
       "question": "_____ 32. In automata theory, the extended transition function that maps a state and an entire string w of symbols to a resulting state is standardly denoted as ____.",
       "answerOptions": [
         {
-          "text": "a.) Σ* (Sigma star)",
+          "text": "Σ* (Sigma star)",
           "isCorrect": false,
           "rationale": "Incorrect. 'Σ* (Sigma star)' is a distractor. The correct answer is 'δ* (Delta star)'."
         },
         {
-          "text": "b.) ε* (Epsilon star)",
+          "text": "ε* (Epsilon star)",
           "isCorrect": false,
           "rationale": "Incorrect. 'ε* (Epsilon star)' is a distractor. The correct answer is 'δ* (Delta star)'."
         },
         {
-          "text": "c.) δ* (Delta star)",
+          "text": "δ* (Delta star)",
           "isCorrect": true,
           "rationale": "Correct! [Extended Transition Function] The extended transition function δ*: Q x Σ* -> Q computes the cumulative state transition resulting from processing an entire string."
         },
         {
-          "text": "d.) Q* (Q star)",
+          "text": "Q* (Q star)",
           "isCorrect": false,
           "rationale": "Incorrect. 'Q* (Q star)' is a distractor. The correct answer is 'δ* (Delta star)'."
         }
@@ -837,22 +837,22 @@
       "question": "_____ 33. A formal representation of an automaton that uses a tabular matrix with current states as rows and input symbols as columns is a transition ____.",
       "answerOptions": [
         {
-          "text": "a.) table",
+          "text": "table",
           "isCorrect": true,
           "rationale": "Correct! [Transition Table] A transition table lists current states along the vertical axis and alphabet symbols along the horizontal axis, specifying next states in cell entries."
         },
         {
-          "text": "b.) stack",
+          "text": "stack",
           "isCorrect": false,
           "rationale": "Incorrect. 'stack' is a distractor. The correct answer is 'table'."
         },
         {
-          "text": "c.) tree",
+          "text": "tree",
           "isCorrect": false,
           "rationale": "Incorrect. 'tree' is a distractor. The correct answer is 'table'."
         },
         {
-          "text": "d.) tape",
+          "text": "tape",
           "isCorrect": false,
           "rationale": "Incorrect. 'tape' is a distractor. The correct answer is 'table'."
         }
@@ -863,22 +863,22 @@
       "question": "_____ 34. In a transition table, the start state is standardly annotated with an arrow (->) and accepting states are annotated with an ____.",
       "answerOptions": [
         {
-          "text": "a.) hashtag (#)",
+          "text": "hashtag (#)",
           "isCorrect": false,
           "rationale": "Incorrect. 'hashtag (#)' is a distractor. The correct answer is 'asterisk (*)'."
         },
         {
-          "text": "b.) asterisk (*)",
+          "text": "asterisk (*)",
           "isCorrect": true,
           "rationale": "Correct! [Transition Table Annotations] In standard textbook notation, '->' marks the start state and '*' marks accepting/final states in a transition table."
         },
         {
-          "text": "c.) ampersand (&)",
+          "text": "ampersand (&)",
           "isCorrect": false,
           "rationale": "Incorrect. 'ampersand (&)' is a distractor. The correct answer is 'asterisk (*)'."
         },
         {
-          "text": "d.) exclamation mark (!)",
+          "text": "exclamation mark (!)",
           "isCorrect": false,
           "rationale": "Incorrect. 'exclamation mark (!)' is a distractor. The correct answer is 'asterisk (*)'."
         }
@@ -889,22 +889,22 @@
       "question": "_____ 35. In the DFA for substring 'aabb' (Example 3), if the machine is in state B (prefix 'a') and receives input 'b', why does it return to state A?",
       "answerOptions": [
         {
-          "text": "a.) Because it enters a dead state",
+          "text": "Because it enters a dead state",
           "isCorrect": false,
           "rationale": "Incorrect. 'Because it enters a dead state' is a distractor. The correct answer is 'Because 'ab' cannot be part of the prefix 'aa', resetting progress'."
         },
         {
-          "text": "b.) Because state A is an accepting state",
+          "text": "Because state A is an accepting state",
           "isCorrect": false,
           "rationale": "Incorrect. 'Because state A is an accepting state' is a distractor. The correct answer is 'Because 'ab' cannot be part of the prefix 'aa', resetting progress'."
         },
         {
-          "text": "c.) Because 'ab' cannot be part of the prefix 'aa', resetting progress",
+          "text": "Because 'ab' cannot be part of the prefix 'aa', resetting progress",
           "isCorrect": true,
           "rationale": "Correct! [Prefix Reset Logic] The sequence 'ab' breaks the prefix 'aa'. Since 'b' cannot extend 'aa', the machine must restart matching from state A."
         },
         {
-          "text": "d.) Because 'b' is not in the alphabet",
+          "text": "Because 'b' is not in the alphabet",
           "isCorrect": false,
           "rationale": "Incorrect. 'Because 'b' is not in the alphabet' is a distractor. The correct answer is 'Because 'ab' cannot be part of the prefix 'aa', resetting progress'."
         }
@@ -915,22 +915,22 @@
       "question": "_____ 36. In the DFA for substring 'aabb' (Example 3), what is the state trajectory when processing the input string 'baabb'?",
       "answerOptions": [
         {
-          "text": "a.) A -> B -> A -> B -> E",
+          "text": "A -> B -> A -> B -> E",
           "isCorrect": false,
           "rationale": "Incorrect. 'A -> B -> A -> B -> E' is a distractor. The correct answer is 'A -> A -> B -> C -> D -> E'."
         },
         {
-          "text": "b.) A -> A -> B -> C -> D -> E",
+          "text": "A -> A -> B -> C -> D -> E",
           "isCorrect": true,
           "rationale": "Correct! [String Trace 'baabb'] From A, on 'b' it stays at A. Then 'a' moves to B, 'a' to C, 'b' to D, and 'b' to E (accepted)."
         },
         {
-          "text": "c.) A -> B -> C -> D -> E -> E",
+          "text": "A -> B -> C -> D -> E -> E",
           "isCorrect": false,
           "rationale": "Incorrect. 'A -> B -> C -> D -> E -> E' is a distractor. The correct answer is 'A -> A -> B -> C -> D -> E'."
         },
         {
-          "text": "d.) A -> C -> D -> E -> E",
+          "text": "A -> C -> D -> E -> E",
           "isCorrect": false,
           "rationale": "Incorrect. 'A -> C -> D -> E -> E' is a distractor. The correct answer is 'A -> A -> B -> C -> D -> E'."
         }
@@ -941,22 +941,22 @@
       "question": "_____ 37. In the DFA for substring 'aabb' (Example 3), does the machine accept the string 'aaabb'?",
       "answerOptions": [
         {
-          "text": "a.) No, because of too many 'a' symbols",
+          "text": "No, because of too many 'a' symbols",
           "isCorrect": false,
           "rationale": "Incorrect. 'No, because of too many 'a' symbols' is a distractor. The correct answer is 'Yes, because state C loops on 'a', reaching E on 'bb''."
         },
         {
-          "text": "b.) Yes, because state C loops on 'a', reaching E on 'bb'",
+          "text": "Yes, because state C loops on 'a', reaching E on 'bb'",
           "isCorrect": true,
           "rationale": "Correct! [String Trace 'aaabb'] From A: on 'a' -> B, on 'a' -> C, on 'a' -> C (loops), on 'b' -> D, on 'b' -> E (accepts)."
         },
         {
-          "text": "c.) Only if complemented",
+          "text": "Only if complemented",
           "isCorrect": false,
           "rationale": "Incorrect. 'Only if complemented' is a distractor. The correct answer is 'Yes, because state C loops on 'a', reaching E on 'bb''."
         },
         {
-          "text": "d.) No, it enters a trap state",
+          "text": "No, it enters a trap state",
           "isCorrect": false,
           "rationale": "Incorrect. 'No, it enters a trap state' is a distractor. The correct answer is 'Yes, because state C loops on 'a', reaching E on 'bb''."
         }
@@ -967,22 +967,22 @@
       "question": "_____ 38. In DFA design, if an automaton with 5 states is complemented by flipping final and non-final states, how many total states does the complement DFA have?",
       "answerOptions": [
         {
-          "text": "a.) 4 states",
+          "text": "4 states",
           "isCorrect": false,
           "rationale": "Incorrect. '4 states' is a distractor. The correct answer is '5 states'."
         },
         {
-          "text": "b.) 5 states",
+          "text": "5 states",
           "isCorrect": true,
           "rationale": "Correct! [Complement State Preservation] Complementation changes only the subset of accepting states (F' = Q \\ F); the state set Q and transition function δ remain unchanged."
         },
         {
-          "text": "c.) 6 states",
+          "text": "6 states",
           "isCorrect": false,
           "rationale": "Incorrect. '6 states' is a distractor. The correct answer is '5 states'."
         },
         {
-          "text": "d.) 10 states",
+          "text": "10 states",
           "isCorrect": false,
           "rationale": "Incorrect. '10 states' is a distractor. The correct answer is '5 states'."
         }
@@ -993,22 +993,22 @@
       "question": "_____ 39. For a DFA M = (Q, Σ, q0, F, δ), a string w is formally accepted by M if and only if ____.",
       "answerOptions": [
         {
-          "text": "a.) δ*(q0, w) ∉ F",
+          "text": "δ*(q0, w) ∉ F",
           "isCorrect": false,
           "rationale": "Incorrect. 'δ*(q0, w) ∉ F' is a distractor. The correct answer is 'δ*(q0, w) ∈ F'."
         },
         {
-          "text": "b.) δ*(q0, w) ∈ F",
+          "text": "δ*(q0, w) ∈ F",
           "isCorrect": true,
           "rationale": "Correct! [Formal Language Acceptance Definition] A string w is accepted by DFA M if the state reached after processing w starting from q0 belongs to F."
         },
         {
-          "text": "c.) δ*(q0, w) = ϕ",
+          "text": "δ*(q0, w) = ϕ",
           "isCorrect": false,
           "rationale": "Incorrect. 'δ*(q0, w) = ϕ' is a distractor. The correct answer is 'δ*(q0, w) ∈ F'."
         },
         {
-          "text": "d.) δ*(q0, w) = q0",
+          "text": "δ*(q0, w) = q0",
           "isCorrect": false,
           "rationale": "Incorrect. 'δ*(q0, w) = q0' is a distractor. The correct answer is 'δ*(q0, w) ∈ F'."
         }
@@ -1019,22 +1019,22 @@
       "question": "_____ 40. The set of all strings accepted by a DFA M is called the language accepted by M, formally denoted as ____.",
       "answerOptions": [
         {
-          "text": "a.) F(M)",
+          "text": "F(M)",
           "isCorrect": false,
           "rationale": "Incorrect. 'F(M)' is a distractor. The correct answer is 'L(M)'."
         },
         {
-          "text": "b.) Σ(M)",
+          "text": "Σ(M)",
           "isCorrect": false,
           "rationale": "Incorrect. 'Σ(M)' is a distractor. The correct answer is 'L(M)'."
         },
         {
-          "text": "c.) L(M)",
+          "text": "L(M)",
           "isCorrect": true,
           "rationale": "Correct! [Language of a Machine Notation] L(M) = {w ∈ Σ* | δ*(q0, w) ∈ F} denotes the language recognized by automaton M."
         },
         {
-          "text": "d.) Q(M)",
+          "text": "Q(M)",
           "isCorrect": false,
           "rationale": "Incorrect. 'Q(M)' is a distractor. The correct answer is 'L(M)'."
         }
@@ -1045,22 +1045,22 @@
       "question": "_____ 41. Two DFAs M1 and M2 are defined to be equivalent if and only if they ____.",
       "answerOptions": [
         {
-          "text": "a.) have identical transition tables",
+          "text": "have identical transition tables",
           "isCorrect": false,
           "rationale": "Incorrect. 'have identical transition tables' is a distractor. The correct answer is 'accept the exact same language (L(M1) = L(M2))'."
         },
         {
-          "text": "b.) share the same alphabet",
+          "text": "share the same alphabet",
           "isCorrect": false,
           "rationale": "Incorrect. 'share the same alphabet' is a distractor. The correct answer is 'accept the exact same language (L(M1) = L(M2))'."
         },
         {
-          "text": "c.) have the exact same number of states",
+          "text": "have the exact same number of states",
           "isCorrect": false,
           "rationale": "Incorrect. 'have the exact same number of states' is a distractor. The correct answer is 'accept the exact same language (L(M1) = L(M2))'."
         },
         {
-          "text": "d.) accept the exact same language (L(M1) = L(M2))",
+          "text": "accept the exact same language (L(M1) = L(M2))",
           "isCorrect": true,
           "rationale": "Correct! [DFA Equivalence Definition] Two automata are computationally equivalent if and only if they recognize the identical formal language."
         }

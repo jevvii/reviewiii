@@ -5,22 +5,22 @@
       "question": "_____ 1. A systematic way of learning about the natural world by applying rules of logic to the way information is gathered and conclusions are drawn is the ____.",
       "answerOptions": [
         {
-          "text": "a.) natural law",
+          "text": "natural law",
           "isCorrect": false,
           "rationale": "Incorrect. 'natural law' is a distractor. The correct answer is 'scientific method'."
         },
         {
-          "text": "b.) inductive philosophy",
+          "text": "inductive philosophy",
           "isCorrect": false,
           "rationale": "Incorrect. 'inductive philosophy' is a distractor. The correct answer is 'scientific method'."
         },
         {
-          "text": "c.) scientific method",
+          "text": "scientific method",
           "isCorrect": true,
           "rationale": "Correct! [Scientific Method Definition] The scientific method is defined as a systematic approach to investigating the natural world through logical inquiry, rigorous observation, and evidence-based conclusion."
         },
         {
-          "text": "d.) anecdotal observation",
+          "text": "anecdotal observation",
           "isCorrect": false,
           "rationale": "Incorrect. 'anecdotal observation' is a distractor. The correct answer is 'scientific method'."
         }
@@ -31,22 +31,22 @@
       "question": "_____ 2. In the scientific method, Phase 1 begins when careful observation prompts a ____ that is grounded in existing scientific knowledge.",
       "answerOptions": [
         {
-          "text": "a.) proof",
+          "text": "proof",
           "isCorrect": false,
           "rationale": "Incorrect. 'proof' is a distractor. The correct answer is 'question'."
         },
         {
-          "text": "b.) question",
+          "text": "question",
           "isCorrect": true,
           "rationale": "Correct! [Phase 1: Observation & Question] Phase 1 involves making careful observations of the environment, which in turn prompts a specific question informed by existing knowledge."
         },
         {
-          "text": "c.) dogma",
+          "text": "dogma",
           "isCorrect": false,
           "rationale": "Incorrect. 'dogma' is a distractor. The correct answer is 'question'."
         },
         {
-          "text": "d.) conclusion",
+          "text": "conclusion",
           "isCorrect": false,
           "rationale": "Incorrect. 'conclusion' is a distractor. The correct answer is 'question'."
         }
@@ -57,22 +57,22 @@
       "question": "_____ 3. According to the scientific method, questions prompted by observations should be based on existing knowledge gathered through observation of the ____.",
       "answerOptions": [
         {
-          "text": "a.) virtual model",
+          "text": "virtual model",
           "isCorrect": false,
           "rationale": "Incorrect. 'virtual model' is a distractor. The correct answer is 'environment'."
         },
         {
-          "text": "b.) speculation",
+          "text": "speculation",
           "isCorrect": false,
           "rationale": "Incorrect. 'speculation' is a distractor. The correct answer is 'environment'."
         },
         {
-          "text": "c.) environment",
+          "text": "environment",
           "isCorrect": true,
           "rationale": "Correct! [Phase 1: Environmental Observation] Observation of the natural environment provides the empirical foundation upon which scientific questions are formulated."
         },
         {
-          "text": "d.) mathematical theory",
+          "text": "mathematical theory",
           "isCorrect": false,
           "rationale": "Incorrect. 'mathematical theory' is a distractor. The correct answer is 'environment'."
         }
@@ -83,22 +83,22 @@
       "question": "_____ 4. A testable possible explanation formulated as a tentative answer to an observed question is a ____.",
       "answerOptions": [
         {
-          "text": "a.) hypothesis",
+          "text": "hypothesis",
           "isCorrect": true,
           "rationale": "Correct! [Phase 2: Hypothesis Formulation] Phase 2 requires developing a testable hypothesis, which represents a plausible explanation or answer to the question asked."
         },
         {
-          "text": "b.) variable",
+          "text": "variable",
           "isCorrect": false,
           "rationale": "Incorrect. 'variable' is a distractor. The correct answer is 'hypothesis'."
         },
         {
-          "text": "c.) scientific law",
+          "text": "scientific law",
           "isCorrect": false,
           "rationale": "Incorrect. 'scientific law' is a distractor. The correct answer is 'hypothesis'."
         },
         {
-          "text": "d.) paradigm",
+          "text": "paradigm",
           "isCorrect": false,
           "rationale": "Incorrect. 'paradigm' is a distractor. The correct answer is 'hypothesis'."
         }
@@ -109,22 +109,22 @@
       "question": "_____ 5. To be methodologically sound and scientifically valid, a hypothesis must always be phrased as a ____, rather than as an interrogative question.",
       "answerOptions": [
         {
-          "text": "a.) paradox",
+          "text": "paradox",
           "isCorrect": false,
           "rationale": "Incorrect. 'paradox' is a distractor. The correct answer is 'statement'."
         },
         {
-          "text": "b.) question",
+          "text": "question",
           "isCorrect": false,
           "rationale": "Incorrect. 'question' is a distractor. The correct answer is 'statement'."
         },
         {
-          "text": "c.) statement",
+          "text": "statement",
           "isCorrect": true,
           "rationale": "Correct! [Phase 2: Hypothesis Format] A hypothesis must be framed as a definitive declarative statement (e.g., 'Daily exposure to the sun leads to increased levels of happiness') rather than a question."
         },
         {
-          "text": "d.) metaphor",
+          "text": "metaphor",
           "isCorrect": false,
           "rationale": "Incorrect. 'metaphor' is a distractor. The correct answer is 'statement'."
         }
@@ -135,22 +135,22 @@
       "question": "_____ 6. In scientific inquiry, the proposition 'Daily exposure to the sun leads to increased levels of happiness' is a classic example of a ____.",
       "answerOptions": [
         {
-          "text": "a.) scientific law",
+          "text": "scientific law",
           "isCorrect": false,
           "rationale": "Incorrect. 'scientific law' is a distractor. The correct answer is 'hypothesis'."
         },
         {
-          "text": "b.) conclusion",
+          "text": "conclusion",
           "isCorrect": false,
           "rationale": "Incorrect. 'conclusion' is a distractor. The correct answer is 'hypothesis'."
         },
         {
-          "text": "c.) hypothesis",
+          "text": "hypothesis",
           "isCorrect": true,
           "rationale": "Correct! [Phase 2: Hypothesis Example] The proposition 'Daily exposure to the sun leads to increased levels of happiness' is an example of a testable declarative statement formulating a hypothesis."
         },
         {
-          "text": "d.) control group",
+          "text": "control group",
           "isCorrect": false,
           "rationale": "Incorrect. 'control group' is a distractor. The correct answer is 'hypothesis'."
         }
@@ -161,22 +161,22 @@
       "question": "_____ 7. A fundamental characteristic of any valid hypothesis is that it must be testable, which means that it has the potential to be proven ____.",
       "answerOptions": [
         {
-          "text": "a.) unquestionable",
+          "text": "unquestionable",
           "isCorrect": false,
           "rationale": "Incorrect. 'unquestionable' is a distractor. The correct answer is 'false'."
         },
         {
-          "text": "b.) infallible",
+          "text": "infallible",
           "isCorrect": false,
           "rationale": "Incorrect. 'infallible' is a distractor. The correct answer is 'false'."
         },
         {
-          "text": "c.) absolute",
+          "text": "absolute",
           "isCorrect": false,
           "rationale": "Incorrect. 'absolute' is a distractor. The correct answer is 'false'."
         },
         {
-          "text": "d.) false",
+          "text": "false",
           "isCorrect": true,
           "rationale": "Correct! [Phase 2: Testability & Falsifiability] For a hypothesis to be scientifically valid, it must be falsifiable—meaning there must be conceivable empirical observations that could prove it false."
         }
@@ -187,22 +187,22 @@
       "question": "_____ 8. In the philosophy of science, while empirical experimentation can definitively prove a hypothesis false, it can never be proven as ____.",
       "answerOptions": [
         {
-          "text": "a.) true",
+          "text": "true",
           "isCorrect": true,
           "rationale": "Correct! [Phase 2: Provisional Nature of Science] A hypothesis can be supported repeatedly, but in empirical science, it can never be proven absolutely true beyond all future revision."
         },
         {
-          "text": "b.) false",
+          "text": "false",
           "isCorrect": false,
           "rationale": "Incorrect. 'false' is a distractor. The correct answer is 'true'."
         },
         {
-          "text": "c.) testable",
+          "text": "testable",
           "isCorrect": false,
           "rationale": "Incorrect. 'testable' is a distractor. The correct answer is 'true'."
         },
         {
-          "text": "d.) provisional",
+          "text": "provisional",
           "isCorrect": false,
           "rationale": "Incorrect. 'provisional' is a distractor. The correct answer is 'true'."
         }
@@ -213,22 +213,22 @@
       "question": "_____ 9. In Phase 3 of the scientific method, researchers make a ____ based on the hypothesis, which guides the experimental design.",
       "answerOptions": [
         {
-          "text": "a.) postulate",
+          "text": "postulate",
           "isCorrect": false,
           "rationale": "Incorrect. 'postulate' is a distractor. The correct answer is 'prediction'."
         },
         {
-          "text": "b.) prediction",
+          "text": "prediction",
           "isCorrect": true,
           "rationale": "Correct! [Phase 3: Prediction] A prediction forecasts the specific expected outcome of an experiment if the hypothesis holds true."
         },
         {
-          "text": "c.) conclusion",
+          "text": "conclusion",
           "isCorrect": false,
           "rationale": "Incorrect. 'conclusion' is a distractor. The correct answer is 'prediction'."
         },
         {
-          "text": "d.) axiom",
+          "text": "axiom",
           "isCorrect": false,
           "rationale": "Incorrect. 'axiom' is a distractor. The correct answer is 'prediction'."
         }
@@ -239,22 +239,22 @@
       "question": "_____ 10. In experimental methodology, the formulated prediction will determine the experiment or observations that are necessary to ____ the hypothesis.",
       "answerOptions": [
         {
-          "text": "a.) crystallize",
+          "text": "crystallize",
           "isCorrect": false,
           "rationale": "Incorrect. 'crystallize' is a distractor. The correct answer is 'test'."
         },
         {
-          "text": "b.) discard",
+          "text": "discard",
           "isCorrect": false,
           "rationale": "Incorrect. 'discard' is a distractor. The correct answer is 'test'."
         },
         {
-          "text": "c.) test",
+          "text": "test",
           "isCorrect": true,
           "rationale": "Correct! [Phase 3: Testing Predictions] The prediction dictates what specific empirical data and observations must be collected to test the validity of the hypothesis."
         },
         {
-          "text": "d.) canonize",
+          "text": "canonize",
           "isCorrect": false,
           "rationale": "Incorrect. 'canonize' is a distractor. The correct answer is 'test'."
         }
@@ -265,22 +265,22 @@
       "question": "_____ 11. An experiment that tests a hypothesis by comparing an experimental cohort with a reference cohort under identical conditions is a ____ experiment.",
       "answerOptions": [
         {
-          "text": "a.) spontaneous",
+          "text": "spontaneous",
           "isCorrect": false,
           "rationale": "Incorrect. 'spontaneous' is a distractor. The correct answer is 'controlled'."
         },
         {
-          "text": "b.) speculative",
+          "text": "speculative",
           "isCorrect": false,
           "rationale": "Incorrect. 'speculative' is a distractor. The correct answer is 'controlled'."
         },
         {
-          "text": "c.) controlled",
+          "text": "controlled",
           "isCorrect": true,
           "rationale": "Correct! [Phase 3: Controlled Experiment] A controlled experiment isolates the effect of an independent variable by maintaining identical baseline conditions across groups."
         },
         {
-          "text": "d.) subjective",
+          "text": "subjective",
           "isCorrect": false,
           "rationale": "Incorrect. 'subjective' is a distractor. The correct answer is 'controlled'."
         }
@@ -291,22 +291,22 @@
       "question": "_____ 12. In a controlled experiment, the two cohorts compared to evaluate the hypothesis are the experimental group and the ____ group.",
       "answerOptions": [
         {
-          "text": "a.) alternate",
+          "text": "alternate",
           "isCorrect": false,
           "rationale": "Incorrect. 'alternate' is a distractor. The correct answer is 'control'."
         },
         {
-          "text": "b.) variable",
+          "text": "variable",
           "isCorrect": false,
           "rationale": "Incorrect. 'variable' is a distractor. The correct answer is 'control'."
         },
         {
-          "text": "c.) dependent",
+          "text": "dependent",
           "isCorrect": false,
           "rationale": "Incorrect. 'dependent' is a distractor. The correct answer is 'control'."
         },
         {
-          "text": "d.) control",
+          "text": "control",
           "isCorrect": true,
           "rationale": "Correct! [Phase 3: Control Group] Controlled experiments require both a control group (baseline reference) and an experimental group (treatment cohort)."
         }
@@ -317,22 +317,22 @@
       "question": "_____ 13. In a controlled experiment, the control group and the experimental group differ only on a single factor known as a ____.",
       "answerOptions": [
         {
-          "text": "a.) hypothesis",
+          "text": "hypothesis",
           "isCorrect": false,
           "rationale": "Incorrect. 'hypothesis' is a distractor. The correct answer is 'variable'."
         },
         {
-          "text": "b.) variable",
+          "text": "variable",
           "isCorrect": true,
           "rationale": "Correct! [Phase 3: Variable Distinction] The single factor that differs between the control and experimental groups is the variable."
         },
         {
-          "text": "c.) constant",
+          "text": "constant",
           "isCorrect": false,
           "rationale": "Incorrect. 'constant' is a distractor. The correct answer is 'variable'."
         },
         {
-          "text": "d.) placebo",
+          "text": "placebo",
           "isCorrect": false,
           "rationale": "Incorrect. 'placebo' is a distractor. The correct answer is 'variable'."
         }
@@ -343,22 +343,22 @@
       "question": "_____ 14. In a controlled experiment, the specific factor whose biological effect is being revealed is called the ____.",
       "answerOptions": [
         {
-          "text": "a.) control",
+          "text": "control",
           "isCorrect": false,
           "rationale": "Incorrect. 'control' is a distractor. The correct answer is 'variable'."
         },
         {
-          "text": "b.) constant",
+          "text": "constant",
           "isCorrect": false,
           "rationale": "Incorrect. 'constant' is a distractor. The correct answer is 'variable'."
         },
         {
-          "text": "c.) variable",
+          "text": "variable",
           "isCorrect": true,
           "rationale": "Correct! [Phase 3: Experimental Variable] The variable is the distinct factor being tested to determine its effect on the experimental system."
         },
         {
-          "text": "d.) sample size",
+          "text": "sample size",
           "isCorrect": false,
           "rationale": "Incorrect. 'sample size' is a distractor. The correct answer is 'variable'."
         }
@@ -369,22 +369,22 @@
       "question": "_____ 15. In Phase 4 of the scientific method, researchers draw a ____ based on the rigorous interpretation of experimental data.",
       "answerOptions": [
         {
-          "text": "a.) variable",
+          "text": "variable",
           "isCorrect": false,
           "rationale": "Incorrect. 'variable' is a distractor. The correct answer is 'conclusion'."
         },
         {
-          "text": "b.) conclusion",
+          "text": "conclusion",
           "isCorrect": true,
           "rationale": "Correct! [Phase 4: Conclusion] Phase 4 culminates in drawing conclusions based on the systematic analysis and interpretation of empirical results."
         },
         {
-          "text": "c.) prediction",
+          "text": "prediction",
           "isCorrect": false,
           "rationale": "Incorrect. 'prediction' is a distractor. The correct answer is 'conclusion'."
         },
         {
-          "text": "d.) hypothesis",
+          "text": "hypothesis",
           "isCorrect": false,
           "rationale": "Incorrect. 'hypothesis' is a distractor. The correct answer is 'conclusion'."
         }
@@ -395,22 +395,22 @@
       "question": "_____ 16. In the scientific method, the final conclusion reached by researchers is based directly on the interpretation of ____.",
       "answerOptions": [
         {
-          "text": "a.) consensus",
+          "text": "consensus",
           "isCorrect": false,
           "rationale": "Incorrect. 'consensus' is a distractor. The correct answer is 'data'."
         },
         {
-          "text": "b.) data",
+          "text": "data",
           "isCorrect": true,
           "rationale": "Correct! [Phase 4: Data Interpretation] Scientific conclusions must be derived strictly from the objective interpretation of empirical data gathered during testing."
         },
         {
-          "text": "c.) intuition",
+          "text": "intuition",
           "isCorrect": false,
           "rationale": "Incorrect. 'intuition' is a distractor. The correct answer is 'data'."
         },
         {
-          "text": "d.) tradition",
+          "text": "tradition",
           "isCorrect": false,
           "rationale": "Incorrect. 'tradition' is a distractor. The correct answer is 'data'."
         }
@@ -421,22 +421,22 @@
       "question": "_____ 17. To ensure that experimental results and differences between groups are not due to chance alone, researchers require ____.",
       "answerOptions": [
         {
-          "text": "a.) anecdotal consensus",
+          "text": "anecdotal consensus",
           "isCorrect": false,
           "rationale": "Incorrect. 'anecdotal consensus' is a distractor. The correct answer is 'statistical significance'."
         },
         {
-          "text": "b.) peer agreement",
+          "text": "peer agreement",
           "isCorrect": false,
           "rationale": "Incorrect. 'peer agreement' is a distractor. The correct answer is 'statistical significance'."
         },
         {
-          "text": "c.) subjective confidence",
+          "text": "subjective confidence",
           "isCorrect": false,
           "rationale": "Incorrect. 'subjective confidence' is a distractor. The correct answer is 'statistical significance'."
         },
         {
-          "text": "d.) statistical significance",
+          "text": "statistical significance",
           "isCorrect": true,
           "rationale": "Correct! [Phase 4: Statistical Significance] Statistical significance ensures mathematically that observed experimental results are unlikely to have arisen by random chance."
         }
@@ -447,22 +447,22 @@
       "question": "_____ 18. Anything that possesses mass and occupies physical space is defined in chemistry as ____.",
       "answerOptions": [
         {
-          "text": "a.) energy",
+          "text": "energy",
           "isCorrect": false,
           "rationale": "Incorrect. 'energy' is a distractor. The correct answer is 'matter'."
         },
         {
-          "text": "b.) radiation",
+          "text": "radiation",
           "isCorrect": false,
           "rationale": "Incorrect. 'radiation' is a distractor. The correct answer is 'matter'."
         },
         {
-          "text": "c.) matter",
+          "text": "matter",
           "isCorrect": true,
           "rationale": "Correct! [Matter Definition] Matter is defined as any physical substance that has mass and occupies volume in space."
         },
         {
-          "text": "d.) vacuum",
+          "text": "vacuum",
           "isCorrect": false,
           "rationale": "Incorrect. 'vacuum' is a distractor. The correct answer is 'matter'."
         }
@@ -473,22 +473,22 @@
       "question": "_____ 19. Matter is composed of fundamental structural units called ____, which cannot be broken down into simpler substances by ordinary chemical means.",
       "answerOptions": [
         {
-          "text": "a.) cells",
+          "text": "cells",
           "isCorrect": false,
           "rationale": "Incorrect. 'cells' is a distractor. The correct answer is 'atoms'."
         },
         {
-          "text": "b.) compounds",
+          "text": "compounds",
           "isCorrect": false,
           "rationale": "Incorrect. 'compounds' is a distractor. The correct answer is 'atoms'."
         },
         {
-          "text": "c.) atoms",
+          "text": "atoms",
           "isCorrect": true,
           "rationale": "Correct! [Atoms] Atoms are the indivisible basic units of matter that retain chemical identity and cannot be chemically cleaved."
         },
         {
-          "text": "d.) macromolecules",
+          "text": "macromolecules",
           "isCorrect": false,
           "rationale": "Incorrect. 'macromolecules' is a distractor. The correct answer is 'atoms'."
         }
@@ -499,22 +499,22 @@
       "question": "_____ 20. Although indivisible by chemical means, atoms are composed of smaller subatomic particles, namely protons, electrons, and ____.",
       "answerOptions": [
         {
-          "text": "a.) neutrons",
+          "text": "neutrons",
           "isCorrect": true,
           "rationale": "Correct! [Subatomic Particles] Atoms consist of three fundamental subatomic particles: protons, neutrons, and electrons."
         },
         {
-          "text": "b.) positrons",
+          "text": "positrons",
           "isCorrect": false,
           "rationale": "Incorrect. 'positrons' is a distractor. The correct answer is 'neutrons'."
         },
         {
-          "text": "c.) quarks",
+          "text": "quarks",
           "isCorrect": false,
           "rationale": "Incorrect. 'quarks' is a distractor. The correct answer is 'neutrons'."
         },
         {
-          "text": "d.) photons",
+          "text": "photons",
           "isCorrect": false,
           "rationale": "Incorrect. 'photons' is a distractor. The correct answer is 'neutrons'."
         }
@@ -525,22 +525,22 @@
       "question": "_____ 21. The subatomic particle located within the atomic nucleus that possesses a positive electrical charge is the ____.",
       "answerOptions": [
         {
-          "text": "a.) neutron",
+          "text": "neutron",
           "isCorrect": false,
           "rationale": "Incorrect. 'neutron' is a distractor. The correct answer is 'proton'."
         },
         {
-          "text": "b.) proton",
+          "text": "proton",
           "isCorrect": true,
           "rationale": "Correct! [Protons] Protons are positively charged subatomic particles that reside in the nucleus of an atom."
         },
         {
-          "text": "c.) electron",
+          "text": "electron",
           "isCorrect": false,
           "rationale": "Incorrect. 'electron' is a distractor. The correct answer is 'proton'."
         },
         {
-          "text": "d.) neutrino",
+          "text": "neutrino",
           "isCorrect": false,
           "rationale": "Incorrect. 'neutrino' is a distractor. The correct answer is 'proton'."
         }
@@ -551,22 +551,22 @@
       "question": "_____ 22. The subatomic particle located in the nucleus that carries no electrical charge (is neutral) is the ____.",
       "answerOptions": [
         {
-          "text": "a.) electron",
+          "text": "electron",
           "isCorrect": false,
           "rationale": "Incorrect. 'electron' is a distractor. The correct answer is 'neutron'."
         },
         {
-          "text": "b.) ion",
+          "text": "ion",
           "isCorrect": false,
           "rationale": "Incorrect. 'ion' is a distractor. The correct answer is 'neutron'."
         },
         {
-          "text": "c.) proton",
+          "text": "proton",
           "isCorrect": false,
           "rationale": "Incorrect. 'proton' is a distractor. The correct answer is 'neutron'."
         },
         {
-          "text": "d.) neutron",
+          "text": "neutron",
           "isCorrect": true,
           "rationale": "Correct! [Neutrons] Neutrons are uncharged, neutral subatomic particles present alongside protons in the atomic nucleus."
         }
@@ -577,22 +577,22 @@
       "question": "_____ 23. The subatomic particle that orbits the nucleus and carries a negative electrical charge is the ____.",
       "answerOptions": [
         {
-          "text": "a.) electron",
+          "text": "electron",
           "isCorrect": true,
           "rationale": "Correct! [Electrons] Electrons are negatively charged subatomic particles that occupy orbitals surrounding the atomic nucleus."
         },
         {
-          "text": "b.) positron",
+          "text": "positron",
           "isCorrect": false,
           "rationale": "Incorrect. 'positron' is a distractor. The correct answer is 'electron'."
         },
         {
-          "text": "c.) proton",
+          "text": "proton",
           "isCorrect": false,
           "rationale": "Incorrect. 'proton' is a distractor. The correct answer is 'electron'."
         },
         {
-          "text": "d.) neutron",
+          "text": "neutron",
           "isCorrect": false,
           "rationale": "Incorrect. 'neutron' is a distractor. The correct answer is 'electron'."
         }
@@ -603,22 +603,22 @@
       "question": "_____ 24. If a pure form of matter contains only one kind of atom, it is identified as an ____.",
       "answerOptions": [
         {
-          "text": "a.) mixture",
+          "text": "mixture",
           "isCorrect": false,
           "rationale": "Incorrect. 'mixture' is a distractor. The correct answer is 'element'."
         },
         {
-          "text": "b.) isotope",
+          "text": "isotope",
           "isCorrect": false,
           "rationale": "Incorrect. 'isotope' is a distractor. The correct answer is 'element'."
         },
         {
-          "text": "c.) element",
+          "text": "element",
           "isCorrect": true,
           "rationale": "Correct! [Elements] An element is a pure substance consisting entirely of one specific species of atom."
         },
         {
-          "text": "d.) compound",
+          "text": "compound",
           "isCorrect": false,
           "rationale": "Incorrect. 'compound' is a distractor. The correct answer is 'element'."
         }
@@ -629,22 +629,22 @@
       "question": "_____ 25. In the physical universe and periodic table, there are more than ____ known chemical elements.",
       "answerOptions": [
         {
-          "text": "a.) 100",
+          "text": "100",
           "isCorrect": true,
           "rationale": "Correct! [Known Elements] Modern science recognizes more than 100 distinct chemical elements."
         },
         {
-          "text": "b.) 500",
+          "text": "500",
           "isCorrect": false,
           "rationale": "Incorrect. '500' is a distractor. The correct answer is '100'."
         },
         {
-          "text": "c.) 20",
+          "text": "20",
           "isCorrect": false,
           "rationale": "Incorrect. '20' is a distractor. The correct answer is '100'."
         },
         {
-          "text": "d.) 50",
+          "text": "50",
           "isCorrect": false,
           "rationale": "Incorrect. '50' is a distractor. The correct answer is '100'."
         }
@@ -655,22 +655,22 @@
       "question": "_____ 26. Although there are more than 100 known elements, only about ____ elements are found naturally in the human body.",
       "answerOptions": [
         {
-          "text": "a.) 4",
+          "text": "4",
           "isCorrect": false,
           "rationale": "Incorrect. '4' is a distractor. The correct answer is '20'."
         },
         {
-          "text": "b.) 20",
+          "text": "20",
           "isCorrect": true,
           "rationale": "Correct! [Elements in Human Body] Approximately 20 chemical elements are biologically utilized and found within the human body."
         },
         {
-          "text": "c.) 92",
+          "text": "92",
           "isCorrect": false,
           "rationale": "Incorrect. '92' is a distractor. The correct answer is '20'."
         },
         {
-          "text": "d.) 50",
+          "text": "50",
           "isCorrect": false,
           "rationale": "Incorrect. '50' is a distractor. The correct answer is '20'."
         }
@@ -681,22 +681,22 @@
       "question": "_____ 27. The vast majority of human body tissue is composed mostly of four primary elements: carbon, oxygen, nitrogen, and ____.",
       "answerOptions": [
         {
-          "text": "a.) calcium",
+          "text": "calcium",
           "isCorrect": false,
           "rationale": "Incorrect. 'calcium' is a distractor. The correct answer is 'hydrogen'."
         },
         {
-          "text": "b.) potassium",
+          "text": "potassium",
           "isCorrect": false,
           "rationale": "Incorrect. 'potassium' is a distractor. The correct answer is 'hydrogen'."
         },
         {
-          "text": "c.) phosphorus",
+          "text": "phosphorus",
           "isCorrect": false,
           "rationale": "Incorrect. 'phosphorus' is a distractor. The correct answer is 'hydrogen'."
         },
         {
-          "text": "d.) hydrogen",
+          "text": "hydrogen",
           "isCorrect": true,
           "rationale": "Correct! [Major Elements of Human Body] Carbon, Oxygen, Hydrogen, and Nitrogen (COHN) constitute roughly 96% of human body mass."
         }
@@ -707,22 +707,22 @@
       "question": "_____ 28. In standard chemical nomenclature, chemical elements are abbreviated by a ____ symbol.",
       "answerOptions": [
         {
-          "text": "a.) three-letter",
+          "text": "three-letter",
           "isCorrect": false,
           "rationale": "Incorrect. 'three-letter' is a distractor. The correct answer is 'one or two-letter'."
         },
         {
-          "text": "b.) Greek letter",
+          "text": "Greek letter",
           "isCorrect": false,
           "rationale": "Incorrect. 'Greek letter' is a distractor. The correct answer is 'one or two-letter'."
         },
         {
-          "text": "c.) numerical",
+          "text": "numerical",
           "isCorrect": false,
           "rationale": "Incorrect. 'numerical' is a distractor. The correct answer is 'one or two-letter'."
         },
         {
-          "text": "d.) one or two-letter",
+          "text": "one or two-letter",
           "isCorrect": true,
           "rationale": "Correct! [Chemical Symbols] Elements are standardly represented by a one or two-letter symbol derived from their English or Latin names (e.g., C, O, Na, He)."
         }
@@ -733,22 +733,22 @@
       "question": "_____ 29. The standard metric unit used to quantify and measure the atomic weight of an element is the ____.",
       "answerOptions": [
         {
-          "text": "a.) joule",
+          "text": "joule",
           "isCorrect": false,
           "rationale": "Incorrect. 'joule' is a distractor. The correct answer is 'atomic mass unit'."
         },
         {
-          "text": "b.) atomic mass unit",
+          "text": "atomic mass unit",
           "isCorrect": true,
           "rationale": "Correct! [Atomic Mass Unit] Atomic weight or mass is measured in atomic mass units (amu), also known as Daltons."
         },
         {
-          "text": "c.) gram per liter",
+          "text": "gram per liter",
           "isCorrect": false,
           "rationale": "Incorrect. 'gram per liter' is a distractor. The correct answer is 'atomic mass unit'."
         },
         {
-          "text": "d.) angstrom",
+          "text": "angstrom",
           "isCorrect": false,
           "rationale": "Incorrect. 'angstrom' is a distractor. The correct answer is 'atomic mass unit'."
         }
@@ -759,22 +759,22 @@
       "question": "_____ 30. The atomic weight of any given chemical element is primarily influenced by the total number of protons and ____.",
       "answerOptions": [
         {
-          "text": "a.) neutrons",
+          "text": "neutrons",
           "isCorrect": true,
           "rationale": "Correct! [Determinants of Atomic Weight] Because electrons have negligible mass, an atom's atomic weight is determined almost entirely by the sum of its protons and neutrons."
         },
         {
-          "text": "b.) electrons",
+          "text": "electrons",
           "isCorrect": false,
           "rationale": "Incorrect. 'electrons' is a distractor. The correct answer is 'neutrons'."
         },
         {
-          "text": "c.) orbitals",
+          "text": "orbitals",
           "isCorrect": false,
           "rationale": "Incorrect. 'orbitals' is a distractor. The correct answer is 'neutrons'."
         },
         {
-          "text": "d.) photons",
+          "text": "photons",
           "isCorrect": false,
           "rationale": "Incorrect. 'photons' is a distractor. The correct answer is 'neutrons'."
         }
@@ -785,22 +785,22 @@
       "question": "_____ 31. Atoms of the same element that contain the same number of protons but differ in their number of neutrons are called ____.",
       "answerOptions": [
         {
-          "text": "a.) allotropes",
+          "text": "allotropes",
           "isCorrect": false,
           "rationale": "Incorrect. 'allotropes' is a distractor. The correct answer is 'isotopes'."
         },
         {
-          "text": "b.) isomers",
+          "text": "isomers",
           "isCorrect": false,
           "rationale": "Incorrect. 'isomers' is a distractor. The correct answer is 'isotopes'."
         },
         {
-          "text": "c.) isotopes",
+          "text": "isotopes",
           "isCorrect": true,
           "rationale": "Correct! [Isotopes] Isotopes are variants of a specific chemical element having identical proton counts but different numbers of neutrons."
         },
         {
-          "text": "d.) monomers",
+          "text": "monomers",
           "isCorrect": false,
           "rationale": "Incorrect. 'monomers' is a distractor. The correct answer is 'isotopes'."
         }
@@ -811,22 +811,22 @@
       "question": "_____ 32. Unstable isotopes that spontaneously break down over time and emit radiation or subatomic particles are called ____.",
       "answerOptions": [
         {
-          "text": "a.) stable isotopes",
+          "text": "stable isotopes",
           "isCorrect": false,
           "rationale": "Incorrect. 'stable isotopes' is a distractor. The correct answer is 'radioisotopes'."
         },
         {
-          "text": "b.) ions",
+          "text": "ions",
           "isCorrect": false,
           "rationale": "Incorrect. 'ions' is a distractor. The correct answer is 'radioisotopes'."
         },
         {
-          "text": "c.) electrolytes",
+          "text": "electrolytes",
           "isCorrect": false,
           "rationale": "Incorrect. 'electrolytes' is a distractor. The correct answer is 'radioisotopes'."
         },
         {
-          "text": "d.) radioisotopes",
+          "text": "radioisotopes",
           "isCorrect": true,
           "rationale": "Correct! [Radioisotopes] Radioisotopes are radioactive isotopes that decay spontaneously, emitting energetic radiation or particles."
         }
@@ -837,22 +837,22 @@
       "question": "_____ 33. When radioisotopes decay and break down, they release particles or ____.",
       "answerOptions": [
         {
-          "text": "a.) radiation",
+          "text": "radiation",
           "isCorrect": true,
           "rationale": "Correct! [Radioactive Decay Emission] The breakdown of unstable radioisotopes releases energy in the form of radiation or subatomic particles."
         },
         {
-          "text": "b.) nitrogen gas",
+          "text": "nitrogen gas",
           "isCorrect": false,
           "rationale": "Incorrect. 'nitrogen gas' is a distractor. The correct answer is 'radiation'."
         },
         {
-          "text": "c.) ozone",
+          "text": "ozone",
           "isCorrect": false,
           "rationale": "Incorrect. 'ozone' is a distractor. The correct answer is 'radiation'."
         },
         {
-          "text": "d.) glucose",
+          "text": "glucose",
           "isCorrect": false,
           "rationale": "Incorrect. 'glucose' is a distractor. The correct answer is 'radiation'."
         }
@@ -863,22 +863,22 @@
       "question": "_____ 34. When two or more different elements chemically combine, they form a new substance called a ____, which has totally different characteristics from the parent elements.",
       "answerOptions": [
         {
-          "text": "a.) compound",
+          "text": "compound",
           "isCorrect": true,
           "rationale": "Correct! [Chemical Compounds] A compound is a substance formed when two or more elements combine chemically, acquiring completely novel chemical and physical properties."
         },
         {
-          "text": "b.) mixture",
+          "text": "mixture",
           "isCorrect": false,
           "rationale": "Incorrect. 'mixture' is a distractor. The correct answer is 'compound'."
         },
         {
-          "text": "c.) element",
+          "text": "element",
           "isCorrect": false,
           "rationale": "Incorrect. 'element' is a distractor. The correct answer is 'compound'."
         },
         {
-          "text": "d.) isotope",
+          "text": "isotope",
           "isCorrect": false,
           "rationale": "Incorrect. 'isotope' is a distractor. The correct answer is 'compound'."
         }
@@ -889,22 +889,22 @@
       "question": "_____ 35. Atoms within chemical substances are held together through attractive forces known as chemical ____.",
       "answerOptions": [
         {
-          "text": "a.) charges",
+          "text": "charges",
           "isCorrect": false,
           "rationale": "Incorrect. 'charges' is a distractor. The correct answer is 'bonds'."
         },
         {
-          "text": "b.) bonds",
+          "text": "bonds",
           "isCorrect": true,
           "rationale": "Correct! [Chemical Bonds] Chemical bonds are the attractive forces that link atoms together to create stable molecules and compounds."
         },
         {
-          "text": "c.) gradients",
+          "text": "gradients",
           "isCorrect": false,
           "rationale": "Incorrect. 'gradients' is a distractor. The correct answer is 'bonds'."
         },
         {
-          "text": "d.) currents",
+          "text": "currents",
           "isCorrect": false,
           "rationale": "Incorrect. 'currents' is a distractor. The correct answer is 'bonds'."
         }
@@ -915,22 +915,22 @@
       "question": "_____ 36. The chemical bonds that hold atoms together in biological molecules are broadly categorized into ionic bonds and ____ bonds.",
       "answerOptions": [
         {
-          "text": "a.) hydrophobic",
+          "text": "hydrophobic",
           "isCorrect": false,
           "rationale": "Incorrect. 'hydrophobic' is a distractor. The correct answer is 'covalent'."
         },
         {
-          "text": "b.) peptide",
+          "text": "peptide",
           "isCorrect": false,
           "rationale": "Incorrect. 'peptide' is a distractor. The correct answer is 'covalent'."
         },
         {
-          "text": "c.) metallic",
+          "text": "metallic",
           "isCorrect": false,
           "rationale": "Incorrect. 'metallic' is a distractor. The correct answer is 'covalent'."
         },
         {
-          "text": "d.) covalent",
+          "text": "covalent",
           "isCorrect": true,
           "rationale": "Correct! [Bond Categories] Chemical bonds in biological systems are primarily categorized into covalent bonds and ionic bonds."
         }
@@ -941,22 +941,22 @@
       "question": "_____ 37. Chemical bonds that are formed when two or more atoms share electrons in their outer cells (outer shells) are ____ bonds.",
       "answerOptions": [
         {
-          "text": "a.) electrostatic",
+          "text": "electrostatic",
           "isCorrect": false,
           "rationale": "Incorrect. 'electrostatic' is a distractor. The correct answer is 'covalent'."
         },
         {
-          "text": "b.) covalent",
+          "text": "covalent",
           "isCorrect": true,
           "rationale": "Correct! [Covalent Bonds] Covalent bonds form when atoms mutually share pairs of electrons in their outermost valence shells."
         },
         {
-          "text": "c.) hydrogen",
+          "text": "hydrogen",
           "isCorrect": false,
           "rationale": "Incorrect. 'hydrogen' is a distractor. The correct answer is 'covalent'."
         },
         {
-          "text": "d.) ionic",
+          "text": "ionic",
           "isCorrect": false,
           "rationale": "Incorrect. 'ionic' is a distractor. The correct answer is 'covalent'."
         }
@@ -967,22 +967,22 @@
       "question": "_____ 38. Covalent bonds are specifically formed when two or more atoms share electrons located in their ____.",
       "answerOptions": [
         {
-          "text": "a.) outer shells",
+          "text": "outer shells",
           "isCorrect": true,
           "rationale": "Correct! [Covalent Electron Sharing] Covalent electron sharing occurs between the valence electrons located in the outermost electron shells (cells) of the interacting atoms."
         },
         {
-          "text": "b.) proton core",
+          "text": "proton core",
           "isCorrect": false,
           "rationale": "Incorrect. 'proton core' is a distractor. The correct answer is 'outer shells'."
         },
         {
-          "text": "c.) inner nucleus",
+          "text": "inner nucleus",
           "isCorrect": false,
           "rationale": "Incorrect. 'inner nucleus' is a distractor. The correct answer is 'outer shells'."
         },
         {
-          "text": "d.) neutron cloud",
+          "text": "neutron cloud",
           "isCorrect": false,
           "rationale": "Incorrect. 'neutron cloud' is a distractor. The correct answer is 'outer shells'."
         }
@@ -993,22 +993,22 @@
       "question": "_____ 39. Chemical bonds formed from the transfer of valence electrons and the resulting mutual attraction of oppositely charged ions are ____ bonds.",
       "answerOptions": [
         {
-          "text": "a.) ionic",
+          "text": "ionic",
           "isCorrect": true,
           "rationale": "Correct! [Ionic Bonds] Ionic bonds result from the transfer of valence electrons, producing cations and anions whose opposite electrical charges attract."
         },
         {
-          "text": "b.) hydrogen",
+          "text": "hydrogen",
           "isCorrect": false,
           "rationale": "Incorrect. 'hydrogen' is a distractor. The correct answer is 'ionic'."
         },
         {
-          "text": "c.) covalent",
+          "text": "covalent",
           "isCorrect": false,
           "rationale": "Incorrect. 'covalent' is a distractor. The correct answer is 'ionic'."
         },
         {
-          "text": "d.) disulfide",
+          "text": "disulfide",
           "isCorrect": false,
           "rationale": "Incorrect. 'disulfide' is a distractor. The correct answer is 'ionic'."
         }
@@ -1019,22 +1019,22 @@
       "question": "_____ 40. Ionic bonds are fundamentally driven by the mutual attraction between ____ charged ions.",
       "answerOptions": [
         {
-          "text": "a.) neutrally",
+          "text": "neutrally",
           "isCorrect": false,
           "rationale": "Incorrect. 'neutrally' is a distractor. The correct answer is 'oppositely'."
         },
         {
-          "text": "b.) identically",
+          "text": "identically",
           "isCorrect": false,
           "rationale": "Incorrect. 'identically' is a distractor. The correct answer is 'oppositely'."
         },
         {
-          "text": "c.) covalently",
+          "text": "covalently",
           "isCorrect": false,
           "rationale": "Incorrect. 'covalently' is a distractor. The correct answer is 'oppositely'."
         },
         {
-          "text": "d.) oppositely",
+          "text": "oppositely",
           "isCorrect": true,
           "rationale": "Correct! [Ionic Bond Attraction] Ionic bonding occurs due to the electrostatic attraction between positively charged ions (cations) and negatively charged ions (anions)."
         }
@@ -1045,22 +1045,22 @@
       "question": "_____ 41. Because water is capable of dissolving a vast variety of chemical substances, it is widely termed the universal biological ____.",
       "answerOptions": [
         {
-          "text": "a.) solvent",
+          "text": "solvent",
           "isCorrect": true,
           "rationale": "Correct! [Water as Solvent] Water's polar molecular structure enables it to dissolve a wide array of polar and ionic solutes, functioning as the body's primary solvent."
         },
         {
-          "text": "b.) solute",
+          "text": "solute",
           "isCorrect": false,
           "rationale": "Incorrect. 'solute' is a distractor. The correct answer is 'solvent'."
         },
         {
-          "text": "c.) buffer",
+          "text": "buffer",
           "isCorrect": false,
           "rationale": "Incorrect. 'buffer' is a distractor. The correct answer is 'solvent'."
         },
         {
-          "text": "d.) polymer",
+          "text": "polymer",
           "isCorrect": false,
           "rationale": "Incorrect. 'polymer' is a distractor. The correct answer is 'solvent'."
         }
@@ -1071,22 +1071,22 @@
       "question": "_____ 42. Water can absorb large amounts of heat energy with minimal changes in its own temperature because it features a high ____.",
       "answerOptions": [
         {
-          "text": "a.) heat capacity",
+          "text": "heat capacity",
           "isCorrect": true,
           "rationale": "Correct! [Water Heat Capacity] High heat capacity enables water to absorb and store thermal energy, stabilizing biological temperatures against fluctuations."
         },
         {
-          "text": "b.) viscosity",
+          "text": "viscosity",
           "isCorrect": false,
           "rationale": "Incorrect. 'viscosity' is a distractor. The correct answer is 'heat capacity'."
         },
         {
-          "text": "c.) density",
+          "text": "density",
           "isCorrect": false,
           "rationale": "Incorrect. 'density' is a distractor. The correct answer is 'heat capacity'."
         },
         {
-          "text": "d.) vapor pressure",
+          "text": "vapor pressure",
           "isCorrect": false,
           "rationale": "Incorrect. 'vapor pressure' is a distractor. The correct answer is 'heat capacity'."
         }
@@ -1097,22 +1097,22 @@
       "question": "_____ 43. The property of water that enables perspiration to serve as an exceptionally effective cooling mechanism is its high heat of ____.",
       "answerOptions": [
         {
-          "text": "a.) fusion",
+          "text": "fusion",
           "isCorrect": false,
           "rationale": "Incorrect. 'fusion' is a distractor. The correct answer is 'vaporization'."
         },
         {
-          "text": "b.) condensation",
+          "text": "condensation",
           "isCorrect": false,
           "rationale": "Incorrect. 'condensation' is a distractor. The correct answer is 'vaporization'."
         },
         {
-          "text": "c.) crystallization",
+          "text": "crystallization",
           "isCorrect": false,
           "rationale": "Incorrect. 'crystallization' is a distractor. The correct answer is 'vaporization'."
         },
         {
-          "text": "d.) vaporization",
+          "text": "vaporization",
           "isCorrect": true,
           "rationale": "Correct! [Heat of Vaporization] Water's high heat of vaporization requires substantial thermal energy to convert liquid water into vapor, shedding body heat during sweating."
         }
@@ -1123,22 +1123,22 @@
       "question": "_____ 44. Water's distinctive qualities, such as its high heat capacity and solvent power, are due to its ability to form hydrogen bonds and the molecule's ____.",
       "answerOptions": [
         {
-          "text": "a.) polarity",
+          "text": "polarity",
           "isCorrect": true,
           "rationale": "Correct! [Water Polarity] The polarity of the water molecule and its resulting ability to form hydrogen bonds account for water's unique thermal and chemical properties."
         },
         {
-          "text": "b.) nonpolar nature",
+          "text": "nonpolar nature",
           "isCorrect": false,
           "rationale": "Incorrect. 'nonpolar nature' is a distractor. The correct answer is 'polarity'."
         },
         {
-          "text": "c.) neutral charge",
+          "text": "neutral charge",
           "isCorrect": false,
           "rationale": "Incorrect. 'neutral charge' is a distractor. The correct answer is 'polarity'."
         },
         {
-          "text": "d.) linear geometry",
+          "text": "linear geometry",
           "isCorrect": false,
           "rationale": "Incorrect. 'linear geometry' is a distractor. The correct answer is 'polarity'."
         }
@@ -1149,22 +1149,22 @@
       "question": "_____ 45. In water chemistry, polarity refers specifically to the presence of ____ charges within the water molecule.",
       "answerOptions": [
         {
-          "text": "a.) ionic",
+          "text": "ionic",
           "isCorrect": false,
           "rationale": "Incorrect. 'ionic' is a distractor. The correct answer is 'partial'."
         },
         {
-          "text": "b.) neutral",
+          "text": "neutral",
           "isCorrect": false,
           "rationale": "Incorrect. 'neutral' is a distractor. The correct answer is 'partial'."
         },
         {
-          "text": "c.) partial",
+          "text": "partial",
           "isCorrect": true,
           "rationale": "Correct! [Polarity Definition] Polarity refers to the unequal distribution of shared electrons, causing partial negative charges on oxygen and partial positive charges on hydrogens."
         },
         {
-          "text": "d.) complete",
+          "text": "complete",
           "isCorrect": false,
           "rationale": "Incorrect. 'complete' is a distractor. The correct answer is 'partial'."
         }
@@ -1175,22 +1175,22 @@
       "question": "_____ 46. The attraction between slightly positive and slightly negative charges of adjacent water molecules forms a ____ bond.",
       "answerOptions": [
         {
-          "text": "a.) covalent",
+          "text": "covalent",
           "isCorrect": false,
           "rationale": "Incorrect. 'covalent' is a distractor. The correct answer is 'hydrogen'."
         },
         {
-          "text": "b.) peptide",
+          "text": "peptide",
           "isCorrect": false,
           "rationale": "Incorrect. 'peptide' is a distractor. The correct answer is 'hydrogen'."
         },
         {
-          "text": "c.) hydrogen",
+          "text": "hydrogen",
           "isCorrect": true,
           "rationale": "Correct! [Hydrogen Bonds] A hydrogen bond is an intermolecular attraction between the slightly positive hydrogen of one polar molecule and the slightly negative atom of another."
         },
         {
-          "text": "d.) ionic",
+          "text": "ionic",
           "isCorrect": false,
           "rationale": "Incorrect. 'ionic' is a distractor. The correct answer is 'hydrogen'."
         }
@@ -1201,22 +1201,22 @@
       "question": "_____ 47. In a hydrogen bond between water molecules, the attraction occurs between slightly ____ and slightly negative charges.",
       "answerOptions": [
         {
-          "text": "a.) positive",
+          "text": "positive",
           "isCorrect": true,
           "rationale": "Correct! [Hydrogen Bond Charges] Hydrogen bonds arise specifically from the electrical attraction between the slightly positive hydrogen atom and a slightly negative oxygen atom."
         },
         {
-          "text": "b.) covalent",
+          "text": "covalent",
           "isCorrect": false,
           "rationale": "Incorrect. 'covalent' is a distractor. The correct answer is 'positive'."
         },
         {
-          "text": "c.) neutral",
+          "text": "neutral",
           "isCorrect": false,
           "rationale": "Incorrect. 'neutral' is a distractor. The correct answer is 'positive'."
         },
         {
-          "text": "d.) identical",
+          "text": "identical",
           "isCorrect": false,
           "rationale": "Incorrect. 'identical' is a distractor. The correct answer is 'positive'."
         }
@@ -1227,22 +1227,22 @@
       "question": "_____ 48. Large biological molecules formed by thousands of atoms linked together into long chains are called ____.",
       "answerOptions": [
         {
-          "text": "a.) macromolecules",
+          "text": "macromolecules",
           "isCorrect": true,
           "rationale": "Correct! [Macromolecules] Macromolecules are giant organic molecules constructed from thousands of covalently bonded atoms."
         },
         {
-          "text": "b.) coenzymes",
+          "text": "coenzymes",
           "isCorrect": false,
           "rationale": "Incorrect. 'coenzymes' is a distractor. The correct answer is 'macromolecules'."
         },
         {
-          "text": "c.) microelements",
+          "text": "microelements",
           "isCorrect": false,
           "rationale": "Incorrect. 'microelements' is a distractor. The correct answer is 'macromolecules'."
         },
         {
-          "text": "d.) micelles",
+          "text": "micelles",
           "isCorrect": false,
           "rationale": "Incorrect. 'micelles' is a distractor. The correct answer is 'macromolecules'."
         }
@@ -1253,22 +1253,22 @@
       "question": "_____ 49. If macromolecules consist of small, repeating molecular subunits linked in a chain, they are identified as ____.",
       "answerOptions": [
         {
-          "text": "a.) electrolytes",
+          "text": "electrolytes",
           "isCorrect": false,
           "rationale": "Incorrect. 'electrolytes' is a distractor. The correct answer is 'polymers'."
         },
         {
-          "text": "b.) monomers",
+          "text": "monomers",
           "isCorrect": false,
           "rationale": "Incorrect. 'monomers' is a distractor. The correct answer is 'polymers'."
         },
         {
-          "text": "c.) dimers",
+          "text": "dimers",
           "isCorrect": false,
           "rationale": "Incorrect. 'dimers' is a distractor. The correct answer is 'polymers'."
         },
         {
-          "text": "d.) polymers",
+          "text": "polymers",
           "isCorrect": true,
           "rationale": "Correct! [Polymers] A polymer is a large macromolecule composed of repeated, linked chemical units called monomers."
         }
@@ -1279,22 +1279,22 @@
       "question": "_____ 50. The individual, small molecular building blocks that link together to form polymers are referred to as ____.",
       "answerOptions": [
         {
-          "text": "a.) complexes",
+          "text": "complexes",
           "isCorrect": false,
           "rationale": "Incorrect. 'complexes' is a distractor. The correct answer is 'monomers'."
         },
         {
-          "text": "b.) polymers",
+          "text": "polymers",
           "isCorrect": false,
           "rationale": "Incorrect. 'polymers' is a distractor. The correct answer is 'monomers'."
         },
         {
-          "text": "c.) isomers",
+          "text": "isomers",
           "isCorrect": false,
           "rationale": "Incorrect. 'isomers' is a distractor. The correct answer is 'monomers'."
         },
         {
-          "text": "d.) monomers",
+          "text": "monomers",
           "isCorrect": true,
           "rationale": "Correct! [Monomers] Monomers are the fundamental sub-units that undergo polymerization to assemble large polymers."
         }
@@ -1305,22 +1305,22 @@
       "question": "_____ 51. Chemical reactions that join monomers together to form polymers by eliminating water molecules are ____ reactions.",
       "answerOptions": [
         {
-          "text": "a.) oxidation",
+          "text": "oxidation",
           "isCorrect": false,
           "rationale": "Incorrect. 'oxidation' is a distractor. The correct answer is 'dehydration'."
         },
         {
-          "text": "b.) hydrolysis",
+          "text": "hydrolysis",
           "isCorrect": false,
           "rationale": "Incorrect. 'hydrolysis' is a distractor. The correct answer is 'dehydration'."
         },
         {
-          "text": "c.) carboxylation",
+          "text": "carboxylation",
           "isCorrect": false,
           "rationale": "Incorrect. 'carboxylation' is a distractor. The correct answer is 'dehydration'."
         },
         {
-          "text": "d.) dehydration",
+          "text": "dehydration",
           "isCorrect": true,
           "rationale": "Correct! [Dehydration Synthesis] Dehydration synthesis (condensation) reactions link monomers into polymers through the removal of water."
         }
@@ -1331,22 +1331,22 @@
       "question": "_____ 52. Chemical reactions that break polymers down into individual monomers by consuming water molecules are ____ reactions.",
       "answerOptions": [
         {
-          "text": "a.) dehydration",
+          "text": "dehydration",
           "isCorrect": false,
           "rationale": "Incorrect. 'dehydration' is a distractor. The correct answer is 'hydrolysis'."
         },
         {
-          "text": "b.) condensation",
+          "text": "condensation",
           "isCorrect": false,
           "rationale": "Incorrect. 'condensation' is a distractor. The correct answer is 'hydrolysis'."
         },
         {
-          "text": "c.) hydrolysis",
+          "text": "hydrolysis",
           "isCorrect": true,
           "rationale": "Correct! [Hydrolysis Reactions] Hydrolysis reactions cleave chemical bonds within polymers by adding water molecules, splitting them back into monomers."
         },
         {
-          "text": "d.) polymerization",
+          "text": "polymerization",
           "isCorrect": false,
           "rationale": "Incorrect. 'polymerization' is a distractor. The correct answer is 'hydrolysis'."
         }
@@ -1357,22 +1357,22 @@
       "question": "_____ 53. In cellular biochemistry, while dehydration reactions form polymers, ____ reactions break polymers down.",
       "answerOptions": [
         {
-          "text": "a.) synthesis",
+          "text": "synthesis",
           "isCorrect": false,
           "rationale": "Incorrect. 'synthesis' is a distractor. The correct answer is 'hydrolysis'."
         },
         {
-          "text": "b.) hydrolysis",
+          "text": "hydrolysis",
           "isCorrect": true,
           "rationale": "Correct! [Dehydration vs Hydrolysis] Dehydration builds polymers by joining subunits, whereas hydrolysis breaks polymers down into smaller components."
         },
         {
-          "text": "c.) dehydration",
+          "text": "dehydration",
           "isCorrect": false,
           "rationale": "Incorrect. 'dehydration' is a distractor. The correct answer is 'hydrolysis'."
         },
         {
-          "text": "d.) anabolic",
+          "text": "anabolic",
           "isCorrect": false,
           "rationale": "Incorrect. 'anabolic' is a distractor. The correct answer is 'hydrolysis'."
         }
@@ -1383,22 +1383,22 @@
       "question": "_____ 54. The four major types of biomolecules essential to life are carbohydrates, proteins, nucleic acids, and ____.",
       "answerOptions": [
         {
-          "text": "a.) vitamins",
+          "text": "vitamins",
           "isCorrect": false,
           "rationale": "Incorrect. 'vitamins' is a distractor. The correct answer is 'fats'."
         },
         {
-          "text": "b.) minerals",
+          "text": "minerals",
           "isCorrect": false,
           "rationale": "Incorrect. 'minerals' is a distractor. The correct answer is 'fats'."
         },
         {
-          "text": "c.) electrolytes",
+          "text": "electrolytes",
           "isCorrect": false,
           "rationale": "Incorrect. 'electrolytes' is a distractor. The correct answer is 'fats'."
         },
         {
-          "text": "d.) fats",
+          "text": "fats",
           "isCorrect": true,
           "rationale": "Correct! [Four Major Biomolecules] Living organisms are built from four classes of biological macromolecules: carbohydrates, proteins, fats (lipids), and nucleic acids."
         }
@@ -1409,22 +1409,22 @@
       "question": "_____ 55. Biomolecules made entirely of carbon, hydrogen, and oxygen that primarily provide fuel or energy for the human body are ____.",
       "answerOptions": [
         {
-          "text": "a.) proteins",
+          "text": "proteins",
           "isCorrect": false,
           "rationale": "Incorrect. 'proteins' is a distractor. The correct answer is 'carbohydrates'."
         },
         {
-          "text": "b.) nucleic acids",
+          "text": "nucleic acids",
           "isCorrect": false,
           "rationale": "Incorrect. 'nucleic acids' is a distractor. The correct answer is 'carbohydrates'."
         },
         {
-          "text": "c.) carbohydrates",
+          "text": "carbohydrates",
           "isCorrect": true,
           "rationale": "Correct! [Carbohydrates Overview] Carbohydrates are composed of C, H, and O and function as the body's premier source of cellular fuel and metabolic energy."
         },
         {
-          "text": "d.) lipids",
+          "text": "lipids",
           "isCorrect": false,
           "rationale": "Incorrect. 'lipids' is a distractor. The correct answer is 'carbohydrates'."
         }
@@ -1435,22 +1435,22 @@
       "question": "_____ 56. Common dietary examples of carbohydrates include starches and ____.",
       "answerOptions": [
         {
-          "text": "a.) amino acids",
+          "text": "amino acids",
           "isCorrect": false,
           "rationale": "Incorrect. 'amino acids' is a distractor. The correct answer is 'sugars'."
         },
         {
-          "text": "b.) triglycerides",
+          "text": "triglycerides",
           "isCorrect": false,
           "rationale": "Incorrect. 'triglycerides' is a distractor. The correct answer is 'sugars'."
         },
         {
-          "text": "c.) steroids",
+          "text": "steroids",
           "isCorrect": false,
           "rationale": "Incorrect. 'steroids' is a distractor. The correct answer is 'sugars'."
         },
         {
-          "text": "d.) sugars",
+          "text": "sugars",
           "isCorrect": true,
           "rationale": "Correct! [Carbohydrate Examples] Sugars and starches represent the primary nutritional forms of carbohydrate biomolecules."
         }
@@ -1461,22 +1461,22 @@
       "question": "_____ 57. Carbohydrates are classified into three major hierarchical groups: monosaccharides, polysaccharides, and ____.",
       "answerOptions": [
         {
-          "text": "a.) oligosaccharides",
+          "text": "oligosaccharides",
           "isCorrect": true,
           "rationale": "Correct! [Carbohydrate Classification] Carbohydrates are grouped into monosaccharides (single sugars), oligosaccharides (short chains), and polysaccharides (complex chains)."
         },
         {
-          "text": "b.) fatty acids",
+          "text": "fatty acids",
           "isCorrect": false,
           "rationale": "Incorrect. 'fatty acids' is a distractor. The correct answer is 'oligosaccharides'."
         },
         {
-          "text": "c.) polypeptides",
+          "text": "polypeptides",
           "isCorrect": false,
           "rationale": "Incorrect. 'polypeptides' is a distractor. The correct answer is 'oligosaccharides'."
         },
         {
-          "text": "d.) phospholipids",
+          "text": "phospholipids",
           "isCorrect": false,
           "rationale": "Incorrect. 'phospholipids' is a distractor. The correct answer is 'oligosaccharides'."
         }
@@ -1487,22 +1487,22 @@
       "question": "_____ 58. The simplest carbohydrate units, commonly referred to as simple sugars, are ____.",
       "answerOptions": [
         {
-          "text": "a.) disaccharides",
+          "text": "disaccharides",
           "isCorrect": false,
           "rationale": "Incorrect. 'disaccharides' is a distractor. The correct answer is 'monosaccharides'."
         },
         {
-          "text": "b.) monosaccharides",
+          "text": "monosaccharides",
           "isCorrect": true,
           "rationale": "Correct! [Monosaccharides] Monosaccharides are the basic monomeric sugar units, also called simple sugars."
         },
         {
-          "text": "c.) oligosaccharides",
+          "text": "oligosaccharides",
           "isCorrect": false,
           "rationale": "Incorrect. 'oligosaccharides' is a distractor. The correct answer is 'monosaccharides'."
         },
         {
-          "text": "d.) polysaccharides",
+          "text": "polysaccharides",
           "isCorrect": false,
           "rationale": "Incorrect. 'polysaccharides' is a distractor. The correct answer is 'monosaccharides'."
         }
@@ -1513,22 +1513,22 @@
       "question": "_____ 59. Monosaccharides are categorized by the number of carbon atoms in their ring, which ranges from three to ____ carbon atoms.",
       "answerOptions": [
         {
-          "text": "a.) twelve",
+          "text": "twelve",
           "isCorrect": false,
           "rationale": "Incorrect. 'twelve' is a distractor. The correct answer is 'seven'."
         },
         {
-          "text": "b.) seven",
+          "text": "seven",
           "isCorrect": true,
           "rationale": "Correct! [Monosaccharide Carbon Range] Monosaccharides are classified by their carbon backbone length, which spans from 3 to 7 carbon atoms."
         },
         {
-          "text": "c.) four",
+          "text": "four",
           "isCorrect": false,
           "rationale": "Incorrect. 'four' is a distractor. The correct answer is 'seven'."
         },
         {
-          "text": "d.) ten",
+          "text": "ten",
           "isCorrect": false,
           "rationale": "Incorrect. 'ten' is a distractor. The correct answer is 'seven'."
         }
@@ -1539,22 +1539,22 @@
       "question": "_____ 60. Monosaccharides containing six carbon atoms, such as glucose, fructose, and galactose, are classified as ____.",
       "answerOptions": [
         {
-          "text": "a.) hexoses",
+          "text": "hexoses",
           "isCorrect": true,
           "rationale": "Correct! [Hexose Sugars] Hexoses are six-carbon monosaccharides (C6H12O6), including glucose, fructose, and galactose."
         },
         {
-          "text": "b.) heptoses",
+          "text": "heptoses",
           "isCorrect": false,
           "rationale": "Incorrect. 'heptoses' is a distractor. The correct answer is 'hexoses'."
         },
         {
-          "text": "c.) pentoses",
+          "text": "pentoses",
           "isCorrect": false,
           "rationale": "Incorrect. 'pentoses' is a distractor. The correct answer is 'hexoses'."
         },
         {
-          "text": "d.) trioses",
+          "text": "trioses",
           "isCorrect": false,
           "rationale": "Incorrect. 'trioses' is a distractor. The correct answer is 'hexoses'."
         }
@@ -1565,22 +1565,22 @@
       "question": "_____ 61. The hexose monosaccharide noted for being rich in carbohydrates and circulating as the primary fuel for human cells is ____.",
       "answerOptions": [
         {
-          "text": "a.) ribose",
+          "text": "ribose",
           "isCorrect": false,
           "rationale": "Incorrect. 'ribose' is a distractor. The correct answer is 'glucose'."
         },
         {
-          "text": "b.) cellulose",
+          "text": "cellulose",
           "isCorrect": false,
           "rationale": "Incorrect. 'cellulose' is a distractor. The correct answer is 'glucose'."
         },
         {
-          "text": "c.) glucose",
+          "text": "glucose",
           "isCorrect": true,
           "rationale": "Correct! [Glucose] Glucose is the six-carbon hexose that serves as the central fuel molecule for cellular respiration in human tissues."
         },
         {
-          "text": "d.) sucrose",
+          "text": "sucrose",
           "isCorrect": false,
           "rationale": "Incorrect. 'sucrose' is a distractor. The correct answer is 'glucose'."
         }
@@ -1591,22 +1591,22 @@
       "question": "_____ 62. The hexose monosaccharide naturally seen and found in abundance in fruits and vegetables is ____.",
       "answerOptions": [
         {
-          "text": "a.) fructose",
+          "text": "fructose",
           "isCorrect": true,
           "rationale": "Correct! [Fructose] Fructose is a six-carbon hexose found naturally in fruits, honey, and vegetables."
         },
         {
-          "text": "b.) galactose",
+          "text": "galactose",
           "isCorrect": false,
           "rationale": "Incorrect. 'galactose' is a distractor. The correct answer is 'fructose'."
         },
         {
-          "text": "c.) maltose",
+          "text": "maltose",
           "isCorrect": false,
           "rationale": "Incorrect. 'maltose' is a distractor. The correct answer is 'fructose'."
         },
         {
-          "text": "d.) glycogen",
+          "text": "glycogen",
           "isCorrect": false,
           "rationale": "Incorrect. 'glycogen' is a distractor. The correct answer is 'fructose'."
         }
@@ -1617,22 +1617,22 @@
       "question": "_____ 63. The hexose monosaccharide commonly seen in dairy products is ____.",
       "answerOptions": [
         {
-          "text": "a.) fructose",
+          "text": "fructose",
           "isCorrect": false,
           "rationale": "Incorrect. 'fructose' is a distractor. The correct answer is 'galactose'."
         },
         {
-          "text": "b.) starch",
+          "text": "starch",
           "isCorrect": false,
           "rationale": "Incorrect. 'starch' is a distractor. The correct answer is 'galactose'."
         },
         {
-          "text": "c.) galactose",
+          "text": "galactose",
           "isCorrect": true,
           "rationale": "Correct! [Galactose] Galactose is a six-carbon hexose sugar abundant in milk and dairy products as part of lactose."
         },
         {
-          "text": "d.) ribose",
+          "text": "ribose",
           "isCorrect": false,
           "rationale": "Incorrect. 'ribose' is a distractor. The correct answer is 'galactose'."
         }
@@ -1643,22 +1643,22 @@
       "question": "_____ 64. The five-carbon monosaccharide that is classified as a pentose sugar is ____.",
       "answerOptions": [
         {
-          "text": "a.) glucose",
+          "text": "glucose",
           "isCorrect": false,
           "rationale": "Incorrect. 'glucose' is a distractor. The correct answer is 'ribose'."
         },
         {
-          "text": "b.) galactose",
+          "text": "galactose",
           "isCorrect": false,
           "rationale": "Incorrect. 'galactose' is a distractor. The correct answer is 'ribose'."
         },
         {
-          "text": "c.) fructose",
+          "text": "fructose",
           "isCorrect": false,
           "rationale": "Incorrect. 'fructose' is a distractor. The correct answer is 'ribose'."
         },
         {
-          "text": "d.) ribose",
+          "text": "ribose",
           "isCorrect": true,
           "rationale": "Correct! [Ribose] Ribose is a 5-carbon pentose sugar that forms an integral component of RNA and ATP."
         }
@@ -1669,22 +1669,22 @@
       "question": "_____ 65. A five-carbon simple sugar, such as ribose, is scientifically termed a ____.",
       "answerOptions": [
         {
-          "text": "a.) tetrose",
+          "text": "tetrose",
           "isCorrect": false,
           "rationale": "Incorrect. 'tetrose' is a distractor. The correct answer is 'pentose'."
         },
         {
-          "text": "b.) pentose",
+          "text": "pentose",
           "isCorrect": true,
           "rationale": "Correct! [Pentose Definition] Pentoses are monosaccharides containing exactly five carbon atoms."
         },
         {
-          "text": "c.) hexose",
+          "text": "hexose",
           "isCorrect": false,
           "rationale": "Incorrect. 'hexose' is a distractor. The correct answer is 'pentose'."
         },
         {
-          "text": "d.) triose",
+          "text": "triose",
           "isCorrect": false,
           "rationale": "Incorrect. 'triose' is a distractor. The correct answer is 'pentose'."
         }
@@ -1695,22 +1695,22 @@
       "question": "_____ 66. Carbohydrate chains composed of a few monosaccharides joined together by dehydration synthesis are called ____.",
       "answerOptions": [
         {
-          "text": "a.) oligosaccharides",
+          "text": "oligosaccharides",
           "isCorrect": true,
           "rationale": "Correct! [Oligosaccharides] Oligosaccharides are short polymers consisting of a few monosaccharide units linked by glycosidic bonds."
         },
         {
-          "text": "b.) lipids",
+          "text": "lipids",
           "isCorrect": false,
           "rationale": "Incorrect. 'lipids' is a distractor. The correct answer is 'oligosaccharides'."
         },
         {
-          "text": "c.) polysaccharides",
+          "text": "polysaccharides",
           "isCorrect": false,
           "rationale": "Incorrect. 'polysaccharides' is a distractor. The correct answer is 'oligosaccharides'."
         },
         {
-          "text": "d.) monosaccharides",
+          "text": "monosaccharides",
           "isCorrect": false,
           "rationale": "Incorrect. 'monosaccharides' is a distractor. The correct answer is 'oligosaccharides'."
         }
@@ -1721,22 +1721,22 @@
       "question": "_____ 67. Oligosaccharides are categorized and classified based on the number of ____ present per chain.",
       "answerOptions": [
         {
-          "text": "a.) electrons",
+          "text": "electrons",
           "isCorrect": false,
           "rationale": "Incorrect. 'electrons' is a distractor. The correct answer is 'subunits'."
         },
         {
-          "text": "b.) subunits",
+          "text": "subunits",
           "isCorrect": true,
           "rationale": "Correct! [Oligosaccharide Classification] Oligosaccharides are classified by the exact number of monosaccharide subunits in their chain (e.g., disaccharides, trisaccharides)."
         },
         {
-          "text": "c.) peptide links",
+          "text": "peptide links",
           "isCorrect": false,
           "rationale": "Incorrect. 'peptide links' is a distractor. The correct answer is 'subunits'."
         },
         {
-          "text": "d.) double bonds",
+          "text": "double bonds",
           "isCorrect": false,
           "rationale": "Incorrect. 'double bonds' is a distractor. The correct answer is 'subunits'."
         }
@@ -1747,22 +1747,22 @@
       "question": "_____ 68. Double sugars that form when two monosaccharides covalently bond to each other through dehydration synthesis are ____.",
       "answerOptions": [
         {
-          "text": "a.) hexoses",
+          "text": "hexoses",
           "isCorrect": false,
           "rationale": "Incorrect. 'hexoses' is a distractor. The correct answer is 'disaccharides'."
         },
         {
-          "text": "b.) pentoses",
+          "text": "pentoses",
           "isCorrect": false,
           "rationale": "Incorrect. 'pentoses' is a distractor. The correct answer is 'disaccharides'."
         },
         {
-          "text": "c.) disaccharides",
+          "text": "disaccharides",
           "isCorrect": true,
           "rationale": "Correct! [Disaccharides] A disaccharide is a carbohydrate formed by covalently linking two monosaccharide units."
         },
         {
-          "text": "d.) polysaccharides",
+          "text": "polysaccharides",
           "isCorrect": false,
           "rationale": "Incorrect. 'polysaccharides' is a distractor. The correct answer is 'disaccharides'."
         }
@@ -1773,22 +1773,22 @@
       "question": "_____ 69. A classic example of a disaccharide, commonly known as household table sugar, is ____.",
       "answerOptions": [
         {
-          "text": "a.) cellulose",
+          "text": "cellulose",
           "isCorrect": false,
           "rationale": "Incorrect. 'cellulose' is a distractor. The correct answer is 'sucrose'."
         },
         {
-          "text": "b.) glycogen",
+          "text": "glycogen",
           "isCorrect": false,
           "rationale": "Incorrect. 'glycogen' is a distractor. The correct answer is 'sucrose'."
         },
         {
-          "text": "c.) glucose",
+          "text": "glucose",
           "isCorrect": false,
           "rationale": "Incorrect. 'glucose' is a distractor. The correct answer is 'sucrose'."
         },
         {
-          "text": "d.) sucrose",
+          "text": "sucrose",
           "isCorrect": true,
           "rationale": "Correct! [Sucrose] Sucrose (table sugar) is a disaccharide made of one glucose molecule bonded to one fructose molecule."
         }
@@ -1799,22 +1799,22 @@
       "question": "_____ 70. Complex carbohydrates wherein monosaccharides join together in longer and more extensive chains are ____.",
       "answerOptions": [
         {
-          "text": "a.) polysaccharides",
+          "text": "polysaccharides",
           "isCorrect": true,
           "rationale": "Correct! [Polysaccharides] Polysaccharides are large, complex macromolecules composed of hundreds or thousands of monosaccharide units."
         },
         {
-          "text": "b.) disaccharides",
+          "text": "disaccharides",
           "isCorrect": false,
           "rationale": "Incorrect. 'disaccharides' is a distractor. The correct answer is 'polysaccharides'."
         },
         {
-          "text": "c.) oligosaccharides",
+          "text": "oligosaccharides",
           "isCorrect": false,
           "rationale": "Incorrect. 'oligosaccharides' is a distractor. The correct answer is 'polysaccharides'."
         },
         {
-          "text": "d.) hexoses",
+          "text": "hexoses",
           "isCorrect": false,
           "rationale": "Incorrect. 'hexoses' is a distractor. The correct answer is 'polysaccharides'."
         }
@@ -1825,22 +1825,22 @@
       "question": "_____ 71. Polysaccharides are categorized based on their biological function into two main types: structural and ____.",
       "answerOptions": [
         {
-          "text": "a.) amphipathic",
+          "text": "amphipathic",
           "isCorrect": false,
           "rationale": "Incorrect. 'amphipathic' is a distractor. The correct answer is 'storage'."
         },
         {
-          "text": "b.) storage",
+          "text": "storage",
           "isCorrect": true,
           "rationale": "Correct! [Polysaccharide Functional Classes] Polysaccharides are functionally categorized as either storage polysaccharides (energy reserves) or structural polysaccharides (support)."
         },
         {
-          "text": "c.) transport",
+          "text": "transport",
           "isCorrect": false,
           "rationale": "Incorrect. 'transport' is a distractor. The correct answer is 'storage'."
         },
         {
-          "text": "d.) catalytic",
+          "text": "catalytic",
           "isCorrect": false,
           "rationale": "Incorrect. 'catalytic' is a distractor. The correct answer is 'storage'."
         }
@@ -1851,22 +1851,22 @@
       "question": "_____ 72. Polysaccharides that function to store energy for future physiological use are classified as ____ polysaccharides.",
       "answerOptions": [
         {
-          "text": "a.) structural",
+          "text": "structural",
           "isCorrect": false,
           "rationale": "Incorrect. 'structural' is a distractor. The correct answer is 'storage'."
         },
         {
-          "text": "b.) genetic",
+          "text": "genetic",
           "isCorrect": false,
           "rationale": "Incorrect. 'genetic' is a distractor. The correct answer is 'storage'."
         },
         {
-          "text": "c.) hormonal",
+          "text": "hormonal",
           "isCorrect": false,
           "rationale": "Incorrect. 'hormonal' is a distractor. The correct answer is 'storage'."
         },
         {
-          "text": "d.) storage",
+          "text": "storage",
           "isCorrect": true,
           "rationale": "Correct! [Storage Polysaccharides] Storage polysaccharides sequester glucose molecules in compact forms for future metabolic breakdown."
         }
@@ -1877,22 +1877,22 @@
       "question": "_____ 73. The primary storage polysaccharide found in plants is ____.",
       "answerOptions": [
         {
-          "text": "a.) cellulose",
+          "text": "cellulose",
           "isCorrect": false,
           "rationale": "Incorrect. 'cellulose' is a distractor. The correct answer is 'starch'."
         },
         {
-          "text": "b.) starch",
+          "text": "starch",
           "isCorrect": true,
           "rationale": "Correct! [Starch] Starch is the primary energy storage polysaccharide synthesized by plants."
         },
         {
-          "text": "c.) chitin",
+          "text": "chitin",
           "isCorrect": false,
           "rationale": "Incorrect. 'chitin' is a distractor. The correct answer is 'starch'."
         },
         {
-          "text": "d.) glycogen",
+          "text": "glycogen",
           "isCorrect": false,
           "rationale": "Incorrect. 'glycogen' is a distractor. The correct answer is 'starch'."
         }
@@ -1903,22 +1903,22 @@
       "question": "_____ 74. The primary storage polysaccharide found in animals, stored in liver and muscle tissue, is ____.",
       "answerOptions": [
         {
-          "text": "a.) glycogen",
+          "text": "glycogen",
           "isCorrect": true,
           "rationale": "Correct! [Glycogen] Glycogen is the major glucose storage polymer utilized by animals and humans."
         },
         {
-          "text": "b.) sucrose",
+          "text": "sucrose",
           "isCorrect": false,
           "rationale": "Incorrect. 'sucrose' is a distractor. The correct answer is 'glycogen'."
         },
         {
-          "text": "c.) starch",
+          "text": "starch",
           "isCorrect": false,
           "rationale": "Incorrect. 'starch' is a distractor. The correct answer is 'glycogen'."
         },
         {
-          "text": "d.) cellulose",
+          "text": "cellulose",
           "isCorrect": false,
           "rationale": "Incorrect. 'cellulose' is a distractor. The correct answer is 'glycogen'."
         }
@@ -1929,22 +1929,22 @@
       "question": "_____ 75. Polysaccharides that provide physical strength and mechanical support in organisms are classified as ____ polysaccharides.",
       "answerOptions": [
         {
-          "text": "a.) structural",
+          "text": "structural",
           "isCorrect": true,
           "rationale": "Correct! [Structural Polysaccharides] Structural polysaccharides form tough fibrous networks that give cells and organisms structural rigidity."
         },
         {
-          "text": "b.) nutritional",
+          "text": "nutritional",
           "isCorrect": false,
           "rationale": "Incorrect. 'nutritional' is a distractor. The correct answer is 'structural'."
         },
         {
-          "text": "c.) enzymatic",
+          "text": "enzymatic",
           "isCorrect": false,
           "rationale": "Incorrect. 'enzymatic' is a distractor. The correct answer is 'structural'."
         },
         {
-          "text": "d.) storage",
+          "text": "storage",
           "isCorrect": false,
           "rationale": "Incorrect. 'storage' is a distractor. The correct answer is 'structural'."
         }
@@ -1955,22 +1955,22 @@
       "question": "_____ 76. The structural polysaccharide that provides strength in organisms and is seen in materials like bamboo, jute, and cotton is ____.",
       "answerOptions": [
         {
-          "text": "a.) glycogen",
+          "text": "glycogen",
           "isCorrect": false,
           "rationale": "Incorrect. 'glycogen' is a distractor. The correct answer is 'cellulose'."
         },
         {
-          "text": "b.) cellulose",
+          "text": "cellulose",
           "isCorrect": true,
           "rationale": "Correct! [Cellulose] Cellulose is an unbranched polymer of glucose that forms plant cell walls and fibers in bamboo, jute, and cotton."
         },
         {
-          "text": "c.) amylose",
+          "text": "amylose",
           "isCorrect": false,
           "rationale": "Incorrect. 'amylose' is a distractor. The correct answer is 'cellulose'."
         },
         {
-          "text": "d.) starch",
+          "text": "starch",
           "isCorrect": false,
           "rationale": "Incorrect. 'starch' is a distractor. The correct answer is 'cellulose'."
         }
@@ -1981,22 +1981,22 @@
       "question": "_____ 77. Plant materials such as bamboo, jute, and cotton are highlighted as prominent examples containing the structural carbohydrate ____.",
       "answerOptions": [
         {
-          "text": "a.) galactose",
+          "text": "galactose",
           "isCorrect": false,
           "rationale": "Incorrect. 'galactose' is a distractor. The correct answer is 'cellulose'."
         },
         {
-          "text": "b.) cellulose",
+          "text": "cellulose",
           "isCorrect": true,
           "rationale": "Correct! [Cellulose Examples] Bamboo, jute, and cotton are natural fibrous materials composed predominantly of cellulose."
         },
         {
-          "text": "c.) sucrose",
+          "text": "sucrose",
           "isCorrect": false,
           "rationale": "Incorrect. 'sucrose' is a distractor. The correct answer is 'cellulose'."
         },
         {
-          "text": "d.) glycogen",
+          "text": "glycogen",
           "isCorrect": false,
           "rationale": "Incorrect. 'glycogen' is a distractor. The correct answer is 'cellulose'."
         }
@@ -2007,22 +2007,22 @@
       "question": "_____ 78. Organic biomolecules that do not dissolve in water due to their nonpolar nature are ____.",
       "answerOptions": [
         {
-          "text": "a.) proteins",
+          "text": "proteins",
           "isCorrect": false,
           "rationale": "Incorrect. 'proteins' is a distractor. The correct answer is 'lipids'."
         },
         {
-          "text": "b.) lipids",
+          "text": "lipids",
           "isCorrect": true,
           "rationale": "Correct! [Lipids Overview] Lipids (fats) are hydrophobic organic compounds that are insoluble in water because of their nonpolar hydrocarbon chains."
         },
         {
-          "text": "c.) nucleic acids",
+          "text": "nucleic acids",
           "isCorrect": false,
           "rationale": "Incorrect. 'nucleic acids' is a distractor. The correct answer is 'lipids'."
         },
         {
-          "text": "d.) carbohydrates",
+          "text": "carbohydrates",
           "isCorrect": false,
           "rationale": "Incorrect. 'carbohydrates' is a distractor. The correct answer is 'lipids'."
         }
@@ -2033,22 +2033,22 @@
       "question": "_____ 79. The three types of lipids that are critically important to human health are phospholipids, steroids, and ____.",
       "answerOptions": [
         {
-          "text": "a.) amino acids",
+          "text": "amino acids",
           "isCorrect": false,
           "rationale": "Incorrect. 'amino acids' is a distractor. The correct answer is 'triglycerides'."
         },
         {
-          "text": "b.) triglycerides",
+          "text": "triglycerides",
           "isCorrect": true,
           "rationale": "Correct! [Three Lipid Types] The three major classes of biologically important lipids are triglycerides, phospholipids, and steroids."
         },
         {
-          "text": "c.) polysaccharides",
+          "text": "polysaccharides",
           "isCorrect": false,
           "rationale": "Incorrect. 'polysaccharides' is a distractor. The correct answer is 'triglycerides'."
         },
         {
-          "text": "d.) peptides",
+          "text": "peptides",
           "isCorrect": false,
           "rationale": "Incorrect. 'peptides' is a distractor. The correct answer is 'triglycerides'."
         }
@@ -2059,22 +2059,22 @@
       "question": "_____ 80. A triglyceride molecule is comprised of one molecule of glycerol chemically bonded to three ____.",
       "answerOptions": [
         {
-          "text": "a.) fatty acids",
+          "text": "fatty acids",
           "isCorrect": true,
           "rationale": "Correct! [Triglyceride Composition] Triglycerides are formed by esterifying three fatty acid chains to a single glycerol backbone."
         },
         {
-          "text": "b.) amino acids",
+          "text": "amino acids",
           "isCorrect": false,
           "rationale": "Incorrect. 'amino acids' is a distractor. The correct answer is 'fatty acids'."
         },
         {
-          "text": "c.) nucleotides",
+          "text": "nucleotides",
           "isCorrect": false,
           "rationale": "Incorrect. 'nucleotides' is a distractor. The correct answer is 'fatty acids'."
         },
         {
-          "text": "d.) phosphate groups",
+          "text": "phosphate groups",
           "isCorrect": false,
           "rationale": "Incorrect. 'phosphate groups' is a distractor. The correct answer is 'fatty acids'."
         }
@@ -2085,22 +2085,22 @@
       "question": "_____ 81. Fatty acids are chains of carbon atoms bonded to hydrogens that feature the functional group ____ at one end of the chain.",
       "answerOptions": [
         {
-          "text": "a.) COOH",
+          "text": "COOH",
           "isCorrect": true,
           "rationale": "Correct! [Fatty Acid Functional Group] Fatty acids consist of a long hydrocarbon tail capped at one end by a carboxyl group (-COOH)."
         },
         {
-          "text": "b.) OH",
+          "text": "OH",
           "isCorrect": false,
           "rationale": "Incorrect. 'OH' is a distractor. The correct answer is 'COOH'."
         },
         {
-          "text": "c.) NH2",
+          "text": "NH2",
           "isCorrect": false,
           "rationale": "Incorrect. 'NH2' is a distractor. The correct answer is 'COOH'."
         },
         {
-          "text": "d.) PO4",
+          "text": "PO4",
           "isCorrect": false,
           "rationale": "Incorrect. 'PO4' is a distractor. The correct answer is 'COOH'."
         }
@@ -2111,22 +2111,22 @@
       "question": "_____ 82. In fatty acid chemical structure, chains of carbon atoms are covalently bonded to ____.",
       "answerOptions": [
         {
-          "text": "a.) phosphates",
+          "text": "phosphates",
           "isCorrect": false,
           "rationale": "Incorrect. 'phosphates' is a distractor. The correct answer is 'hydrogens'."
         },
         {
-          "text": "b.) sulfurs",
+          "text": "sulfurs",
           "isCorrect": false,
           "rationale": "Incorrect. 'sulfurs' is a distractor. The correct answer is 'hydrogens'."
         },
         {
-          "text": "c.) nitrogens",
+          "text": "nitrogens",
           "isCorrect": false,
           "rationale": "Incorrect. 'nitrogens' is a distractor. The correct answer is 'hydrogens'."
         },
         {
-          "text": "d.) hydrogens",
+          "text": "hydrogens",
           "isCorrect": true,
           "rationale": "Correct! [Fatty Acid Hydrocarbon Chain] Fatty acid tails consist of long hydrocarbon chains where carbon atoms are bonded to hydrogen atoms."
         }
@@ -2137,22 +2137,22 @@
       "question": "_____ 83. Fatty acids are categorized into saturated and unsaturated based on the presence of ____.",
       "answerOptions": [
         {
-          "text": "a.) phosphate groups",
+          "text": "phosphate groups",
           "isCorrect": false,
           "rationale": "Incorrect. 'phosphate groups' is a distractor. The correct answer is 'double bonds'."
         },
         {
-          "text": "b.) ring structures",
+          "text": "ring structures",
           "isCorrect": false,
           "rationale": "Incorrect. 'ring structures' is a distractor. The correct answer is 'double bonds'."
         },
         {
-          "text": "c.) double bonds",
+          "text": "double bonds",
           "isCorrect": true,
           "rationale": "Correct! [Fatty Acid Classification] Fatty acids are classified as saturated or unsaturated depending on whether double bonds are present between carbon atoms."
         },
         {
-          "text": "d.) amino groups",
+          "text": "amino groups",
           "isCorrect": false,
           "rationale": "Incorrect. 'amino groups' is a distractor. The correct answer is 'double bonds'."
         }
@@ -2163,22 +2163,22 @@
       "question": "_____ 84. If no double bonds are present between carbon atoms in a fatty acid chain, it is called a ____ fatty acid.",
       "answerOptions": [
         {
-          "text": "a.) polyunsaturated",
+          "text": "polyunsaturated",
           "isCorrect": false,
           "rationale": "Incorrect. 'polyunsaturated' is a distractor. The correct answer is 'saturated'."
         },
         {
-          "text": "b.) trans",
+          "text": "trans",
           "isCorrect": false,
           "rationale": "Incorrect. 'trans' is a distractor. The correct answer is 'saturated'."
         },
         {
-          "text": "c.) saturated",
+          "text": "saturated",
           "isCorrect": true,
           "rationale": "Correct! [Saturated Fatty Acids] Saturated fatty acids contain only single bonds between carbons, holding the maximum possible number of hydrogen atoms."
         },
         {
-          "text": "d.) unsaturated",
+          "text": "unsaturated",
           "isCorrect": false,
           "rationale": "Incorrect. 'unsaturated' is a distractor. The correct answer is 'saturated'."
         }
@@ -2189,22 +2189,22 @@
       "question": "_____ 85. If there is at least one double bond present in a fatty acid chain, it is classified as an ____ fatty acid.",
       "answerOptions": [
         {
-          "text": "a.) unsaturated",
+          "text": "unsaturated",
           "isCorrect": true,
           "rationale": "Correct! [Unsaturated Fatty Acids] Unsaturated fatty acids contain one or more carbon-carbon double bonds, creating bends or kinks in the tail."
         },
         {
-          "text": "b.) saturated",
+          "text": "saturated",
           "isCorrect": false,
           "rationale": "Incorrect. 'saturated' is a distractor. The correct answer is 'unsaturated'."
         },
         {
-          "text": "c.) solid",
+          "text": "solid",
           "isCorrect": false,
           "rationale": "Incorrect. 'solid' is a distractor. The correct answer is 'unsaturated'."
         },
         {
-          "text": "d.) hydrogenated",
+          "text": "hydrogenated",
           "isCorrect": false,
           "rationale": "Incorrect. 'hydrogenated' is a distractor. The correct answer is 'unsaturated'."
         }
@@ -2215,22 +2215,22 @@
       "question": "_____ 86. Common dietary examples of triglycerides include fats and ____.",
       "answerOptions": [
         {
-          "text": "a.) vitamins",
+          "text": "vitamins",
           "isCorrect": false,
           "rationale": "Incorrect. 'vitamins' is a distractor. The correct answer is 'oils'."
         },
         {
-          "text": "b.) starches",
+          "text": "starches",
           "isCorrect": false,
           "rationale": "Incorrect. 'starches' is a distractor. The correct answer is 'oils'."
         },
         {
-          "text": "c.) sugars",
+          "text": "sugars",
           "isCorrect": false,
           "rationale": "Incorrect. 'sugars' is a distractor. The correct answer is 'oils'."
         },
         {
-          "text": "d.) oils",
+          "text": "oils",
           "isCorrect": true,
           "rationale": "Correct! [Triglyceride Examples] Triglycerides manifest dietary-wise as solid fats (usually animal-derived) and liquid oils (usually plant-derived)."
         }
@@ -2241,22 +2241,22 @@
       "question": "_____ 87. Triglycerides serve as important storage compounds in animals because per gram, they store ____ the energy of carbohydrates.",
       "answerOptions": [
         {
-          "text": "a.) twice",
+          "text": "twice",
           "isCorrect": true,
           "rationale": "Correct! [Energy Density of Triglycerides] Lipids store roughly 9 kcal/g, which is more than twice the caloric energy density of carbohydrates or proteins (4 kcal/g)."
         },
         {
-          "text": "b.) ten times",
+          "text": "ten times",
           "isCorrect": false,
           "rationale": "Incorrect. 'ten times' is a distractor. The correct answer is 'twice'."
         },
         {
-          "text": "c.) half",
+          "text": "half",
           "isCorrect": false,
           "rationale": "Incorrect. 'half' is a distractor. The correct answer is 'twice'."
         },
         {
-          "text": "d.) the same",
+          "text": "the same",
           "isCorrect": false,
           "rationale": "Incorrect. 'the same' is a distractor. The correct answer is 'twice'."
         }
@@ -2267,22 +2267,22 @@
       "question": "_____ 88. The most common type of fat found in the human body is the ____.",
       "answerOptions": [
         {
-          "text": "a.) steroid",
+          "text": "steroid",
           "isCorrect": false,
           "rationale": "Incorrect. 'steroid' is a distractor. The correct answer is 'triglyceride'."
         },
         {
-          "text": "b.) triglyceride",
+          "text": "triglyceride",
           "isCorrect": true,
           "rationale": "Correct! [Most Common Body Fat] Triglycerides represent the predominant form of stored body fat in human adipose tissue."
         },
         {
-          "text": "c.) phospholipid",
+          "text": "phospholipid",
           "isCorrect": false,
           "rationale": "Incorrect. 'phospholipid' is a distractor. The correct answer is 'triglyceride'."
         },
         {
-          "text": "d.) wax",
+          "text": "wax",
           "isCorrect": false,
           "rationale": "Incorrect. 'wax' is a distractor. The correct answer is 'triglyceride'."
         }
@@ -2293,22 +2293,22 @@
       "question": "_____ 89. Triglycerides in the human body come from dietary foods you eat, especially butter, other fats, and ____.",
       "answerOptions": [
         {
-          "text": "a.) oils",
+          "text": "oils",
           "isCorrect": true,
           "rationale": "Correct! [Dietary Sources of Triglycerides] Dietary triglycerides originate from foods rich in fats, notably butter, oils, margarine, and animal fats."
         },
         {
-          "text": "b.) grains",
+          "text": "grains",
           "isCorrect": false,
           "rationale": "Incorrect. 'grains' is a distractor. The correct answer is 'oils'."
         },
         {
-          "text": "c.) fruits",
+          "text": "fruits",
           "isCorrect": false,
           "rationale": "Incorrect. 'fruits' is a distractor. The correct answer is 'oils'."
         },
         {
-          "text": "d.) vegetables",
+          "text": "vegetables",
           "isCorrect": false,
           "rationale": "Incorrect. 'vegetables' is a distractor. The correct answer is 'oils'."
         }
@@ -2319,22 +2319,22 @@
       "question": "_____ 90. A phospholipid molecule is comprised of a glycerol molecule bonded to a negatively charged phosphate group and ____ fatty acids.",
       "answerOptions": [
         {
-          "text": "a.) one",
+          "text": "one",
           "isCorrect": false,
           "rationale": "Incorrect. 'one' is a distractor. The correct answer is 'two'."
         },
         {
-          "text": "b.) two",
+          "text": "two",
           "isCorrect": true,
           "rationale": "Correct! [Phospholipid Composition] Phospholipids consist of a glycerol backbone bonded to two fatty acid tails and one phosphate head."
         },
         {
-          "text": "c.) four",
+          "text": "four",
           "isCorrect": false,
           "rationale": "Incorrect. 'four' is a distractor. The correct answer is 'two'."
         },
         {
-          "text": "d.) three",
+          "text": "three",
           "isCorrect": false,
           "rationale": "Incorrect. 'three' is a distractor. The correct answer is 'two'."
         }
@@ -2345,22 +2345,22 @@
       "question": "_____ 91. Attached to the negatively charged phosphate group of a phospholipid is often a small molecule known as the ____ group.",
       "answerOptions": [
         {
-          "text": "a.) steroid",
+          "text": "steroid",
           "isCorrect": false,
           "rationale": "Incorrect. 'steroid' is a distractor. The correct answer is 'variable'."
         },
         {
-          "text": "b.) variable",
+          "text": "variable",
           "isCorrect": true,
           "rationale": "Correct! [Phospholipid Variable Group] Phospholipids typically have a variable organic group (such as choline or serine) attached to their phosphate head."
         },
         {
-          "text": "c.) peptide",
+          "text": "peptide",
           "isCorrect": false,
           "rationale": "Incorrect. 'peptide' is a distractor. The correct answer is 'variable'."
         },
         {
-          "text": "d.) monomer",
+          "text": "monomer",
           "isCorrect": false,
           "rationale": "Incorrect. 'monomer' is a distractor. The correct answer is 'variable'."
         }
@@ -2371,22 +2371,22 @@
       "question": "_____ 92. Molecules that possess both hydrophobic (water-repelling) and hydrophilic (water-loving) regions are described as ____.",
       "answerOptions": [
         {
-          "text": "a.) amphipathic",
+          "text": "amphipathic",
           "isCorrect": true,
           "rationale": "Correct! [Amphipathic Nature] Amphipathic molecules feature dual chemical affinities, having both polar/charged hydrophilic and nonpolar hydrophobic domains."
         },
         {
-          "text": "b.) nonpolar",
+          "text": "nonpolar",
           "isCorrect": false,
           "rationale": "Incorrect. 'nonpolar' is a distractor. The correct answer is 'amphipathic'."
         },
         {
-          "text": "c.) hydrophilic",
+          "text": "hydrophilic",
           "isCorrect": false,
           "rationale": "Incorrect. 'hydrophilic' is a distractor. The correct answer is 'amphipathic'."
         },
         {
-          "text": "d.) hydrophobic",
+          "text": "hydrophobic",
           "isCorrect": false,
           "rationale": "Incorrect. 'hydrophobic' is a distractor. The correct answer is 'amphipathic'."
         }
@@ -2397,22 +2397,22 @@
       "question": "_____ 93. Because phospholipids are amphipathic, they function as fundamental structural components of the ____ membrane.",
       "answerOptions": [
         {
-          "text": "a.) nuclear pore",
+          "text": "nuclear pore",
           "isCorrect": false,
           "rationale": "Incorrect. 'nuclear pore' is a distractor. The correct answer is 'plasma'."
         },
         {
-          "text": "b.) cell wall",
+          "text": "cell wall",
           "isCorrect": false,
           "rationale": "Incorrect. 'cell wall' is a distractor. The correct answer is 'plasma'."
         },
         {
-          "text": "c.) plasma",
+          "text": "plasma",
           "isCorrect": true,
           "rationale": "Correct! [Plasma Membrane Phospholipids] The amphipathic nature of phospholipids drives them to self-assemble into the lipid bilayer of cellular plasma membranes."
         },
         {
-          "text": "d.) ribosome",
+          "text": "ribosome",
           "isCorrect": false,
           "rationale": "Incorrect. 'ribosome' is a distractor. The correct answer is 'plasma'."
         }
@@ -2423,22 +2423,22 @@
       "question": "_____ 94. Steroids are a distinctive class of lipids whose core molecular structure is composed of ____ carbon rings.",
       "answerOptions": [
         {
-          "text": "a.) three",
+          "text": "three",
           "isCorrect": false,
           "rationale": "Incorrect. 'three' is a distractor. The correct answer is 'four'."
         },
         {
-          "text": "b.) two",
+          "text": "two",
           "isCorrect": false,
           "rationale": "Incorrect. 'two' is a distractor. The correct answer is 'four'."
         },
         {
-          "text": "c.) six",
+          "text": "six",
           "isCorrect": false,
           "rationale": "Incorrect. 'six' is a distractor. The correct answer is 'four'."
         },
         {
-          "text": "d.) four",
+          "text": "four",
           "isCorrect": true,
           "rationale": "Correct! [Steroid Ring Structure] Steroids are characterized by a fused carbon skeleton consisting of four interconnected rings (three six-carbon rings and one five-carbon ring)."
         }
@@ -2449,22 +2449,22 @@
       "question": "_____ 95. In steroid molecular architecture, specific parts of the four carbon rings are attached to ____ molecules.",
       "answerOptions": [
         {
-          "text": "a.) glycerol",
+          "text": "glycerol",
           "isCorrect": false,
           "rationale": "Incorrect. 'glycerol' is a distractor. The correct answer is 'variable'."
         },
         {
-          "text": "b.) nucleotide",
+          "text": "nucleotide",
           "isCorrect": false,
           "rationale": "Incorrect. 'nucleotide' is a distractor. The correct answer is 'variable'."
         },
         {
-          "text": "c.) polypeptide",
+          "text": "polypeptide",
           "isCorrect": false,
           "rationale": "Incorrect. 'polypeptide' is a distractor. The correct answer is 'variable'."
         },
         {
-          "text": "d.) variable",
+          "text": "variable",
           "isCorrect": true,
           "rationale": "Correct! [Steroid Variable Molecules] Different steroids vary according to the specific variable chemical groups attached to their core four carbon rings."
         }
@@ -2475,22 +2475,22 @@
       "question": "_____ 96. The essential steroid that is an integral component of the plasma membrane and serves as the precursor for other steroid hormones is ____.",
       "answerOptions": [
         {
-          "text": "a.) insulin",
+          "text": "insulin",
           "isCorrect": false,
           "rationale": "Incorrect. 'insulin' is a distractor. The correct answer is 'cholesterol'."
         },
         {
-          "text": "b.) cholesterol",
+          "text": "cholesterol",
           "isCorrect": true,
           "rationale": "Correct! [Cholesterol] Cholesterol stabilizes the fluidity of cell membranes and acts as the biosynthetic foundation for steroid hormones."
         },
         {
-          "text": "c.) triglyceride",
+          "text": "triglyceride",
           "isCorrect": false,
           "rationale": "Incorrect. 'triglyceride' is a distractor. The correct answer is 'cholesterol'."
         },
         {
-          "text": "d.) glycogen",
+          "text": "glycogen",
           "isCorrect": false,
           "rationale": "Incorrect. 'glycogen' is a distractor. The correct answer is 'cholesterol'."
         }
@@ -2501,22 +2501,22 @@
       "question": "_____ 97. Cholesterol serves as the biochemical foundation for synthesizing essential steroid hormones such as testosterone and ____.",
       "answerOptions": [
         {
-          "text": "a.) adrenaline",
+          "text": "adrenaline",
           "isCorrect": false,
           "rationale": "Incorrect. 'adrenaline' is a distractor. The correct answer is 'estrogen'."
         },
         {
-          "text": "b.) thyroxine",
+          "text": "thyroxine",
           "isCorrect": false,
           "rationale": "Incorrect. 'thyroxine' is a distractor. The correct answer is 'estrogen'."
         },
         {
-          "text": "c.) insulin",
+          "text": "insulin",
           "isCorrect": false,
           "rationale": "Incorrect. 'insulin' is a distractor. The correct answer is 'estrogen'."
         },
         {
-          "text": "d.) estrogen",
+          "text": "estrogen",
           "isCorrect": true,
           "rationale": "Correct! [Steroid Hormones] Steroid hormones, including estrogen, progesterone, and testosterone, are synthesized biochemically from cholesterol."
         }
@@ -2527,22 +2527,22 @@
       "question": "_____ 98. Polymers comprised from a selection of 20 different building blocks linked together to form chains are ____.",
       "answerOptions": [
         {
-          "text": "a.) polysaccharides",
+          "text": "polysaccharides",
           "isCorrect": false,
           "rationale": "Incorrect. 'polysaccharides' is a distractor. The correct answer is 'proteins'."
         },
         {
-          "text": "b.) lipids",
+          "text": "lipids",
           "isCorrect": false,
           "rationale": "Incorrect. 'lipids' is a distractor. The correct answer is 'proteins'."
         },
         {
-          "text": "c.) proteins",
+          "text": "proteins",
           "isCorrect": true,
           "rationale": "Correct! [Proteins Overview] Proteins are complex macromolecules assembled from chains of 20 standard amino acid monomers."
         },
         {
-          "text": "d.) nucleic acids",
+          "text": "nucleic acids",
           "isCorrect": false,
           "rationale": "Incorrect. 'nucleic acids' is a distractor. The correct answer is 'proteins'."
         }
@@ -2553,22 +2553,22 @@
       "question": "_____ 99. The fundamental monomeric building block of all proteins is the ____.",
       "answerOptions": [
         {
-          "text": "a.) fatty acid",
+          "text": "fatty acid",
           "isCorrect": false,
           "rationale": "Incorrect. 'fatty acid' is a distractor. The correct answer is 'amino acid'."
         },
         {
-          "text": "b.) amino acid",
+          "text": "amino acid",
           "isCorrect": true,
           "rationale": "Correct! [Amino Acids] Amino acids are the building blocks that polymerize to form polypeptide chains and functional proteins."
         },
         {
-          "text": "c.) nucleotide",
+          "text": "nucleotide",
           "isCorrect": false,
           "rationale": "Incorrect. 'nucleotide' is a distractor. The correct answer is 'amino acid'."
         },
         {
-          "text": "d.) monosaccharide",
+          "text": "monosaccharide",
           "isCorrect": false,
           "rationale": "Incorrect. 'monosaccharide' is a distractor. The correct answer is 'amino acid'."
         }
@@ -2579,22 +2579,22 @@
       "question": "_____ 100. Every amino acid is structured around a central ____ atom bound to a hydrogen atom, an amino group, a carboxyl group, and a side chain.",
       "answerOptions": [
         {
-          "text": "a.) carbon",
+          "text": "carbon",
           "isCorrect": true,
           "rationale": "Correct! [Central Carbon Atom] An amino acid features a central alpha-carbon (C) atom to which all its functional groups attach."
         },
         {
-          "text": "b.) nitrogen",
+          "text": "nitrogen",
           "isCorrect": false,
           "rationale": "Incorrect. 'nitrogen' is a distractor. The correct answer is 'carbon'."
         },
         {
-          "text": "c.) phosphorus",
+          "text": "phosphorus",
           "isCorrect": false,
           "rationale": "Incorrect. 'phosphorus' is a distractor. The correct answer is 'carbon'."
         },
         {
-          "text": "d.) oxygen",
+          "text": "oxygen",
           "isCorrect": false,
           "rationale": "Incorrect. 'oxygen' is a distractor. The correct answer is 'carbon'."
         }
@@ -2605,22 +2605,22 @@
       "question": "_____ 101. In an amino acid, the functional group containing nitrogen bound to hydrogens (-NH2) is the ____ group.",
       "answerOptions": [
         {
-          "text": "a.) carboxyl",
+          "text": "carboxyl",
           "isCorrect": false,
           "rationale": "Incorrect. 'carboxyl' is a distractor. The correct answer is 'amino'."
         },
         {
-          "text": "b.) hydroxyl",
+          "text": "hydroxyl",
           "isCorrect": false,
           "rationale": "Incorrect. 'hydroxyl' is a distractor. The correct answer is 'amino'."
         },
         {
-          "text": "c.) amino",
+          "text": "amino",
           "isCorrect": true,
           "rationale": "Correct! [Amino Group] The amino group (-NH2) is the basic, nitrogen-containing component of an amino acid."
         },
         {
-          "text": "d.) phosphate",
+          "text": "phosphate",
           "isCorrect": false,
           "rationale": "Incorrect. 'phosphate' is a distractor. The correct answer is 'amino'."
         }
@@ -2631,22 +2631,22 @@
       "question": "_____ 102. In an amino acid, the acidic functional group bound to the central carbon is the ____ group.",
       "answerOptions": [
         {
-          "text": "a.) methyl",
+          "text": "methyl",
           "isCorrect": false,
           "rationale": "Incorrect. 'methyl' is a distractor. The correct answer is 'carboxyl'."
         },
         {
-          "text": "b.) phosphate",
+          "text": "phosphate",
           "isCorrect": false,
           "rationale": "Incorrect. 'phosphate' is a distractor. The correct answer is 'carboxyl'."
         },
         {
-          "text": "c.) amino",
+          "text": "amino",
           "isCorrect": false,
           "rationale": "Incorrect. 'amino' is a distractor. The correct answer is 'carboxyl'."
         },
         {
-          "text": "d.) carboxyl",
+          "text": "carboxyl",
           "isCorrect": true,
           "rationale": "Correct! [Carboxyl Group] The carboxyl group (-COOH) is the acidic chemical moiety bound to the alpha-carbon of amino acids."
         }
@@ -2657,22 +2657,22 @@
       "question": "_____ 103. The specific part of an amino acid molecule that differentiates it from all other amino acids is the ____.",
       "answerOptions": [
         {
-          "text": "a.) side chain",
+          "text": "side chain",
           "isCorrect": true,
           "rationale": "Correct! [Side Chain (R Group)] The side chain (R-group) is the unique variable group that confers distinctive chemical properties to each of the 20 amino acids."
         },
         {
-          "text": "b.) central carbon",
+          "text": "central carbon",
           "isCorrect": false,
           "rationale": "Incorrect. 'central carbon' is a distractor. The correct answer is 'side chain'."
         },
         {
-          "text": "c.) amino group",
+          "text": "amino group",
           "isCorrect": false,
           "rationale": "Incorrect. 'amino group' is a distractor. The correct answer is 'side chain'."
         },
         {
-          "text": "d.) carboxyl group",
+          "text": "carboxyl group",
           "isCorrect": false,
           "rationale": "Incorrect. 'carboxyl group' is a distractor. The correct answer is 'side chain'."
         }
@@ -2683,22 +2683,22 @@
       "question": "_____ 104. Amino acids are classified into essential and non-essential based on the ability of the ____ to produce it.",
       "answerOptions": [
         {
-          "text": "a.) climate",
+          "text": "climate",
           "isCorrect": false,
           "rationale": "Incorrect. 'climate' is a distractor. The correct answer is 'body'."
         },
         {
-          "text": "b.) body",
+          "text": "body",
           "isCorrect": true,
           "rationale": "Correct! [Amino Acid Classification Basis] Amino acids are categorized based on whether the human body possesses the metabolic pathways to synthesize them."
         },
         {
-          "text": "c.) diet",
+          "text": "diet",
           "isCorrect": false,
           "rationale": "Incorrect. 'diet' is a distractor. The correct answer is 'body'."
         },
         {
-          "text": "d.) bacteria",
+          "text": "bacteria",
           "isCorrect": false,
           "rationale": "Incorrect. 'bacteria' is a distractor. The correct answer is 'body'."
         }
@@ -2709,22 +2709,22 @@
       "question": "_____ 105. Amino acids that can be produced endogenously by the human body through glucose synthesis are classified as ____ amino acids.",
       "answerOptions": [
         {
-          "text": "a.) non-essential",
+          "text": "non-essential",
           "isCorrect": true,
           "rationale": "Correct! [Non-Essential Amino Acids] Non-essential amino acids are those that the human body can synthesize internally, so they are not strictly required in the diet."
         },
         {
-          "text": "b.) dietary",
+          "text": "dietary",
           "isCorrect": false,
           "rationale": "Incorrect. 'dietary' is a distractor. The correct answer is 'non-essential'."
         },
         {
-          "text": "c.) essential",
+          "text": "essential",
           "isCorrect": false,
           "rationale": "Incorrect. 'essential' is a distractor. The correct answer is 'non-essential'."
         },
         {
-          "text": "d.) exogenous",
+          "text": "exogenous",
           "isCorrect": false,
           "rationale": "Incorrect. 'exogenous' is a distractor. The correct answer is 'non-essential'."
         }
@@ -2735,22 +2735,22 @@
       "question": "_____ 106. The human body is able to produce non-essential amino acids endogenously through the synthesis of ____.",
       "answerOptions": [
         {
-          "text": "a.) nucleotides",
+          "text": "nucleotides",
           "isCorrect": false,
           "rationale": "Incorrect. 'nucleotides' is a distractor. The correct answer is 'glucose'."
         },
         {
-          "text": "b.) glucose",
+          "text": "glucose",
           "isCorrect": true,
           "rationale": "Correct! [Glucose Synthesis of Amino Acids] Non-essential amino acids are biosynthesized using carbon skeletons derived from glucose metabolism."
         },
         {
-          "text": "c.) fats",
+          "text": "fats",
           "isCorrect": false,
           "rationale": "Incorrect. 'fats' is a distractor. The correct answer is 'glucose'."
         },
         {
-          "text": "d.) steroids",
+          "text": "steroids",
           "isCorrect": false,
           "rationale": "Incorrect. 'steroids' is a distractor. The correct answer is 'glucose'."
         }
@@ -2761,22 +2761,22 @@
       "question": "_____ 107. Out of the 20 standard amino acids, there are ____ non-essential amino acids that the body can synthesize.",
       "answerOptions": [
         {
-          "text": "a.) 11",
+          "text": "11",
           "isCorrect": true,
           "rationale": "Correct! [Count of Non-Essential Amino Acids] There are 11 non-essential amino acids (alanine, arginine, asparagine, aspartic acid, cysteine, glutamic acid, glutamine, glycine, proline, serine, and tyrosine)."
         },
         {
-          "text": "b.) 4",
+          "text": "4",
           "isCorrect": false,
           "rationale": "Incorrect. '4' is a distractor. The correct answer is '11'."
         },
         {
-          "text": "c.) 9",
+          "text": "9",
           "isCorrect": false,
           "rationale": "Incorrect. '9' is a distractor. The correct answer is '11'."
         },
         {
-          "text": "d.) 20",
+          "text": "20",
           "isCorrect": false,
           "rationale": "Incorrect. '20' is a distractor. The correct answer is '11'."
         }
@@ -2787,22 +2787,22 @@
       "question": "_____ 108. Which of the following is an amino acid explicitly classified in the lecture notes as a non-essential amino acid?",
       "answerOptions": [
         {
-          "text": "a.) alanine",
+          "text": "alanine",
           "isCorrect": true,
           "rationale": "Correct! [Non-Essential Amino Acid Example] Alanine is one of the 11 non-essential amino acids synthesized by the human body."
         },
         {
-          "text": "b.) valine",
+          "text": "valine",
           "isCorrect": false,
           "rationale": "Incorrect. 'valine' is a distractor. The correct answer is 'alanine'."
         },
         {
-          "text": "c.) leucine",
+          "text": "leucine",
           "isCorrect": false,
           "rationale": "Incorrect. 'leucine' is a distractor. The correct answer is 'alanine'."
         },
         {
-          "text": "d.) histidine",
+          "text": "histidine",
           "isCorrect": false,
           "rationale": "Incorrect. 'histidine' is a distractor. The correct answer is 'alanine'."
         }
@@ -2813,22 +2813,22 @@
       "question": "_____ 109. Amino acids that cannot be produced by the body and must be supplied through dietary food intake are ____ amino acids.",
       "answerOptions": [
         {
-          "text": "a.) endogenous",
+          "text": "endogenous",
           "isCorrect": false,
           "rationale": "Incorrect. 'endogenous' is a distractor. The correct answer is 'essential'."
         },
         {
-          "text": "b.) synthetic",
+          "text": "synthetic",
           "isCorrect": false,
           "rationale": "Incorrect. 'synthetic' is a distractor. The correct answer is 'essential'."
         },
         {
-          "text": "c.) non-essential",
+          "text": "non-essential",
           "isCorrect": false,
           "rationale": "Incorrect. 'non-essential' is a distractor. The correct answer is 'essential'."
         },
         {
-          "text": "d.) essential",
+          "text": "essential",
           "isCorrect": true,
           "rationale": "Correct! [Essential Amino Acids] Essential amino acids cannot be synthesized by human cells and must be obtained from food."
         }
@@ -2839,22 +2839,22 @@
       "question": "_____ 110. There are ____ essential amino acids that must be obtained from dietary sources.",
       "answerOptions": [
         {
-          "text": "a.) 20",
+          "text": "20",
           "isCorrect": false,
           "rationale": "Incorrect. '20' is a distractor. The correct answer is '9'."
         },
         {
-          "text": "b.) 9",
+          "text": "9",
           "isCorrect": true,
           "rationale": "Correct! [Count of Essential Amino Acids] There are 9 essential amino acids: histidine, isoleucine, leucine, lysine, methionine, phenylalanine, threonine, tryptophan, and valine."
         },
         {
-          "text": "c.) 11",
+          "text": "11",
           "isCorrect": false,
           "rationale": "Incorrect. '11' is a distractor. The correct answer is '9'."
         },
         {
-          "text": "d.) 5",
+          "text": "5",
           "isCorrect": false,
           "rationale": "Incorrect. '5' is a distractor. The correct answer is '9'."
         }
@@ -2865,22 +2865,22 @@
       "question": "_____ 111. Essential amino acids must be consumed through dietary sources like fish, poultry, egg, and ____.",
       "answerOptions": [
         {
-          "text": "a.) starch",
+          "text": "starch",
           "isCorrect": false,
           "rationale": "Incorrect. 'starch' is a distractor. The correct answer is 'meat'."
         },
         {
-          "text": "b.) cellulose",
+          "text": "cellulose",
           "isCorrect": false,
           "rationale": "Incorrect. 'cellulose' is a distractor. The correct answer is 'meat'."
         },
         {
-          "text": "c.) sugar",
+          "text": "sugar",
           "isCorrect": false,
           "rationale": "Incorrect. 'sugar' is a distractor. The correct answer is 'meat'."
         },
         {
-          "text": "d.) meat",
+          "text": "meat",
           "isCorrect": true,
           "rationale": "Correct! [Dietary Sources of Essential Amino Acids] Complete dietary protein sources rich in essential amino acids include meat, poultry, fish, and eggs."
         }
@@ -2891,22 +2891,22 @@
       "question": "_____ 112. Which of the following is an amino acid explicitly classified in the lecture notes as an essential amino acid?",
       "answerOptions": [
         {
-          "text": "a.) valine",
+          "text": "valine",
           "isCorrect": true,
           "rationale": "Correct! [Essential Amino Acid Example] Valine is one of the 9 essential amino acids that must be acquired through the diet."
         },
         {
-          "text": "b.) alanine",
+          "text": "alanine",
           "isCorrect": false,
           "rationale": "Incorrect. 'alanine' is a distractor. The correct answer is 'valine'."
         },
         {
-          "text": "c.) glycine",
+          "text": "glycine",
           "isCorrect": false,
           "rationale": "Incorrect. 'glycine' is a distractor. The correct answer is 'valine'."
         },
         {
-          "text": "d.) serine",
+          "text": "serine",
           "isCorrect": false,
           "rationale": "Incorrect. 'serine' is a distractor. The correct answer is 'valine'."
         }
@@ -2917,22 +2917,22 @@
       "question": "_____ 113. Proteins exhibit structural organization categorized into ____ hierarchical levels.",
       "answerOptions": [
         {
-          "text": "a.) five",
+          "text": "five",
           "isCorrect": false,
           "rationale": "Incorrect. 'five' is a distractor. The correct answer is 'four'."
         },
         {
-          "text": "b.) three",
+          "text": "three",
           "isCorrect": false,
           "rationale": "Incorrect. 'three' is a distractor. The correct answer is 'four'."
         },
         {
-          "text": "c.) four",
+          "text": "four",
           "isCorrect": true,
           "rationale": "Correct! [Four Levels of Protein Structure] Protein structure is organized into four levels: primary, secondary, tertiary, and quaternary."
         },
         {
-          "text": "d.) two",
+          "text": "two",
           "isCorrect": false,
           "rationale": "Incorrect. 'two' is a distractor. The correct answer is 'four'."
         }
@@ -2943,22 +2943,22 @@
       "question": "_____ 114. The specific, linear sequence of amino acids in a polypeptide chain constitutes a protein's ____ structure.",
       "answerOptions": [
         {
-          "text": "a.) tertiary",
+          "text": "tertiary",
           "isCorrect": false,
           "rationale": "Incorrect. 'tertiary' is a distractor. The correct answer is 'primary'."
         },
         {
-          "text": "b.) primary",
+          "text": "primary",
           "isCorrect": true,
           "rationale": "Correct! [Primary Protein Structure] Primary structure is the unique linear sequence of covalently linked amino acids in a polypeptide."
         },
         {
-          "text": "c.) secondary",
+          "text": "secondary",
           "isCorrect": false,
           "rationale": "Incorrect. 'secondary' is a distractor. The correct answer is 'primary'."
         },
         {
-          "text": "d.) quaternary",
+          "text": "quaternary",
           "isCorrect": false,
           "rationale": "Incorrect. 'quaternary' is a distractor. The correct answer is 'primary'."
         }
@@ -2969,22 +2969,22 @@
       "question": "_____ 115. A specific biological protein cited in the lecture notes as an example of a defined primary structure is ____.",
       "answerOptions": [
         {
-          "text": "a.) hemoglobin",
+          "text": "hemoglobin",
           "isCorrect": false,
           "rationale": "Incorrect. 'hemoglobin' is a distractor. The correct answer is 'insulin'."
         },
         {
-          "text": "b.) insulin",
+          "text": "insulin",
           "isCorrect": true,
           "rationale": "Correct! [Insulin Primary Structure] Insulin is the classic hormone referenced for its precisely sequenced primary chain of amino acids."
         },
         {
-          "text": "c.) cellulose",
+          "text": "cellulose",
           "isCorrect": false,
           "rationale": "Incorrect. 'cellulose' is a distractor. The correct answer is 'insulin'."
         },
         {
-          "text": "d.) DNA polymerase",
+          "text": "DNA polymerase",
           "isCorrect": false,
           "rationale": "Incorrect. 'DNA polymerase' is a distractor. The correct answer is 'insulin'."
         }
@@ -2995,22 +2995,22 @@
       "question": "_____ 116. The structural level resulting from the localized bending and coiling of an amino acid chain into pleated sheets or helices is the ____ structure.",
       "answerOptions": [
         {
-          "text": "a.) quaternary",
+          "text": "quaternary",
           "isCorrect": false,
           "rationale": "Incorrect. 'quaternary' is a distractor. The correct answer is 'secondary'."
         },
         {
-          "text": "b.) primary",
+          "text": "primary",
           "isCorrect": false,
           "rationale": "Incorrect. 'primary' is a distractor. The correct answer is 'secondary'."
         },
         {
-          "text": "c.) secondary",
+          "text": "secondary",
           "isCorrect": true,
           "rationale": "Correct! [Secondary Protein Structure] Secondary structure results from hydrogen bonding along the polypeptide backbone, creating alpha-helices and beta-pleated sheets."
         },
         {
-          "text": "d.) tertiary",
+          "text": "tertiary",
           "isCorrect": false,
           "rationale": "Incorrect. 'tertiary' is a distractor. The correct answer is 'secondary'."
         }
@@ -3021,22 +3021,22 @@
       "question": "_____ 117. Secondary protein structure results from polypeptide chains bending and coiling into either helices or ____ sheets.",
       "answerOptions": [
         {
-          "text": "a.) amphipathic",
+          "text": "amphipathic",
           "isCorrect": false,
           "rationale": "Incorrect. 'amphipathic' is a distractor. The correct answer is 'pleated'."
         },
         {
-          "text": "b.) globular",
+          "text": "globular",
           "isCorrect": false,
           "rationale": "Incorrect. 'globular' is a distractor. The correct answer is 'pleated'."
         },
         {
-          "text": "c.) pleated",
+          "text": "pleated",
           "isCorrect": true,
           "rationale": "Correct! [Pleated Sheets] The two predominant secondary conformations are alpha-helices and beta-pleated sheets."
         },
         {
-          "text": "d.) variable",
+          "text": "variable",
           "isCorrect": false,
           "rationale": "Incorrect. 'variable' is a distractor. The correct answer is 'pleated'."
         }
@@ -3047,22 +3047,22 @@
       "question": "_____ 118. In the study of secondary protein structure, helices and pleated sheets are associated with amino acid derivatives including proline, hydroxyproline, sarcosine, and ____ acid.",
       "answerOptions": [
         {
-          "text": "a.) pipecolic",
+          "text": "pipecolic",
           "isCorrect": true,
           "rationale": "Correct! [Pipecolic Acid in Secondary Structure] The lecture text explicitly associates secondary structural bending and coiling with proline, hydroxyproline, pipecolic acid, and sarcosine."
         },
         {
-          "text": "b.) citric",
+          "text": "citric",
           "isCorrect": false,
           "rationale": "Incorrect. 'citric' is a distractor. The correct answer is 'pipecolic'."
         },
         {
-          "text": "c.) glutamic",
+          "text": "glutamic",
           "isCorrect": false,
           "rationale": "Incorrect. 'glutamic' is a distractor. The correct answer is 'pipecolic'."
         },
         {
-          "text": "d.) aspartic",
+          "text": "aspartic",
           "isCorrect": false,
           "rationale": "Incorrect. 'aspartic' is a distractor. The correct answer is 'pipecolic'."
         }
@@ -3073,22 +3073,22 @@
       "question": "_____ 119. Proline, hydroxyproline, pipecolic acid, and sarcosine are specifically noted in the text in relation to ____ protein structure.",
       "answerOptions": [
         {
-          "text": "a.) primary",
+          "text": "primary",
           "isCorrect": false,
           "rationale": "Incorrect. 'primary' is a distractor. The correct answer is 'secondary'."
         },
         {
-          "text": "b.) quaternary",
+          "text": "quaternary",
           "isCorrect": false,
           "rationale": "Incorrect. 'quaternary' is a distractor. The correct answer is 'secondary'."
         },
         {
-          "text": "c.) secondary",
+          "text": "secondary",
           "isCorrect": true,
           "rationale": "Correct! [Secondary Structure Amino Acids] These specific imino and amino acid residues influence the formation of secondary structural helices and sheets."
         },
         {
-          "text": "d.) tertiary",
+          "text": "tertiary",
           "isCorrect": false,
           "rationale": "Incorrect. 'tertiary' is a distractor. The correct answer is 'secondary'."
         }
@@ -3099,22 +3099,22 @@
       "question": "_____ 120. The overall three-dimensional shape of a single folded protein chain is its ____ structure.",
       "answerOptions": [
         {
-          "text": "a.) primary",
+          "text": "primary",
           "isCorrect": false,
           "rationale": "Incorrect. 'primary' is a distractor. The correct answer is 'tertiary'."
         },
         {
-          "text": "b.) quaternary",
+          "text": "quaternary",
           "isCorrect": false,
           "rationale": "Incorrect. 'quaternary' is a distractor. The correct answer is 'tertiary'."
         },
         {
-          "text": "c.) tertiary",
+          "text": "tertiary",
           "isCorrect": true,
           "rationale": "Correct! [Tertiary Protein Structure] Tertiary structure represents the complete 3D spatial conformation of a folded polypeptide chain."
         },
         {
-          "text": "d.) secondary",
+          "text": "secondary",
           "isCorrect": false,
           "rationale": "Incorrect. 'secondary' is a distractor. The correct answer is 'tertiary'."
         }
@@ -3125,22 +3125,22 @@
       "question": "_____ 121. Tertiary protein structure is functionally observed in transport proteins and ____.",
       "answerOptions": [
         {
-          "text": "a.) monosaccharides",
+          "text": "monosaccharides",
           "isCorrect": false,
           "rationale": "Incorrect. 'monosaccharides' is a distractor. The correct answer is 'enzymes'."
         },
         {
-          "text": "b.) enzymes",
+          "text": "enzymes",
           "isCorrect": true,
           "rationale": "Correct! [Tertiary Structure Examples] Enzymes and membrane transport proteins rely on precise tertiary three-dimensional conformations to perform their functions."
         },
         {
-          "text": "c.) steroids",
+          "text": "steroids",
           "isCorrect": false,
           "rationale": "Incorrect. 'steroids' is a distractor. The correct answer is 'enzymes'."
         },
         {
-          "text": "d.) triglycerides",
+          "text": "triglycerides",
           "isCorrect": false,
           "rationale": "Incorrect. 'triglycerides' is a distractor. The correct answer is 'enzymes'."
         }
@@ -3151,22 +3151,22 @@
       "question": "_____ 122. Proteins that facilitate movement across membranes and exhibit characteristic three-dimensional tertiary shapes include enzymes and ____ proteins.",
       "answerOptions": [
         {
-          "text": "a.) fibrous",
+          "text": "fibrous",
           "isCorrect": false,
           "rationale": "Incorrect. 'fibrous' is a distractor. The correct answer is 'transport'."
         },
         {
-          "text": "b.) structural",
+          "text": "structural",
           "isCorrect": false,
           "rationale": "Incorrect. 'structural' is a distractor. The correct answer is 'transport'."
         },
         {
-          "text": "c.) transport",
+          "text": "transport",
           "isCorrect": true,
           "rationale": "Correct! [Transport Proteins] Transport proteins possess specific 3D tertiary conformations allowing them to shuttle solutes across membranes."
         },
         {
-          "text": "d.) storage",
+          "text": "storage",
           "isCorrect": false,
           "rationale": "Incorrect. 'storage' is a distractor. The correct answer is 'transport'."
         }
@@ -3177,22 +3177,22 @@
       "question": "_____ 123. The complex protein structure produced when attractive forces link multiple polypeptide chains (subunits) together is ____ structure.",
       "answerOptions": [
         {
-          "text": "a.) tertiary",
+          "text": "tertiary",
           "isCorrect": false,
           "rationale": "Incorrect. 'tertiary' is a distractor. The correct answer is 'quaternary'."
         },
         {
-          "text": "b.) secondary",
+          "text": "secondary",
           "isCorrect": false,
           "rationale": "Incorrect. 'secondary' is a distractor. The correct answer is 'quaternary'."
         },
         {
-          "text": "c.) quaternary",
+          "text": "quaternary",
           "isCorrect": true,
           "rationale": "Correct! [Quaternary Protein Structure] Quaternary structure is formed when two or more polypeptide subunits associate into a multi-subunit functional complex."
         },
         {
-          "text": "d.) primary",
+          "text": "primary",
           "isCorrect": false,
           "rationale": "Incorrect. 'primary' is a distractor. The correct answer is 'quaternary'."
         }
@@ -3203,22 +3203,22 @@
       "question": "_____ 124. Quaternary protein structure is distinguished by being comprised of multiple ____ chains.",
       "answerOptions": [
         {
-          "text": "a.) polysaccharide",
+          "text": "polysaccharide",
           "isCorrect": false,
           "rationale": "Incorrect. 'polysaccharide' is a distractor. The correct answer is 'polypeptide'."
         },
         {
-          "text": "b.) monosaccharide",
+          "text": "monosaccharide",
           "isCorrect": false,
           "rationale": "Incorrect. 'monosaccharide' is a distractor. The correct answer is 'polypeptide'."
         },
         {
-          "text": "c.) fatty acid",
+          "text": "fatty acid",
           "isCorrect": false,
           "rationale": "Incorrect. 'fatty acid' is a distractor. The correct answer is 'polypeptide'."
         },
         {
-          "text": "d.) polypeptide",
+          "text": "polypeptide",
           "isCorrect": true,
           "rationale": "Correct! [Polypeptide Subunits] Quaternary proteins consist of two or more independent polypeptide chains joined by non-covalent or covalent bonds."
         }
@@ -3229,22 +3229,22 @@
       "question": "_____ 125. The oxygen-binding protein in red blood cells that is cited as a classic example of quaternary structure is ____.",
       "answerOptions": [
         {
-          "text": "a.) collagen",
+          "text": "collagen",
           "isCorrect": false,
           "rationale": "Incorrect. 'collagen' is a distractor. The correct answer is 'hemoglobin'."
         },
         {
-          "text": "b.) hemoglobin",
+          "text": "hemoglobin",
           "isCorrect": true,
           "rationale": "Correct! [Hemoglobin Quaternary Structure] Hemoglobin is composed of four polypeptide subunits (two alpha and two beta chains), exhibiting quaternary structure."
         },
         {
-          "text": "c.) insulin",
+          "text": "insulin",
           "isCorrect": false,
           "rationale": "Incorrect. 'insulin' is a distractor. The correct answer is 'hemoglobin'."
         },
         {
-          "text": "d.) myoglobin",
+          "text": "myoglobin",
           "isCorrect": false,
           "rationale": "Incorrect. 'myoglobin' is a distractor. The correct answer is 'hemoglobin'."
         }
@@ -3255,22 +3255,22 @@
       "question": "_____ 126. The multi-subunit enzyme responsible for synthesizing new DNA strands, cited as an example of quaternary structure, is ____.",
       "answerOptions": [
         {
-          "text": "a.) lactase",
+          "text": "lactase",
           "isCorrect": false,
           "rationale": "Incorrect. 'lactase' is a distractor. The correct answer is 'DNA polymerase'."
         },
         {
-          "text": "b.) ribonuclease",
+          "text": "ribonuclease",
           "isCorrect": false,
           "rationale": "Incorrect. 'ribonuclease' is a distractor. The correct answer is 'DNA polymerase'."
         },
         {
-          "text": "c.) DNA polymerase",
+          "text": "DNA polymerase",
           "isCorrect": true,
           "rationale": "Correct! [DNA Polymerase Quaternary Structure] DNA polymerase is a complex multi-subunit holoenzyme with quaternary structure."
         },
         {
-          "text": "d.) pepsin",
+          "text": "pepsin",
           "isCorrect": false,
           "rationale": "Incorrect. 'pepsin' is a distractor. The correct answer is 'DNA polymerase'."
         }
@@ -3281,22 +3281,22 @@
       "question": "_____ 127. Transmembrane protein assemblies that regulate electrical potential and ion passage, cited as an example of quaternary structure, are ____.",
       "answerOptions": [
         {
-          "text": "a.) chitin fibers",
+          "text": "chitin fibers",
           "isCorrect": false,
           "rationale": "Incorrect. 'chitin fibers' is a distractor. The correct answer is 'ion channels'."
         },
         {
-          "text": "b.) phospholipids",
+          "text": "phospholipids",
           "isCorrect": false,
           "rationale": "Incorrect. 'phospholipids' is a distractor. The correct answer is 'ion channels'."
         },
         {
-          "text": "c.) steroid receptors",
+          "text": "steroid receptors",
           "isCorrect": false,
           "rationale": "Incorrect. 'steroid receptors' is a distractor. The correct answer is 'ion channels'."
         },
         {
-          "text": "d.) ion channels",
+          "text": "ion channels",
           "isCorrect": true,
           "rationale": "Correct! [Ion Channels Quaternary Structure] Ion channels are multi-subunit protein complexes that span biological membranes, exemplifying quaternary architecture."
         }
@@ -3307,22 +3307,22 @@
       "question": "_____ 128. Proteins that act as biological catalysts by speeding up chemical reactions without being consumed in the process are ____.",
       "answerOptions": [
         {
-          "text": "a.) antibodies",
+          "text": "antibodies",
           "isCorrect": false,
           "rationale": "Incorrect. 'antibodies' is a distractor. The correct answer is 'enzymes'."
         },
         {
-          "text": "b.) hormones",
+          "text": "hormones",
           "isCorrect": false,
           "rationale": "Incorrect. 'hormones' is a distractor. The correct answer is 'enzymes'."
         },
         {
-          "text": "c.) enzymes",
+          "text": "enzymes",
           "isCorrect": true,
           "rationale": "Correct! [Enzymes as Biological Catalysts] Enzymes are protein catalysts that accelerate biochemical reactions by lowering activation energy, remaining unaltered after the reaction."
         },
         {
-          "text": "d.) receptors",
+          "text": "receptors",
           "isCorrect": false,
           "rationale": "Incorrect. 'receptors' is a distractor. The correct answer is 'enzymes'."
         }
@@ -3333,22 +3333,22 @@
       "question": "_____ 129. A key defining feature of biological enzymes is that they accelerate reactions without being ____ in the process.",
       "answerOptions": [
         {
-          "text": "a.) consumed",
+          "text": "consumed",
           "isCorrect": true,
           "rationale": "Correct! [Enzymatic Catalysis] Catalysts facilitate chemical reactions without being consumed or permanently altered in the process."
         },
         {
-          "text": "b.) synthesized",
+          "text": "synthesized",
           "isCorrect": false,
           "rationale": "Incorrect. 'synthesized' is a distractor. The correct answer is 'consumed'."
         },
         {
-          "text": "c.) folded",
+          "text": "folded",
           "isCorrect": false,
           "rationale": "Incorrect. 'folded' is a distractor. The correct answer is 'consumed'."
         },
         {
-          "text": "d.) activated",
+          "text": "activated",
           "isCorrect": false,
           "rationale": "Incorrect. 'activated' is a distractor. The correct answer is 'consumed'."
         }
@@ -3359,22 +3359,22 @@
       "question": "_____ 130. The specific chemical reactant molecule upon which an enzyme acts is the ____.",
       "answerOptions": [
         {
-          "text": "a.) substrate",
+          "text": "substrate",
           "isCorrect": true,
           "rationale": "Correct! [Enzyme Substrate] The substrate is the specific reactant molecule that binds to an enzyme to undergo biochemical conversion."
         },
         {
-          "text": "b.) product",
+          "text": "product",
           "isCorrect": false,
           "rationale": "Incorrect. 'product' is a distractor. The correct answer is 'substrate'."
         },
         {
-          "text": "c.) cofactor",
+          "text": "cofactor",
           "isCorrect": false,
           "rationale": "Incorrect. 'cofactor' is a distractor. The correct answer is 'substrate'."
         },
         {
-          "text": "d.) coenzyme",
+          "text": "coenzyme",
           "isCorrect": false,
           "rationale": "Incorrect. 'coenzyme' is a distractor. The correct answer is 'substrate'."
         }
@@ -3385,22 +3385,22 @@
       "question": "_____ 131. The specialized region or binding pocket on an enzyme protein where the substrate binds is the ____ site.",
       "answerOptions": [
         {
-          "text": "a.) active",
+          "text": "active",
           "isCorrect": true,
           "rationale": "Correct! [Enzyme Active Site] The active site is the specialized catalytic pocket on an enzyme where substrate molecules bind."
         },
         {
-          "text": "b.) regulatory",
+          "text": "regulatory",
           "isCorrect": false,
           "rationale": "Incorrect. 'regulatory' is a distractor. The correct answer is 'active'."
         },
         {
-          "text": "c.) variable",
+          "text": "variable",
           "isCorrect": false,
           "rationale": "Incorrect. 'variable' is a distractor. The correct answer is 'active'."
         },
         {
-          "text": "d.) allosteric",
+          "text": "allosteric",
           "isCorrect": false,
           "rationale": "Incorrect. 'allosteric' is a distractor. The correct answer is 'active'."
         }
@@ -3411,22 +3411,22 @@
       "question": "_____ 132. When a substrate binds to the active site of an enzyme, they temporarily form an ____ complex.",
       "answerOptions": [
         {
-          "text": "a.) enzyme–inhibitor",
+          "text": "enzyme–inhibitor",
           "isCorrect": false,
           "rationale": "Incorrect. 'enzyme–inhibitor' is a distractor. The correct answer is 'enzyme–substrate'."
         },
         {
-          "text": "b.) ionic–covalent",
+          "text": "ionic–covalent",
           "isCorrect": false,
           "rationale": "Incorrect. 'ionic–covalent' is a distractor. The correct answer is 'enzyme–substrate'."
         },
         {
-          "text": "c.) enzyme–substrate",
+          "text": "enzyme–substrate",
           "isCorrect": true,
           "rationale": "Correct! [Enzyme–Substrate Complex] Substrate binding to the active site produces a temporary enzyme-substrate intermediate complex."
         },
         {
-          "text": "d.) active–allosteric",
+          "text": "active–allosteric",
           "isCorrect": false,
           "rationale": "Incorrect. 'active–allosteric' is a distractor. The correct answer is 'enzyme–substrate'."
         }
@@ -3437,22 +3437,22 @@
       "question": "_____ 133. Following catalytic conversion within the enzyme-substrate complex, the substrate is transformed into ____ that leave the active site.",
       "answerOptions": [
         {
-          "text": "a.) products",
+          "text": "products",
           "isCorrect": true,
           "rationale": "Correct! [Enzymatic Products] Once catalysis is complete, newly formed products detach and release from the enzyme's active site."
         },
         {
-          "text": "b.) monomers",
+          "text": "monomers",
           "isCorrect": false,
           "rationale": "Incorrect. 'monomers' is a distractor. The correct answer is 'products'."
         },
         {
-          "text": "c.) cofactors",
+          "text": "cofactors",
           "isCorrect": false,
           "rationale": "Incorrect. 'cofactors' is a distractor. The correct answer is 'products'."
         },
         {
-          "text": "d.) reactants",
+          "text": "reactants",
           "isCorrect": false,
           "rationale": "Incorrect. 'reactants' is a distractor. The correct answer is 'products'."
         }
@@ -3463,22 +3463,22 @@
       "question": "_____ 134. Nonprotein chemical substances required by certain enzymes to convert substrate to product are called ____.",
       "answerOptions": [
         {
-          "text": "a.) cofactors",
+          "text": "cofactors",
           "isCorrect": true,
           "rationale": "Correct! [Cofactors] Cofactors are nonprotein helper components (such as metal ions) required by enzymes for catalytic activity."
         },
         {
-          "text": "b.) monomers",
+          "text": "monomers",
           "isCorrect": false,
           "rationale": "Incorrect. 'monomers' is a distractor. The correct answer is 'cofactors'."
         },
         {
-          "text": "c.) polymers",
+          "text": "polymers",
           "isCorrect": false,
           "rationale": "Incorrect. 'polymers' is a distractor. The correct answer is 'cofactors'."
         },
         {
-          "text": "d.) inhibitors",
+          "text": "inhibitors",
           "isCorrect": false,
           "rationale": "Incorrect. 'inhibitors' is a distractor. The correct answer is 'cofactors'."
         }
@@ -3489,22 +3489,22 @@
       "question": "_____ 135. Organic cofactors, such as dietary vitamins, that assist enzymes in performing catalytic functions are specifically called ____.",
       "answerOptions": [
         {
-          "text": "a.) coenzymes",
+          "text": "coenzymes",
           "isCorrect": true,
           "rationale": "Correct! [Coenzymes] Coenzymes are organic cofactors (often derived from vitamins) that assist enzymes in transferring chemical groups."
         },
         {
-          "text": "b.) substrates",
+          "text": "substrates",
           "isCorrect": false,
           "rationale": "Incorrect. 'substrates' is a distractor. The correct answer is 'coenzymes'."
         },
         {
-          "text": "c.) amphipaths",
+          "text": "amphipaths",
           "isCorrect": false,
           "rationale": "Incorrect. 'amphipaths' is a distractor. The correct answer is 'coenzymes'."
         },
         {
-          "text": "d.) isotopes",
+          "text": "isotopes",
           "isCorrect": false,
           "rationale": "Incorrect. 'isotopes' is a distractor. The correct answer is 'coenzymes'."
         }
@@ -3515,22 +3515,22 @@
       "question": "_____ 136. Deoxyribonucleic acid (DNA) and ribonucleic acid (RNA) are polymers composed of repeating subunits called ____.",
       "answerOptions": [
         {
-          "text": "a.) monosaccharides",
+          "text": "monosaccharides",
           "isCorrect": false,
           "rationale": "Incorrect. 'monosaccharides' is a distractor. The correct answer is 'nucleotides'."
         },
         {
-          "text": "b.) amino acids",
+          "text": "amino acids",
           "isCorrect": false,
           "rationale": "Incorrect. 'amino acids' is a distractor. The correct answer is 'nucleotides'."
         },
         {
-          "text": "c.) fatty acids",
+          "text": "fatty acids",
           "isCorrect": false,
           "rationale": "Incorrect. 'fatty acids' is a distractor. The correct answer is 'nucleotides'."
         },
         {
-          "text": "d.) nucleotides",
+          "text": "nucleotides",
           "isCorrect": true,
           "rationale": "Correct! [Nucleic Acids & Nucleotides] DNA and RNA are nucleic acid polymers composed of nucleotide monomer building blocks."
         }
@@ -3541,22 +3541,22 @@
       "question": "_____ 137. A nucleotide consists of a five-carbon sugar, a phosphate group, and one of five ____ bases.",
       "answerOptions": [
         {
-          "text": "a.) carbon-saturated",
+          "text": "carbon-saturated",
           "isCorrect": false,
           "rationale": "Incorrect. 'carbon-saturated' is a distractor. The correct answer is 'nitrogen-containing'."
         },
         {
-          "text": "b.) nitrogen-containing",
+          "text": "nitrogen-containing",
           "isCorrect": true,
           "rationale": "Correct! [Nucleotide Components] Every nucleotide is built from three components: a five-carbon pentose sugar, a phosphate group, and a nitrogenous base."
         },
         {
-          "text": "c.) sulfur-rich",
+          "text": "sulfur-rich",
           "isCorrect": false,
           "rationale": "Incorrect. 'sulfur-rich' is a distractor. The correct answer is 'nitrogen-containing'."
         },
         {
-          "text": "d.) oxygen-free",
+          "text": "oxygen-free",
           "isCorrect": false,
           "rationale": "Incorrect. 'oxygen-free' is a distractor. The correct answer is 'nitrogen-containing'."
         }
@@ -3567,22 +3567,22 @@
       "question": "_____ 138. The pentose sugar present in every nucleotide molecule contains ____ carbon atoms.",
       "answerOptions": [
         {
-          "text": "a.) three",
+          "text": "three",
           "isCorrect": false,
           "rationale": "Incorrect. 'three' is a distractor. The correct answer is 'five'."
         },
         {
-          "text": "b.) six",
+          "text": "six",
           "isCorrect": false,
           "rationale": "Incorrect. 'six' is a distractor. The correct answer is 'five'."
         },
         {
-          "text": "c.) five",
+          "text": "five",
           "isCorrect": true,
           "rationale": "Correct! [Nucleotide Pentose Sugar] Nucleotides always contain a 5-carbon pentose sugar (deoxyribose in DNA, ribose in RNA)."
         },
         {
-          "text": "d.) seven",
+          "text": "seven",
           "isCorrect": false,
           "rationale": "Incorrect. 'seven' is a distractor. The correct answer is 'five'."
         }
@@ -3593,22 +3593,22 @@
       "question": "_____ 139. Stretches of DNA that determine the sequence of amino acids that will assemble into a protein are called a ____.",
       "answerOptions": [
         {
-          "text": "a.) nucleolus",
+          "text": "nucleolus",
           "isCorrect": false,
           "rationale": "Incorrect. 'nucleolus' is a distractor. The correct answer is 'gene'."
         },
         {
-          "text": "b.) ribosome",
+          "text": "ribosome",
           "isCorrect": false,
           "rationale": "Incorrect. 'ribosome' is a distractor. The correct answer is 'gene'."
         },
         {
-          "text": "c.) gene",
+          "text": "gene",
           "isCorrect": true,
           "rationale": "Correct! [Genes] A gene is a functional segment of DNA that encodes the precise amino acid sequence of a polypeptide chain."
         },
         {
-          "text": "d.) codon",
+          "text": "codon",
           "isCorrect": false,
           "rationale": "Incorrect. 'codon' is a distractor. The correct answer is 'gene'."
         }
@@ -3619,22 +3619,22 @@
       "question": "_____ 140. A gene consists of a stretch of DNA that encodes instructions to determine the sequence of ____ in a protein.",
       "answerOptions": [
         {
-          "text": "a.) monosaccharides",
+          "text": "monosaccharides",
           "isCorrect": false,
           "rationale": "Incorrect. 'monosaccharides' is a distractor. The correct answer is 'amino acids'."
         },
         {
-          "text": "b.) fatty acids",
+          "text": "fatty acids",
           "isCorrect": false,
           "rationale": "Incorrect. 'fatty acids' is a distractor. The correct answer is 'amino acids'."
         },
         {
-          "text": "c.) amino acids",
+          "text": "amino acids",
           "isCorrect": true,
           "rationale": "Correct! [Genetic Code for Amino Acids] Genes encode genetic information that translates into the primary sequence of amino acids during protein synthesis."
         },
         {
-          "text": "d.) nucleotides",
+          "text": "nucleotides",
           "isCorrect": false,
           "rationale": "Incorrect. 'nucleotides' is a distractor. The correct answer is 'amino acids'."
         }
@@ -3645,22 +3645,22 @@
       "question": "_____ 141. DNA and RNA are biochemically distinguished from each other by their structure, nitrogen-containing bases, and ____ component.",
       "answerOptions": [
         {
-          "text": "a.) sugar",
+          "text": "sugar",
           "isCorrect": true,
           "rationale": "Correct! [DNA vs RNA Distinctions] DNA and RNA are distinguished by their strandedness (structure), their pentose sugar (deoxyribose vs ribose), and their bases."
         },
         {
-          "text": "b.) lipid",
+          "text": "lipid",
           "isCorrect": false,
           "rationale": "Incorrect. 'lipid' is a distractor. The correct answer is 'sugar'."
         },
         {
-          "text": "c.) protein",
+          "text": "protein",
           "isCorrect": false,
           "rationale": "Incorrect. 'protein' is a distractor. The correct answer is 'sugar'."
         },
         {
-          "text": "d.) phosphate",
+          "text": "phosphate",
           "isCorrect": false,
           "rationale": "Incorrect. 'phosphate' is a distractor. The correct answer is 'sugar'."
         }
@@ -3671,22 +3671,22 @@
       "question": "_____ 142. In terms of molecular architecture, DNA is characteristically a ____-stranded molecule.",
       "answerOptions": [
         {
-          "text": "a.) branched",
+          "text": "branched",
           "isCorrect": false,
           "rationale": "Incorrect. 'branched' is a distractor. The correct answer is 'double'."
         },
         {
-          "text": "b.) triple",
+          "text": "triple",
           "isCorrect": false,
           "rationale": "Incorrect. 'triple' is a distractor. The correct answer is 'double'."
         },
         {
-          "text": "c.) single",
+          "text": "single",
           "isCorrect": false,
           "rationale": "Incorrect. 'single' is a distractor. The correct answer is 'double'."
         },
         {
-          "text": "d.) double",
+          "text": "double",
           "isCorrect": true,
           "rationale": "Correct! [DNA Double-Stranded Structure] DNA consists of two antiparallel nucleotide strands wound into a double helix."
         }
@@ -3697,22 +3697,22 @@
       "question": "_____ 143. The five-carbon pentose sugar component found in DNA nucleotides is ____.",
       "answerOptions": [
         {
-          "text": "a.) fructose",
+          "text": "fructose",
           "isCorrect": false,
           "rationale": "Incorrect. 'fructose' is a distractor. The correct answer is 'deoxyribose'."
         },
         {
-          "text": "b.) ribose",
+          "text": "ribose",
           "isCorrect": false,
           "rationale": "Incorrect. 'ribose' is a distractor. The correct answer is 'deoxyribose'."
         },
         {
-          "text": "c.) glucose",
+          "text": "glucose",
           "isCorrect": false,
           "rationale": "Incorrect. 'glucose' is a distractor. The correct answer is 'deoxyribose'."
         },
         {
-          "text": "d.) deoxyribose",
+          "text": "deoxyribose",
           "isCorrect": true,
           "rationale": "Correct! [Deoxyribose] DNA contains deoxyribose sugar, which lacks an oxygen atom at the 2' carbon position compared to ribose."
         }
@@ -3723,22 +3723,22 @@
       "question": "_____ 144. The four nitrogen-containing bases found in DNA nucleotides are adenine, guanine, cytosine, and ____.",
       "answerOptions": [
         {
-          "text": "a.) ribose",
+          "text": "ribose",
           "isCorrect": false,
           "rationale": "Incorrect. 'ribose' is a distractor. The correct answer is 'thymine'."
         },
         {
-          "text": "b.) thymine",
+          "text": "thymine",
           "isCorrect": true,
           "rationale": "Correct! [DNA Bases (Thymine)] DNA contains four nitrogenous bases: Adenine (A), Guanine (G), Cytosine (C), and Thymine (T)."
         },
         {
-          "text": "c.) histidine",
+          "text": "histidine",
           "isCorrect": false,
           "rationale": "Incorrect. 'histidine' is a distractor. The correct answer is 'thymine'."
         },
         {
-          "text": "d.) uracil",
+          "text": "uracil",
           "isCorrect": false,
           "rationale": "Incorrect. 'uracil' is a distractor. The correct answer is 'thymine'."
         }
@@ -3749,22 +3749,22 @@
       "question": "_____ 145. In contrast to DNA, RNA is characteristically a ____-stranded molecule.",
       "answerOptions": [
         {
-          "text": "a.) single",
+          "text": "single",
           "isCorrect": true,
           "rationale": "Correct! [RNA Single-Stranded Structure] RNA molecules typically exist as single-stranded polynucleotide chains."
         },
         {
-          "text": "b.) circular",
+          "text": "circular",
           "isCorrect": false,
           "rationale": "Incorrect. 'circular' is a distractor. The correct answer is 'single'."
         },
         {
-          "text": "c.) double",
+          "text": "double",
           "isCorrect": false,
           "rationale": "Incorrect. 'double' is a distractor. The correct answer is 'single'."
         },
         {
-          "text": "d.) triple",
+          "text": "triple",
           "isCorrect": false,
           "rationale": "Incorrect. 'triple' is a distractor. The correct answer is 'single'."
         }
@@ -3775,22 +3775,22 @@
       "question": "_____ 146. The five-carbon pentose sugar component found in RNA nucleotides is ____.",
       "answerOptions": [
         {
-          "text": "a.) ribose",
+          "text": "ribose",
           "isCorrect": true,
           "rationale": "Correct! [Ribose in RNA] RNA contains ribose sugar, possessing a 2'-hydroxyl group."
         },
         {
-          "text": "b.) galactose",
+          "text": "galactose",
           "isCorrect": false,
           "rationale": "Incorrect. 'galactose' is a distractor. The correct answer is 'ribose'."
         },
         {
-          "text": "c.) glucose",
+          "text": "glucose",
           "isCorrect": false,
           "rationale": "Incorrect. 'glucose' is a distractor. The correct answer is 'ribose'."
         },
         {
-          "text": "d.) deoxyribose",
+          "text": "deoxyribose",
           "isCorrect": false,
           "rationale": "Incorrect. 'deoxyribose' is a distractor. The correct answer is 'ribose'."
         }
@@ -3801,22 +3801,22 @@
       "question": "_____ 147. The four nitrogen-containing bases found in RNA nucleotides are adenine, guanine, cytosine, and ____.",
       "answerOptions": [
         {
-          "text": "a.) alanine",
+          "text": "alanine",
           "isCorrect": false,
           "rationale": "Incorrect. 'alanine' is a distractor. The correct answer is 'uracil'."
         },
         {
-          "text": "b.) uracil",
+          "text": "uracil",
           "isCorrect": true,
           "rationale": "Correct! [RNA Bases (Uracil)] RNA contains Adenine (A), Guanine (G), Cytosine (C), and Uracil (U), lacking thymine."
         },
         {
-          "text": "c.) valine",
+          "text": "valine",
           "isCorrect": false,
           "rationale": "Incorrect. 'valine' is a distractor. The correct answer is 'uracil'."
         },
         {
-          "text": "d.) thymine",
+          "text": "thymine",
           "isCorrect": false,
           "rationale": "Incorrect. 'thymine' is a distractor. The correct answer is 'uracil'."
         }
@@ -3827,22 +3827,22 @@
       "question": "_____ 148. The nitrogenous base found in RNA that substitutes for thymine and pairs with adenine is ____.",
       "answerOptions": [
         {
-          "text": "a.) guanine",
+          "text": "guanine",
           "isCorrect": false,
           "rationale": "Incorrect. 'guanine' is a distractor. The correct answer is 'uracil'."
         },
         {
-          "text": "b.) thymine",
+          "text": "thymine",
           "isCorrect": false,
           "rationale": "Incorrect. 'thymine' is a distractor. The correct answer is 'uracil'."
         },
         {
-          "text": "c.) uracil",
+          "text": "uracil",
           "isCorrect": true,
           "rationale": "Correct! [Uracil Replaces Thymine] In RNA, uracil replaces thymine and forms complementary base pairs with adenine."
         },
         {
-          "text": "d.) cytosine",
+          "text": "cytosine",
           "isCorrect": false,
           "rationale": "Incorrect. 'cytosine' is a distractor. The correct answer is 'uracil'."
         }
@@ -3853,22 +3853,22 @@
       "question": "_____ 149. In human cells, RNA molecules serve as structural and catalytic components of protein-making organelles called ____.",
       "answerOptions": [
         {
-          "text": "a.) vacuoles",
+          "text": "vacuoles",
           "isCorrect": false,
           "rationale": "Incorrect. 'vacuoles' is a distractor. The correct answer is 'ribosomes'."
         },
         {
-          "text": "b.) ribosomes",
+          "text": "ribosomes",
           "isCorrect": true,
           "rationale": "Correct! [RNA in Ribosomes] Ribosomal RNA (rRNA) combines with proteins to form the structure of ribosomes, the protein synthesis machines."
         },
         {
-          "text": "c.) lysosomes",
+          "text": "lysosomes",
           "isCorrect": false,
           "rationale": "Incorrect. 'lysosomes' is a distractor. The correct answer is 'ribosomes'."
         },
         {
-          "text": "d.) mitochondria",
+          "text": "mitochondria",
           "isCorrect": false,
           "rationale": "Incorrect. 'mitochondria' is a distractor. The correct answer is 'ribosomes'."
         }
@@ -3879,22 +3879,22 @@
       "question": "_____ 150. During protein synthesis, transfer RNA (tRNA) molecules act specifically as transfer agents of ____.",
       "answerOptions": [
         {
-          "text": "a.) glucose units",
+          "text": "glucose units",
           "isCorrect": false,
           "rationale": "Incorrect. 'glucose units' is a distractor. The correct answer is 'amino acids'."
         },
         {
-          "text": "b.) amino acids",
+          "text": "amino acids",
           "isCorrect": true,
           "rationale": "Correct! [tRNA Transfer of Amino Acids] tRNA transfers specific amino acids to the growing polypeptide chain at the ribosome."
         },
         {
-          "text": "c.) fatty acids",
+          "text": "fatty acids",
           "isCorrect": false,
           "rationale": "Incorrect. 'fatty acids' is a distractor. The correct answer is 'amino acids'."
         },
         {
-          "text": "d.) phosphate ions",
+          "text": "phosphate ions",
           "isCorrect": false,
           "rationale": "Incorrect. 'phosphate ions' is a distractor. The correct answer is 'amino acids'."
         }
@@ -3905,22 +3905,22 @@
       "question": "_____ 151. During protein synthesis, messenger RNA (mRNA) functions as the carrier of genetic ____ from DNA to the ribosome.",
       "answerOptions": [
         {
-          "text": "a.) radiation",
+          "text": "radiation",
           "isCorrect": false,
           "rationale": "Incorrect. 'radiation' is a distractor. The correct answer is 'information'."
         },
         {
-          "text": "b.) glucose",
+          "text": "glucose",
           "isCorrect": false,
           "rationale": "Incorrect. 'glucose' is a distractor. The correct answer is 'information'."
         },
         {
-          "text": "c.) enzymes",
+          "text": "enzymes",
           "isCorrect": false,
           "rationale": "Incorrect. 'enzymes' is a distractor. The correct answer is 'information'."
         },
         {
-          "text": "d.) information",
+          "text": "information",
           "isCorrect": true,
           "rationale": "Correct! [mRNA Messenger of Information] mRNA acts as the messenger carrying transcribed genetic information from nuclear DNA to cytoplasmic ribosomes."
         }
@@ -3931,22 +3931,22 @@
       "question": "_____ 152. In cell biology, RNA plays three primary roles in protein synthesis: as messengers of information, transfer agents of amino acids, and components of ____.",
       "answerOptions": [
         {
-          "text": "a.) plasma membranes",
+          "text": "plasma membranes",
           "isCorrect": false,
           "rationale": "Incorrect. 'plasma membranes' is a distractor. The correct answer is 'ribosomes'."
         },
         {
-          "text": "b.) ribosomes",
+          "text": "ribosomes",
           "isCorrect": true,
           "rationale": "Correct! [Three Roles of RNA] The three core functions of RNA in protein synthesis are: mRNA (information messenger), tRNA (amino acid transfer), and rRNA (ribosome component)."
         },
         {
-          "text": "c.) chromosomes",
+          "text": "chromosomes",
           "isCorrect": false,
           "rationale": "Incorrect. 'chromosomes' is a distractor. The correct answer is 'ribosomes'."
         },
         {
-          "text": "d.) centrioles",
+          "text": "centrioles",
           "isCorrect": false,
           "rationale": "Incorrect. 'centrioles' is a distractor. The correct answer is 'ribosomes'."
         }

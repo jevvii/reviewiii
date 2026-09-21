@@ -5,22 +5,22 @@
       "question": "_____ 1. A state machine where a single input symbol can lead to multiple next states or no next state at all is a ____ Finite Automaton.",
       "answerOptions": [
         {
-          "text": "a.) Turing",
+          "text": "Turing",
           "isCorrect": false,
           "rationale": "Incorrect. 'Turing' is a distractor. The correct answer is 'Non-Deterministic'."
         },
         {
-          "text": "b.) Non-Deterministic",
+          "text": "Non-Deterministic",
           "isCorrect": true,
           "rationale": "Correct! [NFA Core Definition] A Non-Deterministic Finite Automaton (NFA) allows zero, one, or multiple outgoing transitions from a state on a single input symbol."
         },
         {
-          "text": "c.) Deterministic",
+          "text": "Deterministic",
           "isCorrect": false,
           "rationale": "Incorrect. 'Deterministic' is a distractor. The correct answer is 'Non-Deterministic'."
         },
         {
-          "text": "d.) Linear Bounded",
+          "text": "Linear Bounded",
           "isCorrect": false,
           "rationale": "Incorrect. 'Linear Bounded' is a distractor. The correct answer is 'Non-Deterministic'."
         }
@@ -31,22 +31,22 @@
       "question": "_____ 2. Unlike a DFA, an NFA is permitted to make transitions without consuming any input symbol, which are known as ____-moves.",
       "answerOptions": [
         {
-          "text": "a.) Σ (Sigma)",
+          "text": "Σ (Sigma)",
           "isCorrect": false,
           "rationale": "Incorrect. 'Σ (Sigma)' is a distractor. The correct answer is 'ε (Epsilon)'."
         },
         {
-          "text": "b.) Q",
+          "text": "Q",
           "isCorrect": false,
           "rationale": "Incorrect. 'Q' is a distractor. The correct answer is 'ε (Epsilon)'."
         },
         {
-          "text": "c.) δ (Delta)",
+          "text": "δ (Delta)",
           "isCorrect": false,
           "rationale": "Incorrect. 'δ (Delta)' is a distractor. The correct answer is 'ε (Epsilon)'."
         },
         {
-          "text": "d.) ε (Epsilon)",
+          "text": "ε (Epsilon)",
           "isCorrect": true,
           "rationale": "Correct! [Epsilon Moves in NFA] NFAs can incorporate ε-transitions (empty moves), enabling state changes without consuming input symbols."
         }
@@ -57,22 +57,22 @@
       "question": "_____ 3. For an NFA, the transition function δ maps each state and input symbol (including ε) to ____.",
       "answerOptions": [
         {
-          "text": "a.) a subset of states (2^Q or power set)",
+          "text": "a subset of states (2^Q or power set)",
           "isCorrect": true,
           "rationale": "Correct! [NFA Transition Function Signature] The NFA transition function is defined as δ: Q x (Σ U {ε}) -> 2^Q, meaning its output is a set of states (element of the power set)."
         },
         {
-          "text": "b.) a stack of tokens",
+          "text": "a stack of tokens",
           "isCorrect": false,
           "rationale": "Incorrect. 'a stack of tokens' is a distractor. The correct answer is 'a subset of states (2^Q or power set)'."
         },
         {
-          "text": "c.) the alphabet (Σ)",
+          "text": "the alphabet (Σ)",
           "isCorrect": false,
           "rationale": "Incorrect. 'the alphabet (Σ)' is a distractor. The correct answer is 'a subset of states (2^Q or power set)'."
         },
         {
-          "text": "d.) exactly one single state (Q)",
+          "text": "exactly one single state (Q)",
           "isCorrect": false,
           "rationale": "Incorrect. 'exactly one single state (Q)' is a distractor. The correct answer is 'a subset of states (2^Q or power set)'."
         }
@@ -83,22 +83,22 @@
       "question": "_____ 4. If for a given state q and symbol a there is no valid transition in an NFA, the transition maps to the ____ set (ϕ).",
       "answerOptions": [
         {
-          "text": "a.) empty",
+          "text": "empty",
           "isCorrect": true,
           "rationale": "Correct! [Empty Set Transition] In an NFA, having no next state for an input symbol means δ(q, a) = ∅, representing a dead computational branch."
         },
         {
-          "text": "b.) universal",
+          "text": "universal",
           "isCorrect": false,
           "rationale": "Incorrect. 'universal' is a distractor. The correct answer is 'empty'."
         },
         {
-          "text": "c.) initial",
+          "text": "initial",
           "isCorrect": false,
           "rationale": "Incorrect. 'initial' is a distractor. The correct answer is 'empty'."
         },
         {
-          "text": "d.) final",
+          "text": "final",
           "isCorrect": false,
           "rationale": "Incorrect. 'final' is a distractor. The correct answer is 'empty'."
         }
@@ -109,22 +109,22 @@
       "question": "_____ 5. A computational branch in an NFA that reaches the empty set (ϕ) with no available transitions is known as a dead ____.",
       "answerOptions": [
         {
-          "text": "a.) symbol",
+          "text": "symbol",
           "isCorrect": false,
           "rationale": "Incorrect. 'symbol' is a distractor. The correct answer is 'configuration'."
         },
         {
-          "text": "b.) tape",
+          "text": "tape",
           "isCorrect": false,
           "rationale": "Incorrect. 'tape' is a distractor. The correct answer is 'configuration'."
         },
         {
-          "text": "c.) stack",
+          "text": "stack",
           "isCorrect": false,
           "rationale": "Incorrect. 'stack' is a distractor. The correct answer is 'configuration'."
         },
         {
-          "text": "d.) configuration",
+          "text": "configuration",
           "isCorrect": true,
           "rationale": "Correct! [Dead Configuration] When an NFA computational path encounters a state with no transition for the current input symbol, that branch enters a dead configuration and terminates."
         }
@@ -135,22 +135,22 @@
       "question": "_____ 6. In terms of language recognition capability, how does the expressive computational power of an NFA compare to that of a DFA?",
       "answerOptions": [
         {
-          "text": "a.) They are exactly equal (both recognize Regular Languages)",
+          "text": "They are exactly equal (both recognize Regular Languages)",
           "isCorrect": true,
           "rationale": "Correct! [DFA vs NFA Equivalence] By the Rabin-Scott powerset construction theorem, any language recognized by an NFA can also be recognized by an equivalent DFA."
         },
         {
-          "text": "b.) NFA is strictly more powerful",
+          "text": "NFA is strictly more powerful",
           "isCorrect": false,
           "rationale": "Incorrect. 'NFA is strictly more powerful' is a distractor. The correct answer is 'They are exactly equal (both recognize Regular Languages)'."
         },
         {
-          "text": "c.) DFA is strictly more powerful",
+          "text": "DFA is strictly more powerful",
           "isCorrect": false,
           "rationale": "Incorrect. 'DFA is strictly more powerful' is a distractor. The correct answer is 'They are exactly equal (both recognize Regular Languages)'."
         },
         {
-          "text": "d.) NFA recognizes Context-Free languages",
+          "text": "NFA recognizes Context-Free languages",
           "isCorrect": false,
           "rationale": "Incorrect. 'NFA recognizes Context-Free languages' is a distractor. The correct answer is 'They are exactly equal (both recognize Regular Languages)'."
         }
@@ -161,22 +161,22 @@
       "question": "_____ 7. While DFAs and NFAs recognize the exact same class of languages, NFAs are often much easier to design and can have ____ states than equivalent DFAs.",
       "answerOptions": [
         {
-          "text": "a.) fractionally more",
+          "text": "fractionally more",
           "isCorrect": false,
           "rationale": "Incorrect. 'fractionally more' is a distractor. The correct answer is 'exponentially fewer'."
         },
         {
-          "text": "b.) exponentially fewer",
+          "text": "exponentially fewer",
           "isCorrect": true,
           "rationale": "Correct! [State Conciseness of NFA] An NFA with n states may require up to 2^n states when converted into a minimal equivalent DFA."
         },
         {
-          "text": "c.) infinitely more",
+          "text": "infinitely more",
           "isCorrect": false,
           "rationale": "Incorrect. 'infinitely more' is a distractor. The correct answer is 'exponentially fewer'."
         },
         {
-          "text": "d.) exactly double",
+          "text": "exactly double",
           "isCorrect": false,
           "rationale": "Incorrect. 'exactly double' is a distractor. The correct answer is 'exponentially fewer'."
         }
@@ -187,22 +187,22 @@
       "question": "_____ 8. In a DFA, how many next states must exist for every (state, input symbol) pair?",
       "answerOptions": [
         {
-          "text": "a.) Zero or more",
+          "text": "Zero or more",
           "isCorrect": false,
           "rationale": "Incorrect. 'Zero or more' is a distractor. The correct answer is 'Exactly one'."
         },
         {
-          "text": "b.) At least two",
+          "text": "At least two",
           "isCorrect": false,
           "rationale": "Incorrect. 'At least two' is a distractor. The correct answer is 'Exactly one'."
         },
         {
-          "text": "c.) Any arbitrary subset",
+          "text": "Any arbitrary subset",
           "isCorrect": false,
           "rationale": "Incorrect. 'Any arbitrary subset' is a distractor. The correct answer is 'Exactly one'."
         },
         {
-          "text": "d.) Exactly one",
+          "text": "Exactly one",
           "isCorrect": true,
           "rationale": "Correct! [DFA Uniqueness Constraint] A DFA requires exactly one deterministic next state for every combination of state and input symbol."
         }
@@ -213,22 +213,22 @@
       "question": "_____ 9. According to the formal acceptance rule, an NFA accepts an input string if ____.",
       "answerOptions": [
         {
-          "text": "a.) at least one computational branch ends in an accept/final state",
+          "text": "at least one computational branch ends in an accept/final state",
           "isCorrect": true,
           "rationale": "Correct! [NFA Acceptance Criterion] An NFA accepts if there exists at least one valid sequence of transitions that consumes the entire string and terminates in a final state F."
         },
         {
-          "text": "b.) the majority of branches accept",
+          "text": "the majority of branches accept",
           "isCorrect": false,
           "rationale": "Incorrect. 'the majority of branches accept' is a distractor. The correct answer is 'at least one computational branch ends in an accept/final state'."
         },
         {
-          "text": "c.) all computational branches end in an accept state",
+          "text": "all computational branches end in an accept state",
           "isCorrect": false,
           "rationale": "Incorrect. 'all computational branches end in an accept state' is a distractor. The correct answer is 'at least one computational branch ends in an accept/final state'."
         },
         {
-          "text": "d.) the machine has no dead configurations",
+          "text": "the machine has no dead configurations",
           "isCorrect": false,
           "rationale": "Incorrect. 'the machine has no dead configurations' is a distractor. The correct answer is 'at least one computational branch ends in an accept/final state'."
         }
@@ -239,22 +239,22 @@
       "question": "_____ 10. An NFA rejects an input string if and only if ____.",
       "answerOptions": [
         {
-          "text": "a.) at least one path fails",
+          "text": "at least one path fails",
           "isCorrect": false,
           "rationale": "Incorrect. 'at least one path fails' is a distractor. The correct answer is 'ALL computational paths fail to reach any final state'."
         },
         {
-          "text": "b.) a dead configuration is encountered on one path",
+          "text": "a dead configuration is encountered on one path",
           "isCorrect": false,
           "rationale": "Incorrect. 'a dead configuration is encountered on one path' is a distractor. The correct answer is 'ALL computational paths fail to reach any final state'."
         },
         {
-          "text": "c.) the string contains an odd number of zeros",
+          "text": "the string contains an odd number of zeros",
           "isCorrect": false,
           "rationale": "Incorrect. 'the string contains an odd number of zeros' is a distractor. The correct answer is 'ALL computational paths fail to reach any final state'."
         },
         {
-          "text": "d.) ALL computational paths fail to reach any final state",
+          "text": "ALL computational paths fail to reach any final state",
           "isCorrect": true,
           "rationale": "Correct! [NFA Rejection Rule] Rejection requires that none of the possible parallel computational branches terminate in an accepting state."
         }
@@ -265,22 +265,22 @@
       "question": "_____ 11. In the formal 5-tuple M = (Q, Σ, q0, F, δ) of an NFA, the power set of states Q is mathematically represented as ____.",
       "answerOptions": [
         {
-          "text": "a.) Q^2",
+          "text": "Q^2",
           "isCorrect": false,
           "rationale": "Incorrect. 'Q^2' is a distractor. The correct answer is '2^Q'."
         },
         {
-          "text": "b.) Σ^Q",
+          "text": "Σ^Q",
           "isCorrect": false,
           "rationale": "Incorrect. 'Σ^Q' is a distractor. The correct answer is '2^Q'."
         },
         {
-          "text": "c.) Q!",
+          "text": "Q!",
           "isCorrect": false,
           "rationale": "Incorrect. 'Q!' is a distractor. The correct answer is '2^Q'."
         },
         {
-          "text": "d.) 2^Q",
+          "text": "2^Q",
           "isCorrect": true,
           "rationale": "Correct! [Power Set Notation] 2^Q denotes the set of all subsets of Q (the power set), which is the co-domain of the NFA transition function."
         }
@@ -291,22 +291,22 @@
       "question": "_____ 12. If an NFA has 3 states, how many elements are in its power set 2^Q?",
       "answerOptions": [
         {
-          "text": "a.) 8 (2^3)",
+          "text": "8 (2^3)",
           "isCorrect": true,
           "rationale": "Correct! [Power Set Size] The power set of a set with |Q| = 3 contains 2^3 = 8 possible subsets."
         },
         {
-          "text": "b.) 6",
+          "text": "6",
           "isCorrect": false,
           "rationale": "Incorrect. '6' is a distractor. The correct answer is '8 (2^3)'."
         },
         {
-          "text": "c.) 3",
+          "text": "3",
           "isCorrect": false,
           "rationale": "Incorrect. '3' is a distractor. The correct answer is '8 (2^3)'."
         },
         {
-          "text": "d.) 9",
+          "text": "9",
           "isCorrect": false,
           "rationale": "Incorrect. '9' is a distractor. The correct answer is '8 (2^3)'."
         }
@@ -317,22 +317,22 @@
       "question": "_____ 13. In Week 4 Example 1 (NFA for strings ending with '0'), state A loops on {0, 1} and transitions on '0' to state B. When input '100' is processed, what is the set of states occupied at the end?",
       "answerOptions": [
         {
-          "text": "a.) ϕ",
+          "text": "ϕ",
           "isCorrect": false,
           "rationale": "Incorrect. 'ϕ' is a distractor. The correct answer is '{A, B}'."
         },
         {
-          "text": "b.) {A}",
+          "text": "{A}",
           "isCorrect": false,
           "rationale": "Incorrect. '{A}' is a distractor. The correct answer is '{A, B}'."
         },
         {
-          "text": "c.) {B}",
+          "text": "{B}",
           "isCorrect": false,
           "rationale": "Incorrect. '{B}' is a distractor. The correct answer is '{A, B}'."
         },
         {
-          "text": "d.) {A, B}",
+          "text": "{A, B}",
           "isCorrect": true,
           "rationale": "Correct! [Example 1 Trace '100'] After '100', branch A remains at A, and the '0' transition also moves to B, resulting in active state subset {A, B}."
         }
@@ -343,22 +343,22 @@
       "question": "_____ 14. In Week 4 Example 1, why is the input string '100' accepted by the NFA?",
       "answerOptions": [
         {
-          "text": "a.) Because the string has 3 symbols",
+          "text": "Because the string has 3 symbols",
           "isCorrect": false,
           "rationale": "Incorrect. 'Because the string has 3 symbols' is a distractor. The correct answer is 'Because state B is in {A, B} and B is an accepting state'."
         },
         {
-          "text": "b.) Because state B is in {A, B} and B is an accepting state",
+          "text": "Because state B is in {A, B} and B is an accepting state",
           "isCorrect": true,
           "rationale": "Correct! [Example 1 Acceptance Rationale] Since state B is a final state and B ∈ {A, B}, at least one path ends in a final state, so the string is accepted."
         },
         {
-          "text": "c.) Because state A is an accepting state",
+          "text": "Because state A is an accepting state",
           "isCorrect": false,
           "rationale": "Incorrect. 'Because state A is an accepting state' is a distractor. The correct answer is 'Because state B is in {A, B} and B is an accepting state'."
         },
         {
-          "text": "d.) Because there are no 1s at the end",
+          "text": "Because there are no 1s at the end",
           "isCorrect": false,
           "rationale": "Incorrect. 'Because there are no 1s at the end' is a distractor. The correct answer is 'Because state B is in {A, B} and B is an accepting state'."
         }
@@ -369,22 +369,22 @@
       "question": "_____ 15. In Week 4 Example 2 (NFA for strings starting with '0'), what occurs if the first input symbol is '1'?",
       "answerOptions": [
         {
-          "text": "a.) The machine transitions to state B",
+          "text": "The machine transitions to state B",
           "isCorrect": false,
           "rationale": "Incorrect. 'The machine transitions to state B' is a distractor. The correct answer is 'The machine enters a dead configuration (ϕ) and rejects'."
         },
         {
-          "text": "b.) The machine loops at state A",
+          "text": "The machine loops at state A",
           "isCorrect": false,
           "rationale": "Incorrect. 'The machine loops at state A' is a distractor. The correct answer is 'The machine enters a dead configuration (ϕ) and rejects'."
         },
         {
-          "text": "c.) The machine enters a dead configuration (ϕ) and rejects",
+          "text": "The machine enters a dead configuration (ϕ) and rejects",
           "isCorrect": true,
           "rationale": "Correct! [Example 2 Dead Configuration on '1'] State A has no transition defined for '1', resulting in δ(A, 1) = ∅ (dead configuration)."
         },
         {
-          "text": "d.) The machine complements the string",
+          "text": "The machine complements the string",
           "isCorrect": false,
           "rationale": "Incorrect. 'The machine complements the string' is a distractor. The correct answer is 'The machine enters a dead configuration (ϕ) and rejects'."
         }
@@ -395,22 +395,22 @@
       "question": "_____ 16. In Week 4 Example 3, an NFA accepts all strings over {0, 1} of length exactly 2 with states A -> B -> C. Why is string '01' accepted?",
       "answerOptions": [
         {
-          "text": "a.) Because it has no trap states",
+          "text": "Because it has no trap states",
           "isCorrect": false,
           "rationale": "Incorrect. 'Because it has no trap states' is a distractor. The correct answer is 'A transitions on 0 to B, and B transitions on 1 to final state C'."
         },
         {
-          "text": "b.) Because C loops on all inputs",
+          "text": "Because C loops on all inputs",
           "isCorrect": false,
           "rationale": "Incorrect. 'Because C loops on all inputs' is a distractor. The correct answer is 'A transitions on 0 to B, and B transitions on 1 to final state C'."
         },
         {
-          "text": "c.) Because A is an accepting state",
+          "text": "Because A is an accepting state",
           "isCorrect": false,
           "rationale": "Incorrect. 'Because A is an accepting state' is a distractor. The correct answer is 'A transitions on 0 to B, and B transitions on 1 to final state C'."
         },
         {
-          "text": "d.) A transitions on 0 to B, and B transitions on 1 to final state C",
+          "text": "A transitions on 0 to B, and B transitions on 1 to final state C",
           "isCorrect": true,
           "rationale": "Correct! [Example 3 Length 2 Trace] The sequence A --0--> B --1--> C lands in final state C after 2 symbols."
         }
@@ -421,22 +421,22 @@
       "question": "_____ 17. The algorithmic method used to convert any Non-Deterministic Finite Automaton (NFA) into an equivalent Deterministic Finite Automaton (DFA) is known as the ____ construction.",
       "answerOptions": [
         {
-          "text": "a.) subset (powerset)",
+          "text": "subset (powerset)",
           "isCorrect": true,
           "rationale": "Correct! [Subset Construction Name] The subset construction (or powerset construction) algorithm systematically models sets of NFA states as individual DFA states."
         },
         {
-          "text": "b.) Chomsky",
+          "text": "Chomsky",
           "isCorrect": false,
           "rationale": "Incorrect. 'Chomsky' is a distractor. The correct answer is 'subset (powerset)'."
         },
         {
-          "text": "c.) Turing",
+          "text": "Turing",
           "isCorrect": false,
           "rationale": "Incorrect. 'Turing' is a distractor. The correct answer is 'subset (powerset)'."
         },
         {
-          "text": "d.) pumping",
+          "text": "pumping",
           "isCorrect": false,
           "rationale": "Incorrect. 'pumping' is a distractor. The correct answer is 'subset (powerset)'."
         }
@@ -447,22 +447,22 @@
       "question": "_____ 18. In the subset construction algorithm, each individual state in the resulting DFA represents a ____ of states from the original NFA.",
       "answerOptions": [
         {
-          "text": "a.) quotient",
+          "text": "quotient",
           "isCorrect": false,
           "rationale": "Incorrect. 'quotient' is a distractor. The correct answer is 'subset (or set)'."
         },
         {
-          "text": "b.) permutation",
+          "text": "permutation",
           "isCorrect": false,
           "rationale": "Incorrect. 'permutation' is a distractor. The correct answer is 'subset (or set)'."
         },
         {
-          "text": "c.) derivative",
+          "text": "derivative",
           "isCorrect": false,
           "rationale": "Incorrect. 'derivative' is a distractor. The correct answer is 'subset (or set)'."
         },
         {
-          "text": "d.) subset (or set)",
+          "text": "subset (or set)",
           "isCorrect": true,
           "rationale": "Correct! [DFA States as NFA Subsets] A state in the converted DFA corresponds to a subset of NFA states that could be reached simultaneously."
         }
@@ -473,22 +473,22 @@
       "question": "_____ 19. If an NFA has n states, what is the theoretical maximum number of states the converted DFA could possess before minimization?",
       "answerOptions": [
         {
-          "text": "a.) n^2",
+          "text": "n^2",
           "isCorrect": false,
           "rationale": "Incorrect. 'n^2' is a distractor. The correct answer is '2^n'."
         },
         {
-          "text": "b.) 2n",
+          "text": "2n",
           "isCorrect": false,
           "rationale": "Incorrect. '2n' is a distractor. The correct answer is '2^n'."
         },
         {
-          "text": "c.) 2^n",
+          "text": "2^n",
           "isCorrect": true,
           "rationale": "Correct! [Maximum DFA State Bound] Since there are 2^n subsets of a set of n states, the converted DFA has at most 2^n states."
         },
         {
-          "text": "d.) n!",
+          "text": "n!",
           "isCorrect": false,
           "rationale": "Incorrect. 'n!' is a distractor. The correct answer is '2^n'."
         }
@@ -499,22 +499,22 @@
       "question": "_____ 20. During subset construction, how is the transition on symbol 'a' from a composite DFA state S = {q1, q2} computed?",
       "answerOptions": [
         {
-          "text": "a.) By taking the union of transitions: δ(q1, a) U δ(q2, a)",
+          "text": "By taking the union of transitions: δ(q1, a) U δ(q2, a)",
           "isCorrect": true,
           "rationale": "Correct! [Subset Transition Union Rule] The DFA transition on symbol 'a' from set S is the union of all NFA transitions from each state in S on symbol 'a'."
         },
         {
-          "text": "b.) By choosing only the transition from q1",
+          "text": "By choosing only the transition from q1",
           "isCorrect": false,
           "rationale": "Incorrect. 'By choosing only the transition from q1' is a distractor. The correct answer is 'By taking the union of transitions: δ(q1, a) U δ(q2, a)'."
         },
         {
-          "text": "c.) By taking the intersection: δ(q1, a) ∩ δ(q2, a)",
+          "text": "By taking the intersection: δ(q1, a) ∩ δ(q2, a)",
           "isCorrect": false,
           "rationale": "Incorrect. 'By taking the intersection: δ(q1, a) ∩ δ(q2, a)' is a distractor. The correct answer is 'By taking the union of transitions: δ(q1, a) U δ(q2, a)'."
         },
         {
-          "text": "d.) By taking the Cartesian product",
+          "text": "By taking the Cartesian product",
           "isCorrect": false,
           "rationale": "Incorrect. 'By taking the Cartesian product' is a distractor. The correct answer is 'By taking the union of transitions: δ(q1, a) U δ(q2, a)'."
         }
@@ -525,22 +525,22 @@
       "question": "_____ 21. In subset construction, which subsets of NFA states are designated as final (accepting) states in the converted DFA?",
       "answerOptions": [
         {
-          "text": "a.) Only subsets containing exclusively final states",
+          "text": "Only subsets containing exclusively final states",
           "isCorrect": false,
           "rationale": "Incorrect. 'Only subsets containing exclusively final states' is a distractor. The correct answer is 'Any subset that contains at least one final state of the NFA'."
         },
         {
-          "text": "b.) Only the initial subset",
+          "text": "Only the initial subset",
           "isCorrect": false,
           "rationale": "Incorrect. 'Only the initial subset' is a distractor. The correct answer is 'Any subset that contains at least one final state of the NFA'."
         },
         {
-          "text": "c.) Subsets containing the empty set",
+          "text": "Subsets containing the empty set",
           "isCorrect": false,
           "rationale": "Incorrect. 'Subsets containing the empty set' is a distractor. The correct answer is 'Any subset that contains at least one final state of the NFA'."
         },
         {
-          "text": "d.) Any subset that contains at least one final state of the NFA",
+          "text": "Any subset that contains at least one final state of the NFA",
           "isCorrect": true,
           "rationale": "Correct! [DFA Accepting State Condition] A DFA state S is an accepting state if S ∩ F_NFA ≠ ∅ (it contains at least one state that was an accepting state in the NFA)."
         }
@@ -551,22 +551,22 @@
       "question": "_____ 22. In subset construction, if a state transition leads to the empty set (ϕ), how is this represented in the equivalent DFA?",
       "answerOptions": [
         {
-          "text": "a.) It is completely removed from the DFA",
+          "text": "It is completely removed from the DFA",
           "isCorrect": false,
           "rationale": "Incorrect. 'It is completely removed from the DFA' is a distractor. The correct answer is 'As a dead (trap) state that loops on all input symbols'."
         },
         {
-          "text": "b.) It becomes an accepting state",
+          "text": "It becomes an accepting state",
           "isCorrect": false,
           "rationale": "Incorrect. 'It becomes an accepting state' is a distractor. The correct answer is 'As a dead (trap) state that loops on all input symbols'."
         },
         {
-          "text": "c.) As a dead (trap) state that loops on all input symbols",
+          "text": "As a dead (trap) state that loops on all input symbols",
           "isCorrect": true,
           "rationale": "Correct! [Dead State Representation in DFA] The empty set ϕ becomes an explicit trap state in the DFA with self-loops on all alphabet symbols."
         },
         {
-          "text": "d.) It is designated as the start state",
+          "text": "It is designated as the start state",
           "isCorrect": false,
           "rationale": "Incorrect. 'It is designated as the start state' is a distractor. The correct answer is 'As a dead (trap) state that loops on all input symbols'."
         }
@@ -577,22 +577,22 @@
       "question": "_____ 23. According to the set algebra rule cited in Slide 10 of Week 4, what is the result of taking the union of set A with the empty set ϕ (A U ϕ)?",
       "answerOptions": [
         {
-          "text": "a.) ϕ",
+          "text": "ϕ",
           "isCorrect": false,
           "rationale": "Incorrect. 'ϕ' is a distractor. The correct answer is 'A'."
         },
         {
-          "text": "b.) {A, ϕ}",
+          "text": "{A, ϕ}",
           "isCorrect": false,
           "rationale": "Incorrect. '{A, ϕ}' is a distractor. The correct answer is 'A'."
         },
         {
-          "text": "c.) A",
+          "text": "A",
           "isCorrect": true,
           "rationale": "Correct! [Set Union with Empty Set] Union with the empty set is identity: A ∪ ∅ = A."
         },
         {
-          "text": "d.) U",
+          "text": "U",
           "isCorrect": false,
           "rationale": "Incorrect. 'U' is a distractor. The correct answer is 'A'."
         }
@@ -603,22 +603,22 @@
       "question": "_____ 24. In Slide 10 (NFA to DFA conversion for strings ending with '1'), the NFA has states {A, B} where A is start and B is final. What are the states in the converted DFA?",
       "answerOptions": [
         {
-          "text": "a.) Only State A",
+          "text": "Only State A",
           "isCorrect": false,
           "rationale": "Incorrect. 'Only State A' is a distractor. The correct answer is 'State A and State AB (where AB is accepting)'."
         },
         {
-          "text": "b.) State A and State B",
+          "text": "State A and State B",
           "isCorrect": false,
           "rationale": "Incorrect. 'State A and State B' is a distractor. The correct answer is 'State A and State AB (where AB is accepting)'."
         },
         {
-          "text": "c.) State A and State AB (where AB is accepting)",
+          "text": "State A and State AB (where AB is accepting)",
           "isCorrect": true,
           "rationale": "Correct! [Slide 10 Converted DFA States] The reachable subsets are {A} and {A, B}, where {A, B} is accepting because it contains NFA final state B."
         },
         {
-          "text": "d.) State A, State B, State C",
+          "text": "State A, State B, State C",
           "isCorrect": false,
           "rationale": "Incorrect. 'State A, State B, State C' is a distractor. The correct answer is 'State A and State AB (where AB is accepting)'."
         }
@@ -629,22 +629,22 @@
       "question": "_____ 25. In Slide 10, what is the transition from DFA state AB on input '0'?",
       "answerOptions": [
         {
-          "text": "a.) It loops on state AB",
+          "text": "It loops on state AB",
           "isCorrect": false,
           "rationale": "Incorrect. 'It loops on state AB' is a distractor. The correct answer is 'It transitions back to state A'."
         },
         {
-          "text": "b.) It transitions to a dead state",
+          "text": "It transitions to a dead state",
           "isCorrect": false,
           "rationale": "Incorrect. 'It transitions to a dead state' is a distractor. The correct answer is 'It transitions back to state A'."
         },
         {
-          "text": "c.) It transitions back to state A",
+          "text": "It transitions back to state A",
           "isCorrect": true,
           "rationale": "Correct! [Slide 10 Transition on 0] From AB, on input 0: δ(A, 0) ∪ δ(B, 0) = A ∪ ∅ = A. Thus it returns to state A."
         },
         {
-          "text": "d.) It transitions to state B",
+          "text": "It transitions to state B",
           "isCorrect": false,
           "rationale": "Incorrect. 'It transitions to state B' is a distractor. The correct answer is 'It transitions back to state A'."
         }
@@ -655,22 +655,22 @@
       "question": "_____ 26. In Slide 10, what is the transition from DFA state AB on input '1'?",
       "answerOptions": [
         {
-          "text": "a.) It loops on state AB",
+          "text": "It loops on state AB",
           "isCorrect": true,
           "rationale": "Correct! [Slide 10 Transition on 1] From AB, on input 1: δ(A, 1) ∪ δ(B, 1) = {A, B} ∪ ∅ = {A, B} = AB, looping on itself."
         },
         {
-          "text": "b.) It enters a trap state",
+          "text": "It enters a trap state",
           "isCorrect": false,
           "rationale": "Incorrect. 'It enters a trap state' is a distractor. The correct answer is 'It loops on state AB'."
         },
         {
-          "text": "c.) It halts",
+          "text": "It halts",
           "isCorrect": false,
           "rationale": "Incorrect. 'It halts' is a distractor. The correct answer is 'It loops on state AB'."
         },
         {
-          "text": "d.) It transitions to state A",
+          "text": "It transitions to state A",
           "isCorrect": false,
           "rationale": "Incorrect. 'It transitions to state A' is a distractor. The correct answer is 'It loops on state AB'."
         }
@@ -681,22 +681,22 @@
       "question": "_____ 27. In Activity 3 Problem 1 ($L1 = {strings containing '01'}$), what is the regular expression for the language?",
       "answerOptions": [
         {
-          "text": "a.) (0 + 1)* 01 (0 + 1)*",
+          "text": "(0 + 1)* 01 (0 + 1)*",
           "isCorrect": true,
           "rationale": "Correct! [Regex for Containing '01'] Strings containing '01' anywhere have the regex (0 + 1)* 01 (0 + 1)*."
         },
         {
-          "text": "b.) (0 + 1)* 01",
+          "text": "(0 + 1)* 01",
           "isCorrect": false,
           "rationale": "Incorrect. '(0 + 1)* 01' is a distractor. The correct answer is '(0 + 1)* 01 (0 + 1)*'."
         },
         {
-          "text": "c.) 01 (0 + 1)*",
+          "text": "01 (0 + 1)*",
           "isCorrect": false,
           "rationale": "Incorrect. '01 (0 + 1)*' is a distractor. The correct answer is '(0 + 1)* 01 (0 + 1)*'."
         },
         {
-          "text": "d.) (01)*",
+          "text": "(01)*",
           "isCorrect": false,
           "rationale": "Incorrect. '(01)*' is a distractor. The correct answer is '(0 + 1)* 01 (0 + 1)*'."
         }
@@ -707,22 +707,22 @@
       "question": "_____ 28. In Activity 3 Problem 1 ($L1 = {strings containing '01'}$), how many states does the minimal DFA have?",
       "answerOptions": [
         {
-          "text": "a.) 5 states",
+          "text": "5 states",
           "isCorrect": false,
           "rationale": "Incorrect. '5 states' is a distractor. The correct answer is '3 states'."
         },
         {
-          "text": "b.) 2 states",
+          "text": "2 states",
           "isCorrect": false,
           "rationale": "Incorrect. '2 states' is a distractor. The correct answer is '3 states'."
         },
         {
-          "text": "c.) 3 states",
+          "text": "3 states",
           "isCorrect": true,
           "rationale": "Correct! [Minimal DFA for Containing '01'] The minimal DFA requires 3 states: S0 (not seen 0), S1 (seen 0), and S2 (seen 01, accepting)."
         },
         {
-          "text": "d.) 4 states",
+          "text": "4 states",
           "isCorrect": false,
           "rationale": "Incorrect. '4 states' is a distractor. The correct answer is '3 states'."
         }
@@ -733,22 +733,22 @@
       "question": "_____ 29. In Activity 3 Problem 2 ($L2 = {strings starting with '10'}$), what is the regular expression?",
       "answerOptions": [
         {
-          "text": "a.) 10 (0 + 1)*",
+          "text": "10 (0 + 1)*",
           "isCorrect": true,
           "rationale": "Correct! [Regex for Starting with '10'] Strings that start with '10' followed by any sequence of symbols are given by 10 (0 + 1)*."
         },
         {
-          "text": "b.) (10)*",
+          "text": "(10)*",
           "isCorrect": false,
           "rationale": "Incorrect. '(10)*' is a distractor. The correct answer is '10 (0 + 1)*'."
         },
         {
-          "text": "c.) (0 + 1)* 10",
+          "text": "(0 + 1)* 10",
           "isCorrect": false,
           "rationale": "Incorrect. '(0 + 1)* 10' is a distractor. The correct answer is '10 (0 + 1)*'."
         },
         {
-          "text": "d.) 1 (0 + 1)* 0",
+          "text": "1 (0 + 1)* 0",
           "isCorrect": false,
           "rationale": "Incorrect. '1 (0 + 1)* 0' is a distractor. The correct answer is '10 (0 + 1)*'."
         }
@@ -759,22 +759,22 @@
       "question": "_____ 30. In Activity 3 Problem 2 ($L2 = {strings starting with '10'}$), why does the converted DFA require a Trap state?",
       "answerOptions": [
         {
-          "text": "a.) To permanently reject any string whose prefix is not '10'",
+          "text": "To permanently reject any string whose prefix is not '10'",
           "isCorrect": true,
           "rationale": "Correct! [Trap State in Starting with '10'] Any string starting with '0' or '11' violates the required prefix '10' and must be diverted to an inescapable trap state."
         },
         {
-          "text": "b.) To loop on final states",
+          "text": "To loop on final states",
           "isCorrect": false,
           "rationale": "Incorrect. 'To loop on final states' is a distractor. The correct answer is 'To permanently reject any string whose prefix is not '10''."
         },
         {
-          "text": "c.) To handle epsilon transitions",
+          "text": "To handle epsilon transitions",
           "isCorrect": false,
           "rationale": "Incorrect. 'To handle epsilon transitions' is a distractor. The correct answer is 'To permanently reject any string whose prefix is not '10''."
         },
         {
-          "text": "d.) To store stack memory",
+          "text": "To store stack memory",
           "isCorrect": false,
           "rationale": "Incorrect. 'To store stack memory' is a distractor. The correct answer is 'To permanently reject any string whose prefix is not '10''."
         }
@@ -785,22 +785,22 @@
       "question": "_____ 31. In Activity 3 Problem 4 ($L4 = {strings ending with '1'}$), what is the regular expression?",
       "answerOptions": [
         {
-          "text": "a.) 1 (0 + 1)*",
+          "text": "1 (0 + 1)*",
           "isCorrect": false,
           "rationale": "Incorrect. '1 (0 + 1)*' is a distractor. The correct answer is '(0 + 1)* 1'."
         },
         {
-          "text": "b.) (0 + 1)* 1",
+          "text": "(0 + 1)* 1",
           "isCorrect": true,
           "rationale": "Correct! [Regex for Ending with '1'] Any string ending with '1' is matched by (0 + 1)* 1."
         },
         {
-          "text": "c.) (01)*",
+          "text": "(01)*",
           "isCorrect": false,
           "rationale": "Incorrect. '(01)*' is a distractor. The correct answer is '(0 + 1)* 1'."
         },
         {
-          "text": "d.) (1)*",
+          "text": "(1)*",
           "isCorrect": false,
           "rationale": "Incorrect. '(1)*' is a distractor. The correct answer is '(0 + 1)* 1'."
         }
@@ -811,22 +811,22 @@
       "question": "_____ 32. In Activity 3 Problem 5 ($L5 = {strings ending with '11'}$), how many states does the equivalent minimal DFA contain?",
       "answerOptions": [
         {
-          "text": "a.) 4 states",
+          "text": "4 states",
           "isCorrect": false,
           "rationale": "Incorrect. '4 states' is a distractor. The correct answer is '3 states'."
         },
         {
-          "text": "b.) 2 states",
+          "text": "2 states",
           "isCorrect": false,
           "rationale": "Incorrect. '2 states' is a distractor. The correct answer is '3 states'."
         },
         {
-          "text": "c.) 3 states",
+          "text": "3 states",
           "isCorrect": true,
           "rationale": "Correct! [DFA for Ending with '11'] Matching strings ending with '11' requires 3 DFA states: S0 (no trailing 1), S1 (one trailing 1), and S2 (two or more trailing 1s, accepting)."
         },
         {
-          "text": "d.) 5 states",
+          "text": "5 states",
           "isCorrect": false,
           "rationale": "Incorrect. '5 states' is a distractor. The correct answer is '3 states'."
         }
@@ -837,22 +837,22 @@
       "question": "_____ 33. In Activity 3 Problem 3 ($L3 = {strings containing '0'}$), what is the minimal number of states in the equivalent DFA?",
       "answerOptions": [
         {
-          "text": "a.) 4 states",
+          "text": "4 states",
           "isCorrect": false,
           "rationale": "Incorrect. '4 states' is a distractor. The correct answer is '2 states'."
         },
         {
-          "text": "b.) 2 states",
+          "text": "2 states",
           "isCorrect": true,
           "rationale": "Correct! [DFA for Containing '0'] Only 2 states are needed: state A (seen only 1s, non-accepting) and state B (seen at least one 0, accepting)."
         },
         {
-          "text": "c.) 3 states",
+          "text": "3 states",
           "isCorrect": false,
           "rationale": "Incorrect. '3 states' is a distractor. The correct answer is '2 states'."
         },
         {
-          "text": "d.) 1 state",
+          "text": "1 state",
           "isCorrect": false,
           "rationale": "Incorrect. '1 state' is a distractor. The correct answer is '2 states'."
         }
@@ -863,22 +863,22 @@
       "question": "_____ 34. In an ε-NFA, the set of all states that can be reached from a state q using only empty transitions (ε-moves) without consuming any input is called the ____ of q.",
       "answerOptions": [
         {
-          "text": "a.) transition matrix",
+          "text": "transition matrix",
           "isCorrect": false,
           "rationale": "Incorrect. 'transition matrix' is a distractor. The correct answer is 'ε-closure (Epsilon closure)'."
         },
         {
-          "text": "b.) power set",
+          "text": "power set",
           "isCorrect": false,
           "rationale": "Incorrect. 'power set' is a distractor. The correct answer is 'ε-closure (Epsilon closure)'."
         },
         {
-          "text": "c.) ε-closure (Epsilon closure)",
+          "text": "ε-closure (Epsilon closure)",
           "isCorrect": true,
           "rationale": "Correct! [Epsilon Closure Definition] The ε-closure(q) is the set of all states reachable from state q by following zero or more ε-transitions."
         },
         {
-          "text": "d.) Kleene closure",
+          "text": "Kleene closure",
           "isCorrect": false,
           "rationale": "Incorrect. 'Kleene closure' is a distractor. The correct answer is 'ε-closure (Epsilon closure)'."
         }
@@ -889,22 +889,22 @@
       "question": "_____ 35. The ε-closure of any state q always contains at least ____.",
       "answerOptions": [
         {
-          "text": "a.) the initial state",
+          "text": "the initial state",
           "isCorrect": false,
           "rationale": "Incorrect. 'the initial state' is a distractor. The correct answer is 'the state q itself'."
         },
         {
-          "text": "b.) the empty set",
+          "text": "the empty set",
           "isCorrect": false,
           "rationale": "Incorrect. 'the empty set' is a distractor. The correct answer is 'the state q itself'."
         },
         {
-          "text": "c.) the state q itself",
+          "text": "the state q itself",
           "isCorrect": true,
           "rationale": "Correct! [Epsilon Closure Self-Inclusion] Because a state is reachable from itself via zero ε-moves (path of length 0), q ∈ ε-closure(q) always."
         },
         {
-          "text": "d.) the final state",
+          "text": "the final state",
           "isCorrect": false,
           "rationale": "Incorrect. 'the final state' is a distractor. The correct answer is 'the state q itself'."
         }
@@ -915,22 +915,22 @@
       "question": "_____ 36. In Activity 3 Problem 1 ($L1 = {strings containing '01'}$), the DFA created by subset construction has 4 reachable states before minimization: A = {q0}, B = {q0, q1}, C = {q0, q2}, and D = {q0, q1, q2}. Which states are accepting?",
       "answerOptions": [
         {
-          "text": "a.) Only State C",
+          "text": "Only State C",
           "isCorrect": false,
           "rationale": "Incorrect. 'Only State C' is a distractor. The correct answer is 'States C and D (both contain q2)'."
         },
         {
-          "text": "b.) States C and D (both contain q2)",
+          "text": "States C and D (both contain q2)",
           "isCorrect": true,
           "rationale": "Correct! [Activity 3 Problem 1 Accepting States] Because q2 is the accepting state in the NFA, any subset containing q2 (namely C and D) is an accepting state in the DFA."
         },
         {
-          "text": "c.) States A and B",
+          "text": "States A and B",
           "isCorrect": false,
           "rationale": "Incorrect. 'States A and B' is a distractor. The correct answer is 'States C and D (both contain q2)'."
         },
         {
-          "text": "d.) Only State D",
+          "text": "Only State D",
           "isCorrect": false,
           "rationale": "Incorrect. 'Only State D' is a distractor. The correct answer is 'States C and D (both contain q2)'."
         }
@@ -941,22 +941,22 @@
       "question": "_____ 37. In Activity 3 Problem 1, why can states C = {q0, q2} and D = {q0, q1, q2} be merged during DFA minimization?",
       "answerOptions": [
         {
-          "text": "a.) Because both have dead configurations",
+          "text": "Because both have dead configurations",
           "isCorrect": false,
           "rationale": "Incorrect. 'Because both have dead configurations' is a distractor. The correct answer is 'Both states transition to D on '0' and to C on '1', making them equivalent'."
         },
         {
-          "text": "b.) Because state D is unreachable",
+          "text": "Because state D is unreachable",
           "isCorrect": false,
           "rationale": "Incorrect. 'Because state D is unreachable' is a distractor. The correct answer is 'Both states transition to D on '0' and to C on '1', making them equivalent'."
         },
         {
-          "text": "c.) Because both are initial states",
+          "text": "Because both are initial states",
           "isCorrect": false,
           "rationale": "Incorrect. 'Because both are initial states' is a distractor. The correct answer is 'Both states transition to D on '0' and to C on '1', making them equivalent'."
         },
         {
-          "text": "d.) Both states transition to D on '0' and to C on '1', making them equivalent",
+          "text": "Both states transition to D on '0' and to C on '1', making them equivalent",
           "isCorrect": true,
           "rationale": "Correct! [State Equivalence in Minimization] States C and D have identical transition outputs on all alphabet symbols (0 -> D, 1 -> C) and are both accepting, proving they are indistinguishable/equivalent."
         }
@@ -967,22 +967,22 @@
       "question": "_____ 38. In subset construction, states in the power set that cannot be reached by any sequence of transitions starting from the initial state are called ____ states.",
       "answerOptions": [
         {
-          "text": "a.) trap",
+          "text": "trap",
           "isCorrect": false,
           "rationale": "Incorrect. 'trap' is a distractor. The correct answer is 'unreachable (inaccessible)'."
         },
         {
-          "text": "b.) unreachable (inaccessible)",
+          "text": "unreachable (inaccessible)",
           "isCorrect": true,
           "rationale": "Correct! [Unreachable States in Subset Construction] While 2^Q possible subsets exist, typically only a small fraction are reachable from the start state, and unreachable subsets are discarded."
         },
         {
-          "text": "c.) deterministic",
+          "text": "deterministic",
           "isCorrect": false,
           "rationale": "Incorrect. 'deterministic' is a distractor. The correct answer is 'unreachable (inaccessible)'."
         },
         {
-          "text": "d.) final",
+          "text": "final",
           "isCorrect": false,
           "rationale": "Incorrect. 'final' is a distractor. The correct answer is 'unreachable (inaccessible)'."
         }
@@ -993,22 +993,22 @@
       "question": "_____ 39. The famous algorithmic technique that converts any Regular Expression into an equivalent ε-NFA is known as ____ Construction.",
       "answerOptions": [
         {
-          "text": "a.) Thompson's",
+          "text": "Thompson's",
           "isCorrect": true,
           "rationale": "Correct! [Thompson's Construction] Thompson's construction algorithm systematically converts regular expressions into ε-NFAs using base cases and structural induction."
         },
         {
-          "text": "b.) Moore's",
+          "text": "Moore's",
           "isCorrect": false,
           "rationale": "Incorrect. 'Moore's' is a distractor. The correct answer is 'Thompson's'."
         },
         {
-          "text": "c.) Turing's",
+          "text": "Turing's",
           "isCorrect": false,
           "rationale": "Incorrect. 'Turing's' is a distractor. The correct answer is 'Thompson's'."
         },
         {
-          "text": "d.) Chomsky's",
+          "text": "Chomsky's",
           "isCorrect": false,
           "rationale": "Incorrect. 'Chomsky's' is a distractor. The correct answer is 'Thompson's'."
         }
@@ -1019,22 +1019,22 @@
       "question": "_____ 40. In an NFA, when multiple transitions exist for the same input symbol from a single state, how does the machine conceptually process them?",
       "answerOptions": [
         {
-          "text": "a.) It crashes with a runtime error",
+          "text": "It crashes with a runtime error",
           "isCorrect": false,
           "rationale": "Incorrect. 'It crashes with a runtime error' is a distractor. The correct answer is 'It explores all possible execution paths simultaneously in parallel'."
         },
         {
-          "text": "b.) It prompts the user for a choice",
+          "text": "It prompts the user for a choice",
           "isCorrect": false,
           "rationale": "Incorrect. 'It prompts the user for a choice' is a distractor. The correct answer is 'It explores all possible execution paths simultaneously in parallel'."
         },
         {
-          "text": "c.) It explores all possible execution paths simultaneously in parallel",
+          "text": "It explores all possible execution paths simultaneously in parallel",
           "isCorrect": true,
           "rationale": "Correct! [Parallel Branching Concept] Non-determinism can be conceptualized as cloning the machine at each branch point to explore all computational trajectories in parallel."
         },
         {
-          "text": "d.) It always chooses the alphabetically first state",
+          "text": "It always chooses the alphabetically first state",
           "isCorrect": false,
           "rationale": "Incorrect. 'It always chooses the alphabetically first state' is a distractor. The correct answer is 'It explores all possible execution paths simultaneously in parallel'."
         }
@@ -1045,22 +1045,22 @@
       "question": "_____ 41. An NFA with n states that recognizes a language can always be converted into an equivalent DFA with at most ____ states.",
       "answerOptions": [
         {
-          "text": "a.) 2^n",
+          "text": "2^n",
           "isCorrect": true,
           "rationale": "Correct! [NFA to DFA State Upper Bound] By subset construction, the maximum number of states in the equivalent DFA is 2^n."
         },
         {
-          "text": "b.) n!",
+          "text": "n!",
           "isCorrect": false,
           "rationale": "Incorrect. 'n!' is a distractor. The correct answer is '2^n'."
         },
         {
-          "text": "c.) n^2",
+          "text": "n^2",
           "isCorrect": false,
           "rationale": "Incorrect. 'n^2' is a distractor. The correct answer is '2^n'."
         },
         {
-          "text": "d.) 2n",
+          "text": "2n",
           "isCorrect": false,
           "rationale": "Incorrect. '2n' is a distractor. The correct answer is '2^n'."
         }
@@ -1071,22 +1071,22 @@
       "question": "_____ 42. In an NFA transition table, an entry with the symbol ϕ indicates that ____.",
       "answerOptions": [
         {
-          "text": "a.) the state is an accepting state",
+          "text": "the state is an accepting state",
           "isCorrect": false,
           "rationale": "Incorrect. 'the state is an accepting state' is a distractor. The correct answer is 'no transition is defined for that state and input symbol'."
         },
         {
-          "text": "b.) an epsilon transition occurs",
+          "text": "an epsilon transition occurs",
           "isCorrect": false,
           "rationale": "Incorrect. 'an epsilon transition occurs' is a distractor. The correct answer is 'no transition is defined for that state and input symbol'."
         },
         {
-          "text": "c.) no transition is defined for that state and input symbol",
+          "text": "no transition is defined for that state and input symbol",
           "isCorrect": true,
           "rationale": "Correct! [Phi Symbol in Transition Table] The symbol ϕ (or ∅) in a transition table denotes the empty set, indicating no valid next state exists for that input."
         },
         {
-          "text": "d.) the machine loops infinitely",
+          "text": "the machine loops infinitely",
           "isCorrect": false,
           "rationale": "Incorrect. 'the machine loops infinitely' is a distractor. The correct answer is 'no transition is defined for that state and input symbol'."
         }
@@ -1097,22 +1097,22 @@
       "question": "_____ 43. In Activity 3 Problem 5 (strings ending with '11'), what is the transition from DFA state B = {q0, q1} on input '1'?",
       "answerOptions": [
         {
-          "text": "a.) State A = {q0}",
+          "text": "State A = {q0}",
           "isCorrect": false,
           "rationale": "Incorrect. 'State A = {q0}' is a distractor. The correct answer is 'State C = {q0, q1, q2} (Accepting)'."
         },
         {
-          "text": "b.) Trap state",
+          "text": "Trap state",
           "isCorrect": false,
           "rationale": "Incorrect. 'Trap state' is a distractor. The correct answer is 'State C = {q0, q1, q2} (Accepting)'."
         },
         {
-          "text": "c.) State C = {q0, q1, q2} (Accepting)",
+          "text": "State C = {q0, q1, q2} (Accepting)",
           "isCorrect": true,
           "rationale": "Correct! [Activity 3 Problem 5 Transition on '1'] From B = {q0, q1}, on input 1: δ(q0, 1) = {q0, q1} and δ(q1, 1) = {q2}. The union is {q0, q1, q2} = C (accepting)."
         },
         {
-          "text": "d.) State B = {q0, q1}",
+          "text": "State B = {q0, q1}",
           "isCorrect": false,
           "rationale": "Incorrect. 'State B = {q0, q1}' is a distractor. The correct answer is 'State C = {q0, q1, q2} (Accepting)'."
         }
@@ -1123,22 +1123,22 @@
       "question": "_____ 44. In Activity 3 Problem 5 (strings ending with '11'), what is the transition from DFA state C = {q0, q1, q2} on input '0'?",
       "answerOptions": [
         {
-          "text": "a.) State B = {q0, q1}",
+          "text": "State B = {q0, q1}",
           "isCorrect": false,
           "rationale": "Incorrect. 'State B = {q0, q1}' is a distractor. The correct answer is 'State A = {q0}'."
         },
         {
-          "text": "b.) Trap state",
+          "text": "Trap state",
           "isCorrect": false,
           "rationale": "Incorrect. 'Trap state' is a distractor. The correct answer is 'State A = {q0}'."
         },
         {
-          "text": "c.) State A = {q0}",
+          "text": "State A = {q0}",
           "isCorrect": true,
           "rationale": "Correct! [Activity 3 Problem 5 Transition on '0'] From C, on input 0: δ(q0, 0) = {q0}, δ(q1, 0) = ∅, and δ(q2, 0) = ∅. The union is {q0} = State A."
         },
         {
-          "text": "d.) State C = {q0, q1, q2}",
+          "text": "State C = {q0, q1, q2}",
           "isCorrect": false,
           "rationale": "Incorrect. 'State C = {q0, q1, q2}' is a distractor. The correct answer is 'State A = {q0}'."
         }
@@ -1149,22 +1149,22 @@
       "question": "_____ 45. Which of the following computational characteristics is shared by BOTH DFAs and NFAs?",
       "answerOptions": [
         {
-          "text": "a.) Both allow epsilon transitions",
+          "text": "Both allow epsilon transitions",
           "isCorrect": false,
           "rationale": "Incorrect. 'Both allow epsilon transitions' is a distractor. The correct answer is 'Both recognize exactly the class of Regular Languages'."
         },
         {
-          "text": "b.) Both require exactly one next state per symbol",
+          "text": "Both require exactly one next state per symbol",
           "isCorrect": false,
           "rationale": "Incorrect. 'Both require exactly one next state per symbol' is a distractor. The correct answer is 'Both recognize exactly the class of Regular Languages'."
         },
         {
-          "text": "c.) Both require unique deterministic transitions",
+          "text": "Both require unique deterministic transitions",
           "isCorrect": false,
           "rationale": "Incorrect. 'Both require unique deterministic transitions' is a distractor. The correct answer is 'Both recognize exactly the class of Regular Languages'."
         },
         {
-          "text": "d.) Both recognize exactly the class of Regular Languages",
+          "text": "Both recognize exactly the class of Regular Languages",
           "isCorrect": true,
           "rationale": "Correct! [Shared DFA and NFA Characteristics] DFAs and NFAs are computationally equivalent in language recognition power—both define and recognize Regular Languages."
         }

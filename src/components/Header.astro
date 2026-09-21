@@ -9,36 +9,54 @@ const { currentSubject } = Astro.props;
 const baseUrl = import.meta.env.BASE_URL;
 ---
 
-<header class="site-header">
+<header class="site-header" id="site-header">
   <div class="nav-container">
-    <a href={baseUrl} class="brand">
-      <span class="brand-sparkle">✦</span>
-      <span class="brand-title">ReviewIII</span>
-      <span class="brand-sub">Hub</span>
-      {currentSubject && (
-        <>
-          <span class="crumb-divider">/</span>
-          <span class="brand-crumb">{currentSubject}</span>
-        </>
-      )}
-    </a>
+    <div class="nav-left">
+      <a href={baseUrl} class="brand" title="ReviewIII Academic Hub">
+        <span class="brand-sparkle">✦</span>
+        <span class="brand-title">ReviewIII</span>
+        <span class="brand-sub">Hub</span>
+        {currentSubject && (
+          <>
+            <span class="crumb-divider">/</span>
+            <span class="brand-crumb">{currentSubject}</span>
+          </>
+        )}
+      </a>
+
+      <!-- Quick Section Tabs (Desktop) -->
+      <nav class="header-nav-links" aria-label="Main Navigation">
+        <button type="button" class="header-nav-btn active" data-view="reviewers">
+          Reviewers
+        </button>
+        <button type="button" class="header-nav-btn" data-view="focus">
+          Pomodoro
+        </button>
+        <button type="button" class="header-nav-btn" data-view="downloads">
+          Downloads
+        </button>
+      </nav>
+    </div>
 
     <div class="nav-right">
-      <!-- Live Synchronized Focus Pill (matches study-tracker FocusPill) -->
-      <a href={`${baseUrl}#focus-timer`} class="header-focus-pill idle" id="header-focus-pill" title="Jump to Pomodoro Focus Timer">
+      <!-- Quick Search Trigger Badge -->
+      <button type="button" class="header-search-trigger" id="header-search-trigger" title="Quick Search (Press / to focus)">
+        <span class="search-icon">🔍</span>
+        <span class="search-label">Search</span>
+        <kbd class="search-kbd">/</kbd>
+      </button>
+
+      <!-- Live Synchronized Focus Pill -->
+      <button type="button" class="header-focus-pill idle" id="header-focus-pill" title="Jump to Pomodoro Focus Workstation">
         <span class="pill-ping" id="pill-ping-indicator" style="display: none;">
           <span class="ping-wave"></span>
           <span class="ping-dot"></span>
         </span>
         <span class="pill-icon" id="pill-phase-icon">⏱️</span>
         <span class="pill-text" id="pill-display-text">Focus</span>
-      </a>
+      </button>
 
-      <div class="stat-badge">
-        <strong>{TOTAL_QUESTIONS}</strong> Items &bull; <strong>{TOTAL_MODULES}</strong> Modules
-      </div>
-      <a href={`${baseUrl}#subjects`} class="nav-link">Subjects</a>
-      <a href="https://github.com/jevvii/reviewiii" target="_blank" rel="noopener noreferrer" class="nav-link">
+      <a href="https://github.com/jevvii/reviewiii" target="_blank" rel="noopener noreferrer" class="nav-link github-link" title="Open GitHub Repository">
         GitHub &nearr;
       </a>
     </div>
@@ -46,6 +64,12 @@ const baseUrl = import.meta.env.BASE_URL;
 </header>
 
 <style>
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
   .crumb-divider {
     color: #444;
     font-size: 0.85rem;
@@ -55,13 +79,92 @@ const baseUrl = import.meta.env.BASE_URL;
     font-weight: 500;
   }
 
+  /* Desktop Header Nav Links */
+  .header-nav-links {
+    display: none;
+    align-items: center;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-full);
+    padding: 3px;
+  }
+
+  @media (min-width: 860px) {
+    .header-nav-links {
+      display: flex;
+    }
+  }
+
+  .header-nav-btn {
+    background: transparent;
+    border: none;
+    color: var(--color-text-muted);
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 5px 12px;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    font-family: inherit;
+  }
+
+  .header-nav-btn:hover {
+    color: var(--color-text-main);
+  }
+
+  .header-nav-btn.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-text-main);
+    font-weight: 600;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  }
+
+  /* Search Trigger */
+  .header-search-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-subtle);
+    color: var(--color-text-muted);
+    padding: 5px 10px;
+    border-radius: var(--radius-sm);
+    font-size: 0.76rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+  }
+
+  .header-search-trigger:hover {
+    border-color: var(--border-medium);
+    color: var(--color-text-main);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .search-kbd {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 3px;
+    padding: 0 5px;
+    font-size: 0.68rem;
+    color: var(--color-text-muted);
+    line-height: 1.4;
+  }
+
+  @media (max-width: 640px) {
+    .header-search-trigger .search-label {
+      display: none;
+    }
+  }
+
   /* Header Focus Pill */
   .header-focus-pill {
     display: inline-flex;
     align-items: center;
     gap: 6px;
     padding: 5px 12px;
-    border-radius: 9999px;
+    border-radius: var(--radius-full);
     font-size: 0.76rem;
     font-weight: 600;
     font-family: 'Inter', monospace;
@@ -69,8 +172,9 @@ const baseUrl = import.meta.env.BASE_URL;
     text-decoration: none;
     transition: all 0.2s ease;
     border: 1px solid rgba(255, 255, 255, 0.12);
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.04);
     color: var(--color-text-muted);
+    cursor: pointer;
   }
 
   .header-focus-pill.idle:hover {
@@ -81,16 +185,16 @@ const baseUrl = import.meta.env.BASE_URL;
 
   .header-focus-pill.running-focus {
     border-color: rgba(138, 154, 134, 0.5);
-    background: rgba(138, 154, 134, 0.12);
+    background: rgba(138, 154, 134, 0.14);
     color: var(--color-accent-primary);
-    box-shadow: 0 0 12px rgba(138, 154, 134, 0.18);
+    box-shadow: 0 0 14px rgba(138, 154, 134, 0.22);
   }
 
   .header-focus-pill.running-break {
     border-color: rgba(168, 159, 145, 0.5);
-    background: rgba(168, 159, 145, 0.12);
+    background: rgba(168, 159, 145, 0.14);
     color: #a89f91;
-    box-shadow: 0 0 12px rgba(168, 159, 145, 0.18);
+    box-shadow: 0 0 14px rgba(168, 159, 145, 0.22);
   }
 
   .pill-ping {
@@ -129,10 +233,17 @@ const baseUrl = import.meta.env.BASE_URL;
     font-size: 0.85rem;
   }
 
-  @media (max-width: 640px) {
-    .stat-badge {
-      display: none;
+  .github-link {
+    display: none;
+  }
+
+  @media (min-width: 640px) {
+    .github-link {
+      display: inline-flex;
     }
+  }
+
+  @media (max-width: 480px) {
     .header-focus-pill {
       padding: 4px 9px;
       font-size: 0.72rem;
@@ -148,11 +259,13 @@ const baseUrl = import.meta.env.BASE_URL;
     PHASE_EMOJIS
   } from '../lib/focus-system.js';
 
-  (function initHeaderFocusPill() {
+  (function initHeader() {
     const pillEl = document.getElementById('header-focus-pill');
     const pingEl = document.getElementById('pill-ping-indicator');
     const iconEl = document.getElementById('pill-phase-icon');
     const textEl = document.getElementById('pill-display-text');
+    const searchTrigger = document.getElementById('header-search-trigger');
+    const navBtns = document.querySelectorAll('.header-nav-btn');
 
     if (!pillEl) return;
 
@@ -165,7 +278,6 @@ const baseUrl = import.meta.env.BASE_URL;
         return;
       }
 
-      // Session is active
       const now = Date.now();
       const remaining = snap.endsAt ? Math.max(0, Math.ceil((snap.endsAt - now) / 1000)) : snap.secondsLeft;
       const isFocus = snap.phase === 'focus';
@@ -178,16 +290,61 @@ const baseUrl = import.meta.env.BASE_URL;
 
     // Subscribe to state changes
     subscribeFocus(updatePill);
-
-    // Initial check
     updatePill(readFocusSnapshot());
 
-    // Ticker to refresh time display while running
     setInterval(() => {
       const snap = readFocusSnapshot();
       if (snap && snap.running) {
         updatePill(snap);
       }
     }, 1000);
+
+    // Pill click switches view to Focus Workstation
+    pillEl.addEventListener('click', () => {
+      const focusTab = document.querySelector('[data-view-tab="focus"]') as HTMLElement;
+      if (focusTab) {
+        focusTab.click();
+        const el = document.getElementById('view-focus');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        window.location.hash = '#focus-timer';
+      }
+    });
+
+    // Nav buttons click handlers
+    navBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const view = btn.getAttribute('data-view');
+        const targetTab = document.querySelector(`[data-view-tab="${view}"]`) as HTMLElement;
+        if (targetTab) {
+          targetTab.click();
+          const targetSection = document.getElementById(`view-${view}`);
+          if (targetSection) targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Search Trigger click
+    if (searchTrigger) {
+      searchTrigger.addEventListener('click', () => {
+        // Switch to reviewers view first if not active
+        const revTab = document.querySelector('[data-view-tab="reviewers"]') as HTMLElement;
+        if (revTab) revTab.click();
+        
+        const searchInput = document.getElementById('subject-search') as HTMLInputElement;
+        if (searchInput) {
+          searchInput.focus();
+          searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+    }
+
+    // Global shortcut '/' to focus search
+    window.addEventListener('keydown', (e) => {
+      if (e.key === '/' && document.activeElement?.tagName !== 'INPUT' && document.activeElement?.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        searchTrigger?.click();
+      }
+    });
   })();
 </script>

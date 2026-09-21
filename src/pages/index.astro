@@ -10,7 +10,7 @@ const activeSubjects = SUBJECTS.filter((s) => s.status === 'active');
 
 <Layout title="ReviewIII — Year III Computer Science Study Reviewer & Quiz Portal">
   <main class="container">
-    <!-- Hero Section -->
+    <!-- Hero Section with Minimalist Bento Stats -->
     <section class="hero">
       <div class="tagline">
         <span class="sparkle">✦</span>
@@ -18,203 +18,299 @@ const activeSubjects = SUBJECTS.filter((s) => s.status === 'active');
       </div>
       <h1 class="hero-title">Academic Review Hub</h1>
       <p class="hero-subtitle">
-        Curated identification-type questionnaires with 4-choice distractors, comprehensive answer keys, embedded NotebookLM interactive quizzes, and integrated Pomodoro study tracking.
+        Curated identification-type questionnaires with verified answer keys, interactive NotebookLM-style quiz players, and integrated Pomodoro study tracking.
       </p>
-      
-      <div class="meta-strip">
-        <div class="meta-pill">
-          <strong>{TOTAL_QUESTIONS}</strong> Active Items
+
+      <!-- Bento Metric Pods -->
+      <div class="bento-strip">
+        <div class="bento-tile">
+          <div class="bento-tile-top">
+            <span class="bento-label">Question Bank</span>
+            <span class="bento-tag">Verified</span>
+          </div>
+          <div class="bento-value">{TOTAL_QUESTIONS}</div>
+          <div class="bento-sub">NETC (203) &bull; ATFL (174) &bull; HMBY (152)</div>
         </div>
-        <div class="meta-pill">
-          <strong>{TOTAL_MODULES}</strong> Ready Modules
+
+        <div class="bento-tile">
+          <div class="bento-tile-top">
+            <span class="bento-label">Ready Modules</span>
+            <span class="bento-tag active-tag">Interactive</span>
+          </div>
+          <div class="bento-value">{TOTAL_MODULES}</div>
+          <div class="bento-sub">Cisco CCNA &bull; Automata &bull; BioChem</div>
         </div>
-        <div class="meta-pill">
-          <strong>{activeSubjects.length}</strong> Active Subjects
+
+        <div class="bento-tile focus-tile">
+          <div class="bento-tile-top">
+            <span class="bento-label">Focus Today</span>
+            <span class="bento-tag focus-tag">Manila PST</span>
+          </div>
+          <div class="bento-value" id="hero-focus-today-mins">0m</div>
+          <div class="bento-sub">Continuous Pomodoro Study Log</div>
         </div>
-        <div class="meta-pill">
-          <strong>100%</strong> Rationales & Keys
-        </div>
-        <div class="meta-pill focus-feature-pill">
-          <strong>⏱️ Pomodoro</strong> Study Tracking
+
+        <div class="bento-tile">
+          <div class="bento-tile-top">
+            <span class="bento-label">Curriculum</span>
+            <span class="bento-tag">Year III</span>
+          </div>
+          <div class="bento-value">{activeSubjects.length} <span class="bento-unit">/ {SUBJECTS.length}</span></div>
+          <div class="bento-sub">Active &bull; 4 Upcoming Tracks</div>
         </div>
       </div>
     </section>
 
-    <!-- Pomodoro Focus & Automatic Time Tracker Section -->
-    <section class="focus-section" id="focus-timer">
-      <div class="section-header">
+    <!-- Sophisticated View Switcher (Segmented Control) -->
+    <section class="view-controller-section">
+      <div class="segmented-control" role="tablist" aria-label="Study Hub Views">
+        <button
+          type="button"
+          class="segmented-tab active"
+          role="tab"
+          aria-selected="true"
+          aria-controls="view-reviewers"
+          data-view-tab="reviewers"
+          id="tab-reviewers"
+        >
+          <span class="tab-icon">📚</span>
+          <span class="tab-text">Course Reviewers</span>
+          <span class="tab-badge">{activeSubjects.length} Active</span>
+        </button>
+
+        <button
+          type="button"
+          class="segmented-tab"
+          role="tab"
+          aria-selected="false"
+          aria-controls="view-focus"
+          data-view-tab="focus"
+          id="tab-focus"
+        >
+          <span class="tab-icon">⏱️</span>
+          <span class="tab-text">Pomodoro Workstation</span>
+          <span class="tab-live-beacon" id="tab-focus-beacon" style="display: none;"></span>
+        </button>
+
+        <button
+          type="button"
+          class="segmented-tab"
+          role="tab"
+          aria-selected="false"
+          aria-controls="view-downloads"
+          data-view-tab="downloads"
+          id="tab-downloads"
+        >
+          <span class="tab-icon">📥</span>
+          <span class="tab-text">Download Vault</span>
+          <span class="tab-badge">28 Files</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- VIEW 1: Course Reviewers (Default) -->
+    <div class="hub-view active" id="view-reviewers" role="tabpanel" aria-labelledby="tab-reviewers">
+      <!-- Sticky Filter & Search Toolbar -->
+      <section class="controls-section" id="subjects">
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">All ({SUBJECTS.length})</button>
+          <button class="filter-tab" data-filter="active">Active ({activeSubjects.length})</button>
+          <button class="filter-tab" data-filter="NETC311">NETC311 (2)</button>
+          <button class="filter-tab" data-filter="HMBY311">HMBY311 (1)</button>
+          <button class="filter-tab" data-filter="ATFL311">ATFL311 (4)</button>
+          <button class="filter-tab" data-filter="upcoming">Upcoming ({SUBJECTS.length - activeSubjects.length})</button>
+        </div>
+
+        <div class="search-box-wrapper">
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input
+              type="text"
+              id="subject-search"
+              placeholder="Search subjects, modules, topics... (Press /)"
+              aria-label="Search subjects and modules"
+              autocomplete="off"
+            />
+            <button type="button" class="search-clear-btn" id="search-clear-btn" aria-label="Clear search" style="display: none;">✕</button>
+            <kbd class="search-kbd-hint">/</kbd>
+          </div>
+          <span class="search-counter" id="search-counter" style="display: none;">Showing 7 of 7</span>
+        </div>
+      </section>
+
+      <!-- Empty State for Search -->
+      <div class="empty-search-state" id="empty-search-state" style="display: none;">
+        <div class="empty-icon">🔍</div>
+        <p class="empty-title">No matching subjects or modules found</p>
+        <span class="empty-desc">Try adjusting your query or resetting your active filters.</span>
+        <button type="button" class="btn-secondary" id="btn-reset-search">Reset Search & Filters</button>
+      </div>
+
+      <!-- Subjects Grid -->
+      <section class="subjects-grid" id="subjects-container">
+        {SUBJECTS.map((subject) => (
+          <SubjectCard subject={subject} />
+        ))}
+      </section>
+    </div>
+
+    <!-- VIEW 2: Pomodoro Focus Workstation -->
+    <div class="hub-view" id="view-focus" role="tabpanel" aria-labelledby="tab-focus" style="display: none;">
+      <section class="focus-section-header">
         <div class="section-title-row">
-          <span class="section-badge">Productivity System</span>
-          <h2 class="section-title">Pomodoro Focus & Automatic Study Log</h2>
+          <span class="section-badge">Productivity Station</span>
+          <h2 class="section-title">Pomodoro Focus & Study Log</h2>
         </div>
         <p class="section-sub">
-          25/5/15 minute interval cycles with continuous auto-advance loops, browser-resilient epoch timing, Web Audio synthesis chimes, and automatic attribution logging.
+          25/5/15 minute interval cycles with continuous auto-advance loops, browser-resilient epoch timing, Web Audio synthesis chimes, and automatic subject attribution logging.
         </p>
-      </div>
+      </section>
 
       <FocusTimer />
-    </section>
+    </div>
 
-    <!-- Interactive Filter & Search Controls -->
-    <section class="controls-section" id="subjects">
-      <div class="filter-tabs">
-        <button class="filter-tab active" data-filter="all">All ({SUBJECTS.length})</button>
-        <button class="filter-tab" data-filter="active">Active ({activeSubjects.length})</button>
-        <button class="filter-tab" data-filter="NETC311">NETC311</button>
-        <button class="filter-tab" data-filter="HMBY311">HMBY311</button>
-        <button class="filter-tab" data-filter="ATFL311">ATFL311</button>
-        <button class="filter-tab" data-filter="upcoming">Upcoming ({SUBJECTS.length - activeSubjects.length})</button>
-        <a href="#focus-timer" class="filter-tab focus-tab-link">⏱️ Focus Timer</a>
-      </div>
-
-      <div class="search-box">
-        <span class="search-icon">🔍</span>
-        <input
-          type="text"
-          id="subject-search"
-          placeholder="Search subjects, modules, topics..."
-          aria-label="Search subjects"
-        />
-      </div>
-    </section>
-
-    <!-- Subjects Grid -->
-    <section class="subjects-grid" id="subjects-container">
-      {SUBJECTS.map((subject) => (
-        <SubjectCard subject={subject} />
-      ))}
-    </section>
-
-    <!-- Consolidated Sources & Downloads Section -->
-    <section class="sources-section">
-      <div class="section-header">
-        <h2 class="section-title">Consolidated Downloads & Answer Keys</h2>
-        <span class="section-sub">Offline PDF Questionnaires, Word DOCX, JSON Datasets, and Markdown</span>
-      </div>
-
-      <div class="sources-box">
-        <div class="source-list">
-          <!-- NETC311 Module 1 -->
-          <div class="source-row">
-            <div class="source-info">
-              <span class="source-tag netc">NETC311</span>
-              <div class="source-text">
-                <span class="source-name">Module 1 — Networking Today Reviewer</span>
-                <span class="source-meta">99 Identification Items &bull; Cisco CCNA ITN</span>
-              </div>
-            </div>
-            <div class="file-badges">
-              <a href={`${baseUrl}downloads/netc311/Module 1 - Networking Today - Questionnaire.pdf`} download class="download-pill">PDF</a>
-              <a href={`${baseUrl}downloads/netc311/Module 1 - Networking Today - Questionnaire.docx`} download class="download-pill">DOCX</a>
-              <a href={`${baseUrl}downloads/netc311/Module_1_NotebookLM_Quiz.json`} download class="download-pill">JSON</a>
-              <a href={`${baseUrl}downloads/netc311/Module_1_NotebookLM_Quiz.md`} download class="download-pill">MD</a>
-            </div>
+    <!-- VIEW 3: Download Vault -->
+    <div class="hub-view" id="view-downloads" role="tabpanel" aria-labelledby="tab-downloads" style="display: none;">
+      <section class="vault-section">
+        <div class="section-header">
+          <div class="section-title-row">
+            <span class="section-badge">Offline Repository</span>
+            <h2 class="section-title">Consolidated Downloads & Answer Keys</h2>
           </div>
+          <span class="section-sub">
+            Direct access to all 28 course documents: printable formatted PDFs, editable Word DOCX questionnaires, structured JSON datasets, and Markdown keys.
+          </span>
+        </div>
 
-          <!-- NETC311 Module 2 -->
-          <div class="source-row">
-            <div class="source-info">
-              <span class="source-tag netc">NETC311</span>
-              <div class="source-text">
-                <span class="source-name">Module 2 — Basic Switch & End Device Configuration Reviewer</span>
-                <span class="source-meta">104 Identification Items &bull; Cisco CCNA ITN</span>
+        <div class="sources-box">
+          <div class="source-list">
+            <!-- NETC311 Module 1 -->
+            <div class="source-row">
+              <div class="source-info">
+                <span class="source-tag netc">NETC311</span>
+                <div class="source-text">
+                  <span class="source-name">Module 1 — Networking Today Reviewer</span>
+                  <span class="source-meta">99 Identification Items &bull; Cisco CCNA ITN</span>
+                </div>
+              </div>
+              <div class="file-badges">
+                <a href={`${baseUrl}downloads/netc311/Module 1 - Networking Today - Questionnaire.pdf`} download class="download-pill" title="Download Printable PDF">PDF</a>
+                <a href={`${baseUrl}downloads/netc311/Module 1 - Networking Today - Questionnaire.docx`} download class="download-pill" title="Download Word DOCX">DOCX</a>
+                <a href={`${baseUrl}downloads/netc311/Module_1_NotebookLM_Quiz.json`} download class="download-pill" title="Download JSON Dataset">JSON</a>
+                <a href={`${baseUrl}downloads/netc311/Module_1_NotebookLM_Quiz.md`} download class="download-pill" title="Download Markdown Key">MD</a>
               </div>
             </div>
-            <div class="file-badges">
-              <a href={`${baseUrl}downloads/netc311/Module 2 - Basic Switch and End Device Configuration - Questionnaire.pdf`} download class="download-pill">PDF</a>
-              <a href={`${baseUrl}downloads/netc311/Module 2 - Basic Switch and End Device Configuration - Questionnaire.docx`} download class="download-pill">DOCX</a>
-              <a href={`${baseUrl}downloads/netc311/Module_2_NotebookLM_Quiz.json`} download class="download-pill">JSON</a>
-              <a href={`${baseUrl}downloads/netc311/Module_2_NotebookLM_Quiz.md`} download class="download-pill">MD</a>
-            </div>
-          </div>
 
-          <!-- HMBY311 Module 1 -->
-          <div class="source-row">
-            <div class="source-info">
-              <span class="source-tag hmby">HMBY311</span>
-              <div class="source-text">
-                <span class="source-name">Module 1 — The Scientific Method & Basic Chemistry Reviewer</span>
-                <span class="source-meta">152 Identification Items &bull; Human Biology</span>
+            <!-- NETC311 Module 2 -->
+            <div class="source-row">
+              <div class="source-info">
+                <span class="source-tag netc">NETC311</span>
+                <div class="source-text">
+                  <span class="source-name">Module 2 — Basic Switch & End Device Configuration Reviewer</span>
+                  <span class="source-meta">104 Identification Items &bull; Cisco CCNA ITN</span>
+                </div>
+              </div>
+              <div class="file-badges">
+                <a href={`${baseUrl}downloads/netc311/Module 2 - Basic Switch and End Device Configuration - Questionnaire.pdf`} download class="download-pill" title="Download Printable PDF">PDF</a>
+                <a href={`${baseUrl}downloads/netc311/Module 2 - Basic Switch and End Device Configuration - Questionnaire.docx`} download class="download-pill" title="Download Word DOCX">DOCX</a>
+                <a href={`${baseUrl}downloads/netc311/Module_2_NotebookLM_Quiz.json`} download class="download-pill" title="Download JSON Dataset">JSON</a>
+                <a href={`${baseUrl}downloads/netc311/Module_2_NotebookLM_Quiz.md`} download class="download-pill" title="Download Markdown Key">MD</a>
               </div>
             </div>
-            <div class="file-badges">
-              <a href={`${baseUrl}downloads/hmby311/Module 1 - Human Biology - Scientific Method and Basic Chemistry.pdf`} download class="download-pill">PDF</a>
-              <a href={`${baseUrl}downloads/hmby311/Module 1 - Human Biology - Scientific Method and Basic Chemistry.docx`} download class="download-pill">DOCX</a>
-              <a href={`${baseUrl}downloads/hmby311/HMBY311_Module_1_Quiz.json`} download class="download-pill">JSON</a>
-              <a href={`${baseUrl}downloads/hmby311/HMBY311_Module_1_Quiz.md`} download class="download-pill">MD</a>
-            </div>
-          </div>
 
-          <!-- ATFL311 Module 1 -->
-          <div class="source-row">
-            <div class="source-info">
-              <span class="source-tag atfl">ATFL311</span>
-              <div class="source-text">
-                <span class="source-name">Module 1 — Introduction to Automata Theory & Chomsky Hierarchy Reviewer</span>
-                <span class="source-meta">40 Identification Items &bull; Automata Theory & Formal Languages</span>
+            <!-- HMBY311 Module 1 -->
+            <div class="source-row">
+              <div class="source-info">
+                <span class="source-tag hmby">HMBY311</span>
+                <div class="source-text">
+                  <span class="source-name">Module 1 — The Scientific Method & Basic Chemistry Reviewer</span>
+                  <span class="source-meta">152 Identification Items &bull; Human Biology</span>
+                </div>
+              </div>
+              <div class="file-badges">
+                <a href={`${baseUrl}downloads/hmby311/Module 1 - Human Biology - Scientific Method and Basic Chemistry.pdf`} download class="download-pill" title="Download Printable PDF">PDF</a>
+                <a href={`${baseUrl}downloads/hmby311/Module 1 - Human Biology - Scientific Method and Basic Chemistry.docx`} download class="download-pill" title="Download Word DOCX">DOCX</a>
+                <a href={`${baseUrl}downloads/hmby311/HMBY311_Module_1_Quiz.json`} download class="download-pill" title="Download JSON Dataset">JSON</a>
+                <a href={`${baseUrl}downloads/hmby311/HMBY311_Module_1_Quiz.md`} download class="download-pill" title="Download Markdown Key">MD</a>
               </div>
             </div>
-            <div class="file-badges">
-              <a href={`${baseUrl}downloads/atfl311/Module 1 - Introduction to Automata Theory - Questionnaire.pdf`} download class="download-pill">PDF</a>
-              <a href={`${baseUrl}downloads/atfl311/Module 1 - Introduction to Automata Theory - Questionnaire.docx`} download class="download-pill">DOCX</a>
-              <a href={`${baseUrl}downloads/atfl311/ATFL311_Module_1_Quiz.json`} download class="download-pill">JSON</a>
-              <a href={`${baseUrl}downloads/atfl311/ATFL311_Module_1_Quiz.md`} download class="download-pill">MD</a>
-            </div>
-          </div>
 
-          <!-- ATFL311 Module 2 -->
-          <div class="source-row">
-            <div class="source-info">
-              <span class="source-tag atfl">ATFL311</span>
-              <div class="source-text">
-                <span class="source-name">Module 2 — Finite State Machines & Prerequisites Reviewer</span>
-                <span class="source-meta">48 Identification Items &bull; Automata Theory & Formal Languages</span>
+            <!-- ATFL311 Module 1 -->
+            <div class="source-row">
+              <div class="source-info">
+                <span class="source-tag atfl">ATFL311</span>
+                <div class="source-text">
+                  <span class="source-name">Module 1 — Introduction to Automata Theory & Chomsky Hierarchy</span>
+                  <span class="source-meta">40 Identification Items &bull; Automata Theory & Formal Languages</span>
+                </div>
+              </div>
+              <div class="file-badges">
+                <a href={`${baseUrl}downloads/atfl311/Module 1 - Introduction to Automata Theory - Questionnaire.pdf`} download class="download-pill" title="Download Printable PDF">PDF</a>
+                <a href={`${baseUrl}downloads/atfl311/Module 1 - Introduction to Automata Theory - Questionnaire.docx`} download class="download-pill" title="Download Word DOCX">DOCX</a>
+                <a href={`${baseUrl}downloads/atfl311/ATFL311_Module_1_Quiz.json`} download class="download-pill" title="Download JSON Dataset">JSON</a>
+                <a href={`${baseUrl}downloads/atfl311/ATFL311_Module_1_Quiz.md`} download class="download-pill" title="Download Markdown Key">MD</a>
               </div>
             </div>
-            <div class="file-badges">
-              <a href={`${baseUrl}downloads/atfl311/Module 2 - Finite State Machines and Prerequisites - Questionnaire.pdf`} download class="download-pill">PDF</a>
-              <a href={`${baseUrl}downloads/atfl311/Module 2 - Finite State Machines and Prerequisites - Questionnaire.docx`} download class="download-pill">DOCX</a>
-              <a href={`${baseUrl}downloads/atfl311/ATFL311_Module_2_Quiz.json`} download class="download-pill">JSON</a>
-              <a href={`${baseUrl}downloads/atfl311/ATFL311_Module_2_Quiz.md`} download class="download-pill">MD</a>
-            </div>
-          </div>
 
-          <!-- ATFL311 Module 3 -->
-          <div class="source-row">
-            <div class="source-info">
-              <span class="source-tag atfl">ATFL311</span>
-              <div class="source-text">
-                <span class="source-name">Module 3 — Deterministic Finite Automata (DFA) Reviewer</span>
-                <span class="source-meta">41 Identification Items &bull; Automata Theory & Formal Languages</span>
+            <!-- ATFL311 Module 2 -->
+            <div class="source-row">
+              <div class="source-info">
+                <span class="source-tag atfl">ATFL311</span>
+                <div class="source-text">
+                  <span class="source-name">Module 2 — Finite State Machines & Prerequisites</span>
+                  <span class="source-meta">48 Identification Items &bull; Automata Theory & Formal Languages</span>
+                </div>
+              </div>
+              <div class="file-badges">
+                <a href={`${baseUrl}downloads/atfl311/Module 2 - Finite State Machines and Prerequisites - Questionnaire.pdf`} download class="download-pill" title="Download Printable PDF">PDF</a>
+                <a href={`${baseUrl}downloads/atfl311/Module 2 - Finite State Machines and Prerequisites - Questionnaire.docx`} download class="download-pill" title="Download Word DOCX">DOCX</a>
+                <a href={`${baseUrl}downloads/atfl311/ATFL311_Module_2_Quiz.json`} download class="download-pill" title="Download JSON Dataset">JSON</a>
+                <a href={`${baseUrl}downloads/atfl311/ATFL311_Module_2_Quiz.md`} download class="download-pill" title="Download Markdown Key">MD</a>
               </div>
             </div>
-            <div class="file-badges">
-              <a href={`${baseUrl}downloads/atfl311/Module 3 - Deterministic Finite Automata - Questionnaire.pdf`} download class="download-pill">PDF</a>
-              <a href={`${baseUrl}downloads/atfl311/Module 3 - Deterministic Finite Automata - Questionnaire.docx`} download class="download-pill">DOCX</a>
-              <a href={`${baseUrl}downloads/atfl311/ATFL311_Module_3_Quiz.json`} download class="download-pill">JSON</a>
-              <a href={`${baseUrl}downloads/atfl311/ATFL311_Module_3_Quiz.md`} download class="download-pill">MD</a>
-            </div>
-          </div>
 
-          <!-- ATFL311 Module 4 -->
-          <div class="source-row">
-            <div class="source-info">
-              <span class="source-tag atfl">ATFL311</span>
-              <div class="source-text">
-                <span class="source-name">Module 4 — Non-Deterministic Finite Automata (NFA) Reviewer</span>
-                <span class="source-meta">45 Identification Items &bull; Automata Theory & Formal Languages</span>
+            <!-- ATFL311 Module 3 -->
+            <div class="source-row">
+              <div class="source-info">
+                <span class="source-tag atfl">ATFL311</span>
+                <div class="source-text">
+                  <span class="source-name">Module 3 — Deterministic Finite Automata (DFA)</span>
+                  <span class="source-meta">41 Identification Items &bull; Automata Theory & Formal Languages</span>
+                </div>
+              </div>
+              <div class="file-badges">
+                <a href={`${baseUrl}downloads/atfl311/Module 3 - Deterministic Finite Automata - Questionnaire.pdf`} download class="download-pill" title="Download Printable PDF">PDF</a>
+                <a href={`${baseUrl}downloads/atfl311/Module 3 - Deterministic Finite Automata - Questionnaire.docx`} download class="download-pill" title="Download Word DOCX">DOCX</a>
+                <a href={`${baseUrl}downloads/atfl311/ATFL311_Module_3_Quiz.json`} download class="download-pill" title="Download JSON Dataset">JSON</a>
+                <a href={`${baseUrl}downloads/atfl311/ATFL311_Module_3_Quiz.md`} download class="download-pill" title="Download Markdown Key">MD</a>
               </div>
             </div>
-            <div class="file-badges">
-              <a href={`${baseUrl}downloads/atfl311/Module 4 - Non-Deterministic Finite Automata - Questionnaire.pdf`} download class="download-pill">PDF</a>
-              <a href={`${baseUrl}downloads/atfl311/Module 4 - Non-Deterministic Finite Automata - Questionnaire.docx`} download class="download-pill">DOCX</a>
-              <a href={`${baseUrl}downloads/atfl311/ATFL311_Module_4_Quiz.json`} download class="download-pill">JSON</a>
-              <a href={`${baseUrl}downloads/atfl311/ATFL311_Module_4_Quiz.md`} download class="download-pill">MD</a>
+
+            <!-- ATFL311 Module 4 -->
+            <div class="source-row">
+              <div class="source-info">
+                <span class="source-tag atfl">ATFL311</span>
+                <div class="source-text">
+                  <span class="source-name">Module 4 — Non-Deterministic Finite Automata (NFA)</span>
+                  <span class="source-meta">45 Identification Items &bull; Automata Theory & Formal Languages</span>
+                </div>
+              </div>
+              <div class="file-badges">
+                <a href={`${baseUrl}downloads/atfl311/Module 4 - Non-Deterministic Finite Automata - Questionnaire.pdf`} download class="download-pill" title="Download Printable PDF">PDF</a>
+                <a href={`${baseUrl}downloads/atfl311/Module 4 - Non-Deterministic Finite Automata - Questionnaire.docx`} download class="download-pill" title="Download Word DOCX">DOCX</a>
+                <a href={`${baseUrl}downloads/atfl311/ATFL311_Module_4_Quiz.json`} download class="download-pill" title="Download JSON Dataset">JSON</a>
+                <a href={`${baseUrl}downloads/atfl311/ATFL311_Module_4_Quiz.md`} download class="download-pill" title="Download Markdown Key">MD</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
+
+    <!-- Floating Back to Top Button -->
+    <button type="button" class="back-to-top-btn" id="back-to-top-btn" title="Back to top" aria-label="Back to top">
+      &uarr;
+    </button>
   </main>
 </Layout>
 
@@ -228,8 +324,8 @@ const activeSubjects = SUBJECTS.filter((s) => s.status === 'active');
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    font-size: 0.78rem;
-    font-weight: 500;
+    font-size: 0.76rem;
+    font-weight: 600;
     color: var(--color-accent-primary);
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -241,52 +337,423 @@ const activeSubjects = SUBJECTS.filter((s) => s.status === 'active');
   }
 
   .hero-title {
-    font-size: clamp(2rem, 6vw, 3.2rem);
+    font-size: clamp(2.2rem, 6vw, 3.4rem);
     font-weight: 200;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.035em;
     color: var(--color-text-main);
     line-height: 1.15;
     margin-bottom: 0.75rem;
   }
 
   .hero-subtitle {
-    font-size: 0.92rem;
+    font-size: 0.94rem;
     color: var(--color-text-muted);
     max-width: 680px;
     line-height: 1.65;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.75rem;
   }
 
-  .meta-strip {
+  /* Bento Strip */
+  .bento-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+  }
+
+  .bento-tile {
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: var(--radius-md);
+    padding: 16px 18px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  .meta-pill {
-    font-size: 0.76rem;
-    color: var(--color-text-muted);
-    background: var(--color-bg-surface);
+  .bento-tile:hover {
+    border-color: rgba(255, 255, 255, 0.16);
+    background: #0d0d0d;
+    transform: translateY(-1px);
+  }
+
+  .bento-tile-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .bento-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-subtle);
+  }
+
+  .bento-tag {
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 1px 6px;
+    border-radius: var(--radius-xs);
+    background: rgba(255, 255, 255, 0.04);
     border: 1px solid var(--border-subtle);
-    padding: 4px 12px;
-    border-radius: var(--radius-sm);
-    white-space: nowrap;
+    color: var(--color-text-subtle);
   }
 
-  .meta-pill strong {
+  .bento-tag.active-tag {
+    color: var(--color-accent-primary);
+    border-color: rgba(138, 154, 134, 0.3);
+    background: rgba(138, 154, 134, 0.08);
+  }
+
+  .bento-tag.focus-tag {
+    color: var(--color-accent-secondary);
+    border-color: rgba(168, 159, 145, 0.3);
+    background: rgba(168, 159, 145, 0.08);
+  }
+
+  .bento-value {
+    font-size: 1.85rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+
+  .bento-unit {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-text-subtle);
+  }
+
+  .bento-sub {
+    font-size: 0.74rem;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* View Controller Segmented Bar */
+  .view-controller-section {
+    margin-bottom: 2rem;
+    position: sticky;
+    top: 57px;
+    z-index: 40;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .segmented-control {
+    display: flex;
+    gap: 6px;
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-full);
+    padding: 4px;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 640px) {
+    .segmented-control {
+      max-width: 100%;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .segmented-control::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .segmented-tab {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: var(--radius-full);
+    border: none;
+    background: transparent;
+    color: var(--color-text-muted);
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    white-space: nowrap;
+    font-family: inherit;
+  }
+
+  .segmented-tab:hover {
+    color: var(--color-text-main);
+  }
+
+  .segmented-tab.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-text-main);
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  .tab-badge {
+    font-size: 0.68rem;
+    padding: 1px 6px;
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--color-text-subtle);
+    font-weight: 500;
+  }
+
+  .segmented-tab.active .tab-badge {
+    background: rgba(138, 154, 134, 0.18);
     color: var(--color-accent-primary);
   }
 
-  .focus-feature-pill {
-    border-color: rgba(138, 154, 134, 0.3);
-    background: rgba(138, 154, 134, 0.06);
+  .tab-live-beacon {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--color-accent-primary);
+    box-shadow: 0 0 6px var(--color-accent-primary);
+    animation: pill-ping 1.5s infinite;
   }
 
-  /* Focus Section */
-  .focus-section {
+  /* Hub Views */
+  .hub-view {
+    animation: view-fade-in 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  @keyframes view-fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Focus Section View Header */
+  .focus-section-header {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .focus-section-header .section-title-row {
+    justify-content: center;
+  }
+
+  .focus-section-header .section-sub {
+    margin: 0 auto;
+  }
+
+  /* Controls Toolbar */
+  .controls-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 2rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .filter-tabs {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 2px;
+    max-width: 100%;
+  }
+
+  .filter-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-tab {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--border-subtle);
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-family: inherit;
+  }
+
+  .filter-tab:hover {
+    color: var(--color-text-main);
+    border-color: var(--border-medium);
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .filter-tab.active {
+    background: var(--color-accent-primary);
+    color: var(--color-text-inverse);
+    font-weight: 600;
+    border-color: var(--color-accent-primary);
+    box-shadow: 0 2px 10px rgba(138, 154, 134, 0.25);
+  }
+
+  /* Search Box */
+  .search-box-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .search-box-wrapper {
+      width: auto;
+    }
+  }
+
+  .search-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--color-bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 7px 12px;
+    width: 100%;
+    min-width: 0;
+    transition: all 0.2s ease;
+    position: relative;
+  }
+
+  @media (min-width: 768px) {
+    .search-box {
+      width: 320px;
+    }
+  }
+
+  .search-box:focus-within {
+    border-color: var(--color-accent-primary);
+    box-shadow: 0 0 0 2px rgba(138, 154, 134, 0.15);
+  }
+
+  .search-icon {
+    font-size: 0.82rem;
+    opacity: 0.6;
+  }
+
+  #subject-search {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--color-text-main);
+    font-size: 0.82rem;
+    width: 100%;
+    font-family: inherit;
+  }
+
+  #subject-search::placeholder {
+    color: var(--color-text-subtle);
+  }
+
+  .search-clear-btn {
+    background: transparent;
+    border: none;
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 50%;
+  }
+
+  .search-clear-btn:hover {
+    color: var(--color-text-main);
+  }
+
+  .search-kbd-hint {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 3px;
+    padding: 1px 5px;
+    font-size: 0.68rem;
+    color: var(--color-text-subtle);
+    line-height: 1.3;
+  }
+
+  .search-counter {
+    font-size: 0.72rem;
+    color: var(--color-text-subtle);
+    white-space: nowrap;
+  }
+
+  /* Empty Search State */
+  .empty-search-state {
+    padding: 3.5rem 1.5rem;
+    text-align: center;
+    background: #0a0a0a;
+    border: 1px dashed var(--border-subtle);
+    border-radius: var(--radius-lg);
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .empty-icon {
+    font-size: 1.75rem;
+    opacity: 0.4;
+    margin-bottom: 4px;
+  }
+
+  .empty-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text-main);
+  }
+
+  .empty-desc {
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+    margin-bottom: 8px;
+  }
+
+  /* Subjects Grid */
+  .subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 1.5rem;
     margin-bottom: 3.5rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--border-subtle);
+  }
+
+  @media (max-width: 640px) {
+    .subjects-grid {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+  }
+
+  /* Vault Section */
+  .vault-section {
+    margin-top: 0.5rem;
+  }
+
+  .section-header {
+    margin-bottom: 1.5rem;
   }
 
   .section-title-row {
@@ -320,178 +787,54 @@ const activeSubjects = SUBJECTS.filter((s) => s.status === 'active');
     color: var(--color-text-muted);
     max-width: 640px;
     line-height: 1.5;
-    margin-bottom: 1.5rem;
-  }
-
-  /* Controls */
-  .controls-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 2rem;
-    padding-bottom: 1.25rem;
-    border-bottom: 1px solid var(--border-subtle);
-  }
-
-  .filter-tabs {
-    display: flex;
-    gap: 6px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    padding-bottom: 2px;
-    max-width: 100%;
-  }
-
-  .filter-tabs::-webkit-scrollbar {
-    display: none;
-  }
-
-  .filter-tab {
-    background: var(--color-bg-surface);
-    border: 1px solid var(--border-subtle);
-    color: var(--color-text-muted);
-    font-size: 0.8rem;
-    font-weight: 500;
-    padding: 6px 12px;
-    border-radius: var(--radius-sm);
-    cursor: pointer;
-    transition: all 0.2s ease;
-    white-space: nowrap;
-    flex-shrink: 0;
-    text-decoration: none;
-  }
-
-  .filter-tab:hover {
-    color: var(--color-text-main);
-    border-color: var(--border-medium);
-  }
-
-  .filter-tab.active {
-    background: var(--color-accent-primary);
-    color: var(--color-text-inverse);
-    font-weight: 600;
-    border-color: var(--color-accent-primary);
-  }
-
-  .focus-tab-link {
-    border-color: rgba(138, 154, 134, 0.25);
-    color: var(--color-accent-primary);
-  }
-
-  .focus-tab-link:hover {
-    background: rgba(138, 154, 134, 0.1);
-  }
-
-  .search-box {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--color-bg-surface);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-sm);
-    padding: 7px 12px;
-    width: 100%;
-    min-width: 0;
-    transition: border-color 0.2s ease;
-  }
-
-  @media (min-width: 768px) {
-    .search-box {
-      width: auto;
-      min-width: 280px;
-    }
-  }
-
-  .search-box:focus-within {
-    border-color: var(--color-accent-primary);
-  }
-
-  .search-icon {
-    font-size: 0.8rem;
-    opacity: 0.6;
-  }
-
-  #subject-search {
-    background: transparent;
-    border: none;
-    outline: none;
-    color: var(--color-text-main);
-    font-size: 0.82rem;
-    width: 100%;
-    font-family: inherit;
-  }
-
-  #subject-search::placeholder {
-    color: var(--color-text-subtle);
-  }
-
-  /* Subjects Grid */
-  .subjects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 1.35rem;
-    margin-bottom: 3.5rem;
-  }
-
-  @media (max-width: 640px) {
-    .subjects-grid {
-      grid-template-columns: 1fr;
-      gap: 1.15rem;
-    }
-  }
-
-  /* Sources Section */
-  .sources-section {
-    margin-top: 1rem;
   }
 
   .sources-box {
     background: var(--color-bg-surface);
     border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-lg);
     padding: 1.25rem;
   }
 
   .source-list {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.85rem;
   }
 
   .source-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 14px;
+    padding: 14px 16px;
     background: #000000;
-    border: 1px solid var(--border-subtle);
+    border: 1px solid rgba(255, 255, 255, 0.07);
     border-radius: var(--radius-sm);
     flex-wrap: wrap;
-    gap: 10px;
-    transition: border-color 0.2s ease;
+    gap: 12px;
+    transition: all 0.2s ease;
   }
 
   .source-row:hover {
-    border-color: var(--border-medium);
+    border-color: rgba(255, 255, 255, 0.16);
+    background: #040404;
   }
 
   .source-info {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     flex: 1 1 auto;
     min-width: 0;
   }
 
   .source-tag {
-    font-size: 0.7rem;
+    font-size: 0.72rem;
     font-weight: 700;
-    padding: 2px 7px;
+    padding: 3px 8px;
     border-radius: var(--radius-xs);
     flex-shrink: 0;
+    letter-spacing: 0.05em;
   }
 
   .source-tag.netc {
@@ -519,7 +862,7 @@ const activeSubjects = SUBJECTS.filter((s) => s.status === 'active');
   }
 
   .source-name {
-    font-size: 0.86rem;
+    font-size: 0.88rem;
     font-weight: 500;
     color: var(--color-text-main);
     word-break: break-word;
@@ -533,7 +876,7 @@ const activeSubjects = SUBJECTS.filter((s) => s.status === 'active');
   .file-badges {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 6px;
     flex-wrap: wrap;
   }
 
@@ -541,7 +884,7 @@ const activeSubjects = SUBJECTS.filter((s) => s.status === 'active');
     .source-row {
       flex-direction: column;
       align-items: stretch;
-      padding: 10px 12px;
+      padding: 12px;
     }
     .file-badges {
       display: grid;
@@ -553,16 +896,99 @@ const activeSubjects = SUBJECTS.filter((s) => s.status === 'active');
 </style>
 
 <script>
-  // Client-side filtering & live search
+  import { getTodayMinutes, subscribeFocus, formatMinutes } from '../lib/focus-system.js';
+
   document.addEventListener('DOMContentLoaded', () => {
-    const filterTabs = document.querySelectorAll<HTMLElement>('.filter-tab:not(.focus-tab-link)');
+    // 1. Live Hero Focus Today display
+    const heroFocusEl = document.getElementById('hero-focus-today-mins');
+    const tabFocusBeacon = document.getElementById('tab-focus-beacon');
+    
+    function refreshHeroFocus() {
+      if (heroFocusEl) {
+        const mins = getTodayMinutes();
+        heroFocusEl.textContent = formatMinutes(mins);
+      }
+    }
+    refreshHeroFocus();
+
+    subscribeFocus((snap) => {
+      refreshHeroFocus();
+      if (tabFocusBeacon) {
+        tabFocusBeacon.style.display = (snap && snap.running) ? 'inline-block' : 'none';
+      }
+    });
+
+    // 2. View Switcher Controller (Segmented Control)
+    const viewTabs = document.querySelectorAll<HTMLElement>('.segmented-tab');
+    const headerNavBtns = document.querySelectorAll<HTMLElement>('.header-nav-btn');
+    const views = {
+      reviewers: document.getElementById('view-reviewers'),
+      focus: document.getElementById('view-focus'),
+      downloads: document.getElementById('view-downloads'),
+    };
+
+    function switchView(viewName: string, updateHash = true) {
+      // Deactivate all tabs
+      viewTabs.forEach((tab) => {
+        const isMatch = tab.dataset.viewTab === viewName;
+        tab.classList.toggle('active', isMatch);
+        tab.setAttribute('aria-selected', isMatch ? 'true' : 'false');
+      });
+
+      // Synchronize header nav buttons
+      headerNavBtns.forEach((btn) => {
+        btn.classList.toggle('active', btn.dataset.view === viewName);
+      });
+
+      // Toggle views visibility
+      Object.entries(views).forEach(([key, el]) => {
+        if (el) {
+          el.style.display = key === viewName ? 'block' : 'none';
+          el.classList.toggle('active', key === viewName);
+        }
+      });
+
+      if (updateHash) {
+        if (viewName === 'focus') window.location.hash = '#focus-timer';
+        else if (viewName === 'downloads') window.location.hash = '#downloads';
+        else history.replaceState(null, '', window.location.pathname);
+      }
+    }
+
+    viewTabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.viewTab || 'reviewers';
+        switchView(target);
+      });
+    });
+
+    // Handle hash on initial load
+    if (window.location.hash === '#focus-timer') {
+      switchView('focus', false);
+    } else if (window.location.hash === '#downloads') {
+      switchView('downloads', false);
+    } else {
+      switchView('reviewers', false);
+    }
+
+    // 3. Search and Subject Filtering
+    const filterTabs = document.querySelectorAll<HTMLElement>('.filter-tab');
     const searchInput = document.getElementById('subject-search') as HTMLInputElement;
+    const searchClearBtn = document.getElementById('search-clear-btn');
+    const searchCounter = document.getElementById('search-counter');
+    const emptyState = document.getElementById('empty-search-state');
+    const btnResetSearch = document.getElementById('btn-reset-search');
     const cards = document.querySelectorAll<HTMLElement>('.subject-card');
 
     let currentFilter = 'all';
 
     function updateVisibility() {
       const query = (searchInput?.value || '').toLowerCase().trim();
+      let matchCount = 0;
+
+      if (searchClearBtn) {
+        searchClearBtn.style.display = query ? 'block' : 'none';
+      }
 
       cards.forEach((card) => {
         const code = card.dataset.code || '';
@@ -586,10 +1012,25 @@ const activeSubjects = SUBJECTS.filter((s) => s.status === 'active');
 
         if (tabMatch && searchMatch) {
           card.style.display = 'flex';
+          matchCount++;
         } else {
           card.style.display = 'none';
         }
       });
+
+      // Update counter & empty state
+      if (searchCounter) {
+        if (query || currentFilter !== 'all') {
+          searchCounter.textContent = `Showing ${matchCount} of ${cards.length}`;
+          searchCounter.style.display = 'inline';
+        } else {
+          searchCounter.style.display = 'none';
+        }
+      }
+
+      if (emptyState) {
+        emptyState.style.display = matchCount === 0 ? 'flex' : 'none';
+      }
     }
 
     filterTabs.forEach((tab) => {
@@ -601,6 +1042,54 @@ const activeSubjects = SUBJECTS.filter((s) => s.status === 'active');
       });
     });
 
-    searchInput?.addEventListener('input', updateVisibility);
+    if (searchInput) {
+      searchInput.addEventListener('input', updateVisibility);
+      
+      // Escape key clears search
+      searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          searchInput.value = '';
+          updateVisibility();
+          searchInput.blur();
+        }
+      });
+    }
+
+    if (searchClearBtn) {
+      searchClearBtn.addEventListener('click', () => {
+        if (searchInput) {
+          searchInput.value = '';
+          searchInput.focus();
+          updateVisibility();
+        }
+      });
+    }
+
+    if (btnResetSearch) {
+      btnResetSearch.addEventListener('click', () => {
+        if (searchInput) searchInput.value = '';
+        currentFilter = 'all';
+        filterTabs.forEach((t) => {
+          t.classList.toggle('active', t.getAttribute('data-filter') === 'all');
+        });
+        updateVisibility();
+      });
+    }
+
+    // 4. Back to Top Button
+    const backToTopBtn = document.getElementById('back-to-top-btn');
+    if (backToTopBtn) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 320) {
+          backToTopBtn.classList.add('visible');
+        } else {
+          backToTopBtn.classList.remove('visible');
+        }
+      });
+
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
   });
 </script>

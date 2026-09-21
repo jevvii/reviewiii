@@ -13,16 +13,20 @@ const totalSubjectItems = subject.modules.reduce((acc, m) => acc + m.itemCount, 
 <article class="subject-card" data-code={subject.code} data-status={subject.status}>
   <div class="card-header">
     <div class="header-meta">
-      <span class="code-badge" style={`border-color: ${subject.accentColor}; color: ${subject.accentColor};`}>
-        {subject.code}
-      </span>
-      <span class="category-tag">{subject.tag}</span>
+      <div class="code-and-cat">
+        <span class="code-badge" style={`border-color: ${subject.accentColor}; color: ${subject.accentColor};`}>
+          {subject.code}
+        </span>
+        <span class="category-tag">{subject.tag}</span>
+      </div>
+
       {subject.status === 'active' ? (
         <span class="status-pill active">
+          <span class="status-beacon"></span>
           <strong>{totalSubjectItems}</strong> Qs &bull; {subject.modules.length} {subject.modules.length === 1 ? 'Module' : 'Modules'}
         </span>
       ) : (
-        <span class="status-pill upcoming">Upcoming</span>
+        <span class="status-pill upcoming">Upcoming Track</span>
       )}
     </div>
 
@@ -33,7 +37,10 @@ const totalSubjectItems = subject.modules.reduce((acc, m) => acc + m.itemCount, 
 
   <div class="modules-section">
     <div class="modules-header">
-      <span class="modules-title">Module Questionnaires</span>
+      <div class="modules-title-box">
+        <span class="modules-title">Module Questionnaires</span>
+        <span class="modules-count-tag">{subject.modules.length} Available</span>
+      </div>
       <span class="term-badge">{subject.term}</span>
     </div>
 
@@ -60,34 +67,35 @@ const totalSubjectItems = subject.modules.reduce((acc, m) => acc + m.itemCount, 
 
             <div class="module-item-bottom">
               <div class="module-actions">
-                <a href={`${baseUrl}${mod.quizPath}`} class="btn-primary">
+                <a href={`${baseUrl}${mod.quizPath}`} class="btn-primary" title={`Start ${mod.title} Quiz`}>
                   Start Quiz &rarr;
                 </a>
                 {mod.notebookLmUrl && (
-                  <a href={mod.notebookLmUrl} target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                  <a href={mod.notebookLmUrl} target="_blank" rel="noopener noreferrer" class="btn-secondary" title="Open Google NotebookLM">
                     NotebookLM &nearr;
                   </a>
                 )}
               </div>
 
-              <div class="download-pills">
+              <div class="download-pills-group" aria-label="Module Downloads">
+                <span class="downloads-group-label">Offline:</span>
                 {mod.downloads.pdf && (
-                  <a href={`${baseUrl}${mod.downloads.pdf}`} download class="download-pill" title="Download PDF Reviewer">
+                  <a href={`${baseUrl}${mod.downloads.pdf}`} download class="download-pill" title="Download Formatted PDF Reviewer">
                     PDF
                   </a>
                 )}
                 {mod.downloads.docx && (
-                  <a href={`${baseUrl}${mod.downloads.docx}`} download class="download-pill" title="Download Word DOCX">
+                  <a href={`${baseUrl}${mod.downloads.docx}`} download class="download-pill" title="Download Editable Word DOCX">
                     DOCX
                   </a>
                 )}
                 {mod.downloads.json && (
-                  <a href={`${baseUrl}${mod.downloads.json}`} download class="download-pill" title="Download JSON Dataset">
+                  <a href={`${baseUrl}${mod.downloads.json}`} download class="download-pill" title="Download Structured JSON Dataset">
                     JSON
                   </a>
                 )}
                 {mod.downloads.md && (
-                  <a href={`${baseUrl}${mod.downloads.md}`} download class="download-pill" title="Download Markdown Key">
+                  <a href={`${baseUrl}${mod.downloads.md}`} download class="download-pill" title="Download Markdown Answer Key">
                     MD
                   </a>
                 )}
@@ -99,8 +107,8 @@ const totalSubjectItems = subject.modules.reduce((acc, m) => acc + m.itemCount, 
     ) : (
       <div class="upcoming-box">
         <div class="upcoming-sparkle">✦</div>
-        <p class="upcoming-text">Course questionnaires and slide extractors in preparation.</p>
-        <span class="upcoming-sub">Check back soon for Module 1 reviewer.</span>
+        <p class="upcoming-text">Course syllabus and module questionnaires in preparation.</p>
+        <span class="upcoming-sub">Check back soon for Module 1 reviewer & questionnaire.</span>
       </div>
     )}
   </div>
@@ -108,42 +116,50 @@ const totalSubjectItems = subject.modules.reduce((acc, m) => acc + m.itemCount, 
 
 <style>
   .subject-card {
-    background: var(--color-bg-surface);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-md);
-    padding: 1.6rem;
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-lg);
+    padding: 1.65rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     width: 100%;
     min-width: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   }
 
   .subject-card:hover {
-    border-color: var(--color-accent-primary);
-    background: var(--color-bg-surface-elevated);
+    border-color: rgba(138, 154, 134, 0.4);
+    background: #0e0e0e;
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(138, 154, 134, 0.08);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6), 0 0 24px rgba(138, 154, 134, 0.08);
   }
 
   .card-header {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.35rem;
   }
 
   .header-meta {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 8px;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.85rem;
     flex-wrap: wrap;
   }
 
+  .code-and-cat {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
   .code-badge {
-    font-size: 0.75rem;
+    font-size: 0.76rem;
     font-weight: 700;
-    letter-spacing: 0.05em;
-    background: rgba(255, 255, 255, 0.03);
+    letter-spacing: 0.06em;
+    background: rgba(255, 255, 255, 0.04);
     border: 1px solid;
     padding: 3px 8px;
     border-radius: var(--radius-xs);
@@ -157,17 +173,27 @@ const totalSubjectItems = subject.modules.reduce((acc, m) => acc + m.itemCount, 
   }
 
   .status-pill {
-    margin-left: auto;
     font-size: 0.74rem;
-    padding: 3px 8px;
-    border-radius: var(--radius-xs);
+    padding: 3px 9px;
+    border-radius: var(--radius-full);
     white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
   }
 
   .status-pill.active {
     background: rgba(138, 154, 134, 0.1);
-    border: 1px solid rgba(138, 154, 134, 0.25);
+    border: 1px solid rgba(138, 154, 134, 0.28);
     color: var(--color-text-main);
+  }
+
+  .status-beacon {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--color-accent-primary);
+    box-shadow: 0 0 8px var(--color-accent-primary);
   }
 
   .status-pill.active strong {
@@ -181,7 +207,7 @@ const totalSubjectItems = subject.modules.reduce((acc, m) => acc + m.itemCount, 
   }
 
   .subject-title {
-    font-size: 1.3rem;
+    font-size: 1.32rem;
     font-weight: 500;
     color: var(--color-text-main);
     letter-spacing: -0.02em;
@@ -192,7 +218,8 @@ const totalSubjectItems = subject.modules.reduce((acc, m) => acc + m.itemCount, 
   .subject-subtitle {
     font-size: 0.84rem;
     color: var(--color-accent-secondary);
-    margin-bottom: 0.65rem;
+    margin-bottom: 0.75rem;
+    font-weight: 400;
   }
 
   .subject-description {
@@ -203,8 +230,8 @@ const totalSubjectItems = subject.modules.reduce((acc, m) => acc + m.itemCount, 
 
   /* Modules Section */
   .modules-section {
-    border-top: 1px solid var(--border-subtle);
-    padding-top: 1.15rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 1.25rem;
     margin-top: 0.5rem;
   }
 
@@ -212,9 +239,15 @@ const totalSubjectItems = subject.modules.reduce((acc, m) => acc + m.itemCount, 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 0.85rem;
+    margin-bottom: 1rem;
     gap: 8px;
     flex-wrap: wrap;
+  }
+
+  .modules-title-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 
   .modules-title {
@@ -225,6 +258,15 @@ const totalSubjectItems = subject.modules.reduce((acc, m) => acc + m.itemCount, 
     color: var(--color-accent-secondary);
   }
 
+  .modules-count-tag {
+    font-size: 0.68rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-subtle);
+    padding: 1px 6px;
+    border-radius: var(--radius-xs);
+    color: var(--color-text-subtle);
+  }
+
   .term-badge {
     font-size: 0.72rem;
     color: var(--color-text-subtle);
@@ -233,22 +275,23 @@ const totalSubjectItems = subject.modules.reduce((acc, m) => acc + m.itemCount, 
   .modules-list {
     display: flex;
     flex-direction: column;
-    gap: 0.85rem;
+    gap: 0.95rem;
   }
 
   .module-item {
     background: #000000;
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-sm);
-    padding: 1.1rem;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: var(--radius-md);
+    padding: 1.15rem;
     display: flex;
     flex-direction: column;
     gap: 0.85rem;
-    transition: border-color 0.2s ease;
+    transition: all 0.2s ease;
   }
 
   .module-item:hover {
-    border-color: var(--border-medium);
+    border-color: rgba(255, 255, 255, 0.16);
+    background: #040404;
   }
 
   .module-item-title-row {
@@ -272,9 +315,9 @@ const totalSubjectItems = subject.modules.reduce((acc, m) => acc + m.itemCount, 
     font-size: 0.7rem;
     font-weight: 700;
     color: var(--color-accent-primary);
-    background: rgba(138, 154, 134, 0.1);
-    border: 1px solid rgba(138, 154, 134, 0.2);
-    padding: 2px 6px;
+    background: rgba(138, 154, 134, 0.12);
+    border: 1px solid rgba(138, 154, 134, 0.25);
+    padding: 2px 7px;
     border-radius: var(--radius-xs);
     flex-shrink: 0;
   }
@@ -292,6 +335,7 @@ const totalSubjectItems = subject.modules.reduce((acc, m) => acc + m.itemCount, 
     color: var(--color-text-subtle);
     white-space: nowrap;
     flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
   }
 
   .mod-desc {
@@ -310,8 +354,8 @@ const totalSubjectItems = subject.modules.reduce((acc, m) => acc + m.itemCount, 
   .topic-chip {
     font-size: 0.68rem;
     color: var(--color-text-muted);
-    background: var(--color-bg-surface);
-    border: 1px solid var(--border-subtle);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
     padding: 2px 7px;
     border-radius: var(--radius-xs);
   }
@@ -321,8 +365,8 @@ const totalSubjectItems = subject.modules.reduce((acc, m) => acc + m.itemCount, 
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 10px;
-    padding-top: 0.75rem;
+    gap: 12px;
+    padding-top: 0.85rem;
     border-top: 1px solid rgba(255, 255, 255, 0.04);
   }
 
@@ -333,25 +377,33 @@ const totalSubjectItems = subject.modules.reduce((acc, m) => acc + m.itemCount, 
     flex-wrap: wrap;
   }
 
-  .download-pills {
+  .download-pills-group {
     display: flex;
     align-items: center;
     gap: 5px;
     flex-wrap: wrap;
   }
 
+  .downloads-group-label {
+    font-size: 0.68rem;
+    color: var(--color-text-subtle);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-right: 2px;
+  }
+
   .upcoming-box {
-    padding: 1.4rem;
+    padding: 1.5rem;
     background: #000000;
-    border: 1px dashed var(--border-subtle);
-    border-radius: var(--radius-sm);
+    border: 1px dashed rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
     text-align: center;
   }
 
   .upcoming-sparkle {
-    color: var(--color-text-subtle);
+    color: var(--color-accent-primary);
     margin-bottom: 0.35rem;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
   }
 
   .upcoming-text {
@@ -365,7 +417,7 @@ const totalSubjectItems = subject.modules.reduce((acc, m) => acc + m.itemCount, 
     color: var(--color-text-subtle);
   }
 
-  /* Mobile Responsive Tweaks */
+  /* Mobile Responsive */
   @media (max-width: 640px) {
     .subject-card {
       padding: 1.25rem 1rem;
@@ -376,7 +428,7 @@ const totalSubjectItems = subject.modules.reduce((acc, m) => acc + m.itemCount, 
     }
     
     .module-item {
-      padding: 0.95rem 0.85rem;
+      padding: 1rem 0.9rem;
     }
     
     .module-item-bottom {
@@ -396,11 +448,15 @@ const totalSubjectItems = subject.modules.reduce((acc, m) => acc + m.itemCount, 
       width: 100%;
     }
     
-    .download-pills {
+    .download-pills-group {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       width: 100%;
       text-align: center;
+    }
+
+    .downloads-group-label {
+      display: none;
     }
     
     .download-pill {
@@ -409,7 +465,7 @@ const totalSubjectItems = subject.modules.reduce((acc, m) => acc + m.itemCount, 
     }
   }
 
-  @media (max-width: 380px) {
+  @media (max-width: 400px) {
     .module-actions {
       grid-template-columns: 1fr;
     }
