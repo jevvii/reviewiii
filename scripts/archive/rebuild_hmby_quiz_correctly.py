@@ -1,0 +1,88 @@
+import json
+import html
+import random
+import re
+from hmby311_m1_data import HMBY_MODULE_1_ITEMS
+
+# 1. Build Quiz Questions JSON
+quiz_questions = []
+for idx, item in enumerate(HMBY_MODULE_1_ITEMS, start=1):
+    choices = [item["a"]] + item["distractors"]
+    rng = random.Random(idx * 7919)
+    rng.shuffle(choices)
+    letters = ['a', 'b', 'c', 'd']
+    correct_letter = letters[choices.index(item["a"])]
+    
+    opts = []
+    for l_idx, ch in enumerate(choices):
+        is_corr = (ch == item["a"])
+        if is_corr:
+            rationale = f"Correct! [{item['topic']}] {item['explanation']}"
+        else:
+            rationale = f"Incorrect. '{ch}' is a distractor. The correct answer is '{item['a']}'."
+        opts.append({
+            "text": f"{letters[l_idx]}.) {ch}",
+            "isCorrect": is_corr,
+            "rationale": rationale
+        })
+    
+    quiz_questions.append({
+        "question": f"_____ {idx}. {item['q']}",
+        "answerOptions": opts,
+        "hint": f"Concept: {item['topic']}"
+    })
+
+quiz_payload = {
+    "quiz": quiz_questions,
+    "topics": {
+        "covered": list(set([item["topic"] for item in HMBY_MODULE_1_ITEMS])),
+        "followUp": ["Review missed items and lecture slides on Scientific Method & Basic Chemistry"]
+    }
+}
+
+escaped_json = html.escape(json.dumps(quiz_payload, ensure_ascii=False))
+
+# 2. Read template (Module_1_NotebookLM_Quiz.html)
+with open("Module_1_NotebookLM_Quiz.html", "r", encoding="utf-8") as f:
+    template = f.read()
+
+# Replace title
+template = re.sub(r'<title>.*?</title>', '<title>HMBY311 — Module 1: The Scientific Method & Basic Chemistry</title>', template)
+
+# Replace data-app-data using exact string indexing
+idx = template.find('data-app-data="')
+if idx == -1:
+    raise ValueError("data-app-data not found!")
+end_idx = template.find('"', idx + 15)
+if end_idx == -1:
+    raise ValueError("closing quote not found!")
+
+new_html = template[:idx + 15] + escaped_json + template[end_idx:]
+
+# Update the Top Navigation Bar for HMBY311
+navbar_html = """
+    <!-- Pitch Black Top Nav -->
+    <header id="quiz-hub-nav" style="position: sticky; top: 0; left: 0; right: 0; z-index: 999999; background: rgba(0, 0, 0, 0.88); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding: 12px 28px; display: flex; align-items: center; justify-content: space-between; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <a href="../../index.html" style="color: #f0f0f0; text-decoration: none; font-weight: 600; font-size: 14px; display: flex; align-items: center; gap: 8px;">
+          <span style="color: #8a9a86; font-size: 15px;">✦</span>
+          <span style="color: #8a9a86; letter-spacing: -0.01em;">ReviewIII</span>
+          <span style="color: #f0f0f0;">Hub</span>
+        </a>
+        <span style="color: #444444; font-size: 13px;">/</span>
+        <span style="color: #a89f91; font-size: 13px; font-weight: 500;">HMBY311</span>
+        <span style="color: #444444; font-size: 13px;">/</span>
+        <span style="color: #a0a0a0; font-size: 13px; font-weight: 400;">Module 1: Scientific Method & Chemistry (82 Qs)</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <a href="../../index.html" style="color: #a0a0a0; text-decoration: none; font-size: 13px; font-weight: 500; padding: 6px 14px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.08); background: transparent; transition: all 0.2s;">Hub Overview</a>
+        <span style="color: #000000; background: #8a9a86; font-size: 13px; font-weight: 600; padding: 6px 14px; border-radius: 4px;">Module 1 (82 Qs)</span>
+      </div>
+    </header>
+"""
+new_html = re.sub(r'<!-- Pitch Black Top Nav -->.*?</header>', navbar_html, new_html, flags=re.DOTALL)
+
+with open("HMBY311_Module_1_Quiz.html", "w", encoding="utf-8") as f:
+    f.write(new_html)
+
+print("Successfully rebuilt HMBY311_Module_1_Quiz.html with 82 Biology questions!")

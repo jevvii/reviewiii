@@ -1043,18 +1043,18 @@
   ],
   "topics": {
     "covered": [
-      "Cell Cycle",
-      "Types of Cell Division",
       "Gametes",
-      "Mitosis Phases",
-      "Interphase",
-      "Forms of Chromosomes",
-      "Somatic Cells",
+      "Cell Cycle",
       "Homologous Chromosomes",
-      "Human Genome Project",
-      "Cytokinesis",
+      "Autosomes",
+      "Somatic Cells",
       "Sex Chromosomes",
-      "Autosomes"
+      "Forms of Chromosomes",
+      "Cytokinesis",
+      "Types of Cell Division",
+      "Interphase",
+      "Mitosis Phases",
+      "Human Genome Project"
     ],
     "followUp": [
       "Review lecture materials and diagrams for Module 4: Chromosomes & Cell Division"

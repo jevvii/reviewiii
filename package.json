@@ -7,7 +7,10 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "build:quizzes": "python3 scripts/build_all_quizzes.py",
+    "build:hmby": "python3 scripts/build_hmby_m4_m5.py",
+    "deploy": "bash scripts/deploy_github.sh"
   },
   "dependencies": {
     "astro": "^5.0.0"
