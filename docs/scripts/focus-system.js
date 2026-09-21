@@ -318,8 +318,33 @@
     }
   });
 
+  function pauseFocusOnExit() {
+    try {
+      var raw = localStorage.getItem(FOCUS_STORAGE_KEY);
+      if (!raw) return;
+      var snap = JSON.parse(raw);
+      if (snap && snap.running) {
+        var remaining = snap.secondsLeft;
+        if (typeof snap.endsAt === 'number' && snap.endsAt > 0) {
+          remaining = Math.max(0, Math.round((snap.endsAt - Date.now()) / 1000));
+        }
+        snap.running = false;
+        snap.secondsLeft = remaining;
+        snap.endsAt = null;
+        snap.updatedAt = Date.now();
+        localStorage.setItem(FOCUS_STORAGE_KEY, JSON.stringify(snap));
+      }
+    } catch (e) {}
+  }
+
+  if (typeof window !== 'undefined') {
+    window.addEventListener('beforeunload', pauseFocusOnExit);
+    window.addEventListener('pagehide', pauseFocusOnExit);
+  }
+
   // Export to global object
   global.ReviewIIIFocus = {
+    pauseFocusOnExit: pauseFocusOnExit,
     FOCUS_STORAGE_KEY: FOCUS_STORAGE_KEY,
     TIME_LOGS_STORAGE_KEY: TIME_LOGS_STORAGE_KEY,
     SETTINGS_STORAGE_KEY: SETTINGS_STORAGE_KEY,

@@ -324,9 +324,25 @@ const baseUrl = import.meta.env.BASE_URL;
       width: 100%;
     }
 
-    .quiz-launch-btn,
-    .notebooklm-btn {
+    .quiz-launch-btn {
+      flex: none;
       width: 100%;
+      height: auto;
+      min-height: 34px;
+      padding: 7px 14px;
+      font-size: 0.82rem;
+      border-radius: var(--radius-xs);
+      gap: 6px;
+    }
+
+    .notebooklm-btn {
+      flex: none;
+      width: 100%;
+      height: auto;
+      min-height: 30px;
+      padding: 6px 12px;
+      font-size: 0.78rem;
+      border-radius: var(--radius-xs);
     }
 
     .download-pills-row {

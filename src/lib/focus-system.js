@@ -367,6 +367,26 @@ function broadcastStorageEvent(type, payload) {
   }
 }
 
+export function pauseFocusOnExit() {
+  if (typeof window === 'undefined') return;
+  try {
+    const raw = localStorage.getItem(FOCUS_STORAGE_KEY);
+    if (!raw) return;
+    const snap = JSON.parse(raw);
+    if (snap && snap.running) {
+      let remaining = snap.secondsLeft;
+      if (typeof snap.endsAt === 'number' && snap.endsAt > 0) {
+        remaining = Math.max(0, Math.round((snap.endsAt - Date.now()) / 1000));
+      }
+      snap.running = false;
+      snap.secondsLeft = remaining;
+      snap.endsAt = null;
+      snap.updatedAt = Date.now();
+      localStorage.setItem(FOCUS_STORAGE_KEY, JSON.stringify(snap));
+    }
+  } catch {}
+}
+
 if (typeof window !== 'undefined') {
   window.addEventListener('storage', (e) => {
     if (e.key === FOCUS_STORAGE_KEY) {
@@ -374,4 +394,7 @@ if (typeof window !== 'undefined') {
       for (const cb of listeners) cb(snap);
     }
   });
+
+  window.addEventListener('beforeunload', pauseFocusOnExit);
+  window.addEventListener('pagehide', pauseFocusOnExit);
 }

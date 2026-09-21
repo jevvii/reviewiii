@@ -171,6 +171,7 @@ def generate_header_and_widget_html(course, current_mod):
         <span class="quiz-crumb-sep">/</span>
         <span class="quiz-mod-title-desktop" title="{m_title}">M{m_num}: {m_title} ({m_count} Qs)</span>
         <span class="quiz-mod-badge-mobile">M{m_num}</span>
+        <span id="quiz-session-badge" class="quiz-session-pill" style="display:none;" title="Session progress saved locally">Saved</span>
       </div>
 
       <div class="quiz-nav-right">
@@ -179,6 +180,11 @@ def generate_header_and_widget_html(course, current_mod):
           <span id="quiz-pill-ping" style="display:none; width:6px; height:6px; border-radius:50%; background:#8a9a86;"></span>
           <span id="quiz-pill-icon">⏱️</span>
           <span id="quiz-pill-time">Focus</span>
+        </button>
+
+        <!-- Restart Session Button (Desktop) -->
+        <button type="button" class="quiz-restart-pill-btn" id="quiz-restart-btn" title="Reset saved answers & restart with new randomized choices">
+          <span>↺ Restart</span>
         </button>
 
         <!-- Desktop Navigation Links -->
@@ -203,6 +209,17 @@ def generate_header_and_widget_html(course, current_mod):
       <div class="drawer-top-row">
         <span class="drawer-title">{c_code} &bull; M{m_num} Navigation</span>
         <button type="button" id="drawer-close-btn" class="drawer-close-btn" aria-label="Close menu">✕</button>
+      </div>
+
+      <!-- Mobile Session State Card -->
+      <div class="drawer-session-card">
+        <div class="drawer-session-meta">
+          <span class="drawer-session-title">Session Persistence</span>
+          <span id="drawer-session-status" class="drawer-session-val">Ready</span>
+        </div>
+        <button type="button" id="drawer-restart-btn" class="drawer-restart-btn" title="Reset answers & re-randomize choices">
+          ↺ Restart Quiz (Randomize Choices)
+        </button>
       </div>
 
       <div class="drawer-quick-links">
@@ -521,6 +538,92 @@ def generate_header_and_widget_html(course, current_mod):
     font-size: 11px;
     color: #707070;
     flex-shrink: 0;
+  }}
+
+  /* Session Persistence & Restart Controls */
+  .quiz-session-pill {{
+    display: none;
+    align-items: center;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 2px 7px;
+    border-radius: 9999px;
+    background: rgba(138, 154, 134, 0.15);
+    border: 1px solid rgba(138, 154, 134, 0.35);
+    color: #8a9a86;
+  }}
+  .quiz-restart-pill-btn {{
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 9px;
+    border-radius: 9999px;
+    font-size: 11px;
+    font-weight: 500;
+    font-family: 'Inter', -apple-system, monospace;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    color: #a0a0a0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }}
+  .quiz-restart-pill-btn:hover {{
+    border-color: rgba(168, 159, 145, 0.4);
+    background: rgba(168, 159, 145, 0.12);
+    color: #f0f0f0;
+  }}
+  @media (max-width: 640px) {{
+    .quiz-restart-pill-btn {{
+      display: none;
+    }}
+  }}
+  .drawer-session-card {{
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }}
+  .drawer-session-meta {{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }}
+  .drawer-session-title {{
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #8a9a86;
+  }}
+  .drawer-session-val {{
+    font-size: 10.5px;
+    color: #707070;
+  }}
+  .drawer-restart-btn {{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 7px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    background: rgba(168, 159, 145, 0.12);
+    border: 1px solid rgba(168, 159, 145, 0.3);
+    border-radius: 6px;
+    color: #f0f0f0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }}
+  .drawer-restart-btn:hover {{
+    background: rgba(168, 159, 145, 0.22);
+    border-color: rgba(168, 159, 145, 0.5);
   }}
 
   /* Focus Pill */
@@ -884,6 +987,39 @@ def generate_header_and_widget_html(course, current_mod):
       updateModal(snapshot);
     }});
 
+    // Session Persistence & Restart Handlers
+    var quizRestartBtn = document.getElementById('quiz-restart-btn');
+    if (quizRestartBtn) {{
+      quizRestartBtn.addEventListener('click', function() {{
+        if (window.__quiz_restart_session) window.__quiz_restart_session();
+      }});
+    }}
+    var drawerRestartBtn = document.getElementById('drawer-restart-btn');
+    if (drawerRestartBtn) {{
+      drawerRestartBtn.addEventListener('click', function() {{
+        if (window.__quiz_restart_session) window.__quiz_restart_session();
+      }});
+    }}
+
+    // Check for existing saved session on startup to show indicator
+    try {{
+      var initSaved = window.__quiz_load_state ? window.__quiz_load_state() : null;
+      if (initSaved && initSaved.userAnswers) {{
+        var aCount = Object.keys(initSaved.userAnswers).length;
+        if (aCount > 0) {{
+          var sBadge = document.getElementById('quiz-session-badge');
+          if (sBadge) {{
+            sBadge.style.display = 'inline-flex';
+            sBadge.textContent = 'Saved (' + aCount + ')';
+          }}
+          var dStatus = document.getElementById('drawer-session-status');
+          if (dStatus) {{
+            dStatus.textContent = 'Resumed (' + aCount + ' answered)';
+          }}
+        }}
+      }}
+    }} catch (e) {{}}
+
     updatePill(snapshot);
     updateModal(snapshot);
     setInterval(tick, 1000);
@@ -948,6 +1084,140 @@ def build_quiz_html(course, mod):
         f'<title>{c_code} — Module {m_num}: {m_title}</title>',
         content
     )
+
+    # Apply choice randomization patch
+    target_sN = 'function sN(a,b){a=[...a];var c=0;if(b.length!==0)for(var d=0;d<b.length;d++)c=(c<<5)-c+b.charCodeAt(d),c|=0;b=c;b=tN(b);for(c=a.length-1;c>0;c--)d=Math.floor(b()*(c+1)),[a[c],a[d]]=[a[d],a[c]];return a}'
+    replacement_sN = 'function sN(a,b){a=[...a];var c=(typeof window!=="undefined"&&window.__quiz_session_seed!=null)?window.__quiz_session_seed:0;if(b.length!==0)for(var d=0;d<b.length;d++)c=(c<<5)-c+b.charCodeAt(d),c|=0;b=c;b=tN(b);for(c=a.length-1;c>0;c--)d=Math.floor(b()*(c+1)),[a[c],a[d]]=[a[d],a[c]];return a}'
+    content = content.replace(target_sN, replacement_sN)
+
+    # Apply database persistence patch (qN)
+    target_persistence = 'hN(a=>({Jr:async()=>{if(a.zg?.getAppState)try{let b=await a.zg.getAppState();if(b){let c={tc:!1,...b.timerState};c.zj&&Date.now()-c.zj>864E5&&(c.zj=void 0);aN(a,{userAnswers:oN(b.userAnswers||{}),currentQuestionIndex:b.currentQuestionIndex||\n0,hiddenQuestionIndices:b.hiddenQuestionIndices||[],currentView:b.currentView||\"question\",performanceAnalysis:b.performanceAnalysis,latestCompletion:b.latestCompletion,activeSessionQuestionIndices:b.activeSessionQuestionIndices||null,timerState:c})}}catch(b){console.error(\"Failed to load initial state:\",b)}finally{aN(a,{nc:!1})}else aN(a,{nc:!1})},Yr:async()=>{if(a.zg?.setAppState){var b={userAnswers:pN(a.userAnswers()),currentQuestionIndex:a.currentQuestionIndex(),hiddenQuestionIndices:a.hiddenQuestionIndices(),\ncurrentView:a.currentView(),performanceAnalysis:a.performanceAnalysis?a.performanceAnalysis():void 0,latestCompletion:a.latestCompletion?a.latestCompletion():void 0,activeSessionQuestionIndices:a.activeSessionQuestionIndices?a.activeSessionQuestionIndices():null,timerState:a.timerState?a.timerState():void 0};try{await a.zg.setAppState(b)}catch(c){console.error(\"Failed to save state:\",c)}}},Jc:()=>{a.zg?.setAppState&&a.ak.next()}}))'
+    replacement_persistence = 'hN(a=>({Jr:async()=>{try{let b=null;if(typeof window!=="undefined"&&window.__quiz_load_state){b=window.__quiz_load_state()}if(!b&&a.zg?.getAppState){b=await a.zg.getAppState()}if(b){let c={tc:!1,...b.timerState};c.zj&&Date.now()-c.zj>864E5&&(c.zj=void 0);aN(a,{userAnswers:oN(b.userAnswers||{}),currentQuestionIndex:b.currentQuestionIndex||0,hiddenQuestionIndices:b.hiddenQuestionIndices||[],currentView:b.currentView||"question",performanceAnalysis:b.performanceAnalysis,latestCompletion:b.latestCompletion,activeSessionQuestionIndices:b.activeSessionQuestionIndices||null,timerState:c})}}catch(b){console.error("Failed to load initial state:",b)}finally{aN(a,{nc:!1})}},Yr:async()=>{var b={userAnswers:pN(a.userAnswers()),currentQuestionIndex:a.currentQuestionIndex(),hiddenQuestionIndices:a.hiddenQuestionIndices(),currentView:a.currentView(),performanceAnalysis:a.performanceAnalysis?a.performanceAnalysis():void 0,latestCompletion:a.latestCompletion?a.latestCompletion():void 0,activeSessionQuestionIndices:a.activeSessionQuestionIndices?a.activeSessionQuestionIndices():null,timerState:a.timerState?a.timerState():void 0};try{if(typeof window!=="undefined"&&window.__quiz_save_state){window.__quiz_save_state(b)}if(a.zg?.setAppState)await a.zg.setAppState(b)}catch(c){console.error("Failed to save state:",c)}},Jc:()=>{try{a.Yr()}catch(e){}a.ak.next()}}))'
+    content = content.replace(target_persistence, replacement_persistence)
+
+    # Inject ReviewIII Session Persistence Script before </head>
+    storage_key = f"reviewiii_quiz_{c_code}_{m_num}"
+    session_script = f"""
+<script id="reviewiii-quiz-persistence">
+  (function() {{
+    var key = "{storage_key}";
+    window.__quiz_storage_key = key;
+
+    // 1. Initialize session seed for choice randomization
+    try {{
+      var savedRaw = localStorage.getItem(key);
+      var saved = savedRaw ? JSON.parse(savedRaw) : null;
+      if (saved && typeof saved.sessionSeed === 'number') {{
+        window.__quiz_session_seed = saved.sessionSeed;
+      }} else {{
+        var queuedSeed = localStorage.getItem(key + '_seed');
+        if (queuedSeed) {{
+          window.__quiz_session_seed = parseInt(queuedSeed, 10);
+          localStorage.removeItem(key + '_seed');
+        }} else {{
+          window.__quiz_session_seed = Math.floor(Math.random() * 2147483647) + 1;
+        }}
+      }}
+    }} catch (e) {{
+      window.__quiz_session_seed = Math.floor(Math.random() * 2147483647) + 1;
+    }}
+
+    // 2. Load state interface (called on init)
+    window.__quiz_load_state = function() {{
+      try {{
+        var raw = localStorage.getItem(key);
+        if (!raw) return null;
+        var data = JSON.parse(raw);
+        if (!data || typeof data !== 'object') return null;
+        var timerState = {{ tc: false }};
+        if (data.timerState) {{
+          timerState = Object.assign({{}}, data.timerState, {{ tc: false }});
+        }}
+        return {{
+          userAnswers: data.userAnswers || {{}},
+          currentQuestionIndex: typeof data.currentQuestionIndex === 'number' ? data.currentQuestionIndex : 0,
+          hiddenQuestionIndices: Array.isArray(data.hiddenQuestionIndices) ? data.hiddenQuestionIndices : [],
+          currentView: data.currentView || 'question',
+          performanceAnalysis: data.performanceAnalysis,
+          latestCompletion: data.latestCompletion,
+          activeSessionQuestionIndices: data.activeSessionQuestionIndices || null,
+          timerState: timerState
+        }};
+      }} catch (e) {{
+        console.error('Failed to load quiz state:', e);
+        return null;
+      }}
+    }};
+
+    // 3. Save state interface (called whenever answers/views change)
+    window.__quiz_save_state = function(state) {{
+      try {{
+        if (!state) return;
+        var toSave = Object.assign({{}}, state, {{
+          sessionSeed: window.__quiz_session_seed,
+          savedAt: Date.now()
+        }});
+        localStorage.setItem(key, JSON.stringify(toSave));
+
+        var count = state.userAnswers ? Object.keys(state.userAnswers).length : 0;
+        var badge = document.getElementById('quiz-session-badge');
+        if (badge) {{
+          if (count > 0) {{
+            badge.style.display = 'inline-flex';
+            badge.textContent = 'Saved (' + count + ')';
+          }} else {{
+            badge.style.display = 'none';
+          }}
+        }}
+        var drawerStatus = document.getElementById('drawer-session-status');
+        if (drawerStatus) {{
+          drawerStatus.textContent = count > 0 ? 'Saved (' + count + ' answered)' : 'Ready';
+        }}
+      }} catch (e) {{
+        console.error('Failed to save quiz state:', e);
+      }}
+    }};
+
+    // 4. Restart session interface
+    window.__quiz_restart_session = function() {{
+      if (confirm('Restart this quiz session? All saved answers will be cleared and choices will be freshly randomized.')) {{
+        try {{
+          localStorage.removeItem(key);
+          var freshSeed = Math.floor(Math.random() * 2147483647) + 1;
+          localStorage.setItem(key + '_seed', String(freshSeed));
+        }} catch (e) {{}}
+        window.location.reload();
+      }}
+    }};
+
+    // 5. Auto-pause quiz timer on exit (beforeunload and pagehide)
+    function pauseQuizTimerOnExit() {{
+      try {{
+        var raw = localStorage.getItem(key);
+        if (!raw) return;
+        var data = JSON.parse(raw);
+        if (data && data.timerState && data.timerState.tc) {{
+          var elapsed = data.timerState.Ok || 0;
+          if (data.timerState.zj) {{
+            elapsed += Math.max(0, Math.floor((Date.now() - data.timerState.zj) / 1000));
+          }}
+          data.timerState.tc = false;
+          data.timerState.Ok = elapsed;
+          delete data.timerState.zj;
+          data.savedAt = Date.now();
+          localStorage.setItem(key, JSON.stringify(data));
+        }}
+      }} catch (e) {{}}
+    }}
+    window.addEventListener('beforeunload', pauseQuizTimerOnExit);
+    window.addEventListener('pagehide', pauseQuizTimerOnExit);
+  }})();
+</script>
+"""
+
+    head_idx = content.find('</head>')
+    if head_idx != -1:
+        content = content[:head_idx] + "\n" + session_script + "\n" + content[head_idx:]
 
     header_html, widget_html = generate_header_and_widget_html(course, mod)
 

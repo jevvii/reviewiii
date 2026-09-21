@@ -744,27 +744,62 @@ const totalDownloads = subject.modules.length * 4;
     }
 
     .course-bento-strip {
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 1.25rem;
     }
 
     .bento-tile {
-      padding: 0.85rem 0.95rem;
+      flex: 1 1 calc(50% - 6px);
+      min-width: 130px;
+      padding: 6px 12px;
+      border-radius: var(--radius-full);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+    }
+
+    .bento-label {
+      font-size: 0.68rem;
+      color: var(--color-text-subtle);
     }
 
     .bento-value {
-      font-size: 1.25rem;
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--color-accent-primary);
+    }
+
+    .bento-value.text-caps {
+      font-size: 0.78rem;
+    }
+
+    .bento-unit {
+      font-size: 0.70rem;
+    }
+
+    .bento-sub {
+      display: none;
     }
 
     .hero-actions {
       flex-direction: column;
       align-items: stretch;
       width: 100%;
+      gap: 8px;
     }
 
     .hero-actions .btn-primary,
     .hero-actions .btn-secondary {
       width: 100%;
+      min-height: 34px;
+      padding: 7px 14px;
+      font-size: 0.82rem;
+      border-radius: var(--radius-xs);
     }
 
     .modules-grid {
@@ -790,8 +825,8 @@ const totalDownloads = subject.modules.length * 4;
   }
 
   @media (max-width: 400px) {
-    .course-bento-strip {
-      grid-template-columns: 1fr;
+    .bento-tile {
+      flex: 1 1 100%;
     }
 
     .vault-files {
