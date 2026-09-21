@@ -21,42 +21,38 @@ const activeSubjects = SUBJECTS.filter((s) => s.status === 'active');
         Curated identification-type questionnaires with verified answer keys, interactive NotebookLM-style quiz players, and integrated Pomodoro study tracking.
       </p>
 
-      <!-- Bento Metric Pods -->
+      <!-- Compact Bento Metric Badges -->
       <div class="bento-strip">
-        <div class="bento-tile">
-          <div class="bento-tile-top">
-            <span class="bento-label">Question Bank</span>
-            <span class="bento-tag">Verified</span>
-          </div>
-          <div class="bento-value">{TOTAL_QUESTIONS}</div>
-          <div class="bento-sub">NETC (203) &bull; ATFL (174) &bull; HMBY (152)</div>
+        <div class="bento-tile" title="NETC (203) &bull; ATFL (174) &bull; HMBY (152) Verified Questions">
+          <span class="bento-icon">📋</span>
+          <span class="bento-label">Question Bank</span>
+          <span class="bento-sep">&bull;</span>
+          <span class="bento-value">{TOTAL_QUESTIONS}</span>
+          <span class="bento-tag">Verified</span>
         </div>
 
-        <div class="bento-tile">
-          <div class="bento-tile-top">
-            <span class="bento-label">Ready Modules</span>
-            <span class="bento-tag active-tag">Interactive</span>
-          </div>
-          <div class="bento-value">{TOTAL_MODULES}</div>
-          <div class="bento-sub">Cisco CCNA &bull; Automata &bull; BioChem</div>
+        <div class="bento-tile" title="Cisco CCNA, Automata Theory & Human Biology">
+          <span class="bento-icon">⚡</span>
+          <span class="bento-label">Ready Modules</span>
+          <span class="bento-sep">&bull;</span>
+          <span class="bento-value">{TOTAL_MODULES}</span>
+          <span class="bento-tag active-tag">Interactive</span>
         </div>
 
-        <div class="bento-tile focus-tile">
-          <div class="bento-tile-top">
-            <span class="bento-label">Focus Today</span>
-            <span class="bento-tag focus-tag">Manila PST</span>
-          </div>
-          <div class="bento-value" id="hero-focus-today-mins">0m</div>
-          <div class="bento-sub">Continuous Pomodoro Study Log</div>
+        <div class="bento-tile focus-tile" title="Continuous Asia/Manila Study Tracking">
+          <span class="bento-icon">⏱️</span>
+          <span class="bento-label">Focus Today</span>
+          <span class="bento-sep">&bull;</span>
+          <span class="bento-value" id="hero-focus-today-mins">0m</span>
+          <span class="bento-tag focus-tag">Manila</span>
         </div>
 
-        <div class="bento-tile">
-          <div class="bento-tile-top">
-            <span class="bento-label">Curriculum</span>
-            <span class="bento-tag">Year III</span>
-          </div>
-          <div class="bento-value">{activeSubjects.length} <span class="bento-unit">/ {SUBJECTS.length}</span></div>
-          <div class="bento-sub">Active &bull; 4 Upcoming Tracks</div>
+        <div class="bento-tile" title="3 Active Tracks, 4 Upcoming Curriculum Tracks">
+          <span class="bento-icon">🎓</span>
+          <span class="bento-label">Curriculum</span>
+          <span class="bento-sep">&bull;</span>
+          <span class="bento-value">{activeSubjects.length} <span class="bento-unit">/ {SUBJECTS.length}</span></span>
+          <span class="bento-tag">Year III</span>
         </div>
       </div>
     </section>
@@ -387,89 +383,91 @@ const activeSubjects = SUBJECTS.filter((s) => s.status === 'active');
     margin-bottom: 1.75rem;
   }
 
-  /* Bento Strip */
+  /* Compact Bento Metric Badges */
   .bento-strip {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 1.75rem;
   }
 
   .bento-tile {
-    background: #0a0a0a;
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    border-radius: var(--radius-md);
-    padding: 16px 18px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 5px 13px;
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--color-text-main);
+    font-size: 0.80rem;
+    line-height: 1;
     transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    white-space: nowrap;
   }
 
   .bento-tile:hover {
-    border-color: rgba(255, 255, 255, 0.16);
-    background: #0d0d0d;
+    border-color: rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.06);
     transform: translateY(-1px);
   }
 
-  .bento-tile-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 8px;
+  .bento-icon {
+    font-size: 0.85rem;
+    line-height: 1;
+    opacity: 0.9;
   }
 
   .bento-label {
-    font-size: 0.7rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
+    font-size: 0.74rem;
+    font-weight: 500;
     color: var(--color-text-subtle);
+    letter-spacing: 0.02em;
   }
 
-  .bento-tag {
+  .bento-sep {
+    color: rgba(255, 255, 255, 0.2);
     font-size: 0.65rem;
-    font-weight: 600;
-    padding: 1px 6px;
-    border-radius: var(--radius-xs);
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid var(--border-subtle);
-    color: var(--color-text-subtle);
-  }
-
-  .bento-tag.active-tag {
-    color: var(--color-accent-primary);
-    border-color: rgba(138, 154, 134, 0.3);
-    background: rgba(138, 154, 134, 0.08);
-  }
-
-  .bento-tag.focus-tag {
-    color: var(--color-accent-secondary);
-    border-color: rgba(168, 159, 145, 0.3);
-    background: rgba(168, 159, 145, 0.08);
   }
 
   .bento-value {
-    font-size: 1.85rem;
-    font-weight: 600;
-    color: var(--color-text-main);
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: var(--color-accent-primary);
     font-variant-numeric: tabular-nums;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
-    margin-bottom: 4px;
+    letter-spacing: -0.01em;
   }
 
   .bento-unit {
-    font-size: 1rem;
+    font-size: 0.72rem;
     font-weight: 400;
     color: var(--color-text-subtle);
   }
 
-  .bento-sub {
-    font-size: 0.74rem;
+  .bento-tag {
+    font-size: 0.62rem;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     color: var(--color-text-muted);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-left: 2px;
+  }
+
+  .bento-tag.active-tag {
+    color: var(--color-accent-primary);
+    border-color: rgba(138, 154, 134, 0.35);
+    background: rgba(138, 154, 134, 0.12);
+  }
+
+  .bento-tag.focus-tag {
+    color: var(--color-accent-secondary);
+    border-color: rgba(168, 159, 145, 0.35);
+    background: rgba(168, 159, 145, 0.12);
   }
 
   /* View Controller Segmented Bar */
@@ -482,11 +480,12 @@ const activeSubjects = SUBJECTS.filter((s) => s.status === 'active');
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     padding: 8px 0;
-    border-bottom: 1px solid var(--border-subtle);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   }
 
   .segmented-control {
     display: flex;
+    align-items: center;
     gap: 6px;
     background: #0a0a0a;
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -497,6 +496,33 @@ const activeSubjects = SUBJECTS.filter((s) => s.status === 'active');
   }
 
   @media (max-width: 640px) {
+    .bento-strip {
+      gap: 6px;
+      margin-bottom: 1.25rem;
+    }
+
+    .bento-tile {
+      padding: 4px 9px;
+      font-size: 0.72rem;
+      gap: 4px;
+    }
+
+    .bento-icon {
+      font-size: 0.76rem;
+    }
+
+    .bento-label {
+      font-size: 0.68rem;
+    }
+
+    .bento-value {
+      font-size: 0.76rem;
+    }
+
+    .bento-tag {
+      display: none;
+    }
+
     .segmented-control {
       max-width: 100%;
       overflow-x: auto;

@@ -221,15 +221,21 @@ const baseUrl = import.meta.env.BASE_URL;
     <!-- Stats Summary Tiles -->
     <div class="today-stats-grid">
       <div class="stat-tile">
+        <span class="stat-icon">⏱️</span>
         <span class="stat-label">Focus Time</span>
+        <span class="stat-sep">&bull;</span>
         <span class="stat-val" id="stat-today-minutes">0m</span>
       </div>
       <div class="stat-tile">
-        <span class="stat-label">Completed Sessions</span>
+        <span class="stat-icon">🎯</span>
+        <span class="stat-label">Sessions</span>
+        <span class="stat-sep">&bull;</span>
         <span class="stat-val" id="stat-today-sessions">0</span>
       </div>
       <div class="stat-tile">
-        <span class="stat-label">Active Set Progress</span>
+        <span class="stat-icon">🔄</span>
+        <span class="stat-label">Set Progress</span>
+        <span class="stat-sep">&bull;</span>
         <span class="stat-val" id="stat-set-progress">0 / 4</span>
       </div>
     </div>
@@ -728,33 +734,56 @@ const baseUrl = import.meta.env.BASE_URL;
     cursor: pointer;
   }
 
-  /* Today Stats Grid */
+  /* Today Stats Badges */
   .today-stats-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 8px;
+    align-items: center;
   }
 
   .stat-tile {
-    background: #121212;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: var(--radius-sm);
-    padding: 10px 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+    padding: 5px 13px;
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--color-text-main);
+    font-size: 0.80rem;
+    line-height: 1;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .stat-tile:hover {
+    border-color: rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .stat-icon {
+    font-size: 0.85rem;
+    line-height: 1;
+    opacity: 0.9;
   }
 
   .stat-label {
-    font-size: 0.68rem;
+    font-size: 0.72rem;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.05em;
     color: var(--color-text-subtle);
   }
 
+  .stat-sep {
+    color: rgba(255, 255, 255, 0.18);
+    font-size: 0.65rem;
+  }
+
   .stat-val {
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: 0.84rem;
+    font-weight: 700;
     color: var(--color-accent-primary);
     font-variant-numeric: tabular-nums;
   }
@@ -885,24 +914,21 @@ const baseUrl = import.meta.env.BASE_URL;
     }
 
     .stat-tile {
-      flex: 1 1 calc(50% - 6px);
-      min-width: 120px;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      padding: 6px 12px;
-      border-radius: var(--radius-full);
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      gap: 8px;
+      padding: 4px 10px;
+      font-size: 0.74rem;
+      gap: 5px;
+    }
+
+    .stat-icon {
+      font-size: 0.78rem;
     }
 
     .stat-label {
-      font-size: 0.65rem;
+      font-size: 0.68rem;
     }
 
     .stat-val {
-      font-size: 0.88rem;
+      font-size: 0.80rem;
     }
   }
 </style>
