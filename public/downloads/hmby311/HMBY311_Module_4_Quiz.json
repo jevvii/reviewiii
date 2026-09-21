@@ -1,0 +1,1063 @@
+{
+  "quiz": [
+    {
+      "question": "_____ 1. The condensed form of DNA in a cell that surrounds and wraps around spool-like proteins called histones is known as what structure?",
+      "answerOptions": [
+        {
+          "text": "Centriole",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Centriole' is a distractor. Correct answer is 'Chromosome'."
+        },
+        {
+          "text": "Ribosome",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Ribosome' is a distractor. Correct answer is 'Chromosome'."
+        },
+        {
+          "text": "Chromosome",
+          "isCorrect": true,
+          "rationale": "Correct! [Forms of Chromosomes] A chromosome contains DNA in its condensed form wrapped around proteins called histones."
+        },
+        {
+          "text": "Nucleolus",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Nucleolus' is a distractor. Correct answer is 'Chromosome'."
+        }
+      ],
+      "hint": "Topic: Forms of Chromosomes"
+    },
+    {
+      "question": "_____ 2. What proteins serve as the molecular spools around which DNA coils and condenses into chromatin and chromosomes?",
+      "answerOptions": [
+        {
+          "text": "Spindle fibers",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Spindle fibers' is a distractor. Correct answer is 'Histones'."
+        },
+        {
+          "text": "Histones",
+          "isCorrect": true,
+          "rationale": "Correct! [Forms of Chromosomes] DNA wraps around proteins called histones to form compact chromatin and chromosomes, preventing breakage during cell division."
+        },
+        {
+          "text": "Centrosomes",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Centrosomes' is a distractor. Correct answer is 'Histones'."
+        },
+        {
+          "text": "Ribosomes",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Ribosomes' is a distractor. Correct answer is 'Histones'."
+        }
+      ],
+      "hint": "Topic: Forms of Chromosomes"
+    },
+    {
+      "question": "_____ 3. A specific sequence of DNA that codes for a protein with a structural or functional role in the cell is defined as a what?",
+      "answerOptions": [
+        {
+          "text": "Codon",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Codon' is a distractor. Correct answer is 'Gene'."
+        },
+        {
+          "text": "Centromere",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Centromere' is a distractor. Correct answer is 'Gene'."
+        },
+        {
+          "text": "Gene",
+          "isCorrect": true,
+          "rationale": "Correct! [Forms of Chromosomes] A gene is a sequence of DNA arranged in a specific manner that codes for a protein with a structural or functional role in the cell."
+        },
+        {
+          "text": "Histone",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Histone' is a distractor. Correct answer is 'Gene'."
+        }
+      ],
+      "hint": "Topic: Forms of Chromosomes"
+    },
+    {
+      "question": "_____ 4. How many different kinds of chromosomes are present in human cells?",
+      "answerOptions": [
+        {
+          "text": "23 kinds",
+          "isCorrect": true,
+          "rationale": "Correct! [Forms of Chromosomes] Each of the 23 different kinds of chromosomes in human cells contains a specific sequence of genes."
+        },
+        {
+          "text": "22 kinds",
+          "isCorrect": false,
+          "rationale": "Incorrect. '22 kinds' is a distractor. Correct answer is '23 kinds'."
+        },
+        {
+          "text": "46 kinds",
+          "isCorrect": false,
+          "rationale": "Incorrect. '46 kinds' is a distractor. Correct answer is '23 kinds'."
+        },
+        {
+          "text": "2 kinds",
+          "isCorrect": false,
+          "rationale": "Incorrect. '2 kinds' is a distractor. Correct answer is '23 kinds'."
+        }
+      ],
+      "hint": "Topic: Forms of Chromosomes"
+    },
+    {
+      "question": "_____ 5. According to findings from the Human Genome Project, approximately how many base pairs are in the human genome?",
+      "answerOptions": [
+        {
+          "text": "23 million base pairs",
+          "isCorrect": false,
+          "rationale": "Incorrect. '23 million base pairs' is a distractor. Correct answer is '3.2 billion base pairs'."
+        },
+        {
+          "text": "3.2 million base pairs",
+          "isCorrect": false,
+          "rationale": "Incorrect. '3.2 million base pairs' is a distractor. Correct answer is '3.2 billion base pairs'."
+        },
+        {
+          "text": "3.2 billion base pairs",
+          "isCorrect": true,
+          "rationale": "Correct! [Human Genome Project] Researchers have sequenced approximately 3.2 billion base pairs in the human genome (about 99% of the genome)."
+        },
+        {
+          "text": "46 billion base pairs",
+          "isCorrect": false,
+          "rationale": "Incorrect. '46 billion base pairs' is a distractor. Correct answer is '3.2 billion base pairs'."
+        }
+      ],
+      "hint": "Topic: Human Genome Project"
+    },
+    {
+      "question": "_____ 6. What percentage of our modern human DNA is unique to modern humans and distinct from early human ancestors?",
+      "answerOptions": [
+        {
+          "text": "1%",
+          "isCorrect": false,
+          "rationale": "Incorrect. '1%' is a distractor. Correct answer is '7%'."
+        },
+        {
+          "text": "23%",
+          "isCorrect": false,
+          "rationale": "Incorrect. '23%' is a distractor. Correct answer is '7%'."
+        },
+        {
+          "text": "7%",
+          "isCorrect": true,
+          "rationale": "Correct! [Human Genome Project] Out of the 99% of sequenced human genome, 7% of our DNA is unique to modern humans compared to early ancestors."
+        },
+        {
+          "text": "99%",
+          "isCorrect": false,
+          "rationale": "Incorrect. '99%' is a distractor. Correct answer is '7%'."
+        }
+      ],
+      "hint": "Topic: Human Genome Project"
+    },
+    {
+      "question": "_____ 7. All cells within the human body except for reproductive cells (eggs and sperm) are classified as what type of cells?",
+      "answerOptions": [
+        {
+          "text": "Zygotes",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Zygotes' is a distractor. Correct answer is 'Somatic cells'."
+        },
+        {
+          "text": "Gametes",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Gametes' is a distractor. Correct answer is 'Somatic cells'."
+        },
+        {
+          "text": "Sex cells",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Sex cells' is a distractor. Correct answer is 'Somatic cells'."
+        },
+        {
+          "text": "Somatic cells",
+          "isCorrect": true,
+          "rationale": "Correct! [Somatic Cells] Somatic cells refer to all cells within the human body and are diploid (46 chromosomes) except eggs and sperm."
+        }
+      ],
+      "hint": "Topic: Somatic Cells"
+    },
+    {
+      "question": "_____ 8. What is the total diploid chromosome number present in normal human somatic cells?",
+      "answerOptions": [
+        {
+          "text": "46 chromosomes",
+          "isCorrect": true,
+          "rationale": "Correct! [Somatic Cells] Somatic cells are diploid, containing 46 chromosomes (23 homologous pairs)."
+        },
+        {
+          "text": "23 chromosomes",
+          "isCorrect": false,
+          "rationale": "Incorrect. '23 chromosomes' is a distractor. Correct answer is '46 chromosomes'."
+        },
+        {
+          "text": "92 chromosomes",
+          "isCorrect": false,
+          "rationale": "Incorrect. '92 chromosomes' is a distractor. Correct answer is '46 chromosomes'."
+        },
+        {
+          "text": "44 chromosomes",
+          "isCorrect": false,
+          "rationale": "Incorrect. '44 chromosomes' is a distractor. Correct answer is '46 chromosomes'."
+        }
+      ],
+      "hint": "Topic: Somatic Cells"
+    },
+    {
+      "question": "_____ 9. What term describes human reproductive cells (eggs and sperm) that contain only one set of 23 chromosomes?",
+      "answerOptions": [
+        {
+          "text": "Polyploid",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Polyploid' is a distractor. Correct answer is 'Haploid'."
+        },
+        {
+          "text": "Haploid",
+          "isCorrect": true,
+          "rationale": "Correct! [Gametes] Eggs and sperm are haploid, meaning they contain only one set of 23 chromosomes."
+        },
+        {
+          "text": "Diploid",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Diploid' is a distractor. Correct answer is 'Haploid'."
+        },
+        {
+          "text": "Tetraploid",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Tetraploid' is a distractor. Correct answer is 'Haploid'."
+        }
+      ],
+      "hint": "Topic: Gametes"
+    },
+    {
+      "question": "_____ 10. Chromosomes that occur in pairs and contain genes that code for or affect the same biological traits are called what?",
+      "answerOptions": [
+        {
+          "text": "Heterozygous chromosomes",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Heterozygous chromosomes' is a distractor. Correct answer is 'Homologous chromosomes'."
+        },
+        {
+          "text": "Analogous chromosomes",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Analogous chromosomes' is a distractor. Correct answer is 'Homologous chromosomes'."
+        },
+        {
+          "text": "Homologous chromosomes",
+          "isCorrect": true,
+          "rationale": "Correct! [Homologous Chromosomes] Homologous chromosomes are pairs that contain genes coding for or affecting the same traits, one from each parent."
+        },
+        {
+          "text": "Sister chromatids",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Sister chromatids' is a distractor. Correct answer is 'Homologous chromosomes'."
+        }
+      ],
+      "hint": "Topic: Homologous Chromosomes"
+    },
+    {
+      "question": "_____ 11. How many homologous chromosome pairs are found in a normal human somatic cell?",
+      "answerOptions": [
+        {
+          "text": "46 pairs",
+          "isCorrect": false,
+          "rationale": "Incorrect. '46 pairs' is a distractor. Correct answer is '23 pairs'."
+        },
+        {
+          "text": "22 pairs",
+          "isCorrect": false,
+          "rationale": "Incorrect. '22 pairs' is a distractor. Correct answer is '23 pairs'."
+        },
+        {
+          "text": "23 pairs",
+          "isCorrect": true,
+          "rationale": "Correct! [Homologous Chromosomes] The diploid number of 46 chromosomes translates to 23 homologous pairs in each somatic cell."
+        },
+        {
+          "text": "1 pair",
+          "isCorrect": false,
+          "rationale": "Incorrect. '1 pair' is a distractor. Correct answer is '23 pairs'."
+        }
+      ],
+      "hint": "Topic: Homologous Chromosomes"
+    },
+    {
+      "question": "_____ 12. The single pair of human chromosomes that determines biological gender is designated as what?",
+      "answerOptions": [
+        {
+          "text": "Histones",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Histones' is a distractor. Correct answer is 'Sex chromosomes'."
+        },
+        {
+          "text": "Autosomes",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Autosomes' is a distractor. Correct answer is 'Sex chromosomes'."
+        },
+        {
+          "text": "Centrosomes",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Centrosomes' is a distractor. Correct answer is 'Sex chromosomes'."
+        },
+        {
+          "text": "Sex chromosomes",
+          "isCorrect": true,
+          "rationale": "Correct! [Sex Chromosomes] One pair of chromosomes determines gender and is called the sex chromosomes (XY in males, XX in females)."
+        }
+      ],
+      "hint": "Topic: Sex Chromosomes"
+    },
+    {
+      "question": "_____ 13. Which sex chromosome combination corresponds to biological males in humans?",
+      "answerOptions": [
+        {
+          "text": "XO",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'XO' is a distractor. Correct answer is 'XY'."
+        },
+        {
+          "text": "XY",
+          "isCorrect": true,
+          "rationale": "Correct! [Sex Chromosomes] Males have XY chromosomes, while females have XX chromosomes."
+        },
+        {
+          "text": "XX",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'XX' is a distractor. Correct answer is 'XY'."
+        },
+        {
+          "text": "YY",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'YY' is a distractor. Correct answer is 'XY'."
+        }
+      ],
+      "hint": "Topic: Sex Chromosomes"
+    },
+    {
+      "question": "_____ 14. Which sex chromosome combination corresponds to biological females in humans?",
+      "answerOptions": [
+        {
+          "text": "YY",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'YY' is a distractor. Correct answer is 'XX'."
+        },
+        {
+          "text": "XY",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'XY' is a distractor. Correct answer is 'XX'."
+        },
+        {
+          "text": "XX",
+          "isCorrect": true,
+          "rationale": "Correct! [Sex Chromosomes] Females possess two X chromosomes (XX)."
+        },
+        {
+          "text": "XXY",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'XXY' is a distractor. Correct answer is 'XX'."
+        }
+      ],
+      "hint": "Topic: Sex Chromosomes"
+    },
+    {
+      "question": "_____ 15. The 22 pairs of human chromosomes that do not determine gender are called what?",
+      "answerOptions": [
+        {
+          "text": "Chromatids",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Chromatids' is a distractor. Correct answer is 'Autosomes'."
+        },
+        {
+          "text": "Autosomes",
+          "isCorrect": true,
+          "rationale": "Correct! [Autosomes] There are 22 pairs of non-sex chromosomes, which are termed autosomes."
+        },
+        {
+          "text": "Centrosomes",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Centrosomes' is a distractor. Correct answer is 'Autosomes'."
+        },
+        {
+          "text": "Sex chromosomes",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Sex chromosomes' is a distractor. Correct answer is 'Autosomes'."
+        }
+      ],
+      "hint": "Topic: Autosomes"
+    },
+    {
+      "question": "_____ 16. Which type of nuclear division produces two genetically identical daughter cells with the same number of chromosomes as the parent cell for growth and tissue repair?",
+      "answerOptions": [
+        {
+          "text": "Binary fission",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Binary fission' is a distractor. Correct answer is 'Mitosis'."
+        },
+        {
+          "text": "Mitosis",
+          "isCorrect": true,
+          "rationale": "Correct! [Types of Cell Division] Mitosis creates daughter cells with the exact same number of chromosomes as the original cell, functioning in growth and tissue repair."
+        },
+        {
+          "text": "Meiosis",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Meiosis' is a distractor. Correct answer is 'Mitosis'."
+        },
+        {
+          "text": "Fertilization",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Fertilization' is a distractor. Correct answer is 'Mitosis'."
+        }
+      ],
+      "hint": "Topic: Types of Cell Division"
+    },
+    {
+      "question": "_____ 17. Which type of nuclear division reduces the chromosome number by half and occurs specifically during the production of gametes?",
+      "answerOptions": [
+        {
+          "text": "Cytokinesis",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Cytokinesis' is a distractor. Correct answer is 'Meiosis'."
+        },
+        {
+          "text": "Interphase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Interphase' is a distractor. Correct answer is 'Meiosis'."
+        },
+        {
+          "text": "Mitosis",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Mitosis' is a distractor. Correct answer is 'Meiosis'."
+        },
+        {
+          "text": "Meiosis",
+          "isCorrect": true,
+          "rationale": "Correct! [Types of Cell Division] Meiosis creates cells with half the number of chromosomes (haploid) as the original cell and occurs during gamete production."
+        }
+      ],
+      "hint": "Topic: Types of Cell Division"
+    },
+    {
+      "question": "_____ 18. What are the two major phases that comprise the eukaryotic cell cycle?",
+      "answerOptions": [
+        {
+          "text": "Prophase and telophase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Prophase and telophase' is a distractor. Correct answer is 'Interphase and cell division'."
+        },
+        {
+          "text": "Mitosis and meiosis",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Mitosis and meiosis' is a distractor. Correct answer is 'Interphase and cell division'."
+        },
+        {
+          "text": "Interphase and cell division",
+          "isCorrect": true,
+          "rationale": "Correct! [Cell Cycle] The cell cycle consists of two major phases: interphase and cell division (mitosis + cytokinesis)."
+        },
+        {
+          "text": "G1 and G2",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'G1 and G2' is a distractor. Correct answer is 'Interphase and cell division'."
+        }
+      ],
+      "hint": "Topic: Cell Cycle"
+    },
+    {
+      "question": "_____ 19. The period between cell divisions during which the cell grows and replicates its DNA and organelles is called what?",
+      "answerOptions": [
+        {
+          "text": "Anaphase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Anaphase' is a distractor. Correct answer is 'Interphase'."
+        },
+        {
+          "text": "Cytokinesis",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Cytokinesis' is a distractor. Correct answer is 'Interphase'."
+        },
+        {
+          "text": "Interphase",
+          "isCorrect": true,
+          "rationale": "Correct! [Cell Cycle] Interphase is the period between cell divisions during which DNA and organelles replicate in preparation for division."
+        },
+        {
+          "text": "Metaphase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Metaphase' is a distractor. Correct answer is 'Interphase'."
+        }
+      ],
+      "hint": "Topic: Cell Cycle"
+    },
+    {
+      "question": "_____ 20. What are the three sequential sub-phases of interphase?",
+      "answerOptions": [
+        {
+          "text": "G1, S, and G2",
+          "isCorrect": true,
+          "rationale": "Correct! [Interphase] Interphase is divided into G1 (First Gap), S (Synthesis), and G2 (Second Gap) phases."
+        },
+        {
+          "text": "G0, G1, and G2",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'G0, G1, and G2' is a distractor. Correct answer is 'G1, S, and G2'."
+        },
+        {
+          "text": "Mitosis, meiosis, and cytokinesis",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Mitosis, meiosis, and cytokinesis' is a distractor. Correct answer is 'G1, S, and G2'."
+        },
+        {
+          "text": "Prophase, metaphase, and anaphase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Prophase, metaphase, and anaphase' is a distractor. Correct answer is 'G1, S, and G2'."
+        }
+      ],
+      "hint": "Topic: Interphase"
+    },
+    {
+      "question": "_____ 21. During which sub-phase of interphase does major cell growth occur before DNA synthesis begins?",
+      "answerOptions": [
+        {
+          "text": "S phase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'S phase' is a distractor. Correct answer is 'G1 phase'."
+        },
+        {
+          "text": "G1 phase",
+          "isCorrect": true,
+          "rationale": "Correct! [Interphase] G1 (First Gap) is the stage where major cell growth occurs before DNA synthesis begins."
+        },
+        {
+          "text": "G2 phase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'G2 phase' is a distractor. Correct answer is 'G1 phase'."
+        },
+        {
+          "text": "M phase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'M phase' is a distractor. Correct answer is 'G1 phase'."
+        }
+      ],
+      "hint": "Topic: Interphase"
+    },
+    {
+      "question": "_____ 22. During which specific sub-phase of interphase does DNA synthesis (replication) take place?",
+      "answerOptions": [
+        {
+          "text": "G2 phase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'G2 phase' is a distractor. Correct answer is 'S phase'."
+        },
+        {
+          "text": "Prophase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Prophase' is a distractor. Correct answer is 'S phase'."
+        },
+        {
+          "text": "G1 phase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'G1 phase' is a distractor. Correct answer is 'S phase'."
+        },
+        {
+          "text": "S phase",
+          "isCorrect": true,
+          "rationale": "Correct! [Interphase] During the S phase (Synthesis), DNA replication occurs, producing identical copies of genetic material."
+        }
+      ],
+      "hint": "Topic: Interphase"
+    },
+    {
+      "question": "_____ 23. During which sub-phase of interphase does the cell undergo a second stage of growth in final preparation for mitosis?",
+      "answerOptions": [
+        {
+          "text": "G2 phase",
+          "isCorrect": true,
+          "rationale": "Correct! [Interphase] In the G2 phase, another stage of growth and protein synthesis occurs before mitosis begins."
+        },
+        {
+          "text": "Cytokinesis",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Cytokinesis' is a distractor. Correct answer is 'G2 phase'."
+        },
+        {
+          "text": "G1 phase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'G1 phase' is a distractor. Correct answer is 'G2 phase'."
+        },
+        {
+          "text": "S phase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'S phase' is a distractor. Correct answer is 'G2 phase'."
+        }
+      ],
+      "hint": "Topic: Interphase"
+    },
+    {
+      "question": "_____ 24. In which phase of mitosis does chromatin condense into visible chromosomes, the nuclear membrane break down, and centrioles move to opposite poles?",
+      "answerOptions": [
+        {
+          "text": "Telophase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Telophase' is a distractor. Correct answer is 'Prophase'."
+        },
+        {
+          "text": "Anaphase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Anaphase' is a distractor. Correct answer is 'Prophase'."
+        },
+        {
+          "text": "Prophase",
+          "isCorrect": true,
+          "rationale": "Correct! [Mitosis Phases] During prophase, chromatin condenses, the nuclear membrane breaks down, and centrioles migrate toward opposite ends of the cell."
+        },
+        {
+          "text": "Metaphase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Metaphase' is a distractor. Correct answer is 'Prophase'."
+        }
+      ],
+      "hint": "Topic: Mitosis Phases"
+    },
+    {
+      "question": "_____ 25. Why is the condensation of DNA around histones during prophase critical for cell division?",
+      "answerOptions": [
+        {
+          "text": "It makes it easier to separate sister chromatids without breaking them",
+          "isCorrect": true,
+          "rationale": "Correct! [Mitosis Phases] DNA wrapping tightly around histones prevents long DNA strands from tangling and breaking during chromatid separation."
+        },
+        {
+          "text": "It dissolves the cell membrane",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'It dissolves the cell membrane' is a distractor. Correct answer is 'It makes it easier to separate sister chromatids without breaking them'."
+        },
+        {
+          "text": "It synthesizes new spindle fibers",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'It synthesizes new spindle fibers' is a distractor. Correct answer is 'It makes it easier to separate sister chromatids without breaking them'."
+        },
+        {
+          "text": "It speeds up DNA replication",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'It speeds up DNA replication' is a distractor. Correct answer is 'It makes it easier to separate sister chromatids without breaking them'."
+        }
+      ],
+      "hint": "Topic: Mitosis Phases"
+    },
+    {
+      "question": "_____ 26. During which phase of mitosis do chromosomes attach to spindle fibers and line up along the equator (center) of the mitotic spindle?",
+      "answerOptions": [
+        {
+          "text": "Prophase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Prophase' is a distractor. Correct answer is 'Metaphase'."
+        },
+        {
+          "text": "Metaphase",
+          "isCorrect": true,
+          "rationale": "Correct! [Mitosis Phases] During metaphase, chromosomes attach to spindle fibers and migrate to the equator (metaphase plate) of the mitotic spindle."
+        },
+        {
+          "text": "Telophase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Telophase' is a distractor. Correct answer is 'Metaphase'."
+        },
+        {
+          "text": "Anaphase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Anaphase' is a distractor. Correct answer is 'Metaphase'."
+        }
+      ],
+      "hint": "Topic: Mitosis Phases"
+    },
+    {
+      "question": "_____ 27. During which phase of mitosis do sister chromatids split at the centromere and get pulled toward opposite poles of the cell?",
+      "answerOptions": [
+        {
+          "text": "Metaphase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Metaphase' is a distractor. Correct answer is 'Anaphase'."
+        },
+        {
+          "text": "Telophase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Telophase' is a distractor. Correct answer is 'Anaphase'."
+        },
+        {
+          "text": "Prophase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Prophase' is a distractor. Correct answer is 'Anaphase'."
+        },
+        {
+          "text": "Anaphase",
+          "isCorrect": true,
+          "rationale": "Correct! [Mitosis Phases] During anaphase, sister chromatids separate at the centromere and are pulled toward opposite cell poles."
+        }
+      ],
+      "hint": "Topic: Mitosis Phases"
+    },
+    {
+      "question": "_____ 28. What specialized chromosomal region holds sister chromatids together until it splits during anaphase?",
+      "answerOptions": [
+        {
+          "text": "Centrosome",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Centrosome' is a distractor. Correct answer is 'Centromere'."
+        },
+        {
+          "text": "Telomere",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Telomere' is a distractor. Correct answer is 'Centromere'."
+        },
+        {
+          "text": "Centriole",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Centriole' is a distractor. Correct answer is 'Centromere'."
+        },
+        {
+          "text": "Centromere",
+          "isCorrect": true,
+          "rationale": "Correct! [Mitosis Phases] Chromosomes split at the centromere during anaphase as spindle fibers pull them apart."
+        }
+      ],
+      "hint": "Topic: Mitosis Phases"
+    },
+    {
+      "question": "_____ 29. In which phase of mitosis does a nuclear envelope reform around each group of chromosomes, the spindle disassemble, and chromosomes decondense?",
+      "answerOptions": [
+        {
+          "text": "Anaphase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Anaphase' is a distractor. Correct answer is 'Telophase'."
+        },
+        {
+          "text": "Telophase",
+          "isCorrect": true,
+          "rationale": "Correct! [Mitosis Phases] During telophase, nuclear envelopes reform, the mitotic spindle disassembles, and chromosomes decondense back into chromatin."
+        },
+        {
+          "text": "Prophase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Prophase' is a distractor. Correct answer is 'Telophase'."
+        },
+        {
+          "text": "Metaphase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Metaphase' is a distractor. Correct answer is 'Telophase'."
+        }
+      ],
+      "hint": "Topic: Mitosis Phases"
+    },
+    {
+      "question": "_____ 30. What is the separate cellular process involving the physical division of the cytoplasm into two daughter cells?",
+      "answerOptions": [
+        {
+          "text": "Cytokinesis",
+          "isCorrect": true,
+          "rationale": "Correct! [Cytokinesis] Cytokinesis is the process involving the division of cytoplasm, beginning during telophase."
+        },
+        {
+          "text": "Karyokinesis",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Karyokinesis' is a distractor. Correct answer is 'Cytokinesis'."
+        },
+        {
+          "text": "Interphase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Interphase' is a distractor. Correct answer is 'Cytokinesis'."
+        },
+        {
+          "text": "Apoptosis",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Apoptosis' is a distractor. Correct answer is 'Cytokinesis'."
+        }
+      ],
+      "hint": "Topic: Cytokinesis"
+    },
+    {
+      "question": "_____ 31. At what stage of mitosis does cytokinesis usually begin in human cells?",
+      "answerOptions": [
+        {
+          "text": "Metaphase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Metaphase' is a distractor. Correct answer is 'Telophase'."
+        },
+        {
+          "text": "Prophase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Prophase' is a distractor. Correct answer is 'Telophase'."
+        },
+        {
+          "text": "Telophase",
+          "isCorrect": true,
+          "rationale": "Correct! [Cytokinesis] Cytokinesis usually begins sometime during telophase."
+        },
+        {
+          "text": "G1 phase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'G1 phase' is a distractor. Correct answer is 'Telophase'."
+        }
+      ],
+      "hint": "Topic: Cytokinesis"
+    },
+    {
+      "question": "_____ 32. What cytoskeletal structure contracts at the midline of a dividing animal cell to create a cleavage furrow during cytokinesis?",
+      "answerOptions": [
+        {
+          "text": "Microtubules",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Microtubules' is a distractor. Correct answer is 'A band of microfilaments'."
+        },
+        {
+          "text": "Histone octamer",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Histone octamer' is a distractor. Correct answer is 'A band of microfilaments'."
+        },
+        {
+          "text": "Centrioles",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Centrioles' is a distractor. Correct answer is 'A band of microfilaments'."
+        },
+        {
+          "text": "A band of microfilaments",
+          "isCorrect": true,
+          "rationale": "Correct! [Cytokinesis] A band of microfilaments located at the cell midline contracts, forming a furrow that pinches the cell in two."
+        }
+      ],
+      "hint": "Topic: Cytokinesis"
+    },
+    {
+      "question": "_____ 33. What groove or indentation forms at the cell equator as contracting microfilaments deepen to pinch the cell into two?",
+      "answerOptions": [
+        {
+          "text": "Cleavage furrow",
+          "isCorrect": true,
+          "rationale": "Correct! [Cytokinesis] The contracting microfilament band forms a furrow that pinches the cell into two daughter cells once it deepens."
+        },
+        {
+          "text": "Centromere",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Centromere' is a distractor. Correct answer is 'Cleavage furrow'."
+        },
+        {
+          "text": "Equatorial plate",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Equatorial plate' is a distractor. Correct answer is 'Cleavage furrow'."
+        },
+        {
+          "text": "Cell plate",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Cell plate' is a distractor. Correct answer is 'Cleavage furrow'."
+        }
+      ],
+      "hint": "Topic: Cytokinesis"
+    },
+    {
+      "question": "_____ 34. Skin, bone, blood, and internal organ cells are all examples of what category of cells?",
+      "answerOptions": [
+        {
+          "text": "Somatic cells",
+          "isCorrect": true,
+          "rationale": "Correct! [Somatic Cells] Examples of somatic cells include cells of internal organs, skin, bones, blood, and connective tissues."
+        },
+        {
+          "text": "Gametes",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Gametes' is a distractor. Correct answer is 'Somatic cells'."
+        },
+        {
+          "text": "Germ cells",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Germ cells' is a distractor. Correct answer is 'Somatic cells'."
+        },
+        {
+          "text": "Sex cells",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Sex cells' is a distractor. Correct answer is 'Somatic cells'."
+        }
+      ],
+      "hint": "Topic: Somatic Cells"
+    },
+    {
+      "question": "_____ 35. How many autosomes (individual non-sex chromosomes) are present in a human somatic cell?",
+      "answerOptions": [
+        {
+          "text": "46 autosomes",
+          "isCorrect": false,
+          "rationale": "Incorrect. '46 autosomes' is a distractor. Correct answer is '44 autosomes'."
+        },
+        {
+          "text": "44 autosomes",
+          "isCorrect": true,
+          "rationale": "Correct! [Autosomes] There are 22 pairs of autosomes, which equals 44 individual autosomes (plus 2 sex chromosomes = 46 total)."
+        },
+        {
+          "text": "22 autosomes",
+          "isCorrect": false,
+          "rationale": "Incorrect. '22 autosomes' is a distractor. Correct answer is '44 autosomes'."
+        },
+        {
+          "text": "23 autosomes",
+          "isCorrect": false,
+          "rationale": "Incorrect. '23 autosomes' is a distractor. Correct answer is '44 autosomes'."
+        }
+      ],
+      "hint": "Topic: Autosomes"
+    },
+    {
+      "question": "_____ 36. Which cellular organelle pairs migrate away from each other toward opposite poles during prophase to organize the spindle apparatus?",
+      "answerOptions": [
+        {
+          "text": "Golgi bodies",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Golgi bodies' is a distractor. Correct answer is 'Centrioles'."
+        },
+        {
+          "text": "Lysosomes",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Lysosomes' is a distractor. Correct answer is 'Centrioles'."
+        },
+        {
+          "text": "Ribosomes",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Ribosomes' is a distractor. Correct answer is 'Centrioles'."
+        },
+        {
+          "text": "Centrioles",
+          "isCorrect": true,
+          "rationale": "Correct! [Mitosis Phases] During prophase, centrioles move away from each other toward opposite ends of the cell to form the mitotic spindle."
+        }
+      ],
+      "hint": "Topic: Mitosis Phases"
+    },
+    {
+      "question": "_____ 37. What structure is composed of microtubules that attach to chromosomes and direct their alignment and separation during mitosis?",
+      "answerOptions": [
+        {
+          "text": "Cell cortex",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Cell cortex' is a distractor. Correct answer is 'Mitotic spindle'."
+        },
+        {
+          "text": "Mitotic spindle",
+          "isCorrect": true,
+          "rationale": "Correct! [Mitosis Phases] The mitotic spindle is composed of spindle fibers that attach to chromosomes at metaphase and pull them apart at anaphase."
+        },
+        {
+          "text": "Cleavage furrow",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Cleavage furrow' is a distractor. Correct answer is 'Mitotic spindle'."
+        },
+        {
+          "text": "Nuclear envelope",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Nuclear envelope' is a distractor. Correct answer is 'Mitotic spindle'."
+        }
+      ],
+      "hint": "Topic: Mitosis Phases"
+    },
+    {
+      "question": "_____ 38. What happens to the mitotic spindle during telophase?",
+      "answerOptions": [
+        {
+          "text": "It disassembles and disappears",
+          "isCorrect": true,
+          "rationale": "Correct! [Mitosis Phases] During telophase, the mitotic spindle that caused chromosomes to migrate disassembles and disappears."
+        },
+        {
+          "text": "It pulls chromatids to the center",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'It pulls chromatids to the center' is a distractor. Correct answer is 'It disassembles and disappears'."
+        },
+        {
+          "text": "It duplicates",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'It duplicates' is a distractor. Correct answer is 'It disassembles and disappears'."
+        },
+        {
+          "text": "It forms the cell membrane",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'It forms the cell membrane' is a distractor. Correct answer is 'It disassembles and disappears'."
+        }
+      ],
+      "hint": "Topic: Mitosis Phases"
+    },
+    {
+      "question": "_____ 39. In which stage of the cell cycle does a cell spend the majority of its functional life performing daily metabolic activities and preparing for division?",
+      "answerOptions": [
+        {
+          "text": "Interphase",
+          "isCorrect": true,
+          "rationale": "Correct! [Cell Cycle] Interphase is the longest phase of the cell cycle, consisting of G1, S, and G2 phases."
+        },
+        {
+          "text": "Cytokinesis",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Cytokinesis' is a distractor. Correct answer is 'Interphase'."
+        },
+        {
+          "text": "Mitosis",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Mitosis' is a distractor. Correct answer is 'Interphase'."
+        },
+        {
+          "text": "Anaphase",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Anaphase' is a distractor. Correct answer is 'Interphase'."
+        }
+      ],
+      "hint": "Topic: Cell Cycle"
+    },
+    {
+      "question": "_____ 40. What is the primary biological outcome of mitosis followed by cytokinesis?",
+      "answerOptions": [
+        {
+          "text": "A single tetraploid cell",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'A single tetraploid cell' is a distractor. Correct answer is 'Two genetically identical diploid daughter cells'."
+        },
+        {
+          "text": "Four genetically diverse haploid gametes",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Four genetically diverse haploid gametes' is a distractor. Correct answer is 'Two genetically identical diploid daughter cells'."
+        },
+        {
+          "text": "Two non-identical haploid cells",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Two non-identical haploid cells' is a distractor. Correct answer is 'Two genetically identical diploid daughter cells'."
+        },
+        {
+          "text": "Two genetically identical diploid daughter cells",
+          "isCorrect": true,
+          "rationale": "Correct! [Types of Cell Division] Mitosis distributes replicated genetic material equally between two daughter cells, producing identical diploid cells."
+        }
+      ],
+      "hint": "Topic: Types of Cell Division"
+    }
+  ],
+  "topics": {
+    "covered": [
+      "Cell Cycle",
+      "Types of Cell Division",
+      "Gametes",
+      "Mitosis Phases",
+      "Interphase",
+      "Forms of Chromosomes",
+      "Somatic Cells",
+      "Homologous Chromosomes",
+      "Human Genome Project",
+      "Cytokinesis",
+      "Sex Chromosomes",
+      "Autosomes"
+    ],
+    "followUp": [
+      "Review lecture materials and diagrams for Module 4: Chromosomes & Cell Division"
+    ]
+  }
+}

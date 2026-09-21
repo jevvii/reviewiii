@@ -100,6 +100,36 @@ export const SUBJECTS: Subject[] = [
           json: 'downloads/hmby311/HMBY311_Module_1_Quiz.json',
           md: 'downloads/hmby311/HMBY311_Module_1_Quiz.md'
         }
+      },
+      {
+        id: 'hmby311-m4',
+        number: 4,
+        title: 'Chromosomes & Cell Division',
+        description: 'Forms of chromosomes, DNA condensation around histones, somatic diploid vs gamete haploid cells, autosomes, sex chromosomes (XY/XX), cell cycle (G1, S, G2), prophase, metaphase, anaphase, telophase, and microfilament cytokinesis.',
+        itemCount: 40,
+        topics: ['Chromosomes & Histones', 'Human Genome Project', 'Somatic vs Gametes', 'Mitosis Phases', 'Cytokinesis'],
+        quizPath: 'quizzes/hmby311/module4.html',
+        downloads: {
+          pdf: 'downloads/hmby311/Module 4 - Chromosomes and Cell Division - Questionnaire.pdf',
+          docx: 'downloads/hmby311/Module 4 - Chromosomes and Cell Division - Questionnaire.docx',
+          json: 'downloads/hmby311/HMBY311_Module_4_Quiz.json',
+          md: 'downloads/hmby311/HMBY311_Module_4_Quiz.md'
+        }
+      },
+      {
+        id: 'hmby311-m5',
+        number: 5,
+        title: 'Genetics, Human Inheritance and Cancer',
+        description: 'Mendelian genetics, Law of Segregation & Independent Assortment, Punnett squares, non-Mendelian patterns (codominance, incomplete dominance, polygenic, sex-influenced), human traits inventory, genetic disorders (amniocentesis/CVS), neoplasm biology, dysplasia, carcinoma in situ, angiogenesis, oncogenes, tumor suppressor genes, and cancer therapeutics.',
+        itemCount: 60,
+        topics: ['Mendelian Genetics', 'Punnett Squares', 'Human Traits Inventory', 'Amniocentesis & CVS', 'Neoplasms & Metastasis', 'Oncogenes & Apoptosis', 'Cancer Therapies'],
+        quizPath: 'quizzes/hmby311/module5.html',
+        downloads: {
+          pdf: 'downloads/hmby311/Module 5 - Genetics, Human Inheritance and Cancer - Questionnaire.pdf',
+          docx: 'downloads/hmby311/Module 5 - Genetics, Human Inheritance and Cancer - Questionnaire.docx',
+          json: 'downloads/hmby311/HMBY311_Module_5_Quiz.json',
+          md: 'downloads/hmby311/HMBY311_Module_5_Quiz.md'
+        }
       }
     ]
   },

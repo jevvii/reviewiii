@@ -6,6 +6,7 @@ interface Props {
 }
 
 const { embedded = false } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <div class={`focus-timer-container ${embedded ? 'embedded' : ''}`} id="focus-timer-root">
@@ -76,7 +77,7 @@ const { embedded = false } = Astro.props;
           {SUBJECTS.filter(s => s.status === 'active').map(s => (
             <>
               {s.modules.map(m => (
-                <option value={`${s.code}|${m.title}`}>
+                <option value={`${s.code}|Module ${m.number}: ${m.title}`} data-quiz-path={`${baseUrl}${m.quizPath}`}>
                   {s.code} &bull; M{m.number}: {m.title}
                 </option>
               ))}
@@ -200,8 +201,8 @@ const { embedded = false } = Astro.props;
             {SUBJECTS.filter(s => s.status === 'active').map(s => (
               <>
                 {s.modules.map(m => (
-                  <option value={`${s.code}|${m.title}`}>
-                    {s.code}: {m.title}
+                  <option value={`${s.code}|Module ${m.number}: ${m.title}`}>
+                    {s.code}: M{m.number} &bull; {m.title}
                   </option>
                 ))}
               </>
@@ -1150,14 +1151,29 @@ const { embedded = false } = Astro.props;
 
     function toggleStartPause() {
       if (!snapshot.running) {
+        if (subjectSelect) {
+          const parts = subjectSelect.value.split('|');
+          snapshot.subjectCode = parts[0] || 'General Study';
+          snapshot.moduleTitle = parts[1] || 'Comprehensive Review';
+        }
+
         playFocusChime(snapshot.phase === 'focus' ? 'focus' : 'break');
         snapshot.running = true;
         snapshot.endsAt = Date.now() + snapshot.secondsLeft * 1000;
+        saveFocusSnapshot(snapshot);
+
+        // Auto-redirect to quiz player if a specific module quiz is selected
+        const selectedOpt = subjectSelect?.options[subjectSelect.selectedIndex];
+        const quizPath = selectedOpt?.getAttribute('data-quiz-path');
+        if (quizPath && snapshot.phase === 'focus') {
+          window.location.href = quizPath;
+          return;
+        }
       } else {
         snapshot.running = false;
         snapshot.endsAt = null;
+        saveFocusSnapshot(snapshot);
       }
-      saveFocusSnapshot(snapshot);
       renderUI();
     }
 
@@ -1221,6 +1237,16 @@ const { embedded = false } = Astro.props;
     }
 
     if (subjectSelect) {
+      if (snapshot.subjectCode && snapshot.moduleTitle) {
+        const targetVal = `${snapshot.subjectCode}|${snapshot.moduleTitle}`;
+        for (let i = 0; i < subjectSelect.options.length; i++) {
+          if (subjectSelect.options[i].value === targetVal) {
+            subjectSelect.selectedIndex = i;
+            break;
+          }
+        }
+      }
+
       subjectSelect.addEventListener('change', (e) => {
         const parts = e.target.value.split('|');
         snapshot.subjectCode = parts[0] || 'General Study';

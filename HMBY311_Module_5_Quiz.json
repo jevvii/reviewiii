@@ -1,0 +1,1590 @@
+{
+  "quiz": [
+    {
+      "question": "_____ 1. What biological discipline is defined as the scientific study of heredity in general and of genes in particular?",
+      "answerOptions": [
+        {
+          "text": "Cytology",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Cytology' is a distractor. Correct answer is 'Genetics'."
+        },
+        {
+          "text": "Genomics",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Genomics' is a distractor. Correct answer is 'Genetics'."
+        },
+        {
+          "text": "Genetics",
+          "isCorrect": true,
+          "rationale": "Correct! [Genetics Fundamentals] Genetics is the study of heredity in general and of genes in particular, forming a central pillar of biology."
+        },
+        {
+          "text": "Histology",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Histology' is a distractor. Correct answer is 'Genetics'."
+        }
+      ],
+      "hint": "Topic: Genetics Fundamentals"
+    },
+    {
+      "question": "_____ 2. Gregor Mendel referred to the inherited units passed onto descendants as 'factors', which are now scientifically known as what?",
+      "answerOptions": [
+        {
+          "text": "Enzymes",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Enzymes' is a distractor. Correct answer is 'Genes'."
+        },
+        {
+          "text": "Genes",
+          "isCorrect": true,
+          "rationale": "Correct! [Genetics Fundamentals] Inheritance of traits is determined by factors passed to descendants, now designated as genes."
+        },
+        {
+          "text": "Histones",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Histones' is a distractor. Correct answer is 'Genes'."
+        },
+        {
+          "text": "Chromatids",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Chromatids' is a distractor. Correct answer is 'Genes'."
+        }
+      ],
+      "hint": "Topic: Genetics Fundamentals"
+    },
+    {
+      "question": "_____ 3. What term describes the alternative or different forms of the same gene located at the same locus on homologous chromosomes?",
+      "answerOptions": [
+        {
+          "text": "Histones",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Histones' is a distractor. Correct answer is 'Alleles'."
+        },
+        {
+          "text": "Codons",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Codons' is a distractor. Correct answer is 'Alleles'."
+        },
+        {
+          "text": "Alleles",
+          "isCorrect": true,
+          "rationale": "Correct! [Alleles & Zygosity] Alleles are different forms of the same gene."
+        },
+        {
+          "text": "Autosomes",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Autosomes' is a distractor. Correct answer is 'Alleles'."
+        }
+      ],
+      "hint": "Topic: Alleles & Zygosity"
+    },
+    {
+      "question": "_____ 4. An individual that possesses a pair of identical alleles for a particular gene (such as AA or aa) is described as what?",
+      "answerOptions": [
+        {
+          "text": "Homozygous",
+          "isCorrect": true,
+          "rationale": "Correct! [Alleles & Zygosity] An individual with a pair of the same alleles is identified as homozygous."
+        },
+        {
+          "text": "Hemizygous",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Hemizygous' is a distractor. Correct answer is 'Homozygous'."
+        },
+        {
+          "text": "Heterozygous",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Heterozygous' is a distractor. Correct answer is 'Homozygous'."
+        },
+        {
+          "text": "Polygenic",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Polygenic' is a distractor. Correct answer is 'Homozygous'."
+        }
+      ],
+      "hint": "Topic: Alleles & Zygosity"
+    },
+    {
+      "question": "_____ 5. An individual that possesses two different alleles for a particular gene (such as Aa) is described as what?",
+      "answerOptions": [
+        {
+          "text": "Monohybrid",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Monohybrid' is a distractor. Correct answer is 'Heterozygous'."
+        },
+        {
+          "text": "Homozygous",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Homozygous' is a distractor. Correct answer is 'Heterozygous'."
+        },
+        {
+          "text": "Heterozygous",
+          "isCorrect": true,
+          "rationale": "Correct! [Alleles & Zygosity] An individual with different alleles for a gene is referred to as heterozygous."
+        },
+        {
+          "text": "Aneuploid",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Aneuploid' is a distractor. Correct answer is 'Heterozygous'."
+        }
+      ],
+      "hint": "Topic: Alleles & Zygosity"
+    },
+    {
+      "question": "_____ 6. In a heterozygous condition, what term describes the allele that masks the other allele and is phenotypically expressed?",
+      "answerOptions": [
+        {
+          "text": "Incomplete",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Incomplete' is a distractor. Correct answer is 'Dominant'."
+        },
+        {
+          "text": "Codominant",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Codominant' is a distractor. Correct answer is 'Dominant'."
+        },
+        {
+          "text": "Dominant",
+          "isCorrect": true,
+          "rationale": "Correct! [Alleles & Zygosity] In heterozygous individuals, the allele that is expressed is described as being dominant."
+        },
+        {
+          "text": "Recessive",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Recessive' is a distractor. Correct answer is 'Dominant'."
+        }
+      ],
+      "hint": "Topic: Alleles & Zygosity"
+    },
+    {
+      "question": "_____ 7. In a heterozygous condition, what term describes the allele whose phenotypic expression is masked or suppressed?",
+      "answerOptions": [
+        {
+          "text": "Carrier",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Carrier' is a distractor. Correct answer is 'Recessive'."
+        },
+        {
+          "text": "Dominant",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Dominant' is a distractor. Correct answer is 'Recessive'."
+        },
+        {
+          "text": "Codominant",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Codominant' is a distractor. Correct answer is 'Recessive'."
+        },
+        {
+          "text": "Recessive",
+          "isCorrect": true,
+          "rationale": "Correct! [Alleles & Zygosity] The allele that is not expressed (masked) in a heterozygote is called recessive."
+        }
+      ],
+      "hint": "Topic: Alleles & Zygosity"
+    },
+    {
+      "question": "_____ 8. At the molecular level, what does a recessive allele typically produce compared to a dominant allele?",
+      "answerOptions": [
+        {
+          "text": "A nonfunctional protein or no protein at all",
+          "isCorrect": true,
+          "rationale": "Correct! [Alleles & Zygosity] The dominant allele usually produces a functional protein, while the recessive allele produces either a nonfunctional protein or no protein at all."
+        },
+        {
+          "text": "A toxic protein",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'A toxic protein' is a distractor. Correct answer is 'A nonfunctional protein or no protein at all'."
+        },
+        {
+          "text": "An identical duplicate protein",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'An identical duplicate protein' is a distractor. Correct answer is 'A nonfunctional protein or no protein at all'."
+        },
+        {
+          "text": "A structural lipid",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'A structural lipid' is a distractor. Correct answer is 'A nonfunctional protein or no protein at all'."
+        }
+      ],
+      "hint": "Topic: Alleles & Zygosity"
+    },
+    {
+      "question": "_____ 9. Which Mendelian law states that allele pairs separate during gamete formation so that each gamete carries only one allele for each gene?",
+      "answerOptions": [
+        {
+          "text": "Law of Polygenic Inheritance",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Law of Polygenic Inheritance' is a distractor. Correct answer is 'Law of Segregation'."
+        },
+        {
+          "text": "Law of Segregation",
+          "isCorrect": true,
+          "rationale": "Correct! [Mendelian Principles] The Law of Segregation states that allele pairs separate during gamete formation, with half receiving one allele and half the other."
+        },
+        {
+          "text": "Law of Independent Assortment",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Law of Independent Assortment' is a distractor. Correct answer is 'Law of Segregation'."
+        },
+        {
+          "text": "Law of Dominance",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Law of Dominance' is a distractor. Correct answer is 'Law of Segregation'."
+        }
+      ],
+      "hint": "Topic: Mendelian Principles"
+    },
+    {
+      "question": "_____ 10. Which Mendelian law states that each pair of alleles located on one kind of chromosome separates into gametes independently of alleles on different chromosomes?",
+      "answerOptions": [
+        {
+          "text": "Law of Continuous Variation",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Law of Continuous Variation' is a distractor. Correct answer is 'Law of Independent Assortment'."
+        },
+        {
+          "text": "Law of Segregation",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Law of Segregation' is a distractor. Correct answer is 'Law of Independent Assortment'."
+        },
+        {
+          "text": "Law of Independent Assortment",
+          "isCorrect": true,
+          "rationale": "Correct! [Mendelian Principles] The Law of Independent Assortment dictates that genes on different chromosomes segregate independently into gametes."
+        },
+        {
+          "text": "Law of Dominance",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Law of Dominance' is a distractor. Correct answer is 'Law of Independent Assortment'."
+        }
+      ],
+      "hint": "Topic: Mendelian Principles"
+    },
+    {
+      "question": "_____ 11. What genetic term refers to the precise genetic makeup or combination of alleles present within an individual?",
+      "answerOptions": [
+        {
+          "text": "Phenotype",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Phenotype' is a distractor. Correct answer is 'Genotype'."
+        },
+        {
+          "text": "Karyotype",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Karyotype' is a distractor. Correct answer is 'Genotype'."
+        },
+        {
+          "text": "Genotype",
+          "isCorrect": true,
+          "rationale": "Correct! [Genotype vs Phenotype] The genotype refers to the specific alleles present and combined in an individual (e.g., AA, Aa, aa)."
+        },
+        {
+          "text": "Pedigree",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Pedigree' is a distractor. Correct answer is 'Genotype'."
+        }
+      ],
+      "hint": "Topic: Genotype vs Phenotype"
+    },
+    {
+      "question": "_____ 12. What term describes the observable physical, physiological, or biochemical traits expressed by an individual?",
+      "answerOptions": [
+        {
+          "text": "Allele frequency",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Allele frequency' is a distractor. Correct answer is 'Phenotype'."
+        },
+        {
+          "text": "Genotype",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Genotype' is a distractor. Correct answer is 'Phenotype'."
+        },
+        {
+          "text": "Genome",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Genome' is a distractor. Correct answer is 'Phenotype'."
+        },
+        {
+          "text": "Phenotype",
+          "isCorrect": true,
+          "rationale": "Correct! [Genotype vs Phenotype] The phenotype refers to the observable physical or physiological traits expressed in the individual."
+        }
+      ],
+      "hint": "Topic: Genotype vs Phenotype"
+    },
+    {
+      "question": "_____ 13. What diagrammatic tool is used in genetics to calculate and predict the probabilities of offspring genotypes and phenotypes from parental gametes?",
+      "answerOptions": [
+        {
+          "text": "Chomsky grid",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Chomsky grid' is a distractor. Correct answer is 'Punnett square'."
+        },
+        {
+          "text": "Punnett square",
+          "isCorrect": true,
+          "rationale": "Correct! [Genetic Crosses] A Punnett square is used to determine the probability that each gamete cross will occur."
+        },
+        {
+          "text": "Pedigree chart",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Pedigree chart' is a distractor. Correct answer is 'Punnett square'."
+        },
+        {
+          "text": "Karyotype diagram",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Karyotype diagram' is a distractor. Correct answer is 'Punnett square'."
+        }
+      ],
+      "hint": "Topic: Genetic Crosses"
+    },
+    {
+      "question": "_____ 14. If a homozygous dominant individual (AA) crosses with a homozygous recessive individual (aa), what will be the genotype of all their offspring?",
+      "answerOptions": [
+        {
+          "text": "25% AA, 75% aa",
+          "isCorrect": false,
+          "rationale": "Incorrect. '25% AA, 75% aa' is a distractor. Correct answer is '100% Heterozygous (Aa)'."
+        },
+        {
+          "text": "50% AA, 50% aa",
+          "isCorrect": false,
+          "rationale": "Incorrect. '50% AA, 50% aa' is a distractor. Correct answer is '100% Heterozygous (Aa)'."
+        },
+        {
+          "text": "100% Heterozygous (Aa)",
+          "isCorrect": true,
+          "rationale": "Correct! [Genetic Crosses] Crossing AA x aa yields 100% heterozygous (Aa) offspring expressing the dominant phenotype."
+        },
+        {
+          "text": "100% Homozygous dominant (AA)",
+          "isCorrect": false,
+          "rationale": "Incorrect. '100% Homozygous dominant (AA)' is a distractor. Correct answer is '100% Heterozygous (Aa)'."
+        }
+      ],
+      "hint": "Topic: Genetic Crosses"
+    },
+    {
+      "question": "_____ 15. When two heterozygous individuals (Aa x Aa) mate, what is the expected genotypic ratio among their offspring?",
+      "answerOptions": [
+        {
+          "text": "100% Aa",
+          "isCorrect": false,
+          "rationale": "Incorrect. '100% Aa' is a distractor. Correct answer is '25% AA, 50% Aa, 25% aa'."
+        },
+        {
+          "text": "25% AA, 50% Aa, 25% aa",
+          "isCorrect": true,
+          "rationale": "Correct! [Genetic Crosses] An Aa x Aa cross produces 25% homozygous dominant (AA), 50% heterozygous (Aa), and 25% homozygous recessive (aa)."
+        },
+        {
+          "text": "50% AA, 50% aa",
+          "isCorrect": false,
+          "rationale": "Incorrect. '50% AA, 50% aa' is a distractor. Correct answer is '25% AA, 50% Aa, 25% aa'."
+        },
+        {
+          "text": "75% Aa, 25% aa",
+          "isCorrect": false,
+          "rationale": "Incorrect. '75% Aa, 25% aa' is a distractor. Correct answer is '25% AA, 50% Aa, 25% aa'."
+        }
+      ],
+      "hint": "Topic: Genetic Crosses"
+    },
+    {
+      "question": "_____ 16. When two heterozygous individuals (Aa x Aa) mate, what is the expected phenotypic ratio for a trait following complete dominance?",
+      "answerOptions": [
+        {
+          "text": "100% dominant",
+          "isCorrect": false,
+          "rationale": "Incorrect. '100% dominant' is a distractor. Correct answer is '75% dominant, 25% recessive'."
+        },
+        {
+          "text": "75% dominant, 25% recessive",
+          "isCorrect": true,
+          "rationale": "Correct! [Genetic Crosses] Because AA and Aa both show the dominant phenotype, 75% exhibit the dominant trait and 25% show the recessive trait."
+        },
+        {
+          "text": "50% dominant, 50% recessive",
+          "isCorrect": false,
+          "rationale": "Incorrect. '50% dominant, 50% recessive' is a distractor. Correct answer is '75% dominant, 25% recessive'."
+        },
+        {
+          "text": "25% dominant, 75% recessive",
+          "isCorrect": false,
+          "rationale": "Incorrect. '25% dominant, 75% recessive' is a distractor. Correct answer is '75% dominant, 25% recessive'."
+        }
+      ],
+      "hint": "Topic: Genetic Crosses"
+    },
+    {
+      "question": "_____ 17. What term is given to a heterozygous individual who displays a normal/dominant phenotype but carries a recessive allele for a genetic disorder?",
+      "answerOptions": [
+        {
+          "text": "Vector",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Vector' is a distractor. Correct answer is 'Carrier'."
+        },
+        {
+          "text": "Proband",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Proband' is a distractor. Correct answer is 'Carrier'."
+        },
+        {
+          "text": "Mutant",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Mutant' is a distractor. Correct answer is 'Carrier'."
+        },
+        {
+          "text": "Carrier",
+          "isCorrect": true,
+          "rationale": "Correct! [Genetic Crosses] A heterozygous individual that shows the dominant phenotype while carrying a recessive allele is called a carrier."
+        }
+      ],
+      "hint": "Topic: Genetic Crosses"
+    },
+    {
+      "question": "_____ 18. What is a chart constructed to illustrate genetic relationships, ancestral lineages, and inheritance patterns among individuals in an extended family?",
+      "answerOptions": [
+        {
+          "text": "Punnett square",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Punnett square' is a distractor. Correct answer is 'Pedigree'."
+        },
+        {
+          "text": "Cladogram",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Cladogram' is a distractor. Correct answer is 'Pedigree'."
+        },
+        {
+          "text": "Pedigree",
+          "isCorrect": true,
+          "rationale": "Correct! [Pedigrees] Pedigrees are diagrams constructed to show genetic relationships among individuals in an extended family."
+        },
+        {
+          "text": "Karyogram",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Karyogram' is a distractor. Correct answer is 'Pedigree'."
+        }
+      ],
+      "hint": "Topic: Pedigrees"
+    },
+    {
+      "question": "_____ 19. What type of non-Mendelian inheritance occurs when both alleles are simultaneously and clearly apparent in the heterozygous phenotype?",
+      "answerOptions": [
+        {
+          "text": "Incomplete dominance",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Incomplete dominance' is a distractor. Correct answer is 'Codominance'."
+        },
+        {
+          "text": "Polygenic inheritance",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Polygenic inheritance' is a distractor. Correct answer is 'Codominance'."
+        },
+        {
+          "text": "Codominance",
+          "isCorrect": true,
+          "rationale": "Correct! [Non-Mendelian Inheritance] Codominance takes place when both alleles are fully and distinctly expressed in the phenotype (e.g., AB blood type)."
+        },
+        {
+          "text": "Complete dominance",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Complete dominance' is a distractor. Correct answer is 'Codominance'."
+        }
+      ],
+      "hint": "Topic: Non-Mendelian Inheritance"
+    },
+    {
+      "question": "_____ 20. What pattern of inheritance occurs when a heterozygous phenotype is intermediate between the two homozygous phenotypes (e.g., wavy hair from curly and straight)?",
+      "answerOptions": [
+        {
+          "text": "Incomplete dominance",
+          "isCorrect": true,
+          "rationale": "Correct! [Non-Mendelian Inheritance] Incomplete dominance occurs when expression in a heterozygote is intermediate between homozygous dominant and homozygous recessive."
+        },
+        {
+          "text": "Sex-linkage",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Sex-linkage' is a distractor. Correct answer is 'Incomplete dominance'."
+        },
+        {
+          "text": "Pleiotropy",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Pleiotropy' is a distractor. Correct answer is 'Incomplete dominance'."
+        },
+        {
+          "text": "Codominance",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Codominance' is a distractor. Correct answer is 'Incomplete dominance'."
+        }
+      ],
+      "hint": "Topic: Non-Mendelian Inheritance"
+    },
+    {
+      "question": "_____ 21. What genetic scenario occurs when there are three or more distinct alleles for a single gene existing within a population, as exemplified by the ABO blood group system?",
+      "answerOptions": [
+        {
+          "text": "Polygenic inheritance",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Polygenic inheritance' is a distractor. Correct answer is 'Multiple alleles'."
+        },
+        {
+          "text": "Multiple alleles",
+          "isCorrect": true,
+          "rationale": "Correct! [Non-Mendelian Inheritance] Multiple alleles refers to the condition where three or more alleles exist for a particular gene in a population, such as ABO blood types (IA, IB, i)."
+        },
+        {
+          "text": "Gene duplication",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Gene duplication' is a distractor. Correct answer is 'Multiple alleles'."
+        },
+        {
+          "text": "Epistasis",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Epistasis' is a distractor. Correct answer is 'Multiple alleles'."
+        }
+      ],
+      "hint": "Topic: Non-Mendelian Inheritance"
+    },
+    {
+      "question": "_____ 22. What form of inheritance occurs when two or more distinct genes govern the expression of a single continuous phenotypic trait such as height, skin color, or eye color?",
+      "answerOptions": [
+        {
+          "text": "Incomplete dominance",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Incomplete dominance' is a distractor. Correct answer is 'Polygenic inheritance'."
+        },
+        {
+          "text": "Monogenic inheritance",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Monogenic inheritance' is a distractor. Correct answer is 'Polygenic inheritance'."
+        },
+        {
+          "text": "Multiple alleles",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Multiple alleles' is a distractor. Correct answer is 'Polygenic inheritance'."
+        },
+        {
+          "text": "Polygenic inheritance",
+          "isCorrect": true,
+          "rationale": "Correct! [Non-Mendelian Inheritance] Polygenic inheritance occurs when more than one gene controls the trait. Examples include human height, skin pigmentation, and eye color."
+        }
+      ],
+      "hint": "Topic: Non-Mendelian Inheritance"
+    },
+    {
+      "question": "_____ 23. Traits whose phenotypic expression depends on both the presence of specific alleles and the levels of circulating sex hormones (such as male-pattern baldness) are called what?",
+      "answerOptions": [
+        {
+          "text": "Sex-influenced traits",
+          "isCorrect": true,
+          "rationale": "Correct! [Non-Mendelian Inheritance] The expression of sex-influenced traits depends on both the presence of the allele and circulating sex hormones (e.g. testosterone)."
+        },
+        {
+          "text": "Mitochondrial traits",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Mitochondrial traits' is a distractor. Correct answer is 'Sex-influenced traits'."
+        },
+        {
+          "text": "Sex-linked traits",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Sex-linked traits' is a distractor. Correct answer is 'Sex-influenced traits'."
+        },
+        {
+          "text": "Autosomal recessive traits",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Autosomal recessive traits' is a distractor. Correct answer is 'Sex-influenced traits'."
+        }
+      ],
+      "hint": "Topic: Non-Mendelian Inheritance"
+    },
+    {
+      "question": "_____ 24. In the human genetic traits inventory, which earlobe phenotype is dominant over attached earlobes?",
+      "answerOptions": [
+        {
+          "text": "Lobeless",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Lobeless' is a distractor. Correct answer is 'Free earlobes'."
+        },
+        {
+          "text": "Pointed earlobes",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Pointed earlobes' is a distractor. Correct answer is 'Free earlobes'."
+        },
+        {
+          "text": "Free earlobes",
+          "isCorrect": true,
+          "rationale": "Correct! [Human Genetic Traits] Definite free earlobes are dominant; attached earlobes are recessive."
+        },
+        {
+          "text": "Attached earlobes",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Attached earlobes' is a distractor. Correct answer is 'Free earlobes'."
+        }
+      ],
+      "hint": "Topic: Human Genetic Traits"
+    },
+    {
+      "question": "_____ 25. In human traits, is having a widow's peak hairline dominant or recessive to a straight hairline?",
+      "answerOptions": [
+        {
+          "text": "Dominant",
+          "isCorrect": true,
+          "rationale": "Correct! [Human Genetic Traits] A widow's peak is a dominant trait; a straight hairline is recessive."
+        },
+        {
+          "text": "Polygenic",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Polygenic' is a distractor. Correct answer is 'Dominant'."
+        },
+        {
+          "text": "Codominant",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Codominant' is a distractor. Correct answer is 'Dominant'."
+        },
+        {
+          "text": "Recessive",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Recessive' is a distractor. Correct answer is 'Dominant'."
+        }
+      ],
+      "hint": "Topic: Human Genetic Traits"
+    },
+    {
+      "question": "_____ 26. In human hand genetics, is the presence of six fingers (polydactyly) dominant or recessive to having five fingers?",
+      "answerOptions": [
+        {
+          "text": "Recessive",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Recessive' is a distractor. Correct answer is 'Dominant'."
+        },
+        {
+          "text": "Dominant",
+          "isCorrect": true,
+          "rationale": "Correct! [Human Genetic Traits] Having six fingers (polydactyly) is genetically dominant; five fingers is recessive."
+        },
+        {
+          "text": "Sex-linked",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Sex-linked' is a distractor. Correct answer is 'Dominant'."
+        },
+        {
+          "text": "Codominant",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Codominant' is a distractor. Correct answer is 'Dominant'."
+        }
+      ],
+      "hint": "Topic: Human Genetic Traits"
+    },
+    {
+      "question": "_____ 27. When clasping hands with thumbs crossed, which thumb placement is genetically dominant in humans?",
+      "answerOptions": [
+        {
+          "text": "Parallel thumbs",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Parallel thumbs' is a distractor. Correct answer is 'Left thumb over right thumb'."
+        },
+        {
+          "text": "Interlocked thumbs",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Interlocked thumbs' is a distractor. Correct answer is 'Left thumb over right thumb'."
+        },
+        {
+          "text": "Right thumb over left thumb",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Right thumb over left thumb' is a distractor. Correct answer is 'Left thumb over right thumb'."
+        },
+        {
+          "text": "Left thumb over right thumb",
+          "isCorrect": true,
+          "rationale": "Correct! [Human Genetic Traits] Placing the left thumb over the right thumb when crossing thumbs is dominant; right over left is recessive."
+        }
+      ],
+      "hint": "Topic: Human Genetic Traits"
+    },
+    {
+      "question": "_____ 28. In human facial genetics, is the presence of facial dimples dominant or recessive?",
+      "answerOptions": [
+        {
+          "text": "Recessive",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Recessive' is a distractor. Correct answer is 'Dominant'."
+        },
+        {
+          "text": "Sex-influenced",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Sex-influenced' is a distractor. Correct answer is 'Dominant'."
+        },
+        {
+          "text": "Incomplete dominant",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Incomplete dominant' is a distractor. Correct answer is 'Dominant'."
+        },
+        {
+          "text": "Dominant",
+          "isCorrect": true,
+          "rationale": "Correct! [Human Genetic Traits] Presence of dimples is dominant; absence of dimples is recessive."
+        }
+      ],
+      "hint": "Topic: Human Genetic Traits"
+    },
+    {
+      "question": "_____ 29. In tongue genetics, is the ability to roll the side edges of the tongue upward dominant or recessive?",
+      "answerOptions": [
+        {
+          "text": "Incompletely penetrant",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Incompletely penetrant' is a distractor. Correct answer is 'Dominant'."
+        },
+        {
+          "text": "Dominant",
+          "isCorrect": true,
+          "rationale": "Correct! [Human Genetic Traits] The ability to roll the lateral edges of the tongue upward is a dominant trait; inability is recessive."
+        },
+        {
+          "text": "Recessive",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Recessive' is a distractor. Correct answer is 'Dominant'."
+        },
+        {
+          "text": "Codominant",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Codominant' is a distractor. Correct answer is 'Dominant'."
+        }
+      ],
+      "hint": "Topic: Human Genetic Traits"
+    },
+    {
+      "question": "_____ 30. In toe anatomy, which condition is genetically dominant regarding toe length in humans?",
+      "answerOptions": [
+        {
+          "text": "Second toe longer than first toe",
+          "isCorrect": true,
+          "rationale": "Correct! [Human Genetic Traits] Having the second toe longer than the big toe (Morton's toe) is dominant; first toe longer is recessive."
+        },
+        {
+          "text": "First toe longer than second toe",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'First toe longer than second toe' is a distractor. Correct answer is 'Second toe longer than first toe'."
+        },
+        {
+          "text": "Equal length toes",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Equal length toes' is a distractor. Correct answer is 'Second toe longer than first toe'."
+        },
+        {
+          "text": "Third toe longer than first toe",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Third toe longer than first toe' is a distractor. Correct answer is 'Second toe longer than first toe'."
+        }
+      ],
+      "hint": "Topic: Human Genetic Traits"
+    },
+    {
+      "question": "_____ 31. Which prenatal diagnostic procedure involves sampling and analyzing amniotic fluid and floating fetal cells from within the pregnant mother to detect genetic disorders?",
+      "answerOptions": [
+        {
+          "text": "Ultrasound imaging",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Ultrasound imaging' is a distractor. Correct answer is 'Amniocentesis'."
+        },
+        {
+          "text": "Chorionic villi sampling (CVS)",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Chorionic villi sampling (CVS)' is a distractor. Correct answer is 'Amniocentesis'."
+        },
+        {
+          "text": "Amniocentesis",
+          "isCorrect": true,
+          "rationale": "Correct! [Detecting Genetic Disorders] In amniocentesis, a sample of amniotic fluid containing fetal cells is withdrawn from the uterus and analyzed for genetic problems."
+        },
+        {
+          "text": "Fetoscopy",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Fetoscopy' is a distractor. Correct answer is 'Amniocentesis'."
+        }
+      ],
+      "hint": "Topic: Detecting Genetic Disorders"
+    },
+    {
+      "question": "_____ 32. Which prenatal diagnostic technique samples cells directly from the placental projections to detect chromosomal and genetic abnormalities in a developing fetus?",
+      "answerOptions": [
+        {
+          "text": "Amniocentesis",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Amniocentesis' is a distractor. Correct answer is 'Chorionic villi sampling (CVS)'."
+        },
+        {
+          "text": "CT scanning",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'CT scanning' is a distractor. Correct answer is 'Chorionic villi sampling (CVS)'."
+        },
+        {
+          "text": "PET scanning",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'PET scanning' is a distractor. Correct answer is 'Chorionic villi sampling (CVS)'."
+        },
+        {
+          "text": "Chorionic villi sampling (CVS)",
+          "isCorrect": true,
+          "rationale": "Correct! [Detecting Genetic Disorders] Chorionic villi sampling (CVS) involves sampling tissue from the chorionic villi of the placenta for genetic diagnosis."
+        }
+      ],
+      "hint": "Topic: Detecting Genetic Disorders"
+    },
+    {
+      "question": "_____ 33. What fundamental biological characteristic is universally shared by all forms of cancer?",
+      "answerOptions": [
+        {
+          "text": "Uncontrolled cell division",
+          "isCorrect": true,
+          "rationale": "Correct! [Cancer Biology] All cancers share one universal hallmark: uncontrolled and unregulated cell division."
+        },
+        {
+          "text": "Bacterial infection",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Bacterial infection' is a distractor. Correct answer is 'Uncontrolled cell division'."
+        },
+        {
+          "text": "Programmed cell death",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Programmed cell death' is a distractor. Correct answer is 'Uncontrolled cell division'."
+        },
+        {
+          "text": "Decreased protein synthesis",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Decreased protein synthesis' is a distractor. Correct answer is 'Uncontrolled cell division'."
+        }
+      ],
+      "hint": "Topic: Cancer Biology"
+    },
+    {
+      "question": "_____ 34. What is an abnormal mass of tissue resulting from uncontrolled cell division, also known medically as a neoplasm?",
+      "answerOptions": [
+        {
+          "text": "Tumor",
+          "isCorrect": true,
+          "rationale": "Correct! [Tumors & Neoplasms] A tumor (or neoplasm, meaning 'new growth') is an abnormal growth of cells that forms a tissue mass."
+        },
+        {
+          "text": "Cyst",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Cyst' is a distractor. Correct answer is 'Tumor'."
+        },
+        {
+          "text": "Histone",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Histone' is a distractor. Correct answer is 'Tumor'."
+        },
+        {
+          "text": "Polyp",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Polyp' is a distractor. Correct answer is 'Tumor'."
+        }
+      ],
+      "hint": "Topic: Tumors & Neoplasms"
+    },
+    {
+      "question": "_____ 35. What type of tumor is enclosed within a capsule of connective tissue and does not invade surrounding tissues or spread to distant sites?",
+      "answerOptions": [
+        {
+          "text": "Carcinoma in situ",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Carcinoma in situ' is a distractor. Correct answer is 'Benign tumor'."
+        },
+        {
+          "text": "Benign tumor",
+          "isCorrect": true,
+          "rationale": "Correct! [Tumors & Neoplasms] A benign tumor is surrounded by a connective tissue capsule and does not invade adjacent tissues or metastasize."
+        },
+        {
+          "text": "Malignant tumor",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Malignant tumor' is a distractor. Correct answer is 'Benign tumor'."
+        },
+        {
+          "text": "Metastatic tumor",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Metastatic tumor' is a distractor. Correct answer is 'Benign tumor'."
+        }
+      ],
+      "hint": "Topic: Tumors & Neoplasms"
+    },
+    {
+      "question": "_____ 36. What type of tumor lacks a capsule, invades surrounding tissues, can spread throughout the body, and is properly classified as cancerous?",
+      "answerOptions": [
+        {
+          "text": "Adenoma",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Adenoma' is a distractor. Correct answer is 'Malignant tumor'."
+        },
+        {
+          "text": "Dysplastic cyst",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Dysplastic cyst' is a distractor. Correct answer is 'Malignant tumor'."
+        },
+        {
+          "text": "Benign tumor",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Benign tumor' is a distractor. Correct answer is 'Malignant tumor'."
+        },
+        {
+          "text": "Malignant tumor",
+          "isCorrect": true,
+          "rationale": "Correct! [Tumors & Neoplasms] Malignant tumors can invade neighboring tissues and colonize distant body locations; they are properly termed cancerous."
+        }
+      ],
+      "hint": "Topic: Tumors & Neoplasms"
+    },
+    {
+      "question": "_____ 37. What term defines the migration and spread of cancer cells from their primary tumor site to distant locations throughout the body?",
+      "answerOptions": [
+        {
+          "text": "Apoptosis",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Apoptosis' is a distractor. Correct answer is 'Metastasis'."
+        },
+        {
+          "text": "Metastasis",
+          "isCorrect": true,
+          "rationale": "Correct! [Cancer Progression] Metastasis refers to the spread of cancer cells from one part of the body to another via the bloodstream or lymphatic system."
+        },
+        {
+          "text": "Angiogenesis",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Angiogenesis' is a distractor. Correct answer is 'Metastasis'."
+        },
+        {
+          "text": "Dysplasia",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Dysplasia' is a distractor. Correct answer is 'Metastasis'."
+        }
+      ],
+      "hint": "Topic: Cancer Progression"
+    },
+    {
+      "question": "_____ 38. What term describes the precancerous histological state marked by abnormal changes in cell shape, enlarged nuclei, and disorganized tissue architecture?",
+      "answerOptions": [
+        {
+          "text": "Dysplasia",
+          "isCorrect": true,
+          "rationale": "Correct! [Stages of Cancer Development] Dysplasia describes abnormal changes in cell shape, nuclei, and internal tissue organization in precancerous tissue."
+        },
+        {
+          "text": "Carcinoma in situ",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Carcinoma in situ' is a distractor. Correct answer is 'Dysplasia'."
+        },
+        {
+          "text": "Hyperplasia",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Hyperplasia' is a distractor. Correct answer is 'Dysplasia'."
+        },
+        {
+          "text": "Metastasis",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Metastasis' is a distractor. Correct answer is 'Dysplasia'."
+        }
+      ],
+      "hint": "Topic: Stages of Cancer Development"
+    },
+    {
+      "question": "_____ 39. What term refers to a localized malignant tumor that has reached a critical mass of roughly 1 million cells but has not yet penetrated the basement membrane?",
+      "answerOptions": [
+        {
+          "text": "Carcinoma in situ",
+          "isCorrect": true,
+          "rationale": "Correct! [Stages of Cancer Development] Carcinoma in situ is a localized tumor of roughly 1 million cells where the interior experiences nutrient starvation and waste poisoning."
+        },
+        {
+          "text": "Invasive carcinoma",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Invasive carcinoma' is a distractor. Correct answer is 'Carcinoma in situ'."
+        },
+        {
+          "text": "Dysplasia",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Dysplasia' is a distractor. Correct answer is 'Carcinoma in situ'."
+        },
+        {
+          "text": "Benign neoplasm",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Benign neoplasm' is a distractor. Correct answer is 'Carcinoma in situ'."
+        }
+      ],
+      "hint": "Topic: Stages of Cancer Development"
+    },
+    {
+      "question": "_____ 40. What process is initiated when tumor cells secrete chemical signals that stimulate the formation and ingrowth of new blood vessels?",
+      "answerOptions": [
+        {
+          "text": "Metastasis",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Metastasis' is a distractor. Correct answer is 'Angiogenesis'."
+        },
+        {
+          "text": "Apoptosis",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Apoptosis' is a distractor. Correct answer is 'Angiogenesis'."
+        },
+        {
+          "text": "Cytokinesis",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Cytokinesis' is a distractor. Correct answer is 'Angiogenesis'."
+        },
+        {
+          "text": "Angiogenesis",
+          "isCorrect": true,
+          "rationale": "Correct! [Cancer Progression] Cancer cells release chemicals that initiate the growth of new blood vessels, delivering nutrients, removing wastes, and providing a route for metastasis."
+        }
+      ],
+      "hint": "Topic: Cancer Progression"
+    },
+    {
+      "question": "_____ 41. What is the physiological process of programmed cell death that eliminates cells with severe, irreparable genetic damage?",
+      "answerOptions": [
+        {
+          "text": "Apoptosis",
+          "isCorrect": true,
+          "rationale": "Correct! [Control of Cancer] Apoptosis is programmed cell death triggered when genetic damage is too severe to be repaired."
+        },
+        {
+          "text": "Necrosis",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Necrosis' is a distractor. Correct answer is 'Apoptosis'."
+        },
+        {
+          "text": "Mitosis",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Mitosis' is a distractor. Correct answer is 'Apoptosis'."
+        },
+        {
+          "text": "Dysplasia",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Dysplasia' is a distractor. Correct answer is 'Apoptosis'."
+        }
+      ],
+      "hint": "Topic: Control of Cancer"
+    },
+    {
+      "question": "_____ 42. What category of cellular genes acts as the cell's damage control system by detecting DNA damage and halting division or initiating repair?",
+      "answerOptions": [
+        {
+          "text": "Tumor suppressor genes",
+          "isCorrect": true,
+          "rationale": "Correct! [Cancer Genetics] Tumor suppressor genes help detect damaged DNA, pause the cell cycle, and manage the repair of genetic defects."
+        },
+        {
+          "text": "Histone genes",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Histone genes' is a distractor. Correct answer is 'Tumor suppressor genes'."
+        },
+        {
+          "text": "Proto-oncogenes",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Proto-oncogenes' is a distractor. Correct answer is 'Tumor suppressor genes'."
+        },
+        {
+          "text": "Oncogenes",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Oncogenes' is a distractor. Correct answer is 'Tumor suppressor genes'."
+        }
+      ],
+      "hint": "Topic: Cancer Genetics"
+    },
+    {
+      "question": "_____ 43. Normal regulatory genes that stimulate cell division in response to growth factors under controlled conditions are called what?",
+      "answerOptions": [
+        {
+          "text": "Oncogenes",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Oncogenes' is a distractor. Correct answer is 'Proto-oncogenes'."
+        },
+        {
+          "text": "Tumor suppressor genes",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Tumor suppressor genes' is a distractor. Correct answer is 'Proto-oncogenes'."
+        },
+        {
+          "text": "Histones",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Histones' is a distractor. Correct answer is 'Proto-oncogenes'."
+        },
+        {
+          "text": "Proto-oncogenes",
+          "isCorrect": true,
+          "rationale": "Correct! [Cancer Genetics] Proto-oncogenes produce growth factors or signal transducers that stimulate normal, orderly cell division."
+        }
+      ],
+      "hint": "Topic: Cancer Genetics"
+    },
+    {
+      "question": "_____ 44. What is a mutated, cancer-causing form of a proto-oncogene that drives continuous, uncontrolled cell division without normal external growth signals?",
+      "answerOptions": [
+        {
+          "text": "Oncogene",
+          "isCorrect": true,
+          "rationale": "Correct! [Cancer Genetics] Mutation of a proto-oncogene results in an oncogene, which accelerates cell division without regulatory stimuli."
+        },
+        {
+          "text": "Tumor suppressor gene",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Tumor suppressor gene' is a distractor. Correct answer is 'Oncogene'."
+        },
+        {
+          "text": "Allele",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Allele' is a distractor. Correct answer is 'Oncogene'."
+        },
+        {
+          "text": "Autosome",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Autosome' is a distractor. Correct answer is 'Oncogene'."
+        }
+      ],
+      "hint": "Topic: Cancer Genetics"
+    },
+    {
+      "question": "_____ 45. Which two types of immune cells normally patrol the body and directly destroy emerging cancerous cells?",
+      "answerOptions": [
+        {
+          "text": "Erythrocytes and platelets",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Erythrocytes and platelets' is a distractor. Correct answer is 'Natural killer cells and cytotoxic T cells'."
+        },
+        {
+          "text": "Neutrophils and eosinophils",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Neutrophils and eosinophils' is a distractor. Correct answer is 'Natural killer cells and cytotoxic T cells'."
+        },
+        {
+          "text": "Natural killer cells and cytotoxic T cells",
+          "isCorrect": true,
+          "rationale": "Correct! [Immune Surveillance] Natural killer (NK) cells and cytotoxic T cells recognize and destroy abnormal or cancerous cells."
+        },
+        {
+          "text": "B cells and basophils",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'B cells and basophils' is a distractor. Correct answer is 'Natural killer cells and cytotoxic T cells'."
+        }
+      ],
+      "hint": "Topic: Immune Surveillance"
+    },
+    {
+      "question": "_____ 46. Any environmental, chemical, physical, or biological agent that promotes genetic mutations and fosters the development of cancer is termed a what?",
+      "answerOptions": [
+        {
+          "text": "Allergen",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Allergen' is a distractor. Correct answer is 'Carcinogen'."
+        },
+        {
+          "text": "Histone",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Histone' is a distractor. Correct answer is 'Carcinogen'."
+        },
+        {
+          "text": "Carcinogen",
+          "isCorrect": true,
+          "rationale": "Correct! [Cancer Causes] A carcinogen is an environmental agent that fosters cancer development by inducing genetic mutations."
+        },
+        {
+          "text": "Pathogen",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Pathogen' is a distractor. Correct answer is 'Carcinogen'."
+        }
+      ],
+      "hint": "Topic: Cancer Causes"
+    },
+    {
+      "question": "_____ 47. Which virus is a well-established biological cause of cervical, anal, and throat cancers in humans?",
+      "answerOptions": [
+        {
+          "text": "Human Papilloma Virus (HPV)",
+          "isCorrect": true,
+          "rationale": "Correct! [Cancer Causes] HPV is a DNA virus known to cause cervical and other genital/oropharyngeal cancers."
+        },
+        {
+          "text": "Influenza virus",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Influenza virus' is a distractor. Correct answer is 'Human Papilloma Virus (HPV)'."
+        },
+        {
+          "text": "Rhinovirus",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Rhinovirus' is a distractor. Correct answer is 'Human Papilloma Virus (HPV)'."
+        },
+        {
+          "text": "Norovirus",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Norovirus' is a distractor. Correct answer is 'Human Papilloma Virus (HPV)'."
+        }
+      ],
+      "hint": "Topic: Cancer Causes"
+    },
+    {
+      "question": "_____ 48. Which two viral pathogens that cause chronic liver inflammation are established etiologic agents of hepatocellular carcinoma (liver cancer)?",
+      "answerOptions": [
+        {
+          "text": "Hepatitis B and Hepatitis C viruses",
+          "isCorrect": true,
+          "rationale": "Correct! [Cancer Causes] Chronic infections with Hepatitis B and C viruses significantly increase the risk of liver cancer."
+        },
+        {
+          "text": "Cytomegalovirus and Rabies",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Cytomegalovirus and Rabies' is a distractor. Correct answer is 'Hepatitis B and Hepatitis C viruses'."
+        },
+        {
+          "text": "Rotavirus and Adenovirus",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Rotavirus and Adenovirus' is a distractor. Correct answer is 'Hepatitis B and Hepatitis C viruses'."
+        },
+        {
+          "text": "Hepatitis A and Hepatitis E viruses",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Hepatitis A and Hepatitis E viruses' is a distractor. Correct answer is 'Hepatitis B and Hepatitis C viruses'."
+        }
+      ],
+      "hint": "Topic: Cancer Causes"
+    },
+    {
+      "question": "_____ 49. Which herpesvirus family member is causally linked to mononucleosis, Burkitt lymphoma, and nasopharyngeal carcinoma?",
+      "answerOptions": [
+        {
+          "text": "Hepatitis A virus",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Hepatitis A virus' is a distractor. Correct answer is 'Epstein-Barr virus (EBV)'."
+        },
+        {
+          "text": "Human Papilloma Virus",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Human Papilloma Virus' is a distractor. Correct answer is 'Epstein-Barr virus (EBV)'."
+        },
+        {
+          "text": "Varicella Zoster virus",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Varicella Zoster virus' is a distractor. Correct answer is 'Epstein-Barr virus (EBV)'."
+        },
+        {
+          "text": "Epstein-Barr virus (EBV)",
+          "isCorrect": true,
+          "rationale": "Correct! [Cancer Causes] Epstein-Barr virus (EBV) is linked to infectious mononucleosis and specific malignancies such as Burkitt lymphoma."
+        }
+      ],
+      "hint": "Topic: Cancer Causes"
+    },
+    {
+      "question": "_____ 50. What type of environmental radiation, commonly emitted by the sun and tanning beds, damages cellular DNA and increases the risk of skin cancers?",
+      "answerOptions": [
+        {
+          "text": "Microwave radiation",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Microwave radiation' is a distractor. Correct answer is 'Ultraviolet (UV) radiation'."
+        },
+        {
+          "text": "Infrared radiation",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Infrared radiation' is a distractor. Correct answer is 'Ultraviolet (UV) radiation'."
+        },
+        {
+          "text": "Radio waves",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Radio waves' is a distractor. Correct answer is 'Ultraviolet (UV) radiation'."
+        },
+        {
+          "text": "Ultraviolet (UV) radiation",
+          "isCorrect": true,
+          "rationale": "Correct! [Cancer Causes] Exposure to ultraviolet (UV) radiation causes pyrimidine dimers in DNA, elevating the risk of melanoma and other skin carcinomas."
+        }
+      ],
+      "hint": "Topic: Cancer Causes"
+    },
+    {
+      "question": "_____ 51. What diagnostic procedure involves extracting a small tissue specimen via needle or minor surgery for microscopic evaluation by a pathologist?",
+      "answerOptions": [
+        {
+          "text": "Amniocentesis",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Amniocentesis' is a distractor. Correct answer is 'Biopsy'."
+        },
+        {
+          "text": "Endoscopy",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Endoscopy' is a distractor. Correct answer is 'Biopsy'."
+        },
+        {
+          "text": "Angiography",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Angiography' is a distractor. Correct answer is 'Biopsy'."
+        },
+        {
+          "text": "Biopsy",
+          "isCorrect": true,
+          "rationale": "Correct! [Diagnosing Cancer] A biopsy involves removing a small piece of tissue to examine whether cells display the characteristic architectural features of malignancy."
+        }
+      ],
+      "hint": "Topic: Diagnosing Cancer"
+    },
+    {
+      "question": "_____ 52. What diagnostic blood tests detect specific proteins or chemicals synthesized by tumor cells or produced by body tissues in response to a neoplasm?",
+      "answerOptions": [
+        {
+          "text": "Complete blood count (CBC)",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Complete blood count (CBC)' is a distractor. Correct answer is 'Tumor marker tests'."
+        },
+        {
+          "text": "Hematocrit test",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Hematocrit test' is a distractor. Correct answer is 'Tumor marker tests'."
+        },
+        {
+          "text": "Tumor marker tests",
+          "isCorrect": true,
+          "rationale": "Correct! [Diagnosing Cancer] Tumor marker tests detect circulating substances produced either directly by cancer cells or by host tissues reacting to a tumor."
+        },
+        {
+          "text": "Electrolyte panel",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Electrolyte panel' is a distractor. Correct answer is 'Tumor marker tests'."
+        }
+      ],
+      "hint": "Topic: Diagnosing Cancer"
+    },
+    {
+      "question": "_____ 53. Which bodily secretion is analyzed cytologically or genetically for malignant cells when screening for lung cancer?",
+      "answerOptions": [
+        {
+          "text": "Feces",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Feces' is a distractor. Correct answer is 'Sputum'."
+        },
+        {
+          "text": "Sputum",
+          "isCorrect": true,
+          "rationale": "Correct! [Diagnosing Cancer] Sputum cytology and DNA testing are used to detect early signs of lung cancer."
+        },
+        {
+          "text": "Urine",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Urine' is a distractor. Correct answer is 'Sputum'."
+        },
+        {
+          "text": "Saliva",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Saliva' is a distractor. Correct answer is 'Sputum'."
+        }
+      ],
+      "hint": "Topic: Diagnosing Cancer"
+    },
+    {
+      "question": "_____ 54. Testing a patient's urine for atypical cells and specific mutational markers is primarily used to detect which type of malignancy?",
+      "answerOptions": [
+        {
+          "text": "Colon cancer",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Colon cancer' is a distractor. Correct answer is 'Bladder cancer'."
+        },
+        {
+          "text": "Lung cancer",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Lung cancer' is a distractor. Correct answer is 'Bladder cancer'."
+        },
+        {
+          "text": "Breast cancer",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Breast cancer' is a distractor. Correct answer is 'Bladder cancer'."
+        },
+        {
+          "text": "Bladder cancer",
+          "isCorrect": true,
+          "rationale": "Correct! [Diagnosing Cancer] Urine cytology and marker tests are utilized to detect signs of bladder cancer."
+        }
+      ],
+      "hint": "Topic: Diagnosing Cancer"
+    },
+    {
+      "question": "_____ 55. Analysis of fecal samples for occult blood and exfoliated mutant DNA markers is routinely employed to screen for which cancer?",
+      "answerOptions": [
+        {
+          "text": "Bladder cancer",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Bladder cancer' is a distractor. Correct answer is 'Colon cancer'."
+        },
+        {
+          "text": "Brain cancer",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Brain cancer' is a distractor. Correct answer is 'Colon cancer'."
+        },
+        {
+          "text": "Colon cancer",
+          "isCorrect": true,
+          "rationale": "Correct! [Diagnosing Cancer] Fecal immunochemical tests and stool DNA analyses are used to detect early signs of colorectal cancer."
+        },
+        {
+          "text": "Lung cancer",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Lung cancer' is a distractor. Correct answer is 'Colon cancer'."
+        }
+      ],
+      "hint": "Topic: Diagnosing Cancer"
+    },
+    {
+      "question": "_____ 56. Which cancer treatment modality utilizes high-energy beams directed at malignant tissue to cause catastrophic double-strand DNA breaks and trigger apoptosis?",
+      "answerOptions": [
+        {
+          "text": "Chemotherapy",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Chemotherapy' is a distractor. Correct answer is 'Radiation therapy'."
+        },
+        {
+          "text": "Immunotherapy",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Immunotherapy' is a distractor. Correct answer is 'Radiation therapy'."
+        },
+        {
+          "text": "Surgery",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Surgery' is a distractor. Correct answer is 'Radiation therapy'."
+        },
+        {
+          "text": "Radiation therapy",
+          "isCorrect": true,
+          "rationale": "Correct! [Treating Cancer] Radiation therapy causes extensive DNA damage within tumor cells, triggering programmed cell death."
+        }
+      ],
+      "hint": "Topic: Treating Cancer"
+    },
+    {
+      "question": "_____ 57. Which systemic cancer therapy employs pharmacological agents that circulate throughout the bloodstream to eliminate rapidly proliferating cells body-wide?",
+      "answerOptions": [
+        {
+          "text": "Chemotherapy",
+          "isCorrect": true,
+          "rationale": "Correct! [Treating Cancer] Chemotherapy drugs reach all parts of the body via the vascular system and selectively destroy rapidly dividing cells."
+        },
+        {
+          "text": "Surgery",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Surgery' is a distractor. Correct answer is 'Chemotherapy'."
+        },
+        {
+          "text": "Cryotherapy",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Cryotherapy' is a distractor. Correct answer is 'Chemotherapy'."
+        },
+        {
+          "text": "Radiation therapy",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Radiation therapy' is a distractor. Correct answer is 'Chemotherapy'."
+        }
+      ],
+      "hint": "Topic: Treating Cancer"
+    },
+    {
+      "question": "_____ 58. Which modern therapeutic approach boosts, trains, or genetically engineers a patient's immune system to recognize and eradicate malignant cells?",
+      "answerOptions": [
+        {
+          "text": "Chemotherapy",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Chemotherapy' is a distractor. Correct answer is 'Immunotherapy'."
+        },
+        {
+          "text": "Immunotherapy",
+          "isCorrect": true,
+          "rationale": "Correct! [Treating Cancer] Immunotherapy enhances the host immune response against cancer cells using cancer vaccines, checkpoint inhibitors, or cytokine factors."
+        },
+        {
+          "text": "Surgery",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Surgery' is a distractor. Correct answer is 'Immunotherapy'."
+        },
+        {
+          "text": "Radiation therapy",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Radiation therapy' is a distractor. Correct answer is 'Immunotherapy'."
+        }
+      ],
+      "hint": "Topic: Treating Cancer"
+    },
+    {
+      "question": "_____ 59. What cancer treatment strategy starves growing tumors by administering drugs that block the signaling pathways responsible for recruiting new capillaries?",
+      "answerOptions": [
+        {
+          "text": "Radiation therapy",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Radiation therapy' is a distractor. Correct answer is 'Inhibition of blood vessel formation (anti-angiogenesis)'."
+        },
+        {
+          "text": "Inhibition of blood vessel formation (anti-angiogenesis)",
+          "isCorrect": true,
+          "rationale": "Correct! [Treating Cancer] Inhibition of blood vessel formation (anti-angiogenic therapy) prevents vascularization, depriving tumors of oxygen and nutrients."
+        },
+        {
+          "text": "Chemotherapy",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Chemotherapy' is a distractor. Correct answer is 'Inhibition of blood vessel formation (anti-angiogenesis)'."
+        },
+        {
+          "text": "Gene therapy",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Gene therapy' is a distractor. Correct answer is 'Inhibition of blood vessel formation (anti-angiogenesis)'."
+        }
+      ],
+      "hint": "Topic: Treating Cancer"
+    },
+    {
+      "question": "_____ 60. What emerging therapeutic paradigm seeks to modify, replace, or repair defective genetic sequences inside malignant cells to halt their proliferation or induce apoptosis?",
+      "answerOptions": [
+        {
+          "text": "Gene therapy",
+          "isCorrect": true,
+          "rationale": "Correct! [Treating Cancer] Gene therapy alters the genetic material of cancer cells with the goal of repairing defective regulatory pathways or triggering death."
+        },
+        {
+          "text": "Radiation therapy",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Radiation therapy' is a distractor. Correct answer is 'Gene therapy'."
+        },
+        {
+          "text": "Surgery",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Surgery' is a distractor. Correct answer is 'Gene therapy'."
+        },
+        {
+          "text": "Chemotherapy",
+          "isCorrect": false,
+          "rationale": "Incorrect. 'Chemotherapy' is a distractor. Correct answer is 'Gene therapy'."
+        }
+      ],
+      "hint": "Topic: Treating Cancer"
+    }
+  ],
+  "topics": {
+    "covered": [
+      "Cancer Genetics",
+      "Cancer Progression",
+      "Mendelian Principles",
+      "Cancer Biology",
+      "Non-Mendelian Inheritance",
+      "Human Genetic Traits",
+      "Alleles & Zygosity",
+      "Cancer Causes",
+      "Genetic Crosses",
+      "Treating Cancer",
+      "Detecting Genetic Disorders",
+      "Genetics Fundamentals",
+      "Genotype vs Phenotype",
+      "Stages of Cancer Development",
+      "Pedigrees",
+      "Control of Cancer",
+      "Diagnosing Cancer",
+      "Tumors & Neoplasms",
+      "Immune Surveillance"
+    ],
+    "followUp": [
+      "Review lecture materials and diagrams for Module 5: Genetics, Human Inheritance and Cancer"
+    ]
+  }
+}
