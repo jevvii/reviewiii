@@ -1,0 +1,819 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ModuleCard from '../../components/ModuleCard.astro';
+import { SUBJECTS, type Subject } from '../../data/subjects';
+
+export function getStaticPaths() {
+  return SUBJECTS.map((subject) => ({
+    params: { subject: subject.code.toLowerCase() },
+    props: { subject }
+  }));
+}
+
+interface Props {
+  subject: Subject;
+}
+
+const { subject } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL;
+
+const totalQuestions = subject.modules.reduce((acc, m) => acc + m.itemCount, 0);
+const allTopics = Array.from(new Set(subject.modules.flatMap((m) => m.topics)));
+const otherSubjects = SUBJECTS.filter((s) => s.code !== subject.code);
+const totalDownloads = subject.modules.length * 4;
+---
+
+<Layout
+  title={`${subject.code}: ${subject.title} — ReviewIII Modules & Quizzes`}
+  description={subject.description}
+  currentSubject={subject.code}
+>
+  <main class="container course-detail-page">
+    <!-- Breadcrumb Bar -->
+    <nav class="breadcrumb-nav" aria-label="Course Breadcrumb">
+      <a href={baseUrl} class="back-link" title="Return to ReviewIII Academic Hub">
+        <span class="back-icon">&larr;</span>
+        <span>Hub Overview</span>
+      </a>
+      <span class="crumb-sep">/</span>
+      <span class="crumb-text">Courses</span>
+      <span class="crumb-sep">/</span>
+      <span class="crumb-active" style={`color: ${subject.accentColor};`}>{subject.code}</span>
+    </nav>
+
+    <!-- Course Header Hero -->
+    <section class="course-hero">
+      <div class="hero-top-meta">
+        <div class="code-and-track">
+          <span class="hero-code-badge" style={`border-color: ${subject.accentColor}; color: ${subject.accentColor};`}>
+            {subject.code}
+          </span>
+          <span class="hero-category-tag">{subject.tag}</span>
+          <span class="hero-term-badge">{subject.term}</span>
+        </div>
+
+        {subject.status === 'active' ? (
+          <span class="status-pill active">
+            <span class="status-beacon"></span>
+            <strong>Active Reviewer</strong> &bull; {subject.modules.length} {subject.modules.length === 1 ? 'Module' : 'Modules'}
+          </span>
+        ) : (
+          <span class="status-pill upcoming">✦ Upcoming Track</span>
+        )}
+      </div>
+
+      <h1 class="course-title">{subject.title}</h1>
+      <div class="course-subtitle">{subject.subtitle}</div>
+      <p class="course-description">{subject.description}</p>
+
+      <!-- Course Metric Pods -->
+      <div class="course-bento-strip">
+        <div class="bento-tile">
+          <div class="bento-label">Question Bank</div>
+          <div class="bento-value">
+            {totalQuestions > 0 ? totalQuestions : 'Syllabus'}
+            {totalQuestions > 0 && <span class="bento-unit">Items</span>}
+          </div>
+          <div class="bento-sub">{subject.status === 'active' ? 'Verified Answer Keys' : 'In Preparation'}</div>
+        </div>
+
+        <div class="bento-tile">
+          <div class="bento-label">Modules</div>
+          <div class="bento-value">
+            {subject.modules.length}
+            <span class="bento-unit">{subject.modules.length === 1 ? 'Module' : 'Modules'}</span>
+          </div>
+          <div class="bento-sub">{subject.status === 'active' ? 'Interactive Web Quizzes' : 'Curriculum Roadmap'}</div>
+        </div>
+
+        <div class="bento-tile">
+          <div class="bento-label">Curriculum Track</div>
+          <div class="bento-value text-caps">{subject.category}</div>
+          <div class="bento-sub">{subject.term}</div>
+        </div>
+
+        <div class="bento-tile">
+          <div class="bento-label">Offline Materials</div>
+          <div class="bento-value">
+            {totalDownloads}
+            <span class="bento-unit">Files</span>
+          </div>
+          <div class="bento-sub">PDF &bull; DOCX &bull; JSON &bull; MD</div>
+        </div>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      {subject.status === 'active' && subject.modules.length > 0 && (
+        <div class="hero-actions">
+          <a href="#modules" class="btn-primary">
+            <span>Browse Modules ({subject.modules.length})</span>
+            <span>&darr;</span>
+          </a>
+          <a href={`${baseUrl}${subject.modules[0].quizPath}`} class="btn-secondary" title={`Start Module 1 Quiz`}>
+            <span>Start M1 Quiz</span>
+            <span>⚡</span>
+          </a>
+          <a href="#vault" class="btn-secondary" title="Jump to Download Vault">
+            <span>Download Vault</span>
+            <span>📥</span>
+          </a>
+          <a href={`${baseUrl}#focus-timer`} class="btn-secondary" title="Open Pomodoro Timer on Study Hub">
+            <span>Pomodoro Timer</span>
+            <span>⏱️</span>
+          </a>
+        </div>
+      )}
+    </section>
+
+    <!-- SECTION 1: Module Questionnaires -->
+    <section class="course-section" id="modules">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-kicker">Interactive Quiz Player & Questionnaires</span>
+          <h2 class="section-heading">Available Study Modules</h2>
+        </div>
+        <span class="section-badge">{subject.modules.length} {subject.modules.length === 1 ? 'Module' : 'Modules'} Active</span>
+      </div>
+
+      {subject.modules.length > 0 ? (
+        <div class="modules-grid">
+          {subject.modules.map((mod) => (
+            <ModuleCard module={mod} subjectCode={subject.code} accentColor={subject.accentColor} />
+          ))}
+        </div>
+      ) : (
+        <div class="upcoming-course-card">
+          <div class="upcoming-sparkle">✦</div>
+          <h3 class="upcoming-title">Curriculum Materials in Preparation</h3>
+          <p class="upcoming-desc">
+            The questionnaires, lecture summaries, and interactive quizzes for {subject.title} ({subject.code}) are currently being authored and verified.
+          </p>
+          <div class="upcoming-actions">
+            <a href={baseUrl} class="btn-secondary">&larr; Return to Active Reviewers</a>
+            <a href={`${baseUrl}courses/netc311/`} class="btn-primary">Try Networking Technologies &rarr;</a>
+          </div>
+        </div>
+      )}
+    </section>
+
+    <!-- SECTION 2: Course Offline Vault -->
+    {subject.modules.length > 0 && (
+      <section class="course-section" id="vault">
+        <div class="section-header">
+          <div class="section-title-wrap">
+            <span class="section-kicker">Local Files & Offline Study</span>
+            <h2 class="section-heading">{subject.code} Offline Download Vault</h2>
+          </div>
+          <span class="section-badge">{totalDownloads} Files Available</span>
+        </div>
+
+        <div class="vault-container">
+          <div class="vault-rows">
+            {subject.modules.map((mod) => (
+              <div class="vault-row">
+                <div class="vault-info">
+                  <span class="vault-mod-badge">M{mod.number}</span>
+                  <div class="vault-text">
+                    <span class="vault-name">{mod.title} Reviewer</span>
+                    <span class="vault-meta">{mod.itemCount} Identification Items &bull; Verified Answer Key</span>
+                  </div>
+                </div>
+
+                <div class="vault-files">
+                  {mod.downloads.pdf && (
+                    <a href={`${baseUrl}${mod.downloads.pdf}`} download class="download-pill" title="Download Formatted PDF">
+                      PDF
+                    </a>
+                  )}
+                  {mod.downloads.docx && (
+                    <a href={`${baseUrl}${mod.downloads.docx}`} download class="download-pill" title="Download Word DOCX">
+                      DOCX
+                    </a>
+                  )}
+                  {mod.downloads.json && (
+                    <a href={`${baseUrl}${mod.downloads.json}`} download class="download-pill" title="Download JSON Dataset">
+                      JSON
+                    </a>
+                  )}
+                  {mod.downloads.md && (
+                    <a href={`${baseUrl}${mod.downloads.md}`} download class="download-pill" title="Download Markdown Key">
+                      MD
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- SECTION 3: Cross-Course Navigation Strip -->
+    <section class="course-section navigation-strip-section">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-kicker">Curriculum Explorer</span>
+          <h2 class="section-heading">Explore Other Year III Courses</h2>
+        </div>
+        <a href={baseUrl} class="view-all-link">View All Courses &rarr;</a>
+      </div>
+
+      <div class="other-courses-grid">
+        {otherSubjects.map((other) => (
+          <a
+            href={`${baseUrl}courses/${other.code.toLowerCase()}/`}
+            class="other-course-card"
+            style={`--accent: ${other.accentColor};`}
+          >
+            <div class="other-card-top">
+              <span class="other-code" style={`color: ${other.accentColor}; border-color: ${other.accentColor}30;`}>
+                {other.code}
+              </span>
+              <span class="other-status">
+                {other.status === 'active' ? (
+                  <span class="other-active-tag">● {other.modules.length}M &bull; {other.modules.reduce((a, m) => a + m.itemCount, 0)}Q</span>
+                ) : (
+                  <span class="other-upcoming-tag">Upcoming</span>
+                )}
+              </span>
+            </div>
+            <h3 class="other-title">{other.title}</h3>
+            <p class="other-sub">{other.subtitle}</p>
+            <span class="other-link">Open Course Page &rarr;</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Floating Back to Top Button -->
+    <button type="button" class="back-to-top-btn" id="back-to-top-btn" aria-label="Scroll back to top" title="Back to top">
+      &uarr;
+    </button>
+  </main>
+</Layout>
+
+<style>
+  .course-detail-page {
+    padding-top: 1.5rem;
+  }
+
+  /* Breadcrumb */
+  .breadcrumb-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-accent-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    padding: 4px 10px;
+    background: rgba(138, 154, 134, 0.08);
+    border: 1px solid rgba(138, 154, 134, 0.2);
+    border-radius: var(--radius-full);
+  }
+
+  .back-link:hover {
+    background: rgba(138, 154, 134, 0.15);
+    border-color: var(--color-accent-primary);
+    transform: translateX(-2px);
+  }
+
+  .back-icon {
+    font-size: 0.95rem;
+  }
+
+  .crumb-sep {
+    color: #444;
+  }
+
+  .crumb-text {
+    color: var(--color-text-subtle);
+  }
+
+  .crumb-active {
+    font-weight: 600;
+  }
+
+  /* Course Hero */
+  .course-hero {
+    background: #080808;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-lg);
+    padding: 2.25rem 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-top-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .code-and-track {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .hero-code-badge {
+    font-size: 0.86rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid;
+    padding: 4px 12px;
+    border-radius: var(--radius-xs);
+  }
+
+  .hero-category-tag {
+    font-size: 0.76rem;
+    color: var(--color-text-subtle);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .hero-term-badge {
+    font-size: 0.74rem;
+    color: var(--color-accent-secondary);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-subtle);
+    padding: 2px 8px;
+    border-radius: var(--radius-xs);
+  }
+
+  .status-pill {
+    font-size: 0.76rem;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+  }
+
+  .status-pill.active {
+    background: rgba(138, 154, 134, 0.1);
+    border: 1px solid rgba(138, 154, 134, 0.3);
+    color: var(--color-text-main);
+  }
+
+  .status-beacon {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--color-accent-primary);
+    box-shadow: 0 0 8px var(--color-accent-primary);
+  }
+
+  .status-pill.active strong {
+    color: var(--color-accent-primary);
+  }
+
+  .status-pill.upcoming {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-subtle);
+    color: var(--color-text-subtle);
+  }
+
+  .course-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+    letter-spacing: -0.03em;
+    margin-bottom: 0.4rem;
+    line-height: 1.25;
+  }
+
+  .course-subtitle {
+    font-size: 1.05rem;
+    color: var(--color-accent-secondary);
+    margin-bottom: 1.2rem;
+    font-weight: 400;
+  }
+
+  .course-description {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+    max-width: 900px;
+    margin-bottom: 2rem;
+  }
+
+  /* Bento Stats Strip */
+  .course-bento-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 2rem;
+  }
+
+  .bento-tile {
+    background: #000000;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .bento-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-subtle);
+  }
+
+  .bento-value {
+    font-size: 1.45rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+    letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .bento-value.text-caps {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+  }
+
+  .bento-unit {
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: var(--color-text-subtle);
+    margin-left: 4px;
+  }
+
+  .bento-sub {
+    font-size: 0.72rem;
+    color: var(--color-text-muted);
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  /* Sections */
+  .course-section {
+    margin-bottom: 3.5rem;
+  }
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 0.85rem;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .section-kicker {
+    display: block;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-accent-primary);
+    margin-bottom: 0.2rem;
+    font-weight: 600;
+  }
+
+  .section-heading {
+    font-size: 1.45rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+    letter-spacing: -0.02em;
+  }
+
+  .section-badge {
+    font-size: 0.74rem;
+    color: var(--color-text-subtle);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-subtle);
+    padding: 3px 10px;
+    border-radius: var(--radius-full);
+  }
+
+  /* Modules Grid */
+  .modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 1.5rem;
+  }
+
+  /* Upcoming Course Card */
+  .upcoming-course-card {
+    background: #0a0a0a;
+    border: 1px dashed rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-lg);
+    padding: 3rem 2rem;
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .upcoming-sparkle {
+    font-size: 1.8rem;
+    color: var(--color-accent-primary);
+    margin-bottom: 1rem;
+  }
+
+  .upcoming-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .upcoming-desc {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .upcoming-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  /* Vault */
+  .vault-container {
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+
+  .vault-rows {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .vault-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    gap: 14px;
+    flex-wrap: wrap;
+    transition: background 0.15s ease;
+  }
+
+  .vault-row:last-child {
+    border-bottom: none;
+  }
+
+  .vault-row:hover {
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .vault-info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: 1 1 auto;
+    min-width: 240px;
+  }
+
+  .vault-mod-badge {
+    font-size: 0.72rem;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-medium);
+    padding: 4px 8px;
+    border-radius: var(--radius-xs);
+    color: var(--color-text-main);
+  }
+
+  .vault-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .vault-name {
+    font-size: 0.94rem;
+    font-weight: 500;
+    color: var(--color-text-main);
+  }
+
+  .vault-meta {
+    font-size: 0.74rem;
+    color: var(--color-text-subtle);
+  }
+
+  .vault-files {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  /* Other Courses Grid */
+  .view-all-link {
+    font-size: 0.84rem;
+    color: var(--color-accent-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.15s;
+  }
+
+  .view-all-link:hover {
+    text-decoration: underline;
+  }
+
+  .other-courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+
+  .other-course-card {
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .other-course-card:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    background: #0f0f0f;
+    transform: translateY(-2px);
+  }
+
+  .other-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .other-code {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 2px 7px;
+    border-radius: var(--radius-xs);
+    border: 1px solid;
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .other-active-tag {
+    font-size: 0.7rem;
+    color: var(--color-accent-primary);
+  }
+
+  .other-upcoming-tag {
+    font-size: 0.7rem;
+    color: var(--color-text-subtle);
+  }
+
+  .other-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+    line-height: 1.3;
+  }
+
+  .other-sub {
+    font-size: 0.78rem;
+    color: var(--color-text-muted);
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .other-link {
+    font-size: 0.76rem;
+    color: var(--color-accent-primary);
+    margin-top: 6px;
+    font-weight: 500;
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 860px) {
+    .course-bento-strip {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .course-hero {
+      padding: 1.5rem 1.15rem;
+    }
+
+    .course-title {
+      font-size: 1.6rem;
+    }
+
+    .course-subtitle {
+      font-size: 0.92rem;
+    }
+
+    .course-bento-strip {
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .bento-tile {
+      padding: 0.85rem 0.95rem;
+    }
+
+    .bento-value {
+      font-size: 1.25rem;
+    }
+
+    .hero-actions {
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+    }
+
+    .hero-actions .btn-primary,
+    .hero-actions .btn-secondary {
+      width: 100%;
+    }
+
+    .modules-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .vault-row {
+      padding: 1rem;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .vault-files {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .other-courses-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .course-bento-strip {
+      grid-template-columns: 1fr;
+    }
+
+    .vault-files {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
+
+<script>
+  // Floating back to top button
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+</script>

@@ -1,0 +1,337 @@
+---
+import type { ModuleInfo } from '../data/subjects';
+
+interface Props {
+  module: ModuleInfo;
+  subjectCode: string;
+  accentColor?: string;
+}
+
+const { module: mod, subjectCode, accentColor = '#8a9a86' } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL;
+---
+
+<article class="module-card" id={`module-${mod.number}`}>
+  <div class="module-card-top">
+    <div class="module-card-header">
+      <div class="module-badge-row">
+        <span class="mod-pill" style={`border-color: ${accentColor}40; color: ${accentColor}; background: ${accentColor}15;`}>
+          Module {mod.number}
+        </span>
+        <span class="item-count-badge">
+          <strong>{mod.itemCount}</strong> Questions &bull; Verified Key
+        </span>
+      </div>
+      <h3 class="module-title">{mod.title}</h3>
+    </div>
+
+    <p class="module-desc">{mod.description}</p>
+
+    {mod.topics && mod.topics.length > 0 && (
+      <div class="module-topics">
+        <span class="topics-label">Key Topics:</span>
+        <div class="topics-list">
+          {mod.topics.map((t) => (
+            <span class="topic-chip">{t}</span>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+
+  <div class="module-card-bottom">
+    <div class="primary-actions">
+      <a href={`${baseUrl}${mod.quizPath}`} class="btn-primary quiz-launch-btn">
+        <span class="play-icon">▶</span>
+        <span>Start Interactive Quiz</span>
+        <span class="arrow">&rarr;</span>
+      </a>
+
+      {mod.notebookLmUrl && (
+        <a
+          href={mod.notebookLmUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-secondary notebooklm-btn"
+          title="Open Source Notebook in Google NotebookLM"
+        >
+          <span>NotebookLM</span>
+          <span class="external-icon">&nearr;</span>
+        </a>
+      )}
+    </div>
+
+    <div class="offline-downloads-box">
+      <div class="offline-header">
+        <span class="offline-icon">📥</span>
+        <span class="offline-title">Offline Questionnaires & Keys:</span>
+      </div>
+      <div class="download-pills-row">
+        {mod.downloads.pdf && (
+          <a
+            href={`${baseUrl}${mod.downloads.pdf}`}
+            download
+            class="download-pill"
+            title="Download Formatted Printable PDF Reviewer"
+          >
+            <span class="pill-format">PDF</span>
+            <span class="pill-label">Printable</span>
+          </a>
+        )}
+        {mod.downloads.docx && (
+          <a
+            href={`${baseUrl}${mod.downloads.docx}`}
+            download
+            class="download-pill"
+            title="Download Editable Word DOCX Questionnaire"
+          >
+            <span class="pill-format">DOCX</span>
+            <span class="pill-label">Word</span>
+          </a>
+        )}
+        {mod.downloads.json && (
+          <a
+            href={`${baseUrl}${mod.downloads.json}`}
+            download
+            class="download-pill"
+            title="Download Structured JSON Dataset for Quiz Engines"
+          >
+            <span class="pill-format">JSON</span>
+            <span class="pill-label">Dataset</span>
+          </a>
+        )}
+        {mod.downloads.md && (
+          <a
+            href={`${baseUrl}${mod.downloads.md}`}
+            download
+            class="download-pill"
+            title="Download Markdown Answer Key with Explanations"
+          >
+            <span class="pill-format">MD</span>
+            <span class="pill-label">Markdown</span>
+          </a>
+        )}
+      </div>
+    </div>
+  </div>
+</article>
+
+<style>
+  .module-card {
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-lg);
+    padding: 1.65rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .module-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+  }
+
+  .module-card:hover {
+    border-color: rgba(138, 154, 134, 0.4);
+    background: #0d0d0d;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), 0 0 24px rgba(138, 154, 134, 0.08);
+  }
+
+  .module-card-header {
+    margin-bottom: 0.9rem;
+  }
+
+  .module-badge-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .mod-pill {
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 3px 10px;
+    border-radius: var(--radius-xs);
+    border: 1px solid;
+    text-transform: uppercase;
+  }
+
+  .item-count-badge {
+    font-size: 0.74rem;
+    color: var(--color-text-subtle);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-subtle);
+    padding: 3px 9px;
+    border-radius: var(--radius-full);
+  }
+
+  .item-count-badge strong {
+    color: var(--color-accent-primary);
+  }
+
+  .module-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+    line-height: 1.35;
+    letter-spacing: -0.015em;
+  }
+
+  .module-desc {
+    font-size: 0.86rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .module-topics {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .topics-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-accent-secondary);
+    font-weight: 600;
+  }
+
+  .topics-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .topic-chip {
+    font-size: 0.72rem;
+    color: var(--color-text-muted);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 3px 9px;
+    border-radius: var(--radius-xs);
+  }
+
+  /* Bottom Actions */
+  .module-card-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .primary-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .quiz-launch-btn {
+    flex: 1 1 200px;
+    padding: 10px 18px;
+    font-size: 0.88rem;
+  }
+
+  .play-icon {
+    font-size: 0.72rem;
+  }
+
+  .notebooklm-btn {
+    flex: 0 0 auto;
+  }
+
+  .offline-downloads-box {
+    background: #000000;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-md);
+    padding: 0.85rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .offline-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-text-subtle);
+  }
+
+  .download-pills-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+  }
+
+  .download-pill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 4px;
+    min-height: 42px;
+    border-radius: var(--radius-sm);
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .pill-format {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+  }
+
+  .pill-label {
+    font-size: 0.62rem;
+    color: var(--color-text-subtle);
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 640px) {
+    .module-card {
+      padding: 1.25rem 1rem;
+    }
+
+    .module-title {
+      font-size: 1.12rem;
+    }
+
+    .primary-actions {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .quiz-launch-btn,
+    .notebooklm-btn {
+      width: 100%;
+    }
+
+    .download-pills-row {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px;
+    }
+  }
+</style>

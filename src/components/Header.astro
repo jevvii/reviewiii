@@ -9,7 +9,7 @@ const { currentSubject } = Astro.props;
 const baseUrl = import.meta.env.BASE_URL;
 ---
 
-<header class="site-header" id="site-header">
+<header class="site-header" id="site-header" data-base-url={baseUrl}>
   <div class="nav-container">
     <div class="nav-left">
       <a href={baseUrl} class="brand" title="ReviewIII Academic Hub">
@@ -299,6 +299,9 @@ const baseUrl = import.meta.env.BASE_URL;
       }
     }, 1000);
 
+    const headerEl = document.getElementById('site-header');
+    const baseUrl = headerEl?.getAttribute('data-base-url') || '/reviewiii/';
+
     // Pill click switches view to Focus Workstation
     pillEl.addEventListener('click', () => {
       const focusTab = document.querySelector('[data-view-tab="focus"]') as HTMLElement;
@@ -307,7 +310,7 @@ const baseUrl = import.meta.env.BASE_URL;
         const el = document.getElementById('view-focus');
         if (el) el.scrollIntoView({ behavior: 'smooth' });
       } else {
-        window.location.hash = '#focus-timer';
+        window.location.href = `${baseUrl}#focus-timer`;
       }
     });
 
@@ -320,6 +323,8 @@ const baseUrl = import.meta.env.BASE_URL;
           targetTab.click();
           const targetSection = document.getElementById(`view-${view}`);
           if (targetSection) targetSection.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          window.location.href = `${baseUrl}#${view}`;
         }
       });
     });
@@ -329,12 +334,15 @@ const baseUrl = import.meta.env.BASE_URL;
       searchTrigger.addEventListener('click', () => {
         // Switch to reviewers view first if not active
         const revTab = document.querySelector('[data-view-tab="reviewers"]') as HTMLElement;
-        if (revTab) revTab.click();
-        
-        const searchInput = document.getElementById('subject-search') as HTMLInputElement;
-        if (searchInput) {
-          searchInput.focus();
-          searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        if (revTab) {
+          revTab.click();
+          const searchInput = document.getElementById('subject-search') as HTMLInputElement;
+          if (searchInput) {
+            searchInput.focus();
+            searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        } else {
+          window.location.href = `${baseUrl}?search=true#subjects`;
         }
       });
     }
