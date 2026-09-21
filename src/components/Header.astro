@@ -256,6 +256,7 @@ const baseUrl = import.meta.env.BASE_URL;
     readFocusSnapshot,
     subscribeFocus,
     formatTime,
+    markInternalNav,
     PHASE_EMOJIS
   } from '../lib/focus-system.js';
 
@@ -310,6 +311,7 @@ const baseUrl = import.meta.env.BASE_URL;
         const el = document.getElementById('view-focus');
         if (el) el.scrollIntoView({ behavior: 'smooth' });
       } else {
+        markInternalNav();
         window.location.href = `${baseUrl}#focus-timer`;
       }
     });
@@ -324,6 +326,7 @@ const baseUrl = import.meta.env.BASE_URL;
           const targetSection = document.getElementById(`view-${view}`);
           if (targetSection) targetSection.scrollIntoView({ behavior: 'smooth' });
         } else {
+          markInternalNav();
           window.location.href = `${baseUrl}#${view}`;
         }
       });
@@ -342,6 +345,7 @@ const baseUrl = import.meta.env.BASE_URL;
             searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
           }
         } else {
+          markInternalNav();
           window.location.href = `${baseUrl}?search=true#subjects`;
         }
       });

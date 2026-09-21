@@ -844,7 +844,6 @@ def generate_header_and_widget_html(course, current_mod):
       if (diff <= 0) {{
         handlePhaseComplete();
       }} else {{
-        F.saveFocusSnapshot(snapshot);
         updatePill(snapshot);
         updateModal(snapshot);
       }}
@@ -1186,6 +1185,9 @@ def build_quiz_html(course, mod):
           var freshSeed = Math.floor(Math.random() * 2147483647) + 1;
           localStorage.setItem(key + '_seed', String(freshSeed));
         }} catch (e) {{}}
+        if (window.ReviewIIIFocus && window.ReviewIIIFocus.markInternalNav) {{
+          window.ReviewIIIFocus.markInternalNav();
+        }}
         window.location.reload();
       }}
     }};

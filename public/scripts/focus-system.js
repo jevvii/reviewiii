@@ -233,6 +233,9 @@
       var endsAt = typeof s.endsAt === 'number' && Number.isFinite(s.endsAt) ? s.endsAt : null;
       var secondsLeft = typeof s.secondsLeft === 'number' && Number.isFinite(s.secondsLeft)
         ? Math.max(0, Math.round(s.secondsLeft)) : 0;
+      if (Boolean(s.running) && endsAt) {
+        secondsLeft = Math.max(0, Math.ceil((endsAt - Date.now()) / 1000));
+      }
       return {
         v: 1,
         phase: s.phase,
@@ -318,7 +321,37 @@
     }
   });
 
+  var INTERNAL_NAV_KEY = 'reviewiii_nav_internal';
+
+  function markInternalNav() {
+    try {
+      sessionStorage.setItem(INTERNAL_NAV_KEY, String(Date.now()));
+    } catch (e) {}
+  }
+
+  function isInternalNav() {
+    try {
+      var t = sessionStorage.getItem(INTERNAL_NAV_KEY);
+      if (t) {
+        var elapsed = Date.now() - parseInt(t, 10);
+        if (elapsed >= 0 && elapsed < 15000) {
+          return true;
+        }
+      }
+    } catch (e) {}
+    return false;
+  }
+
+  function clearInternalNav() {
+    try {
+      sessionStorage.removeItem(INTERNAL_NAV_KEY);
+    } catch (e) {}
+  }
+
   function pauseFocusOnExit() {
+    if (isInternalNav()) {
+      return; // Do not pause active focus session during internal navigation
+    }
     try {
       var raw = localStorage.getItem(FOCUS_STORAGE_KEY);
       if (!raw) return;
@@ -338,12 +371,32 @@
   }
 
   if (typeof window !== 'undefined') {
+    // Clear the internal nav flag shortly after landing on the page
+    setTimeout(clearInternalNav, 1500);
+
+    // Capture clicks on all internal links so internal page hops never pause focus
+    document.addEventListener('click', function (e) {
+      var target = e.target;
+      var a = target && target.closest ? target.closest('a') : null;
+      if (a && a.href) {
+        try {
+          var targetUrl = new URL(a.href, window.location.href);
+          if (targetUrl.origin === window.location.origin) {
+            markInternalNav();
+          }
+        } catch (err) {}
+      }
+    }, true);
+
     window.addEventListener('beforeunload', pauseFocusOnExit);
     window.addEventListener('pagehide', pauseFocusOnExit);
   }
 
   // Export to global object
   global.ReviewIIIFocus = {
+    markInternalNav: markInternalNav,
+    isInternalNav: isInternalNav,
+    clearInternalNav: clearInternalNav,
     pauseFocusOnExit: pauseFocusOnExit,
     FOCUS_STORAGE_KEY: FOCUS_STORAGE_KEY,
     TIME_LOGS_STORAGE_KEY: TIME_LOGS_STORAGE_KEY,

@@ -281,8 +281,11 @@ export function readFocusSnapshot() {
     if (s.v !== 1) return null;
     if (s.phase !== 'focus' && s.phase !== 'short' && s.phase !== 'long') return null;
     const endsAt = typeof s.endsAt === 'number' && Number.isFinite(s.endsAt) ? s.endsAt : null;
-    const secondsLeft = typeof s.secondsLeft === 'number' && Number.isFinite(s.secondsLeft)
+    let secondsLeft = typeof s.secondsLeft === 'number' && Number.isFinite(s.secondsLeft)
       ? Math.max(0, Math.round(s.secondsLeft)) : 0;
+    if (Boolean(s.running) && endsAt) {
+      secondsLeft = Math.max(0, Math.ceil((endsAt - Date.now()) / 1000));
+    }
     return {
       v: 1,
       phase: s.phase,
@@ -367,8 +370,41 @@ function broadcastStorageEvent(type, payload) {
   }
 }
 
+export const INTERNAL_NAV_KEY = 'reviewiii_nav_internal';
+
+export function markInternalNav() {
+  if (typeof window === 'undefined') return;
+  try {
+    sessionStorage.setItem(INTERNAL_NAV_KEY, String(Date.now()));
+  } catch {}
+}
+
+export function isInternalNav() {
+  if (typeof window === 'undefined') return false;
+  try {
+    const t = sessionStorage.getItem(INTERNAL_NAV_KEY);
+    if (t) {
+      const elapsed = Date.now() - parseInt(t, 10);
+      if (elapsed >= 0 && elapsed < 15000) {
+        return true;
+      }
+    }
+  } catch {}
+  return false;
+}
+
+export function clearInternalNav() {
+  if (typeof window === 'undefined') return;
+  try {
+    sessionStorage.removeItem(INTERNAL_NAV_KEY);
+  } catch {}
+}
+
 export function pauseFocusOnExit() {
   if (typeof window === 'undefined') return;
+  if (isInternalNav()) {
+    return; // Do not pause focus during internal navigation
+  }
   try {
     const raw = localStorage.getItem(FOCUS_STORAGE_KEY);
     if (!raw) return;
@@ -388,6 +424,23 @@ export function pauseFocusOnExit() {
 }
 
 if (typeof window !== 'undefined') {
+  // Clear the internal nav flag shortly after landing on the page
+  setTimeout(clearInternalNav, 1500);
+
+  // Capture clicks on all internal links so internal page hops never pause focus
+  document.addEventListener('click', (e) => {
+    const target = e.target;
+    const a = target && target.closest ? target.closest('a') : null;
+    if (a && a.href) {
+      try {
+        const targetUrl = new URL(a.href, window.location.href);
+        if (targetUrl.origin === window.location.origin) {
+          markInternalNav();
+        }
+      } catch {}
+    }
+  }, true);
+
   window.addEventListener('storage', (e) => {
     if (e.key === FOCUS_STORAGE_KEY) {
       const snap = readFocusSnapshot();
@@ -397,4 +450,36 @@ if (typeof window !== 'undefined') {
 
   window.addEventListener('beforeunload', pauseFocusOnExit);
   window.addEventListener('pagehide', pauseFocusOnExit);
+
+  // Expose on global ReviewIIIFocus if available
+  const g = window;
+  if (!g.ReviewIIIFocus) g.ReviewIIIFocus = {};
+  Object.assign(g.ReviewIIIFocus, {
+    markInternalNav,
+    isInternalNav,
+    clearInternalNav,
+    pauseFocusOnExit,
+    FOCUS_STORAGE_KEY,
+    TIME_LOGS_STORAGE_KEY,
+    SETTINGS_STORAGE_KEY,
+    DEFAULT_SECONDS,
+    PHASE_LABELS,
+    PHASE_EMOJIS,
+    manilaDateKey,
+    formatTime,
+    formatMinutes,
+    playFocusChime,
+    readSettings,
+    saveSettings,
+    readTimeLogs,
+    logTime,
+    getTodayTimeLogs,
+    getTodayMinutes,
+    getSubjectStats,
+    clearTimeLogs,
+    readFocusSnapshot,
+    saveFocusSnapshot,
+    subscribeFocus,
+    publishFocus
+  });
 }
