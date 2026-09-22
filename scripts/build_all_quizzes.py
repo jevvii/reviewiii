@@ -23,6 +23,10 @@ from atfl311_data import (
     ATFL_MODULE_3_ITEMS,
     ATFL_MODULE_4_ITEMS
 )
+from sepc311_data import (
+    SEPC_MODULE_1_ITEMS,
+    SEPC_MODULE_2_ITEMS
+)
 
 ALL_COURSES = {
     "NETC311": {
@@ -97,6 +101,25 @@ ALL_COURSES = {
                 "title": "Non-Deterministic Finite Automata & Conversions",
                 "items": ATFL_MODULE_4_ITEMS,
                 "html": "module4.html"
+            }
+        ]
+    },
+    "SEPC311": {
+        "title": "Social & Ethical Issues in Computing",
+        "code": "SEPC311",
+        "slug": "sepc311",
+        "modules": [
+            {
+                "num": 1,
+                "title": "Common Ethical Theories",
+                "items": SEPC_MODULE_1_ITEMS,
+                "html": "module1.html"
+            },
+            {
+                "num": 2,
+                "title": "Computer Ethics and Professional Codes",
+                "items": SEPC_MODULE_2_ITEMS,
+                "html": "module2.html"
             }
         ]
     }
@@ -1271,4 +1294,4 @@ for c_key, course in ALL_COURSES.items():
 
         print(f"✓ Built {course['code']} M{mod['num']}: {mod['title']} ({len(mod['items'])} Qs) -> {fname}")
 
-print("\nAll 9 quizzes successfully built with compact mobile hamburger UI and Focus integration!")
+print("\nAll quizzes successfully built with compact mobile hamburger UI and Focus integration!")

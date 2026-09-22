@@ -243,6 +243,49 @@ export const SUBJECTS: Subject[] = [
     ]
   },
   {
+    code: 'SEPC311',
+    title: 'Social & Ethical Issues in Computing',
+    subtitle: 'Ethical Theories, Professional Codes & Cyber Jurisprudence',
+    description: 'Systematic study of moral philosophy, normative theories (relativism, egoism, consequentialism, Kantian deontology), Filipino IT Code of Ethics, ACM/AITP obligations, Ten Commandments of Computer Ethics, James Moor\'s policy vacuums, and digital privacy jurisprudence.',
+    term: 'Year III — 1st Semester',
+    category: 'core',
+    status: 'active',
+    accentColor: '#9c8c7d',
+    tag: 'Ethics & Computing Law',
+    modules: [
+      {
+        id: 'sepc311-m1',
+        number: 1,
+        title: 'Common Ethical Theories',
+        description: 'Moral philosophy (ethos), Subjective and Cultural Relativism, Divine Command Theory, Ethical Egoism vs Altruism, Consequentialism (end justifies means), Kantian deontology (duty from pure reason), three branches of government, Article II Section 26 of Philippine Constitution, and applied moral dilemmas.',
+        itemCount: 51,
+        topics: ['Moral Philosophy', 'Subjective Relativism', 'Cultural Relativism', 'Divine Command Theory', 'Ethical Egoism', 'Consequentialism', 'Kantianism & Duty', 'Philippine Constitutional Ethics'],
+        quizPath: 'quizzes/sepc311/module1.html',
+        downloads: {
+          pdf: 'downloads/sepc311/Module 1 - Common Ethical Theories - Questionnaire.pdf',
+          docx: 'downloads/sepc311/Module 1 - Common Ethical Theories - Questionnaire.docx',
+          json: 'downloads/sepc311/SEPC311_Module_1_Quiz.json',
+          md: 'downloads/sepc311/SEPC311_Module_1_Quiz.md'
+        }
+      },
+      {
+        id: 'sepc311-m2',
+        number: 2,
+        title: 'Computer Ethics and Professional Codes',
+        description: 'Professional codes of ethics (4 benefits), Code of Ethics of Filipino IT Professionals (10 tenets), AITP obligations (6 domains), ACM/IEEE Software Engineering Code (8 principles), Ten Commandments of Computer Ethics (CEI), Hacking Community Constitution (14 beliefs), James Moor\'s policy vacuums & 3 computer properties (Logical Malleability, Invisibility Factor), 3 levels of computer ethics (Pop, Para, Theoretical), and Philippine photo consent cyber jurisprudence.',
+        itemCount: 55,
+        topics: ['Professional Codes', 'Filipino IT Code of Ethics', 'AITP Obligations', 'ACM/IEEE Principles', 'Ten Commandments of Computer Ethics', 'Hacker Constitution', 'James Moor & Policy Vacuums', 'Logical Malleability & Invisibility', 'Levels of Computer Ethics', 'Philippine Cyber Jurisprudence'],
+        quizPath: 'quizzes/sepc311/module2.html',
+        downloads: {
+          pdf: 'downloads/sepc311/Module 2 - Computer Ethics and Professional Codes - Questionnaire.pdf',
+          docx: 'downloads/sepc311/Module 2 - Computer Ethics and Professional Codes - Questionnaire.docx',
+          json: 'downloads/sepc311/SEPC311_Module_2_Quiz.json',
+          md: 'downloads/sepc311/SEPC311_Module_2_Quiz.md'
+        }
+      }
+    ]
+  },
+  {
     code: 'SFCR311',
     title: 'Systems Fundamentals & Cyber Risk',
     subtitle: 'Operating System Internals, Threat Analysis & Defense',

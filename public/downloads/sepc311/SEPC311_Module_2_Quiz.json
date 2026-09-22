@@ -1,0 +1,722 @@
+{
+  "title": "Module 2: Computer Ethics and Professional Codes",
+  "subject": "SEPC311",
+  "total_questions": 55,
+  "questions": [
+    {
+      "number": 1,
+      "question": "A set of guidelines designed to set out acceptable behavior and ethical standards for members of a particular group, association, or profession is called a professional code of ____.",
+      "options": [
+        "by-laws",
+        "algorithms",
+        "ethics",
+        "regulations"
+      ],
+      "answer": "ethics",
+      "topic": "Professional Code Definition",
+      "explanation": "A professional code of ethics sets out explicit standards of acceptable behavior, responsibility, and integrity for practitioners in a profession."
+    },
+    {
+      "number": 2,
+      "question": "Which of the following is recognized as one of the four foundational benefits of ethical guidelines for professionals?",
+      "options": [
+        "Monopolistic Control",
+        "Ethical Decision Making",
+        "Exemption from Lawsuits",
+        "Guaranteed Profitability"
+      ],
+      "answer": "Ethical Decision Making",
+      "topic": "Benefits of Ethical Guidelines",
+      "explanation": "Ethical guidelines provide structured frameworks that assist practitioners in navigating complex moral dilemmas through ethical decision-making."
+    },
+    {
+      "number": 3,
+      "question": "Professional codes of ethics instill high standards of practice and ethical behavior, fostering trust and ____ from the general public.",
+      "options": [
+        "fear",
+        "indifference",
+        "respect",
+        "skepticism"
+      ],
+      "answer": "respect",
+      "topic": "Public Trust and Respect",
+      "explanation": "Adhering to strict professional codes establishes credibility, earning the enduring trust and respect of clients and the general public."
+    },
+    {
+      "number": 4,
+      "question": "A professional code of ethics serves as an evaluation ____ against which the competence, conduct, and accountability of a practitioner can be measured.",
+      "options": [
+        "benchmark",
+        "monopoly",
+        "obstacle",
+        "arbitrage"
+      ],
+      "answer": "benchmark",
+      "topic": "Evaluation Benchmark",
+      "explanation": "Codes of ethics provide an objective evaluation benchmark for auditing professional performance and disciplining malpractice."
+    },
+    {
+      "number": 5,
+      "question": "According to Tenet 1 of the Code of Ethics of the Filipino IT Professionals, members pledge to promote public knowledge, understanding, and ____ of Information Technology.",
+      "options": [
+        "regulation",
+        "taxation",
+        "appreciation",
+        "monopolization"
+      ],
+      "answer": "appreciation",
+      "topic": "Filipino IT Code - Tenet 1",
+      "explanation": "Tenet 1: 'I will promote public knowledge, understanding and appreciation of I.T.'"
+    },
+    {
+      "number": 6,
+      "question": "According to Tenet 2 of the Filipino IT Code, what must an IT professional always consider in the performance of their professional work?",
+      "options": [
+        "Political party interests",
+        "Personal prestige and fame",
+        "General welfare and public good",
+        "Corporate revenue and profit"
+      ],
+      "answer": "General welfare and public good",
+      "topic": "Filipino IT Code - Tenet 2",
+      "explanation": "Tenet 2: 'I will consider the general welfare and public welfare and public good in the performance of my work.'"
+    },
+    {
+      "number": 7,
+      "question": "Tenet 3 of the Filipino IT Code states that professionals must advertise goods or professional services in a clear and ____ manner.",
+      "options": [
+        "lucrative",
+        "aggressive",
+        "secretive",
+        "truthful"
+      ],
+      "answer": "truthful",
+      "topic": "Filipino IT Code - Tenet 3",
+      "explanation": "Tenet 3: 'I will advertise goods or professional services in a clear and truthful manner.'"
+    },
+    {
+      "number": 8,
+      "question": "Tenet 4 of the Filipino IT Code mandates strict compliance and adherence to intellectual property laws, ____ laws, and other related technology statutes.",
+      "options": [
+        "patent",
+        "maritime",
+        "corporate tax",
+        "zoning"
+      ],
+      "answer": "patent",
+      "topic": "Filipino IT Code - Tenet 4",
+      "explanation": "Tenet 4: 'I will comply and strictly abide by the intellectual property laws, patent laws and other related laws in respect of I.T.'"
+    },
+    {
+      "number": 9,
+      "question": "Under Tenet 5 of the Filipino IT Code, practitioners must accept full responsibility for work undertaken and utilize their skills with competence and ____.",
+      "options": [
+        "leverage",
+        "professionalism",
+        "haste",
+        "frugality"
+      ],
+      "answer": "professionalism",
+      "topic": "Filipino IT Code - Tenet 5",
+      "explanation": "Tenet 5: 'I will accept the full responsibility for the work undertaken and utilize my skills with competence and professionalism.'"
+    },
+    {
+      "number": 10,
+      "question": "Tenet 6 of the Filipino IT Code obligates professionals to make truthful statements regarding what aspect of their qualifications and offerings?",
+      "options": [
+        "Competitors' vulnerabilities",
+        "Personal political affiliations",
+        "Areas of competence and product qualities",
+        "Stock market projections"
+      ],
+      "answer": "Areas of competence and product qualities",
+      "topic": "Filipino IT Code - Tenet 6",
+      "explanation": "Tenet 6: 'I will make truthful statements on my areas of competence as well as the capabilities and qualities of my product and services.'"
+    },
+    {
+      "number": 11,
+      "question": "Under Tenet 7 of the Filipino IT Code, an IT professional must never disclose or use confidential information obtained during duty without consent, except when required by ____.",
+      "options": [
+        "their employer",
+        "their family",
+        "the law",
+        "a journalist"
+      ],
+      "answer": "the law",
+      "topic": "Filipino IT Code - Tenet 7",
+      "explanation": "Tenet 7: 'I will not disclose or use any confidential information obtained in course of professional duties without the consent of the parties concerned except when required by the laws.'"
+    },
+    {
+      "number": 12,
+      "question": "Tenet 8 of the Filipino IT Code requires members to strive to attain the highest ____ in both the products and services that they offer.",
+      "options": [
+        "market share",
+        "price",
+        "speed",
+        "quality"
+      ],
+      "answer": "quality",
+      "topic": "Filipino IT Code - Tenet 8",
+      "explanation": "Tenet 8: 'I will strive to attain the highest quality in both the products and services that offer.'"
+    },
+    {
+      "number": 13,
+      "question": "Tenet 9 of the Filipino IT Code emphasizes active industry advancement by pledging to knowingly participate in the ____ of Information Technology.",
+      "options": [
+        "obfuscation",
+        "development",
+        "commercialization",
+        "monopolization"
+      ],
+      "answer": "development",
+      "topic": "Filipino IT Code - Tenet 9",
+      "explanation": "Tenet 9: 'I will knowingly participate in the development of the Information Technology.'"
+    },
+    {
+      "number": 14,
+      "question": "Tenet 10 of the Filipino IT Code requires practitioners to uphold and enhance standards through continuing professional ____ to elevate the profession.",
+      "options": [
+        "political lobbying",
+        "licensing fees",
+        "education",
+        "marketing"
+      ],
+      "answer": "education",
+      "topic": "Filipino IT Code - Tenet 10",
+      "explanation": "Tenet 10 mandates continuous learning to uphold and improve professional standards across the computing industry."
+    },
+    {
+      "number": 15,
+      "question": "What does the professional acronym AITP stand for in computing ethics?",
+      "options": [
+        "Alliance of Information Technology Producers",
+        "Association of Information Technology Professionals",
+        "Association of Internet Technology Pioneers",
+        "American Institute of Technology Programmers"
+      ],
+      "answer": "Association of Information Technology Professionals",
+      "topic": "AITP Acronym",
+      "explanation": "AITP stands for the Association of Information Technology Professionals, a key organization defining computing ethical standards."
+    },
+    {
+      "number": 16,
+      "question": "How many key institutional obligations does a member solemnly accept in the AITP Code of Ethics?",
+      "options": [
+        "Four obligations",
+        "Six obligations",
+        "Ten obligations",
+        "Eight obligations"
+      ],
+      "answer": "Six obligations",
+      "topic": "AITP Obligations Count",
+      "explanation": "The AITP Code specifies 6 primary obligations: to management, fellow members, society, university/college, employer, and country."
+    },
+    {
+      "number": 17,
+      "question": "Which of the following is an explicit obligation declared in the AITP Code of Ethics acknowledging institutional academic roots?",
+      "options": [
+        "Obligation to my Cloud Provider",
+        "Obligation to my Social Network",
+        "Obligation to my Software Vendor",
+        "Obligation to my College or University"
+      ],
+      "answer": "Obligation to my College or University",
+      "topic": "AITP Academic Obligation",
+      "explanation": "The AITP Code explicitly highlights 'an obligation to my College or University' to honor academic foundations and mentor future professionals."
+    },
+    {
+      "number": 18,
+      "question": "In the AITP Code of Ethics, members explicitly acknowledge holding a fiduciary trust toward whom?",
+      "options": [
+        "Shareholder",
+        "Banker",
+        "Employer",
+        "Subcontractor"
+      ],
+      "answer": "Employer",
+      "topic": "AITP Employer Trust",
+      "explanation": "AITP members pledge: 'That I have an obligation to my employer whose trust I hold.'"
+    },
+    {
+      "number": 19,
+      "question": "According to the ACM/IEEE Software Engineering Code of Ethics, how many core principles govern professional practice?",
+      "options": [
+        "Ten Principles",
+        "Twelve Principles",
+        "Eight Principles",
+        "Five Principles"
+      ],
+      "answer": "Eight Principles",
+      "topic": "ACM Principles Count",
+      "explanation": "The ACM/IEEE Software Engineering Code of Ethics contains 8 core principles: Public, Client & Employer, Product, Judgement, Management, Profession, Colleagues, Self."
+    },
+    {
+      "number": 20,
+      "question": "Which ACM Principle states that software engineers shall act consistently with the public interest as their paramount obligation?",
+      "options": [
+        "Principle 1: Public",
+        "Principle 8: Self",
+        "Principle 5: Management",
+        "Principle 2: Client and Employer"
+      ],
+      "answer": "Principle 1: Public",
+      "topic": "ACM Principle 1",
+      "explanation": "Principle 1 (Public) mandates that software engineers shall act consistently with the safety, health, and welfare of the public."
+    },
+    {
+      "number": 21,
+      "question": "Which ACM Principle requires that software engineers ensure their software products and modifications meet the highest professional standards possible?",
+      "options": [
+        "Principle 4: Judgement",
+        "Principle 3: Product",
+        "Principle 6: Profession",
+        "Principle 7: Colleagues"
+      ],
+      "answer": "Principle 3: Product",
+      "topic": "ACM Principle 3",
+      "explanation": "Principle 3 (Product) requires software engineers to strive for high quality, acceptable costs, and rigorous testing."
+    },
+    {
+      "number": 22,
+      "question": "Which ACM Principle dictates that software engineers maintain integrity and independence in their professional evaluations?",
+      "options": [
+        "Principle 5: Management",
+        "Principle 8: Self",
+        "Principle 1: Public",
+        "Principle 4: Judgement"
+      ],
+      "answer": "Principle 4: Judgement",
+      "topic": "ACM Principle 4",
+      "explanation": "Principle 4 (Judgement) requires software engineers to maintain integrity and objectivity, refusing to endorse compromised technical assessments."
+    },
+    {
+      "number": 23,
+      "question": "Which ACM Principle obligates practitioners to participate in lifelong learning to enhance their professional capabilities?",
+      "options": [
+        "Principle 8: Self",
+        "Principle 7: Colleagues",
+        "Principle 2: Client and Employer",
+        "Principle 6: Profession"
+      ],
+      "answer": "Principle 8: Self",
+      "topic": "ACM Principle 8",
+      "explanation": "Principle 8 (Self) states that software engineers shall participate in lifelong professional education to keep pace with technological advancement."
+    },
+    {
+      "number": 24,
+      "question": "Which organization formulated the globally recognized 'Ten Commandments of Computer Ethics'?",
+      "options": [
+        "Federal Bureau of Investigation",
+        "IEEE Computer Society",
+        "Computer Ethics Institute",
+        "Association for Computing Machinery"
+      ],
+      "answer": "Computer Ethics Institute",
+      "topic": "CEI Ten Commandments",
+      "explanation": "The Ten Commandments of Computer Ethics were created in 1992 by the Computer Ethics Institute (CEI) to govern responsible computer usage."
+    },
+    {
+      "number": 25,
+      "question": "What is the 1st Commandment of Computer Ethics?",
+      "options": [
+        "Thou shalt not use a computer to harm other people",
+        "Thou shalt not copy proprietary software",
+        "Thou shalt not snoop around in other people's files",
+        "Thou shalt not use a computer to steal"
+      ],
+      "answer": "Thou shalt not use a computer to harm other people",
+      "topic": "Commandment 1",
+      "explanation": "Commandment 1: 'Thou shalt not use a computer to harm other people', prohibiting harassment, physical injury, and cyber attacks."
+    },
+    {
+      "number": 26,
+      "question": "Commandment 2 states that computer users must not interfere with other people's computer ____.",
+      "options": [
+        "finances",
+        "work",
+        "entertainment",
+        "hardware"
+      ],
+      "answer": "work",
+      "topic": "Commandment 2",
+      "explanation": "Commandment 2: 'Thou shalt not interfere with other people's computer work', barring denial-of-service attacks, malware, and disruptive tactics."
+    },
+    {
+      "number": 27,
+      "question": "Commandment 3 explicitly forbids users from snooping around in other people's computer ____.",
+      "options": [
+        "desks",
+        "cables",
+        "monitors",
+        "files"
+      ],
+      "answer": "files",
+      "topic": "Commandment 3",
+      "explanation": "Commandment 3: 'Thou shalt not snoop around in other people's computer files', protecting digital privacy and data confidentiality."
+    },
+    {
+      "number": 28,
+      "question": "Which Commandment prohibits the use of computer technologies to commit theft of money, data, or electronic assets?",
+      "options": [
+        "Commandment 2",
+        "Commandment 9",
+        "Commandment 7",
+        "Commandment 4: Thou shalt not use a computer to steal"
+      ],
+      "answer": "Commandment 4: Thou shalt not use a computer to steal",
+      "topic": "Commandment 4",
+      "explanation": "Commandment 4: 'Thou shalt not use a computer to steal', prohibiting financial fraud, unauthorized data harvesting, and cyber robbery."
+    },
+    {
+      "number": 29,
+      "question": "Commandment 5 ('Thou shalt not use a computer to bear false witness') directly outlaws which modern digital misconduct?",
+      "options": [
+        "Running peer-to-peer torrents",
+        "Spreading online disinformation, defamation, and fake news",
+        "Writing optimized search algorithms",
+        "Hosting web servers"
+      ],
+      "answer": "Spreading online disinformation, defamation, and fake news",
+      "topic": "Commandment 5",
+      "explanation": "Commandment 5 prohibits online slander, perjury, forged documentation, and spreading malicious disinformation."
+    },
+    {
+      "number": 30,
+      "question": "Which Commandment prohibits software piracy and the illegal downloading or copying of proprietary software without paying licensing fees?",
+      "options": [
+        "Commandment 6",
+        "Commandment 1",
+        "Commandment 3",
+        "Commandment 8"
+      ],
+      "answer": "Commandment 6",
+      "topic": "Commandment 6",
+      "explanation": "Commandment 6: 'Thou shalt not copy or use proprietary software for which you have not paid.'"
+    },
+    {
+      "number": 31,
+      "question": "Commandment 7 prohibits using other people's computer resources without authorization or proper ____.",
+      "options": [
+        "applause",
+        "invitation",
+        "compensation",
+        "encryption"
+      ],
+      "answer": "compensation",
+      "topic": "Commandment 7",
+      "explanation": "Commandment 7: 'Thou shalt not use other people's computer resources without authorization or proper compensation.'"
+    },
+    {
+      "number": 32,
+      "question": "Commandment 8 specifically forbids appropriating other people's intellectual output, which is known academically as ____.",
+      "options": [
+        "phishing",
+        "cryptomining",
+        "debugging",
+        "plagiarism"
+      ],
+      "answer": "plagiarism",
+      "topic": "Commandment 8",
+      "explanation": "Commandment 8 protects intellectual property, forbidding users from claiming another person's code, design, or research as their own."
+    },
+    {
+      "number": 33,
+      "question": "Commandment 9 directs developers to think about the social ____ of the program they are writing or system they are designing.",
+      "options": [
+        "consequences",
+        "syntax",
+        "revenues",
+        "compilation speeds"
+      ],
+      "answer": "consequences",
+      "topic": "Commandment 9",
+      "explanation": "Commandment 9: 'Thou shalt think about the social consequences of the program you are writing or the system you are designing.'"
+    },
+    {
+      "number": 34,
+      "question": "What does the 10th Commandment of Computer Ethics exhort all computer users to always insure when using technology?",
+      "options": [
+        "Consideration and respect for your fellow humans",
+        "Maximum computation bandwidth",
+        "Highest social media follower count",
+        "Flawless battery endurance"
+      ],
+      "answer": "Consideration and respect for your fellow humans",
+      "topic": "Commandment 10",
+      "explanation": "Commandment 10: 'Thou shalt always use a computer in ways that insure consideration and respect for your fellow humans.'"
+    },
+    {
+      "number": 35,
+      "question": "The declaration known as the Hacking Community's Constitution serves as a digital bill of rights that hackers argue should be interpreted in relation to what other ethical document?",
+      "options": [
+        "The US Copyright Act",
+        "The Ten Commandments of Computer Ethics",
+        "The Magna Carta",
+        "The Berne Convention"
+      ],
+      "answer": "The Ten Commandments of Computer Ethics",
+      "topic": "Hacker Constitution Relationship",
+      "explanation": "The Hacking Community's Constitution declares 14 principles akin to a cyber bill of rights, intended to be read alongside the Ten Commandments."
+    },
+    {
+      "number": 36,
+      "question": "According to the Hacking Constitution, hacking is legitimately viewed as a tool to test the ____ of networks that safeguard valuable information.",
+      "options": [
+        "physical wiring",
+        "bandwidth",
+        "monetization",
+        "integrity"
+      ],
+      "answer": "integrity",
+      "topic": "Hacker Tool for Network Integrity",
+      "explanation": "Hackers view ethical hacking as an essential diagnostic tool to stress-test network integrity and uncover critical vulnerabilities before adversaries do."
+    },
+    {
+      "number": 37,
+      "question": "Which movement does the Hacking Community's Constitution passionately support, advocating that governments avoid closed proprietary software?",
+      "options": [
+        "Digital Rights Management Alliance",
+        "Open Source Movement",
+        "Closed Cloud Initiative",
+        "Proprietary Licensing Guild"
+      ],
+      "answer": "Open Source Movement",
+      "topic": "Hacker Open Source Stance",
+      "explanation": "The constitution strongly supports open-source software, arguing that government reliance on proprietary software stifles public innovation."
+    },
+    {
+      "number": 38,
+      "question": "The Hacking Community's Constitution declares that three instruments\u2014hacking, cracking, and ____\u2014can be leveraged to promote direct democracy and free information.",
+      "options": [
+        "phreaking",
+        "spearphishing",
+        "spamming",
+        "ransomware"
+      ],
+      "answer": "phreaking",
+      "topic": "Hacking Instruments",
+      "explanation": "The constitution cites hacking, cracking, and phreaking (telecom exploration) as tools for exploring systems and democratizing information."
+    },
+    {
+      "number": 39,
+      "question": "Which philosopher wrote the seminal 1985 paper 'What Is Computer Ethics?', establishing computer ethics as a distinct field of applied ethics?",
+      "options": [
+        "James H. Moor",
+        "Deborah Johnson",
+        "Norbert Wiener",
+        "Luciano Floridi"
+      ],
+      "answer": "James H. Moor",
+      "topic": "James Moor (1985)",
+      "explanation": "James H. Moor pioneered foundational computer ethics in 1985, analyzing policy vacuums and the unique nature of computing technology."
+    },
+    {
+      "number": 40,
+      "question": "James Moor argued that computer ethics problems typically arise because computers create a '____ vacuum' regarding how technology should be used.",
+      "options": [
+        "hardware",
+        "silicon",
+        "financial",
+        "policy"
+      ],
+      "answer": "policy",
+      "topic": "Policy Vacuum",
+      "explanation": "A 'policy vacuum' occurs when novel computer capabilities arise before society, laws, or institutions have established rules to govern their use."
+    },
+    {
+      "number": 41,
+      "question": "Which unique property of computers describes their capability to be shaped and molded to perform any activity characterized by inputs, outputs, and logical operations?",
+      "options": [
+        "Logical Malleability",
+        "Invisibility Factor",
+        "Silicon Rigidity",
+        "Analog Continuity"
+      ],
+      "answer": "Logical Malleability",
+      "topic": "Logical Malleability",
+      "explanation": "Logical malleability is the computer's universal capacity to execute any computable process that can be formulated in logic."
+    },
+    {
+      "number": 42,
+      "question": "According to James Moor, which property of computers refers to the fact that most internal operational processes take place completely out of human sight?",
+      "options": [
+        "Invisibility Factor",
+        "Physical Obfuscation",
+        "Logical Malleability",
+        "Impact on Society"
+      ],
+      "answer": "Invisibility Factor",
+      "topic": "Invisibility Factor",
+      "explanation": "The Invisibility Factor emphasizes that internal micro-operations, algorithmic decisions, and data transactions are invisible to human perception."
+    },
+    {
+      "number": 43,
+      "question": "Which dimension of Moor's Invisibility Factor describes the covert, unauthorized, and undetectable misuse of computing power (such as digital embezzlement or espionage)?",
+      "options": [
+        "Invisible Programming Values",
+        "Invisible Complex Calculations",
+        "Logical Malleability",
+        "Invisible Abuse"
+      ],
+      "answer": "Invisible Abuse",
+      "topic": "Invisible Abuse",
+      "explanation": "Invisible abuse occurs when a programmer or user exploits the hidden nature of digital systems to execute unauthorized or criminal operations unnoticed."
+    },
+    {
+      "number": 44,
+      "question": "When a programmer intentionally or subconsciously embeds personal biases, moral judgments, or unfair algorithmic assumptions into software code, it illustrates ____.",
+      "options": [
+        "Invisible Programming Values",
+        "Invisible Abuse",
+        "Invisible Complex Calculations",
+        "Logical Malleability"
+      ],
+      "answer": "Invisible Programming Values",
+      "topic": "Invisible Programming Values",
+      "explanation": "Invisible programming values are the hidden philosophical, ethical, or discriminatory assumptions silently encoded into algorithms by developers."
+    },
+    {
+      "number": 45,
+      "question": "Complex financial automated trading or spacecraft telemetry calculations that exceed human capacity to inspect or audit by hand exemplify which aspect of the Invisibility Factor?",
+      "options": [
+        "Invisible Abuse",
+        "Open Source Logic",
+        "Invisible Complex Calculations",
+        "Invisible Programming Values"
+      ],
+      "answer": "Invisible Complex Calculations",
+      "topic": "Invisible Complex Calculations",
+      "explanation": "Invisible complex calculations involve software processing so vast and intricate that human operators must blindly trust the machine's conclusions."
+    },
+    {
+      "number": 46,
+      "question": "Which level of computer ethics consists of sensationalized reporting, public curiosity, and news coverage in magazines, newspapers, and television programs?",
+      "options": [
+        "PARA Computer Ethics",
+        "Meta-Ethics",
+        "POP Computer Ethics",
+        "THEORETICAL Computer Ethics"
+      ],
+      "answer": "POP Computer Ethics",
+      "topic": "POP Computer Ethics",
+      "explanation": "Pop computer ethics encompasses mainstream media discussions, sensational viral news, and popular public discourse on cyber issues."
+    },
+    {
+      "number": 47,
+      "question": "Which level of computer ethics is practiced by people who take a dedicated interest in cyber cases, collect examples, analyze similarities, and attend professional conferences?",
+      "options": [
+        "PARA Computer Ethics",
+        "THEORETICAL Computer Ethics",
+        "POP Computer Ethics",
+        "Normative Ethics"
+      ],
+      "answer": "PARA Computer Ethics",
+      "topic": "PARA Computer Ethics",
+      "explanation": "Para computer ethics is practiced by dedicated enthusiasts and professionals who systematically collect and analyze computing cases."
+    },
+    {
+      "number": 48,
+      "question": "Which level of computer ethics applies rigorous, scholarly philosophical frameworks (such as Kantianism and Utilitarianism) to technological dilemmas?",
+      "options": [
+        "THEORETICAL Computer Ethics",
+        "Colloquial Ethics",
+        "PARA Computer Ethics",
+        "POP Computer Ethics"
+      ],
+      "answer": "THEORETICAL Computer Ethics",
+      "topic": "THEORETICAL Computer Ethics",
+      "explanation": "Theoretical computer ethics is the academic discipline that integrates classical normative philosophy with computing dilemmas."
+    },
+    {
+      "number": 49,
+      "question": "Due to exceptionally high internet usage, mobile messaging volume, and viral social engagement, the Philippines has earned what global title?",
+      "options": [
+        "Hardware Manufacturing Hub",
+        "Silicon Valley of Asia",
+        "E-Commerce Capital of the World",
+        "Social Media Capital of the World"
+      ],
+      "answer": "Social Media Capital of the World",
+      "topic": "Philippine Social Media Capital",
+      "explanation": "The Philippines is recognized globally as the 'Social Media Capital of the World' due to its unprecedented per-capita social media engagement."
+    },
+    {
+      "number": 50,
+      "question": "In digital social networking etiquette, if a friend willingly poses and smiles with you in a joint group photo or selfie, do you legally and ethically need to ask separate written permission before posting it?",
+      "options": [
+        "Yes, copyright fees must be paid",
+        "Yes, notarized consent is mandatory",
+        "No, because photos have no rights",
+        "Not anymore, because consent is implied"
+      ],
+      "answer": "Not anymore, because consent is implied",
+      "topic": "Photo Consent Rules",
+      "explanation": "Voluntarily participating in a mutual group photo or selfie carries implied consent to share, provided it is not maliciously altered or defamatory."
+    },
+    {
+      "number": 51,
+      "question": "Secretly recording or photographing a private individual in a private setting without their knowledge or consent and uploading it to social media is generally ____.",
+      "options": [
+        "mandated by the Cybercrime Act",
+        "acceptable under Fair Use",
+        "fully legal without exception",
+        "unethical and improper"
+      ],
+      "answer": "unethical and improper",
+      "topic": "Unauthorized Recording",
+      "explanation": "Capturing and broadcasting photos/videos of private individuals without consent violates privacy and ethical norms unless specific legal exemptions apply."
+    },
+    {
+      "number": 52,
+      "question": "Which legal exemption permits the unauthorized publication of photos or videos if the material captures breaking news of the day and press information (e.g., a rescue operation on EDSA)?",
+      "options": [
+        "Exemption for Celebrity Monetization",
+        "Exemption for Clickbait Marketing",
+        "Exemption No. 1: News of the day and items of press information",
+        "Exemption for Private Commercial Gain"
+      ],
+      "answer": "Exemption No. 1: News of the day and items of press information",
+      "topic": "Exemption 1 - Press Information",
+      "explanation": "Exemption 1 permits broadcasting recordings that constitute legitimate news of the day and press information in the public interest."
+    },
+    {
+      "number": 53,
+      "question": "If a citizen captures a video of an abusive traffic enforcer illegally extorting and threatening a delivery truck driver, publishing it is ethically and legally justified under which exemption?",
+      "options": [
+        "Exemption for Personal Revenge",
+        "Exemption No. 2: Done for the general welfare and public good",
+        "Exemption for Entertainment Comedy",
+        "Exemption for Commercial Slander"
+      ],
+      "answer": "Exemption No. 2: Done for the general welfare and public good",
+      "topic": "Exemption 2 - General Welfare",
+      "explanation": "Exemption 2 justifies publishing unauthorized recordings when exposing abuse or corruption to protect the general welfare and public interest."
+    },
+    {
+      "number": 54,
+      "question": "Photographing or filming the popular Filipino pop group BINI while they are performing or walking in a public shopping mall is legally permissible under which exemption?",
+      "options": [
+        "Exemption for Private Surveillance",
+        "Exemption for Secret Intellectual Theft",
+        "Exemption for Corporate Monopolies",
+        "Exemption No. 3: Public personalities in a public setting"
+      ],
+      "answer": "Exemption No. 3: Public personalities in a public setting",
+      "topic": "Exemption 3 - Public Personalities",
+      "explanation": "Exemption 3 recognizes that public figures and celebrities appearing in public venues possess reduced expectations of privacy regarding public photography."
+    },
+    {
+      "number": 55,
+      "question": "Which comprehensive textbook serves as the foundational academic reference for SEPC311 at OLFU, written by Dr. Charlemagne Lavi\u00f1a?",
+      "options": [
+        "Automata and Formal Computation",
+        "Modern Software Architecture",
+        "Social, Ethical, Legal and Professional Issues in Computing",
+        "Computer Networks and Topologies"
+      ],
+      "answer": "Social, Ethical, Legal and Professional Issues in Computing",
+      "topic": "Course Textbook Reference",
+      "explanation": "The core textbook referenced throughout the course is 'Social, Ethical, Legal and Professional Issues in Computing' by Dr. Charlemagne Lavi\u00f1a."
+    }
+  ]
+}
