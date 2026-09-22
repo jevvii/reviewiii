@@ -258,6 +258,15 @@ const baseUrl = import.meta.env.BASE_URL;
     .header-search-trigger .search-label {
       display: none;
     }
+
+    /* Keep the header row within mobile width: avatar + status dot are enough */
+    .header-auth-pill .auth-pill-label {
+      display: none;
+    }
+
+    .header-auth-pill {
+      padding: 5px 10px;
+    }
   }
 
   /* Header Focus Pill */
@@ -383,7 +392,9 @@ const baseUrl = import.meta.env.BASE_URL;
     justify-content: center;
   }
 
-  .auth-pill-avatar {
+  /* Avatar <img> is injected at runtime via innerHTML, so it never receives
+     Astro's build-time scope attribute. These rules must be global. */
+  :global(.auth-pill-avatar) {
     width: 18px;
     height: 18px;
     border-radius: 50%;
@@ -431,13 +442,18 @@ const baseUrl = import.meta.env.BASE_URL;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
-  .auth-profile-card {
+  /* ------------------------------------------------------------------ */
+  /* Runtime-injected dropdown content (renderAuthUI innerHTML)         */
+  /* These elements never receive the build-time scope attribute,       */
+  /* so every rule below is declared :global on purpose.                */
+  /* ------------------------------------------------------------------ */
+  :global(.auth-profile-card) {
     display: flex;
     align-items: center;
     gap: 12px;
   }
 
-  .auth-profile-avatar {
+  :global(.auth-profile-avatar) {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -447,12 +463,12 @@ const baseUrl = import.meta.env.BASE_URL;
     background: rgba(255, 255, 255, 0.05);
   }
 
-  .auth-profile-info {
+  :global(.auth-profile-info) {
     flex: 1;
     min-width: 0;
   }
 
-  .auth-profile-name {
+  :global(.auth-profile-name) {
     font-size: 0.88rem;
     font-weight: 600;
     color: #fff;
@@ -461,7 +477,7 @@ const baseUrl = import.meta.env.BASE_URL;
     text-overflow: ellipsis;
   }
 
-  .auth-profile-sub {
+  :global(.auth-profile-sub) {
     font-size: 0.74rem;
     color: var(--color-text-muted);
     display: flex;
@@ -470,16 +486,16 @@ const baseUrl = import.meta.env.BASE_URL;
     margin-top: 1px;
   }
 
-  .auth-profile-sub a {
+  :global(.auth-profile-sub a) {
     color: var(--color-accent-primary);
     text-decoration: none;
   }
 
-  .auth-profile-sub a:hover {
+  :global(.auth-profile-sub a:hover) {
     text-decoration: underline;
   }
 
-  .auth-badge-active {
+  :global(.auth-badge-active) {
     display: inline-flex;
     align-items: center;
     gap: 4px;
@@ -493,7 +509,7 @@ const baseUrl = import.meta.env.BASE_URL;
     margin-top: 6px;
   }
 
-  .auth-badge-guest {
+  :global(.auth-badge-guest) {
     display: inline-flex;
     align-items: center;
     gap: 4px;
@@ -527,7 +543,7 @@ const baseUrl = import.meta.env.BASE_URL;
     overflow-y: auto;
   }
 
-  .auth-account-item {
+  :global(.auth-account-item) {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -542,24 +558,24 @@ const baseUrl = import.meta.env.BASE_URL;
     text-align: left;
   }
 
-  .auth-account-item:hover {
+  :global(.auth-account-item:hover) {
     background: rgba(255, 255, 255, 0.06);
     border-color: rgba(255, 255, 255, 0.1);
   }
 
-  .auth-account-item.active {
+  :global(.auth-account-item.active) {
     background: rgba(138, 154, 134, 0.1);
     border-color: rgba(138, 154, 134, 0.3);
   }
 
-  .auth-account-item-left {
+  :global(.auth-account-item-left) {
     display: flex;
     align-items: center;
     gap: 8px;
     min-width: 0;
   }
 
-  .auth-account-item-avatar {
+  :global(.auth-account-item-avatar) {
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -567,7 +583,7 @@ const baseUrl = import.meta.env.BASE_URL;
     border: 1px solid rgba(255, 255, 255, 0.15);
   }
 
-  .auth-account-item-name {
+  :global(.auth-account-item-name) {
     font-size: 0.78rem;
     font-weight: 500;
     color: #ddd;
@@ -576,24 +592,24 @@ const baseUrl = import.meta.env.BASE_URL;
     text-overflow: ellipsis;
   }
 
-  .auth-account-item.active .auth-account-item-name {
+  :global(.auth-account-item.active .auth-account-item-name) {
     color: #fff;
     font-weight: 600;
   }
 
-  .auth-account-item-right {
+  :global(.auth-account-item-right) {
     display: flex;
     align-items: center;
     gap: 6px;
   }
 
-  .auth-active-check {
+  :global(.auth-active-check) {
     font-size: 0.7rem;
     color: #4ade80;
     font-weight: bold;
   }
 
-  .auth-account-remove-btn {
+  :global(.auth-account-remove-btn) {
     background: transparent;
     border: none;
     color: #666;
@@ -604,7 +620,7 @@ const baseUrl = import.meta.env.BASE_URL;
     line-height: 1;
   }
 
-  .auth-account-remove-btn:hover {
+  :global(.auth-account-remove-btn:hover) {
     color: #f87171;
     background: rgba(248, 113, 113, 0.1);
   }
