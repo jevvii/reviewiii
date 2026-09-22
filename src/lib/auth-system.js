@@ -7,77 +7,83 @@
 // 3. Isolated multi-user sessions, quiz states, timers, and study logs
 // ============================================================================
 
-export const SUPABASE_URL = 'https://uhaomywpyojatwysezld.supabase.co';
+export const SUPABASE_URL = "https://uenxceusckmokmqhrkby.supabase.co";
 // Supabase anon key (public by design — safe for client-side use)
-// Encoded to bypass GitHub push protection pattern matching on sb_secret_ prefix
-export const SUPABASE_ANON_KEY = atob('c2Jfc2VjcmV0X0V1UmRxNFM5Nko0cUlTWFYtQnVHX2dfX044eUstaw==');
-export const ACCOUNTS_STORAGE_KEY = 'reviewiii_accounts:v1';
-export const ACTIVE_USER_STORAGE_KEY = 'reviewiii_active_user:v1';
-export const AUTH_CHANNEL_NAME = 'reviewiii_auth_channel';
+export const SUPABASE_ANON_KEY = 'sb_publishable_OCUPoA1pEFODxzOUoTD8aA_HevquQfY';
+export const ACCOUNTS_STORAGE_KEY = "reviewiii_accounts:v1";
+export const ACTIVE_USER_STORAGE_KEY = "reviewiii_active_user:v1";
+export const AUTH_CHANNEL_NAME = "reviewiii_auth_channel";
 
 const listeners = new Set();
 let authChannel = null;
 
 // Initialize BroadcastChannel for instant cross-tab auth state propagation
-if (typeof window !== 'undefined' && 'BroadcastChannel' in window) {
-  try {
-    authChannel = new BroadcastChannel(AUTH_CHANNEL_NAME);
-    authChannel.onmessage = (event) => {
-      if (event.data && event.data.type === 'auth_changed') {
-        notifyListeners(event.data.activeUser);
-        ensureAuthGate();
-      }
-    };
-  } catch (e) {}
+if (typeof window !== "undefined" && "BroadcastChannel" in window) {
+    try {
+        authChannel = new BroadcastChannel(AUTH_CHANNEL_NAME);
+        authChannel.onmessage = (event) => {
+            if (event.data && event.data.type === "auth_changed") {
+                notifyListeners(event.data.activeUser);
+                ensureAuthGate();
+            }
+        };
+    } catch (e) {}
 }
 
-if (typeof window !== 'undefined') {
-  window.addEventListener('storage', (e) => {
-    if (e.key === ACTIVE_USER_STORAGE_KEY || e.key === ACCOUNTS_STORAGE_KEY) {
-      notifyListeners(getActiveAccount());
-      ensureAuthGate();
-    }
-  });
+if (typeof window !== "undefined") {
+    window.addEventListener("storage", (e) => {
+        if (
+            e.key === ACTIVE_USER_STORAGE_KEY ||
+            e.key === ACCOUNTS_STORAGE_KEY
+        ) {
+            notifyListeners(getActiveAccount());
+            ensureAuthGate();
+        }
+    });
 }
 
 function notifyListeners(user) {
-  const current = user || getActiveAccount();
-  listeners.forEach((cb) => {
-    try {
-      cb(current);
-    } catch (err) {
-      console.error('Error in auth listener:', err);
+    const current = user || getActiveAccount();
+    listeners.forEach((cb) => {
+        try {
+            cb(current);
+        } catch (err) {
+            console.error("Error in auth listener:", err);
+        }
+    });
+    if (typeof window !== "undefined") {
+        window.dispatchEvent(
+            new CustomEvent("reviewiii:auth_changed", {
+                detail: { user: current },
+            }),
+        );
     }
-  });
-  if (typeof window !== 'undefined') {
-    window.dispatchEvent(new CustomEvent('reviewiii:auth_changed', {
-      detail: { user: current }
-    }));
-  }
 }
 
 function broadcastAuthChange(user) {
-  if (authChannel) {
-    try {
-      authChannel.postMessage({ type: 'auth_changed', activeUser: user });
-    } catch (e) {}
-  }
-  notifyListeners(user);
+    if (authChannel) {
+        try {
+            authChannel.postMessage({ type: "auth_changed", activeUser: user });
+        } catch (e) {}
+    }
+    notifyListeners(user);
 }
 
 /**
  * Returns all saved GitHub user accounts from local storage.
  */
 export function getAccounts() {
-  if (typeof window === 'undefined') return [];
-  try {
-    const raw = localStorage.getItem(ACCOUNTS_STORAGE_KEY);
-    if (!raw) return [];
-    const parsed = JSON.parse(raw);
-    return Array.isArray(parsed) ? parsed.filter(a => a && a.id && a.id !== 'guest') : [];
-  } catch (e) {
-    return [];
-  }
+    if (typeof window === "undefined") return [];
+    try {
+        const raw = localStorage.getItem(ACCOUNTS_STORAGE_KEY);
+        if (!raw) return [];
+        const parsed = JSON.parse(raw);
+        return Array.isArray(parsed)
+            ? parsed.filter((a) => a && a.id && a.id !== "guest")
+            : [];
+    } catch (e) {
+        return [];
+    }
 }
 
 /**
@@ -85,43 +91,43 @@ export function getAccounts() {
  * Enforces zero-guest policy: clears legacy 'guest' identifiers.
  */
 export function getActiveUserId() {
-  if (typeof window === 'undefined') return null;
-  try {
-    const id = localStorage.getItem(ACTIVE_USER_STORAGE_KEY);
-    if (!id || id === 'guest') {
-      if (id === 'guest') {
-        localStorage.removeItem(ACTIVE_USER_STORAGE_KEY);
-      }
-      return null;
+    if (typeof window === "undefined") return null;
+    try {
+        const id = localStorage.getItem(ACTIVE_USER_STORAGE_KEY);
+        if (!id || id === "guest") {
+            if (id === "guest") {
+                localStorage.removeItem(ACTIVE_USER_STORAGE_KEY);
+            }
+            return null;
+        }
+        const accounts = getAccounts();
+        const exists = accounts.some((acc) => acc.id === id);
+        if (!exists) {
+            localStorage.removeItem(ACTIVE_USER_STORAGE_KEY);
+            return null;
+        }
+        return id;
+    } catch (e) {
+        return null;
     }
-    const accounts = getAccounts();
-    const exists = accounts.some((acc) => acc.id === id);
-    if (!exists) {
-      localStorage.removeItem(ACTIVE_USER_STORAGE_KEY);
-      return null;
-    }
-    return id;
-  } catch (e) {
-    return null;
-  }
 }
 
 /**
  * Returns the active user object, or null if no student is signed in.
  */
 export function getActiveAccount() {
-  const activeId = getActiveUserId();
-  if (!activeId) return null;
-  const accounts = getAccounts();
-  const found = accounts.find((acc) => acc.id === activeId);
-  return found || null;
+    const activeId = getActiveUserId();
+    if (!activeId) return null;
+    const accounts = getAccounts();
+    const found = accounts.find((acc) => acc.id === activeId);
+    return found || null;
 }
 
 /**
  * Returns true if a student is authenticated via GitHub.
  */
 export function isAuthenticated() {
-  return Boolean(getActiveAccount());
+    return Boolean(getActiveAccount());
 }
 
 /**
@@ -129,309 +135,356 @@ export function isAuthenticated() {
  * Guarantees zero session bleed between different student accounts.
  */
 export function getStorageKey(baseKey) {
-  const activeUser = getActiveAccount();
-  if (!activeUser || !activeUser.id) {
-    return `reviewiii_u_unauth_${baseKey}`;
-  }
-  const safeId = activeUser.id.toLowerCase().replace(/[^a-z0-9_-]/g, '_');
-  return `reviewiii_u_${safeId}_${baseKey}`;
+    const activeUser = getActiveAccount();
+    if (!activeUser || !activeUser.id) {
+        return `reviewiii_u_unauth_${baseKey}`;
+    }
+    const safeId = activeUser.id.toLowerCase().replace(/[^a-z0-9_-]/g, "_");
+    return `reviewiii_u_${safeId}_${baseKey}`;
 }
 
 /**
  * Initiate full GitHub OAuth 2.0 flow via Supabase.
  */
 export function startGitHubOAuth(returnUrl) {
-  if (typeof window === 'undefined') return;
-  const current = returnUrl || window.location.href.split('#')[0];
-  try {
-    localStorage.setItem('reviewiii_oauth_return', current);
-  } catch (e) {}
+    if (typeof window === "undefined") return;
+    const current = returnUrl || window.location.href.split("#")[0];
+    try {
+        localStorage.setItem("reviewiii_oauth_return", current);
+    } catch (e) {}
 
-  const authUrl = `${SUPABASE_URL}/auth/v1/authorize?provider=github&redirect_to=${encodeURIComponent(current)}`;
-  window.location.href = authUrl;
+    const authUrl = `${SUPABASE_URL}/auth/v1/authorize?provider=github&redirect_to=${encodeURIComponent(current)}`;
+    window.location.href = authUrl;
 }
 
 /**
  * Handle Supabase OAuth callback when redirected back with hash tokens.
  */
 export async function handleOAuthCallback() {
-  if (typeof window === 'undefined') return null;
-  const hash = window.location.hash;
-  if (!hash || !hash.includes('access_token=')) return null;
+    if (typeof window === "undefined") return null;
+    const hash = window.location.hash;
+    if (!hash || !hash.includes("access_token=")) return null;
 
-  try {
-    const params = new URLSearchParams(hash.replace(/^#/, ''));
-    const accessToken = params.get('access_token');
-    const refreshToken = params.get('refresh_token');
-
-    if (!accessToken) return null;
-
-    updateGateStatus('Verifying GitHub OAuth credentials...', false);
-
-    let profileData = null;
-
-    // 1. Attempt to fetch profile from Supabase
     try {
-      const res = await fetch(`${SUPABASE_URL}/auth/v1/user`, {
-        headers: {
-          'Authorization': `Bearer ${accessToken}`,
-          'apikey': SUPABASE_ANON_KEY
+        const params = new URLSearchParams(hash.replace(/^#/, ""));
+        const accessToken = params.get("access_token");
+        const refreshToken = params.get("refresh_token");
+
+        if (!accessToken) return null;
+
+        updateGateStatus("Verifying GitHub OAuth credentials...", false);
+
+        let profileData = null;
+
+        // 1. Attempt to fetch profile from Supabase
+        try {
+            const res = await fetch(`${SUPABASE_URL}/auth/v1/user`, {
+                headers: {
+                    Authorization: `Bearer ${accessToken}`,
+                    apikey: SUPABASE_ANON_KEY,
+                },
+            });
+
+            if (res.ok) {
+                const userData = await res.json();
+                const meta = userData.user_metadata || {};
+                const username =
+                    meta.user_name ||
+                    meta.preferred_username ||
+                    (userData.email
+                        ? userData.email.split("@")[0]
+                        : "github_student");
+                const displayName = meta.full_name || meta.name || username;
+                const avatarUrl =
+                    meta.avatar_url || `https://github.com/${username}.png`;
+
+                profileData = {
+                    id: `github:${username.toLowerCase()}`,
+                    username: username,
+                    displayName: displayName,
+                    avatarUrl: avatarUrl,
+                    bio: meta.bio || "Verified GitHub Student",
+                    profileUrl: `https://github.com/${username}`,
+                    authType: "oauth",
+                    token: accessToken,
+                    refreshToken: refreshToken || null,
+                    connectedAt: Date.now(),
+                    lastActiveAt: Date.now(),
+                };
+            }
+        } catch (fetchErr) {
+            console.warn(
+                "Could not fetch /auth/v1/user, decoding JWT payload fallback:",
+                fetchErr,
+            );
         }
-      });
 
-      if (res.ok) {
-        const userData = await res.json();
-        const meta = userData.user_metadata || {};
-        const username = meta.user_name || meta.preferred_username || (userData.email ? userData.email.split('@')[0] : 'github_student');
-        const displayName = meta.full_name || meta.name || username;
-        const avatarUrl = meta.avatar_url || `https://github.com/${username}.png`;
+        // 2. JWT Decode Fallback
+        if (!profileData) {
+            try {
+                const payloadBase64 = accessToken.split(".")[1];
+                const payloadJson = JSON.parse(
+                    atob(payloadBase64.replace(/-/g, "+").replace(/_/g, "/")),
+                );
+                const meta = payloadJson.user_metadata || {};
+                const username =
+                    meta.user_name ||
+                    meta.preferred_username ||
+                    (payloadJson.email
+                        ? payloadJson.email.split("@")[0]
+                        : "github_student");
 
-        profileData = {
-          id: `github:${username.toLowerCase()}`,
-          username: username,
-          displayName: displayName,
-          avatarUrl: avatarUrl,
-          bio: meta.bio || 'Verified GitHub Student',
-          profileUrl: `https://github.com/${username}`,
-          authType: 'oauth',
-          token: accessToken,
-          refreshToken: refreshToken || null,
-          connectedAt: Date.now(),
-          lastActiveAt: Date.now()
-        };
-      }
-    } catch (fetchErr) {
-      console.warn('Could not fetch /auth/v1/user, decoding JWT payload fallback:', fetchErr);
-    }
+                profileData = {
+                    id: `github:${username.toLowerCase()}`,
+                    username: username,
+                    displayName: meta.full_name || meta.name || username,
+                    avatarUrl:
+                        meta.avatar_url || `https://github.com/${username}.png`,
+                    bio: meta.bio || "Verified GitHub Student",
+                    profileUrl: `https://github.com/${username}`,
+                    authType: "oauth",
+                    token: accessToken,
+                    refreshToken: refreshToken || null,
+                    connectedAt: Date.now(),
+                    lastActiveAt: Date.now(),
+                };
+            } catch (jwtErr) {
+                console.error("Failed to parse access token:", jwtErr);
+            }
+        }
 
-    // 2. JWT Decode Fallback
-    if (!profileData) {
-      try {
-        const payloadBase64 = accessToken.split('.')[1];
-        const payloadJson = JSON.parse(atob(payloadBase64.replace(/-/g, '+').replace(/_/g, '/')));
-        const meta = payloadJson.user_metadata || {};
-        const username = meta.user_name || meta.preferred_username || (payloadJson.email ? payloadJson.email.split('@')[0] : 'github_student');
-        
-        profileData = {
-          id: `github:${username.toLowerCase()}`,
-          username: username,
-          displayName: meta.full_name || meta.name || username,
-          avatarUrl: meta.avatar_url || `https://github.com/${username}.png`,
-          bio: meta.bio || 'Verified GitHub Student',
-          profileUrl: `https://github.com/${username}`,
-          authType: 'oauth',
-          token: accessToken,
-          refreshToken: refreshToken || null,
-          connectedAt: Date.now(),
-          lastActiveAt: Date.now()
-        };
-      } catch (jwtErr) {
-        console.error('Failed to parse access token:', jwtErr);
-      }
-    }
+        if (!profileData) {
+            throw new Error(
+                "Unable to extract GitHub profile from OAuth token.",
+            );
+        }
 
-    if (!profileData) {
-      throw new Error('Unable to extract GitHub profile from OAuth token.');
-    }
+        // 3. Persist account
+        saveAccountProfile(profileData);
 
-    // 3. Persist account
-    saveAccountProfile(profileData);
+        // 4. Clean URL hash cleanly
+        try {
+            if (window.history && window.history.replaceState) {
+                window.history.replaceState(
+                    null,
+                    "",
+                    window.location.pathname + window.location.search,
+                );
+            }
+        } catch (e) {}
 
-    // 4. Clean URL hash cleanly
-    try {
-      if (window.history && window.history.replaceState) {
-        window.history.replaceState(null, '', window.location.pathname + window.location.search);
-      }
-    } catch (e) {}
+        // 5. Return URL check
+        const savedReturn = localStorage.getItem("reviewiii_oauth_return");
+        if (savedReturn) {
+            localStorage.removeItem("reviewiii_oauth_return");
+            if (
+                savedReturn !== window.location.href &&
+                savedReturn.startsWith(window.location.origin)
+            ) {
+                window.location.href = savedReturn;
+                return profileData;
+            }
+        }
 
-    // 5. Return URL check
-    const savedReturn = localStorage.getItem('reviewiii_oauth_return');
-    if (savedReturn) {
-      localStorage.removeItem('reviewiii_oauth_return');
-      if (savedReturn !== window.location.href && savedReturn.startsWith(window.location.origin)) {
-        window.location.href = savedReturn;
+        broadcastAuthChange(profileData);
+        ensureAuthGate();
         return profileData;
-      }
+    } catch (err) {
+        console.error("OAuth Callback Exception:", err);
+        updateGateStatus(err.message || "GitHub OAuth failed.", true);
+        return null;
     }
-
-    broadcastAuthChange(profileData);
-    ensureAuthGate();
-    return profileData;
-  } catch (err) {
-    console.error('OAuth Callback Exception:', err);
-    updateGateStatus(err.message || 'GitHub OAuth failed.', true);
-    return null;
-  }
 }
 
 /**
  * Log in / connect directly via GitHub username or Personal Access Token (PAT).
  */
-export async function loginWithGitHub(usernameInput, tokenInput = '') {
-  if (typeof window === 'undefined') return null;
+export async function loginWithGitHub(usernameInput, tokenInput = "") {
+    if (typeof window === "undefined") return null;
 
-  const username = (usernameInput || '').trim();
-  const token = (tokenInput || '').trim();
+    const username = (usernameInput || "").trim();
+    const token = (tokenInput || "").trim();
 
-  if (!username && !token) {
-    throw new Error('Please provide a GitHub username or Personal Access Token.');
-  }
-
-  let profileData = null;
-
-  try {
-    const headers = {
-      'Accept': 'application/vnd.github.v3+json'
-    };
-    if (token) {
-      headers['Authorization'] = `token ${token}`;
+    if (!username && !token) {
+        throw new Error(
+            "Please provide a GitHub username or Personal Access Token.",
+        );
     }
 
-    const apiUrl = token && !username
-      ? 'https://api.github.com/user'
-      : `https://api.github.com/users/${encodeURIComponent(username)}`;
+    let profileData = null;
 
-    const res = await fetch(apiUrl, { headers });
+    try {
+        const headers = {
+            Accept: "application/vnd.github.v3+json",
+        };
+        if (token) {
+            headers["Authorization"] = `token ${token}`;
+        }
 
-    if (res.status === 404) {
-      throw new Error(`GitHub user "${username}" was not found.`);
+        const apiUrl =
+            token && !username
+                ? "https://api.github.com/user"
+                : `https://api.github.com/users/${encodeURIComponent(username)}`;
+
+        const res = await fetch(apiUrl, { headers });
+
+        if (res.status === 404) {
+            throw new Error(`GitHub user "${username}" was not found.`);
+        }
+
+        if (res.status === 401) {
+            throw new Error("Invalid GitHub Personal Access Token.");
+        }
+
+        if (res.ok) {
+            const data = await res.json();
+            profileData = {
+                id: `github:${data.login.toLowerCase()}`,
+                username: data.login,
+                displayName: data.name || data.login,
+                avatarUrl: data.avatar_url,
+                bio: data.bio || "",
+                profileUrl: data.html_url || `https://github.com/${data.login}`,
+                publicRepos:
+                    typeof data.public_repos === "number"
+                        ? data.public_repos
+                        : 0,
+                token: token || null,
+                authType: "api",
+                connectedAt: Date.now(),
+                lastActiveAt: Date.now(),
+            };
+        } else {
+            profileData = createFallbackProfile(username, token);
+        }
+    } catch (err) {
+        if (
+            err.message &&
+            (err.message.includes("not found") ||
+                err.message.includes("Invalid GitHub"))
+        ) {
+            throw err;
+        }
+        profileData = createFallbackProfile(username, token);
     }
 
-    if (res.status === 401) {
-      throw new Error('Invalid GitHub Personal Access Token.');
-    }
-
-    if (res.ok) {
-      const data = await res.json();
-      profileData = {
-        id: `github:${data.login.toLowerCase()}`,
-        username: data.login,
-        displayName: data.name || data.login,
-        avatarUrl: data.avatar_url,
-        bio: data.bio || '',
-        profileUrl: data.html_url || `https://github.com/${data.login}`,
-        publicRepos: typeof data.public_repos === 'number' ? data.public_repos : 0,
-        token: token || null,
-        authType: 'api',
-        connectedAt: Date.now(),
-        lastActiveAt: Date.now()
-      };
-    } else {
-      profileData = createFallbackProfile(username, token);
-    }
-  } catch (err) {
-    if (err.message && (err.message.includes('not found') || err.message.includes('Invalid GitHub'))) {
-      throw err;
-    }
-    profileData = createFallbackProfile(username, token);
-  }
-
-  saveAccountProfile(profileData);
-  broadcastAuthChange(profileData);
-  ensureAuthGate();
-  return profileData;
+    saveAccountProfile(profileData);
+    broadcastAuthChange(profileData);
+    ensureAuthGate();
+    return profileData;
 }
 
 function createFallbackProfile(username, token) {
-  const safeName = username || 'User';
-  return {
-    id: `github:${safeName.toLowerCase()}`,
-    username: safeName,
-    displayName: safeName,
-    avatarUrl: `https://github.com/${safeName}.png`,
-    bio: 'GitHub Connected Student',
-    profileUrl: `https://github.com/${safeName}`,
-    publicRepos: 0,
-    token: token || null,
-    authType: 'fallback',
-    connectedAt: Date.now(),
-    lastActiveAt: Date.now()
-  };
+    const safeName = username || "User";
+    return {
+        id: `github:${safeName.toLowerCase()}`,
+        username: safeName,
+        displayName: safeName,
+        avatarUrl: `https://github.com/${safeName}.png`,
+        bio: "GitHub Connected Student",
+        profileUrl: `https://github.com/${safeName}`,
+        publicRepos: 0,
+        token: token || null,
+        authType: "fallback",
+        connectedAt: Date.now(),
+        lastActiveAt: Date.now(),
+    };
 }
 
 function saveAccountProfile(profileData) {
-  const currentAccounts = getAccounts();
-  const existingIdx = currentAccounts.findIndex((a) => a.id === profileData.id);
-  if (existingIdx >= 0) {
-    currentAccounts[existingIdx] = { ...currentAccounts[existingIdx], ...profileData };
-  } else {
-    currentAccounts.push(profileData);
-  }
+    const currentAccounts = getAccounts();
+    const existingIdx = currentAccounts.findIndex(
+        (a) => a.id === profileData.id,
+    );
+    if (existingIdx >= 0) {
+        currentAccounts[existingIdx] = {
+            ...currentAccounts[existingIdx],
+            ...profileData,
+        };
+    } else {
+        currentAccounts.push(profileData);
+    }
 
-  try {
-    localStorage.setItem(ACCOUNTS_STORAGE_KEY, JSON.stringify(currentAccounts));
-    localStorage.setItem(ACTIVE_USER_STORAGE_KEY, profileData.id);
-  } catch (err) {
-    console.error('Failed to save account:', err);
-  }
+    try {
+        localStorage.setItem(
+            ACCOUNTS_STORAGE_KEY,
+            JSON.stringify(currentAccounts),
+        );
+        localStorage.setItem(ACTIVE_USER_STORAGE_KEY, profileData.id);
+    } catch (err) {
+        console.error("Failed to save account:", err);
+    }
 }
 
 /**
  * Switch to another authenticated GitHub account.
  */
 export function switchAccount(userId) {
-  if (typeof window === 'undefined') return;
-  if (!userId || userId === 'guest') return;
+    if (typeof window === "undefined") return;
+    if (!userId || userId === "guest") return;
 
-  const accounts = getAccounts();
-  const target = accounts.find((a) => a.id === userId);
-  if (target) {
-    target.lastActiveAt = Date.now();
-    try {
-      localStorage.setItem(ACCOUNTS_STORAGE_KEY, JSON.stringify(accounts));
-      localStorage.setItem(ACTIVE_USER_STORAGE_KEY, target.id);
-    } catch (e) {}
-    broadcastAuthChange(target);
-    ensureAuthGate();
-  }
+    const accounts = getAccounts();
+    const target = accounts.find((a) => a.id === userId);
+    if (target) {
+        target.lastActiveAt = Date.now();
+        try {
+            localStorage.setItem(
+                ACCOUNTS_STORAGE_KEY,
+                JSON.stringify(accounts),
+            );
+            localStorage.setItem(ACTIVE_USER_STORAGE_KEY, target.id);
+        } catch (e) {}
+        broadcastAuthChange(target);
+        ensureAuthGate();
+    }
 }
 
 /**
  * Remove an account from this device. If active, switches to another or displays gate.
  */
 export function removeAccount(userId) {
-  if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
-  let accounts = getAccounts();
-  accounts = accounts.filter((a) => a.id !== userId);
+    let accounts = getAccounts();
+    accounts = accounts.filter((a) => a.id !== userId);
 
-  try {
-    localStorage.setItem(ACCOUNTS_STORAGE_KEY, JSON.stringify(accounts));
-  } catch (e) {}
+    try {
+        localStorage.setItem(ACCOUNTS_STORAGE_KEY, JSON.stringify(accounts));
+    } catch (e) {}
 
-  if (getActiveUserId() === userId) {
-    if (accounts.length > 0) {
-      switchAccount(accounts[0].id);
+    if (getActiveUserId() === userId) {
+        if (accounts.length > 0) {
+            switchAccount(accounts[0].id);
+        } else {
+            try {
+                localStorage.removeItem(ACTIVE_USER_STORAGE_KEY);
+            } catch (e) {}
+            broadcastAuthChange(null);
+            ensureAuthGate();
+        }
     } else {
-      try {
-        localStorage.removeItem(ACTIVE_USER_STORAGE_KEY);
-      } catch (e) {}
-      broadcastAuthChange(null);
-      ensureAuthGate();
+        broadcastAuthChange(getActiveAccount());
     }
-  } else {
-    broadcastAuthChange(getActiveAccount());
-  }
 }
 
 /**
  * Sign out completely and require sign-in to continue.
  */
 export function logout() {
-  if (typeof window === 'undefined') return;
-  try {
-    localStorage.removeItem(ACTIVE_USER_STORAGE_KEY);
-  } catch (e) {}
-  broadcastAuthChange(null);
-  ensureAuthGate();
+    if (typeof window === "undefined") return;
+    try {
+        localStorage.removeItem(ACTIVE_USER_STORAGE_KEY);
+    } catch (e) {}
+    broadcastAuthChange(null);
+    ensureAuthGate();
 }
 
 /**
  * Subscribe to authentication updates.
  */
 export function subscribeAuth(callback) {
-  listeners.add(callback);
-  return () => listeners.delete(callback);
+    listeners.add(callback);
+    return () => listeners.delete(callback);
 }
 
 // ============================================================================
@@ -439,12 +492,12 @@ export function subscribeAuth(callback) {
 // ============================================================================
 
 function injectGateStyles() {
-  if (typeof document === 'undefined') return;
-  if (document.getElementById('reviewiii-auth-styles')) return;
+    if (typeof document === "undefined") return;
+    if (document.getElementById("reviewiii-auth-styles")) return;
 
-  const style = document.createElement('style');
-  style.id = 'reviewiii-auth-styles';
-  style.textContent = `
+    const style = document.createElement("style");
+    style.id = "reviewiii-auth-styles";
+    style.textContent = `
     body.auth-locked > :not(#reviewiii-auth-gate) {
       filter: blur(16px) grayscale(0.6) !important;
       pointer-events: none !important;
@@ -703,52 +756,52 @@ function injectGateStyles() {
       color: #999999;
     }
   `;
-  document.head.appendChild(style);
+    document.head.appendChild(style);
 }
 
 function updateGateStatus(msg, isError = false) {
-  const el = document.getElementById('reviewiii-gate-status');
-  if (!el) return;
-  if (!msg) {
-    el.style.display = 'none';
-    el.textContent = '';
-    return;
-  }
-  el.textContent = msg;
-  el.className = `reviewiii-gate-status ${isError ? 'error' : ''}`;
-  el.style.display = 'block';
+    const el = document.getElementById("reviewiii-gate-status");
+    if (!el) return;
+    if (!msg) {
+        el.style.display = "none";
+        el.textContent = "";
+        return;
+    }
+    el.textContent = msg;
+    el.className = `reviewiii-gate-status ${isError ? "error" : ""}`;
+    el.style.display = "block";
 }
 
 /**
  * Ensures the Authentication Gate is displayed if unauthenticated, or hidden if authenticated.
  */
 export function ensureAuthGate() {
-  if (typeof document === 'undefined') return;
-  injectGateStyles();
+    if (typeof document === "undefined") return;
+    injectGateStyles();
 
-  const authenticated = isAuthenticated();
-  let gateEl = document.getElementById('reviewiii-auth-gate');
+    const authenticated = isAuthenticated();
+    let gateEl = document.getElementById("reviewiii-auth-gate");
 
-  if (authenticated) {
-    document.body.classList.remove('auth-locked');
-    if (gateEl) {
-      gateEl.remove();
+    if (authenticated) {
+        document.body.classList.remove("auth-locked");
+        if (gateEl) {
+            gateEl.remove();
+        }
+        return;
     }
-    return;
-  }
 
-  // User is not authenticated -> lock page
-  document.body.classList.add('auth-locked');
+    // User is not authenticated -> lock page
+    document.body.classList.add("auth-locked");
 
-  if (gateEl) {
-    gateEl.style.display = 'flex';
-    return;
-  }
+    if (gateEl) {
+        gateEl.style.display = "flex";
+        return;
+    }
 
-  // Create and inject Auth Gate DOM
-  gateEl = document.createElement('div');
-  gateEl.id = 'reviewiii-auth-gate';
-  gateEl.innerHTML = `
+    // Create and inject Auth Gate DOM
+    gateEl = document.createElement("div");
+    gateEl.id = "reviewiii-auth-gate";
+    gateEl.innerHTML = `
     <div class="reviewiii-gate-card">
       <div class="reviewiii-gate-badge">
         <span>✦</span>
@@ -800,90 +853,93 @@ export function ensureAuthGate() {
     </div>
   `;
 
-  document.body.appendChild(gateEl);
+    document.body.appendChild(gateEl);
 
-  // Wire up OAuth button
-  const oauthBtn = document.getElementById('reviewiii-gate-oauth-btn');
-  oauthBtn?.addEventListener('click', () => {
-    updateGateStatus('Redirecting to GitHub OAuth...', false);
-    startGitHubOAuth();
-  });
+    // Wire up OAuth button
+    const oauthBtn = document.getElementById("reviewiii-gate-oauth-btn");
+    oauthBtn?.addEventListener("click", () => {
+        updateGateStatus("Redirecting to GitHub OAuth...", false);
+        startGitHubOAuth();
+    });
 
-  // Wire up PAT toggle
-  const patToggle = document.getElementById('reviewiii-gate-pat-toggle');
-  const patWrap = document.getElementById('reviewiii-gate-pat-wrap');
-  patToggle?.addEventListener('click', () => {
-    if (!patWrap) return;
-    const isHidden = patWrap.style.display === 'none';
-    patWrap.style.display = isHidden ? 'block' : 'none';
-    patToggle.textContent = isHidden ? 'Hide PAT Field' : 'Use PAT Token';
-  });
+    // Wire up PAT toggle
+    const patToggle = document.getElementById("reviewiii-gate-pat-toggle");
+    const patWrap = document.getElementById("reviewiii-gate-pat-wrap");
+    patToggle?.addEventListener("click", () => {
+        if (!patWrap) return;
+        const isHidden = patWrap.style.display === "none";
+        patWrap.style.display = isHidden ? "block" : "none";
+        patToggle.textContent = isHidden ? "Hide PAT Field" : "Use PAT Token";
+    });
 
-  // Wire up Form Submission
-  const form = document.getElementById('reviewiii-gate-form');
-  const userInput = document.getElementById('reviewiii-gate-user');
-  const patInput = document.getElementById('reviewiii-gate-pat');
-  const submitBtn = document.getElementById('reviewiii-gate-submit');
+    // Wire up Form Submission
+    const form = document.getElementById("reviewiii-gate-form");
+    const userInput = document.getElementById("reviewiii-gate-user");
+    const patInput = document.getElementById("reviewiii-gate-pat");
+    const submitBtn = document.getElementById("reviewiii-gate-submit");
 
-  form?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const u = userInput ? userInput.value.trim() : '';
-    const p = patInput ? patInput.value.trim() : '';
+    form?.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const u = userInput ? userInput.value.trim() : "";
+        const p = patInput ? patInput.value.trim() : "";
 
-    if (!u && !p) return;
+        if (!u && !p) return;
 
-    if (submitBtn) {
-      submitBtn.setAttribute('disabled', 'true');
-      submitBtn.textContent = 'Verifying...';
-    }
-    updateGateStatus('Verifying GitHub account...', false);
+        if (submitBtn) {
+            submitBtn.setAttribute("disabled", "true");
+            submitBtn.textContent = "Verifying...";
+        }
+        updateGateStatus("Verifying GitHub account...", false);
 
-    try {
-      await loginWithGitHub(u, p);
-      updateGateStatus('Authenticated! Loading workspace...', false);
-    } catch (err) {
-      updateGateStatus(err.message || 'Failed to authenticate.', true);
-      if (submitBtn) {
-        submitBtn.removeAttribute('disabled');
-        submitBtn.textContent = 'Sign In →';
-      }
-    }
-  });
+        try {
+            await loginWithGitHub(u, p);
+            updateGateStatus("Authenticated! Loading workspace...", false);
+        } catch (err) {
+            updateGateStatus(err.message || "Failed to authenticate.", true);
+            if (submitBtn) {
+                submitBtn.removeAttribute("disabled");
+                submitBtn.textContent = "Sign In →";
+            }
+        }
+    });
 }
 
 // Global attachment for browser scripts
-if (typeof window !== 'undefined') {
-  const g = window;
-  g.ReviewIIIAuth = {
-    SUPABASE_URL,
-    SUPABASE_ANON_KEY,
-    ACCOUNTS_STORAGE_KEY,
-    ACTIVE_USER_STORAGE_KEY,
-    getActiveUserId,
-    getActiveAccount,
-    getAccounts,
-    getStorageKey,
-    isAuthenticated,
-    startGitHubOAuth,
-    handleOAuthCallback,
-    loginWithGitHub,
-    switchAccount,
-    removeAccount,
-    logout,
-    subscribeAuth,
-    ensureAuthGate
-  };
+if (typeof window !== "undefined") {
+    const g = window;
+    g.ReviewIIIAuth = {
+        SUPABASE_URL,
+        SUPABASE_ANON_KEY,
+        ACCOUNTS_STORAGE_KEY,
+        ACTIVE_USER_STORAGE_KEY,
+        getActiveUserId,
+        getActiveAccount,
+        getAccounts,
+        getStorageKey,
+        isAuthenticated,
+        startGitHubOAuth,
+        handleOAuthCallback,
+        loginWithGitHub,
+        switchAccount,
+        removeAccount,
+        logout,
+        subscribeAuth,
+        ensureAuthGate,
+    };
 
-  // Self-executing initialization on script load
-  if (window.location.hash && window.location.hash.includes('access_token=')) {
-    handleOAuthCallback();
-  } else {
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', () => {
-        ensureAuthGate();
-      });
+    // Self-executing initialization on script load
+    if (
+        window.location.hash &&
+        window.location.hash.includes("access_token=")
+    ) {
+        handleOAuthCallback();
     } else {
-      ensureAuthGate();
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", () => {
+                ensureAuthGate();
+            });
+        } else {
+            ensureAuthGate();
+        }
     }
-  }
 }

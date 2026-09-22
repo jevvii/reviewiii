@@ -5,9 +5,9 @@
 (function (global) {
   'use strict';
 
-  var SUPABASE_URL = 'https://uhaomywpyojatwysezld.supabase.co';
+  var SUPABASE_URL = 'https://uenxceusckmokmqhrkby.supabase.co';
   // Supabase anon key (public by design — safe for client-side use)
-  var SUPABASE_ANON_KEY = atob('c2Jfc2VjcmV0X0V1UmRxNFM5Nko0cUlTWFYtQnVHX2dfX044eUstaw==');
+  var SUPABASE_ANON_KEY = 'sb_publishable_OCUPoA1pEFODxzOUoTD8aA_HevquQfY';
   var ACCOUNTS_STORAGE_KEY = 'reviewiii_accounts:v1';
   var ACTIVE_USER_STORAGE_KEY = 'reviewiii_active_user:v1';
   var AUTH_CHANNEL_NAME = 'reviewiii_auth_channel';
