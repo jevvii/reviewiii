@@ -71,6 +71,22 @@ export const SUBJECTS: Subject[] = [
           json: 'downloads/netc311/Module_2_NotebookLM_Quiz.json',
           md: 'downloads/netc311/Module_2_NotebookLM_Quiz.md'
         }
+      },
+      {
+        id: 'netc311-m3',
+        number: 3,
+        title: 'Protocols & Models',
+        description: 'Network communication rules, protocol suites (OSI vs TCP/IP), standards organizations (IEEE, IETF, ISO), data encapsulation & PDUs, and Layer 2 MAC vs Layer 3 IP data access.',
+        itemCount: 95,
+        topics: ['Communication Rules', 'Protocol Suites', 'Standards Bodies', 'OSI vs TCP/IP', 'Data Encapsulation & Access'],
+        quizPath: 'quizzes/netc311/module3.html',
+        notebookLmUrl: 'https://notebooklm.google.com/notebook/a4a23950-074d-4120-bbb5-9a482941d5ba',
+        downloads: {
+          pdf: 'downloads/netc311/Module 3 - Protocols and Models - Questionnaire.pdf',
+          docx: 'downloads/netc311/Module 3 - Protocols and Models - Questionnaire.docx',
+          json: 'downloads/netc311/Module_3_NotebookLM_Quiz.json',
+          md: 'downloads/netc311/Module_3_NotebookLM_Quiz.md'
+        }
       }
     ]
   },

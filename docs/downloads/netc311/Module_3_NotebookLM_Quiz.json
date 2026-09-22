@@ -1,0 +1,1242 @@
+{
+  "title": "Module 3: Protocols and Models",
+  "subject": "NETC311",
+  "total_questions": 95,
+  "questions": [
+    {
+      "number": 1,
+      "question": "In any network communication, the sending device where a message originates is known as the ____.",
+      "options": [
+        "channel (media)",
+        "destination (receiver)",
+        "source (sender)",
+        "default gateway"
+      ],
+      "answer": "source (sender)",
+      "topic": "3.1 The Rules - Fundamentals",
+      "explanation": "All communication begins with a source (sender) that creates and sends the message."
+    },
+    {
+      "number": 2,
+      "question": "In network communications, the receiving device that accepts and decodes the message is called the ____.",
+      "options": [
+        "repeater",
+        "destination (receiver)",
+        "channel (media)",
+        "source (sender)"
+      ],
+      "answer": "destination (receiver)",
+      "topic": "3.1 The Rules - Fundamentals",
+      "explanation": "The destination (receiver) is the target device that receives and interprets the transmitted message."
+    },
+    {
+      "number": 3,
+      "question": "The physical medium or path providing the transmission pathway over which messages travel from sender to receiver is called the ____.",
+      "options": [
+        "protocol suite",
+        "frame check sequence",
+        "channel (media)",
+        "data link layer"
+      ],
+      "answer": "channel (media)",
+      "topic": "3.1 The Rules - Fundamentals",
+      "explanation": "The channel consists of the media (copper wires, optical fibers, or wireless radio frequencies) that provides the physical path for communication."
+    },
+    {
+      "number": 4,
+      "question": "The three fundamental elements present in every network communication are the source, destination, and ____.",
+      "options": [
+        "channel (media)",
+        "firewall",
+        "default gateway",
+        "router"
+      ],
+      "answer": "channel (media)",
+      "topic": "3.1 The Rules - Fundamentals",
+      "explanation": "Every communication requires three elements: a source (sender), a destination (receiver), and a channel (media)."
+    },
+    {
+      "number": 5,
+      "question": "The established rules and agreements that govern how devices communicate across a network are known as ____.",
+      "options": [
+        "latencies",
+        "topologies",
+        "protocols",
+        "bandwidths"
+      ],
+      "answer": "protocols",
+      "topic": "3.1 The Rules - Protocols",
+      "explanation": "Protocols are the formal sets of rules and standards that govern data communications."
+    },
+    {
+      "number": 6,
+      "question": "A human or computer conversation cannot proceed effectively without an identified sender, receiver, common language, speed/timing, and confirmation or ____ requirements.",
+      "options": [
+        "multiplexing",
+        "segmentation",
+        "acknowledgment",
+        "encryption"
+      ],
+      "answer": "acknowledgment",
+      "topic": "3.1 The Rules - Rule Establishment",
+      "explanation": "Effective communication requires rule establishment including acknowledgment (confirmation that messages were received)."
+    },
+    {
+      "number": 7,
+      "question": "The process of converting human-readable data or information into another acceptable electronic or optical form for transmission across a medium is called ____.",
+      "options": [
+        "routing",
+        "decoding",
+        "de-encapsulation",
+        "encoding"
+      ],
+      "answer": "encoding",
+      "topic": "3.1 The Rules - Message Encoding",
+      "explanation": "Encoding converts data into an acceptable form for transmission over the physical channel."
+    },
+    {
+      "number": 8,
+      "question": "The process where a receiving device reverses the encoding process to convert signals back into readable information is called ____.",
+      "options": [
+        "decoding",
+        "segmentation",
+        "encapsulation",
+        "multiplexing"
+      ],
+      "answer": "decoding",
+      "topic": "3.1 The Rules - Message Encoding",
+      "explanation": "Decoding reverses encoding at the destination host to reconstruct the original message."
+    },
+    {
+      "number": 9,
+      "question": "When messages are sent across a network medium, they are broken down and transmitted as patterns of electrical impulses, sound waves, or light representing ____.",
+      "options": [
+        "frames",
+        "bits",
+        "packets",
+        "segments"
+      ],
+      "answer": "bits",
+      "topic": "3.1 The Rules - Message Size",
+      "explanation": "Messages on the network are ultimately converted into bits and encoded into physical signals (light, electricity, or radio waves)."
+    },
+    {
+      "number": 10,
+      "question": "The timing mechanism that manages the rate of data transmission to prevent a fast sender from overwhelming a slow receiver is called ____.",
+      "options": [
+        "response timeout",
+        "access method",
+        "flow control",
+        "carrier sensing"
+      ],
+      "answer": "flow control",
+      "topic": "3.1 The Rules - Message Timing",
+      "explanation": "Flow control manages transmission rate, defining how much information can be sent and at what speed."
+    },
+    {
+      "number": 11,
+      "question": "The timing rule that dictates how long a transmitting device waits for an acknowledgment or reply before assuming the message was lost is called the ____.",
+      "options": [
+        "propagation delay",
+        "flow control",
+        "response timeout",
+        "jitter buffer"
+      ],
+      "answer": "response timeout",
+      "topic": "3.1 The Rules - Message Timing",
+      "explanation": "Response timeout manages how long a sending device waits for a reply before retransmitting or aborting."
+    },
+    {
+      "number": 12,
+      "question": "The rule that determines when a device is permitted to send a message across shared media to prevent transmission conflicts is the ____.",
+      "options": [
+        "session timeout",
+        "flow control",
+        "modulation method",
+        "access method"
+      ],
+      "answer": "access method",
+      "topic": "3.1 The Rules - Message Timing",
+      "explanation": "The access method determines when a device can transmit onto shared network media."
+    },
+    {
+      "number": 13,
+      "question": "A condition where two or more devices simultaneously transmit data signals across a shared medium causing signals to corrupt each other is called a ____.",
+      "options": [
+        "crossover",
+        "collision",
+        "broadcast storm",
+        "deadlock"
+      ],
+      "answer": "collision",
+      "topic": "3.1 The Rules - Message Timing",
+      "explanation": "A collision occurs when multiple devices transmit traffic at the exact same moment on a shared channel, corrupting both messages."
+    },
+    {
+      "number": 14,
+      "question": "The message delivery method where information is transmitted from a single source host directly to a single destination host is called ____.",
+      "options": [
+        "multicast",
+        "broadcast",
+        "unicast",
+        "anycast"
+      ],
+      "answer": "unicast",
+      "topic": "3.1 The Rules - Delivery Options",
+      "explanation": "Unicast refers to one-to-one communication between a single sender and single receiver."
+    },
+    {
+      "number": 15,
+      "question": "The message delivery option where a message is sent from one source to a selected group of destination hosts that subscribed to receive it is called ____.",
+      "options": [
+        "anycast",
+        "multicast",
+        "broadcast",
+        "unicast"
+      ],
+      "answer": "multicast",
+      "topic": "3.1 The Rules - Delivery Options",
+      "explanation": "Multicast is one-to-many communication, delivering to a specific subset of hosts."
+    },
+    {
+      "number": 16,
+      "question": "The message delivery method in IPv4 where a packet is sent from a single sender to all hosts on the local network segment is called ____.",
+      "options": [
+        "multicast",
+        "broadcast",
+        "unicast",
+        "anycast"
+      ],
+      "answer": "broadcast",
+      "topic": "3.1 The Rules - Delivery Options",
+      "explanation": "Broadcast is one-to-all communication on a local network segment."
+    },
+    {
+      "number": 17,
+      "question": "Unlike IPv4, the IPv6 protocol does not implement broadcast messaging; instead, it uses multicast and a special one-to-nearest delivery option called ____.",
+      "options": [
+        "unicast only",
+        "geocast",
+        "simulcast",
+        "anycast"
+      ],
+      "answer": "anycast",
+      "topic": "3.1 The Rules - Delivery Options",
+      "explanation": "IPv6 eliminated traditional broadcast in favor of multicast and anycast (one-to-nearest)."
+    },
+    {
+      "number": 18,
+      "question": "In Cisco network documentation and topology diagrams, client computers, servers, and intermediate devices are frequently represented using a generic circular symbol called the ____.",
+      "options": [
+        "bus bar",
+        "bridge glyph",
+        "node icon",
+        "cloud token"
+      ],
+      "answer": "node icon",
+      "topic": "3.1 The Rules - Node Icon",
+      "explanation": "Network diagrams frequently use a circular node icon to represent any network-connected device."
+    },
+    {
+      "number": 19,
+      "question": "Network protocols can be implemented in device hardware, device software, or ____.",
+      "options": [
+        "firmware only",
+        "cloud storage only",
+        "both hardware and software",
+        "virtual machines only"
+      ],
+      "answer": "both hardware and software",
+      "topic": "3.2 Protocols - Overview",
+      "explanation": "Protocols can be implemented in software (like OS drivers and applications), hardware (like NIC chipsets), or both."
+    },
+    {
+      "number": 20,
+      "question": "The protocol category responsible for enabling two or more devices to exchange data packets over one or more interconnected networks is ____.",
+      "options": [
+        "network communications",
+        "service discovery",
+        "routing",
+        "network security"
+      ],
+      "answer": "network communications",
+      "topic": "3.2 Protocols - Protocol Types",
+      "explanation": "Network communications protocols (e.g., IP, TCP, HTTP) enable devices to communicate across networks."
+    },
+    {
+      "number": 21,
+      "question": "The protocol category that provides data encryption, user authentication, and data integrity verification is ____.",
+      "options": [
+        "service discovery",
+        "network security",
+        "routing",
+        "multiplexing"
+      ],
+      "answer": "network security",
+      "topic": "3.2 Protocols - Protocol Types",
+      "explanation": "Network security protocols (like SSH, TLS/SSL, IPsec) provide confidentiality, integrity, and authentication."
+    },
+    {
+      "number": 22,
+      "question": "The protocol type that enables routers to exchange network path information, compare metrics, and select the best path to destination networks is ____.",
+      "options": [
+        "error detection",
+        "flow control",
+        "service discovery",
+        "routing"
+      ],
+      "answer": "routing",
+      "topic": "3.2 Protocols - Protocol Types",
+      "explanation": "Routing protocols (e.g., OSPF, EIGRP, BGP) discover routes and calculate optimal forwarding paths."
+    },
+    {
+      "number": 23,
+      "question": "The protocol category used for the automatic detection of devices, network services, and resources on a local network without manual configuration is ____.",
+      "options": [
+        "service discovery",
+        "congestion control",
+        "routing",
+        "network security"
+      ],
+      "answer": "service discovery",
+      "topic": "3.2 Protocols - Protocol Types",
+      "explanation": "Service discovery protocols (e.g., DNS-SD, DHCP, mDNS) automatically identify available network services."
+    },
+    {
+      "number": 24,
+      "question": "The network protocol function that uniquely identifies the sending device and receiving device on a network is ____.",
+      "options": [
+        "flow control",
+        "reliability",
+        "addressing",
+        "sequencing"
+      ],
+      "answer": "addressing",
+      "topic": "3.2 Protocols - Functions",
+      "explanation": "Addressing provides source and destination identification (such as MAC addresses and IP addresses)."
+    },
+    {
+      "number": 25,
+      "question": "The protocol function that guarantees the delivery of data and provides retransmission if packets are lost during transit is ____.",
+      "options": [
+        "reliability",
+        "carrier sense",
+        "service discovery",
+        "best-effort delivery"
+      ],
+      "answer": "reliability",
+      "topic": "3.2 Protocols - Functions",
+      "explanation": "Reliability services (such as TCP acknowledgments and retransmissions) guarantee that sent data arrives intact."
+    },
+    {
+      "number": 26,
+      "question": "The protocol function that numbers or uniquely labels each transmitted data piece so that they can be reassembled in the correct order is called ____.",
+      "options": [
+        "multiplexing",
+        "sequencing",
+        "addressing",
+        "error detection"
+      ],
+      "answer": "sequencing",
+      "topic": "3.2 Protocols - Functions",
+      "explanation": "Sequencing assigns sequence numbers to segments so the receiver can reassemble them in the original sequence."
+    },
+    {
+      "number": 27,
+      "question": "The protocol function that determines whether transmitted bits became corrupted or altered during transmission across the physical media is ____.",
+      "options": [
+        "access control",
+        "flow control",
+        "error simulation",
+        "error detection"
+      ],
+      "answer": "error detection",
+      "topic": "3.2 Protocols - Functions",
+      "explanation": "Error detection (such as checksums or Frame Check Sequence / CRC) detects damaged bits during transmission."
+    },
+    {
+      "number": 28,
+      "question": "The protocol function that manages direct process-to-process communication between software applications running on different hosts is the ____.",
+      "options": [
+        "routing table",
+        "channel arbitration",
+        "flow control",
+        "application interface"
+      ],
+      "answer": "application interface",
+      "topic": "3.2 Protocols - Functions",
+      "explanation": "The application interface function enables inter-process communication between host applications (e.g., port numbers and APIs)."
+    },
+    {
+      "number": 29,
+      "question": "The application layer protocol that governs how web browsers (clients) request web pages from web servers is ____.",
+      "options": [
+        "SNMP",
+        "HTTP (Hypertext Transfer Protocol)",
+        "FTP",
+        "SMTP"
+      ],
+      "answer": "HTTP (Hypertext Transfer Protocol)",
+      "topic": "3.2 Protocols - Interaction",
+      "explanation": "HTTP defines the format and interactions between web clients and web servers."
+    },
+    {
+      "number": 30,
+      "question": "In web traffic, the transport layer protocol that manages individual conversations, divides data into segments, and guarantees reliable delivery is ____.",
+      "options": [
+        "TCP (Transmission Control Protocol)",
+        "UDP",
+        "IP",
+        "ICMP"
+      ],
+      "answer": "TCP (Transmission Control Protocol)",
+      "topic": "3.2 Protocols - Interaction",
+      "explanation": "TCP provides connection-oriented, reliable transmission, flow control, and segment sequencing."
+    },
+    {
+      "number": 31,
+      "question": "The internet layer protocol that encapsulates segments into packets and delivers them globally across intermediate routers from source to destination is ____.",
+      "options": [
+        "TCP",
+        "Ethernet",
+        "IP (Internet Protocol)",
+        "ARP"
+      ],
+      "answer": "IP (Internet Protocol)",
+      "topic": "3.2 Protocols - Interaction",
+      "explanation": "IP handles logical addressing and delivers packets across interconnected networks."
+    },
+    {
+      "number": 32,
+      "question": "The network access layer protocol standard that delivers data frames from one network interface card (NIC) to another NIC on the same local Ethernet LAN is ____.",
+      "options": [
+        "IP",
+        "TCP",
+        "HTTP",
+        "Ethernet"
+      ],
+      "answer": "Ethernet",
+      "topic": "3.2 Protocols - Interaction",
+      "explanation": "Ethernet governs local physical transmission and frame delivery between NICs on a LAN."
+    },
+    {
+      "number": 33,
+      "question": "A group of inter-related protocols that work cooperatively across different layers to perform network communication functions is called a ____.",
+      "options": [
+        "protocol suite",
+        "domain namespace",
+        "routing table",
+        "broadcast domain"
+      ],
+      "answer": "protocol suite",
+      "topic": "3.3 Protocol Suites - Overview",
+      "explanation": "A protocol suite is an organized collection of complementary protocols that solve communication problems together."
+    },
+    {
+      "number": 34,
+      "question": "In a layered protocol suite, the lower layers are primarily responsible for moving data across the physical media and providing services to the ____.",
+      "options": [
+        "upper layers",
+        "BIOS only",
+        "adjacent routers only",
+        "firmware chip only"
+      ],
+      "answer": "upper layers",
+      "topic": "3.3 Protocol Suites - Layer Architecture",
+      "explanation": "Lower layers handle physical transmission and data delivery, offering services to the upper layers."
+    },
+    {
+      "number": 35,
+      "question": "The universal, open-standard protocol suite that powers the modern internet and enterprise networks is the ____ suite.",
+      "options": [
+        "Novell NetWare",
+        "TCP/IP",
+        "AppleTalk",
+        "Decnet"
+      ],
+      "answer": "TCP/IP",
+      "topic": "3.3 Protocol Suites - Evolution",
+      "explanation": "The TCP/IP suite is the dominant protocol suite used across the global Internet and local networks."
+    },
+    {
+      "number": 36,
+      "question": "The TCP/IP protocol suite is maintained, updated, and standardized by the ____.",
+      "options": [
+        "EIA",
+        "ITU-T",
+        "IEEE",
+        "IETF (Internet Engineering Task Force)"
+      ],
+      "answer": "IETF (Internet Engineering Task Force)",
+      "topic": "3.3 Protocol Suites - Evolution",
+      "explanation": "The IETF manages and standardizes the protocols of the TCP/IP suite through RFC documents."
+    },
+    {
+      "number": 37,
+      "question": "The historical proprietary protocol suite developed and released by Apple Inc. for Macintosh local networking in the 1980s was ____.",
+      "options": [
+        "OSI Suite",
+        "AppleTalk",
+        "DECnet",
+        "Novell NetWare"
+      ],
+      "answer": "AppleTalk",
+      "topic": "3.3 Protocol Suites - Evolution",
+      "explanation": "AppleTalk was Apple's proprietary suite before adopting the standard TCP/IP model."
+    },
+    {
+      "number": 38,
+      "question": "The historical proprietary protocol suite that included IPX/SPX and was widely used in early enterprise local area networks was ____.",
+      "options": [
+        "Novell NetWare",
+        "SNA",
+        "AppleTalk",
+        "Ethernet II"
+      ],
+      "answer": "Novell NetWare",
+      "topic": "3.3 Protocol Suites - Evolution",
+      "explanation": "Novell NetWare used IPX/SPX as its proprietary protocol stack before modern TCP/IP dominance."
+    },
+    {
+      "number": 39,
+      "question": "A protocol specification that is published without proprietary vendor restrictions, freely available to the public, and usable by anyone is called an ____.",
+      "options": [
+        "open standard",
+        "commercial license",
+        "closed proprietary system",
+        "trade secret"
+      ],
+      "answer": "open standard",
+      "topic": "3.3 Protocol Suites - Open Standards",
+      "explanation": "Open standards ensure vendor neutrality and allow any company or developer to implement the technology."
+    },
+    {
+      "number": 40,
+      "question": "A protocol suite that is endorsed by the networking industry and ratified by an official standards organization to guarantee multi-vendor interoperability is termed ____.",
+      "options": [
+        "ad-hoc",
+        "vendor-locked",
+        "proprietary",
+        "standards-based"
+      ],
+      "answer": "standards-based",
+      "topic": "3.3 Protocol Suites - Standards",
+      "explanation": "Standards-based protocols have been approved by standards organizations to ensure interoperability between diverse manufacturers."
+    },
+    {
+      "number": 41,
+      "question": "The two most prevalent Network Access layer local area network (LAN) technologies in the TCP/IP model are Ethernet and ____.",
+      "options": [
+        "WLAN (Wireless LAN)",
+        "Token Ring",
+        "ATM",
+        "FDDI"
+      ],
+      "answer": "WLAN (Wireless LAN)",
+      "topic": "3.3 Protocol Suites - TCP/IP Examples",
+      "explanation": "Ethernet (wired) and WLAN (wireless, IEEE 802.11) are the two primary network access LAN technologies."
+    },
+    {
+      "number": 42,
+      "question": "Standards organizations that develop network protocols must be non-profit, open to the public, and ____.",
+      "options": [
+        "vendor-neutral",
+        "privately commercial",
+        "vendor-specific",
+        "government-operated only"
+      ],
+      "answer": "vendor-neutral",
+      "topic": "3.4 Standards Organizations - Open Standards",
+      "explanation": "Standards organizations remain vendor-neutral so no single corporation controls fundamental network standards."
+    },
+    {
+      "number": 43,
+      "question": "Open networking standards encourage three major market benefits: interoperability, innovation, and ____.",
+      "options": [
+        "monopoly",
+        "vendor lock-in",
+        "planned obsolescence",
+        "competition"
+      ],
+      "answer": "competition",
+      "topic": "3.4 Standards Organizations - Benefits",
+      "explanation": "Open standards encourage interoperability, market competition, and rapid innovation."
+    },
+    {
+      "number": 44,
+      "question": "The non-profit organization dedicated to ensuring the open development, evolution, and ethical use of the Internet worldwide is the ____.",
+      "options": [
+        "ISOC (Internet Society)",
+        "IAB",
+        "ICANN",
+        "IANA"
+      ],
+      "answer": "ISOC (Internet Society)",
+      "topic": "3.4 Standards Organizations - Internet Bodies",
+      "explanation": "The Internet Society (ISOC) promotes open development and global evolution of the Internet."
+    },
+    {
+      "number": 45,
+      "question": "The committee responsible for overall architectural oversight, technical management, and appeal procedures for Internet standards is the ____.",
+      "options": [
+        "IETF",
+        "IEEE",
+        "IAB (Internet Architecture Board)",
+        "IRTF"
+      ],
+      "answer": "IAB (Internet Architecture Board)",
+      "topic": "3.4 Standards Organizations - Internet Bodies",
+      "explanation": "The IAB manages internet architecture, advises ISOC, and supervises IETF standards processes."
+    },
+    {
+      "number": 46,
+      "question": "The working group organization that develops, tests, and maintains internet standards and TCP/IP protocols via RFC documents is the ____.",
+      "options": [
+        "IRTF",
+        "ITU-T",
+        "IETF (Internet Engineering Task Force)",
+        "ICANN"
+      ],
+      "answer": "IETF (Internet Engineering Task Force)",
+      "topic": "3.4 Standards Organizations - Internet Bodies",
+      "explanation": "The IETF produces RFC (Request for Comments) documents that define Internet and TCP/IP standards."
+    },
+    {
+      "number": 47,
+      "question": "The organization that focuses on long-term theoretical research topics related to the Internet, TCP/IP, and future protocol architectures is the ____.",
+      "options": [
+        "IRTF (Internet Research Task Force)",
+        "ISOC",
+        "IETF",
+        "EIA"
+      ],
+      "answer": "IRTF (Internet Research Task Force)",
+      "topic": "3.4 Standards Organizations - Internet Bodies",
+      "explanation": "The IRTF focuses on long-term research groups, whereas the IETF focuses on short-to-medium term engineering."
+    },
+    {
+      "number": 48,
+      "question": "The international non-profit entity that coordinates global IP address space allocation, top-level domain (TLD) names, and protocol identifiers is ____.",
+      "options": [
+        "ICANN (Internet Corporation for Assigned Names and Numbers)",
+        "ISOC",
+        "IETF",
+        "IANA"
+      ],
+      "answer": "ICANN (Internet Corporation for Assigned Names and Numbers)",
+      "topic": "3.4 Standards Organizations - IP Coordination",
+      "explanation": "ICANN coordinates IP address allocation, DNS domain management, and protocol parameters globally."
+    },
+    {
+      "number": 49,
+      "question": "The operational department overseen by ICANN that directly manages the global allocation of IPv4/IPv6 address blocks, AS numbers, and root DNS zones is ____.",
+      "options": [
+        "IRTF",
+        "IETF",
+        "IAB",
+        "IANA (Internet Assigned Numbers Authority)"
+      ],
+      "answer": "IANA (Internet Assigned Numbers Authority)",
+      "topic": "3.4 Standards Organizations - IP Coordination",
+      "explanation": "IANA performs the operational responsibility for assigning IP addresses, protocol numbers, and port assignments."
+    },
+    {
+      "number": 50,
+      "question": "The global professional organization that created the 802 LAN/MAN standards, including 802.3 Ethernet and 802.11 Wi-Fi, is the ____.",
+      "options": [
+        "TIA",
+        "EIA",
+        "ITU-T",
+        "IEEE (Institute of Electrical and Electronics Engineers)"
+      ],
+      "answer": "IEEE (Institute of Electrical and Electronics Engineers)",
+      "topic": "3.4 Standards Organizations - Electronics Standards",
+      "explanation": "IEEE defines fundamental electrical and computer engineering standards such as 802.3 (Ethernet) and 802.11 (WLAN)."
+    },
+    {
+      "number": 51,
+      "question": "The trade organization known for standardizing electrical wiring pinouts, serial connectors, and standard 19-inch equipment racks is the ____.",
+      "options": [
+        "ISOC",
+        "IEEE",
+        "ICANN",
+        "EIA (Electronic Industries Alliance)"
+      ],
+      "answer": "EIA (Electronic Industries Alliance)",
+      "topic": "3.4 Standards Organizations - Electronics Standards",
+      "explanation": "EIA developed physical standards for electrical wiring, connectors, and equipment racks."
+    },
+    {
+      "number": 52,
+      "question": "The standards body responsible for developing communication standards in radio equipment, cellular towers, VoIP terminals, and satellite communications is the ____.",
+      "options": [
+        "IAB",
+        "IANA",
+        "TIA (Telecommunications Industry Association)",
+        "IRTF"
+      ],
+      "answer": "TIA (Telecommunications Industry Association)",
+      "topic": "3.4 Standards Organizations - Electronics Standards",
+      "explanation": "TIA standardizes telecommunications equipment, cabling (such as TIA/EIA-568), and radio frequencies."
+    },
+    {
+      "number": 53,
+      "question": "The specialized United Nations agency sector responsible for international standards in video compression, IPTV, and broadband communications like DSL is the ____.",
+      "options": [
+        "IETF",
+        "ITU-T (Telecommunication Standardization Sector of ITU)",
+        "IEEE",
+        "ICANN"
+      ],
+      "answer": "ITU-T (Telecommunication Standardization Sector of ITU)",
+      "topic": "3.4 Standards Organizations - Electronics Standards",
+      "explanation": "ITU-T defines international telecommunications standards including video codecs (H.264), DSL, and optical transport."
+    },
+    {
+      "number": 54,
+      "question": "One primary advantage of using a layered networking model is that changes in technology or capabilities at one layer do not affect ____.",
+      "options": [
+        "the speed of light",
+        "physical cable lengths",
+        "the destination host IP address",
+        "other layers above and below"
+      ],
+      "answer": "other layers above and below",
+      "topic": "3.5 Reference Models - Layered Benefits",
+      "explanation": "Layer independence ensures changes or upgrades in one layer do not require redesigning adjacent layers."
+    },
+    {
+      "number": 55,
+      "question": "A layered model fosters healthy vendor competition because hardware and software from different vendors can ____.",
+      "options": [
+        "bypass standard security policies",
+        "avoid electrical grounding",
+        "interoperate (work together)",
+        "be purchased from a single supplier"
+      ],
+      "answer": "interoperate (work together)",
+      "topic": "3.5 Reference Models - Layered Benefits",
+      "explanation": "Standardized layer interfaces allow products from different manufacturers to interoperate seamlessly."
+    },
+    {
+      "number": 56,
+      "question": "How many distinct architectural layers are defined in the theoretical OSI reference model?",
+      "options": [
+        "4",
+        "8",
+        "5",
+        "7"
+      ],
+      "answer": "7",
+      "topic": "3.5 Reference Models - OSI Model",
+      "explanation": "The OSI model consists of 7 layers: Physical, Data Link, Network, Transport, Session, Presentation, Application."
+    },
+    {
+      "number": 57,
+      "question": "How many architectural layers are defined in the practical TCP/IP reference model?",
+      "options": [
+        "4",
+        "7",
+        "6",
+        "5"
+      ],
+      "answer": "4",
+      "topic": "3.5 Reference Models - TCP/IP Model",
+      "explanation": "The TCP/IP model consists of 4 layers: Network Access, Internet, Transport, and Application."
+    },
+    {
+      "number": 58,
+      "question": "In the OSI reference model, Layer 7 is the ____ layer.",
+      "options": [
+        "Session",
+        "Application",
+        "Transport",
+        "Presentation"
+      ],
+      "answer": "Application",
+      "topic": "3.5 Reference Models - OSI Model",
+      "explanation": "Layer 7 of the OSI model is the Application layer, providing services directly to user network software."
+    },
+    {
+      "number": 59,
+      "question": "In the OSI model, the layer responsible for data formatting, data compression, and data encryption/decryption between applications is the ____ layer.",
+      "options": [
+        "Application (Layer 7)",
+        "Presentation (Layer 6)",
+        "Session (Layer 5)",
+        "Transport (Layer 4)"
+      ],
+      "answer": "Presentation (Layer 6)",
+      "topic": "3.5 Reference Models - OSI Model",
+      "explanation": "The Presentation layer ensures common data representation, data compression, and encryption."
+    },
+    {
+      "number": 60,
+      "question": "The OSI model layer that establishes, manages, synchronizes, and terminates communication dialogues between cooperating applications is the ____ layer.",
+      "options": [
+        "Session (Layer 5)",
+        "Network (Layer 3)",
+        "Presentation (Layer 6)",
+        "Transport (Layer 4)"
+      ],
+      "answer": "Session (Layer 5)",
+      "topic": "3.5 Reference Models - OSI Model",
+      "explanation": "The Session layer manages dialogues and data exchange sessions between applications."
+    },
+    {
+      "number": 61,
+      "question": "The OSI layer that segments, transfers, and reassembles data for individual communications between end hosts is the ____ layer.",
+      "options": [
+        "Network (Layer 3)",
+        "Session (Layer 5)",
+        "Transport (Layer 4)",
+        "Data Link (Layer 2)"
+      ],
+      "answer": "Transport (Layer 4)",
+      "topic": "3.5 Reference Models - OSI Model",
+      "explanation": "Layer 4 (Transport) defines services to segment, transfer, and reassemble conversation data."
+    },
+    {
+      "number": 62,
+      "question": "The OSI layer responsible for logical addressing, path determination, and forwarding packets across intermediate networks is the ____ layer.",
+      "options": [
+        "Network (Layer 3)",
+        "Data Link (Layer 2)",
+        "Transport (Layer 4)",
+        "Physical (Layer 1)"
+      ],
+      "answer": "Network (Layer 3)",
+      "topic": "3.5 Reference Models - OSI Model",
+      "explanation": "Layer 3 (Network) handles logical addressing (IP) and exchanges individual pieces of data across networks."
+    },
+    {
+      "number": 63,
+      "question": "The OSI layer responsible for exchanging data frames across a common physical medium and managing physical MAC addressing is the ____ layer.",
+      "options": [
+        "Physical (Layer 1)",
+        "Session (Layer 5)",
+        "Data Link (Layer 2)",
+        "Network (Layer 3)"
+      ],
+      "answer": "Data Link (Layer 2)",
+      "topic": "3.5 Reference Models - OSI Model",
+      "explanation": "Layer 2 (Data Link) describes methods for exchanging data frames over common physical media."
+    },
+    {
+      "number": 64,
+      "question": "The OSI model layer responsible for the physical connectors, cabling specifications, and transmitting raw bit signals across transmission media is the ____ layer.",
+      "options": [
+        "Data Link (Layer 2)",
+        "Network (Layer 3)",
+        "Transport (Layer 4)",
+        "Physical (Layer 1)"
+      ],
+      "answer": "Physical (Layer 1)",
+      "topic": "3.5 Reference Models - OSI Model",
+      "explanation": "Layer 1 (Physical) specifies electrical, mechanical, and optical means to transmit raw bit streams."
+    },
+    {
+      "number": 65,
+      "question": "In the TCP/IP model, the single top layer that combines the functions of the OSI Application, Presentation, and Session layers is the ____ layer.",
+      "options": [
+        "Network Access",
+        "Application",
+        "Transport",
+        "Internet"
+      ],
+      "answer": "Application",
+      "topic": "3.5 Reference Models - TCP/IP Model",
+      "explanation": "The TCP/IP Application layer represents data to the user and handles encoding, presentation, and dialog control."
+    },
+    {
+      "number": 66,
+      "question": "The TCP/IP layer that corresponds directly to OSI Layer 3 and determines the best path through interconnected networks is the ____ layer.",
+      "options": [
+        "Internet",
+        "Application",
+        "Network Access",
+        "Transport"
+      ],
+      "answer": "Internet",
+      "topic": "3.5 Reference Models - TCP/IP Model",
+      "explanation": "The TCP/IP Internet layer maps to OSI Layer 3 (Network) and routes packets using logical IP addressing."
+    },
+    {
+      "number": 67,
+      "question": "The TCP/IP layer that controls the physical hardware devices and media and corresponds to OSI Layers 1 and 2 is the ____ layer.",
+      "options": [
+        "Internet",
+        "Network Access",
+        "Physical Only",
+        "Transport"
+      ],
+      "answer": "Network Access",
+      "topic": "3.5 Reference Models - TCP/IP Model",
+      "explanation": "The Network Access layer in the TCP/IP model encompasses both the Data Link and Physical layers of the OSI model."
+    },
+    {
+      "number": 68,
+      "question": "The networking process of dividing a large stream of application data into smaller, manageable chunks before transmission is known as ____.",
+      "options": [
+        "encapsulation",
+        "routing",
+        "segmenting (segmentation)",
+        "multiplexing"
+      ],
+      "answer": "segmenting (segmentation)",
+      "topic": "3.6 Data Encapsulation - Segmenting",
+      "explanation": "Segmenting breaks large messages into smaller units so they can travel across the network efficiently."
+    },
+    {
+      "number": 69,
+      "question": "The technique of taking multiple streams of segmented data from different conversations and interleaving them together over a single network channel is called ____.",
+      "options": [
+        "de-encapsulation",
+        "modulation",
+        "broadcasting",
+        "multiplexing"
+      ],
+      "answer": "multiplexing",
+      "topic": "3.6 Data Encapsulation - Multiplexing",
+      "explanation": "Multiplexing interleaves multiple communication streams across shared transmission channels."
+    },
+    {
+      "number": 70,
+      "question": "A major benefit of segmenting data messages is that if a piece of data fails to reach its destination, only the lost ____ needs to be retransmitted.",
+      "options": [
+        "segment",
+        "entire file",
+        "entire database",
+        "operating system"
+      ],
+      "answer": "segment",
+      "topic": "3.6 Data Encapsulation - Benefits",
+      "explanation": "Segmentation increases efficiency because only failed segments must be retransmitted rather than the entire message."
+    },
+    {
+      "number": 71,
+      "question": "The formal term used to describe the generic package of data and protocol control information created at each layer of a networking model is a ____.",
+      "options": [
+        "MAC table entry",
+        "PDU (Protocol Data Unit)",
+        "SYN packet",
+        "MTU (Maximum Transmission Unit)"
+      ],
+      "answer": "PDU (Protocol Data Unit)",
+      "topic": "3.6 Data Encapsulation - PDUs",
+      "explanation": "A Protocol Data Unit (PDU) is the specific form that data takes at any given layer of the protocol stack."
+    },
+    {
+      "number": 72,
+      "question": "In the TCP/IP protocol suite, what is the specific name of the PDU at the Transport layer?",
+      "options": [
+        "Packet",
+        "Frame",
+        "Bits",
+        "Segment"
+      ],
+      "answer": "Segment",
+      "topic": "3.6 Data Encapsulation - PDUs",
+      "explanation": "At the Transport layer, the PDU is called a Segment (or Datagram for UDP)."
+    },
+    {
+      "number": 73,
+      "question": "In the TCP/IP protocol suite, what is the specific name of the PDU at the Internet (Network) layer?",
+      "options": [
+        "Frame",
+        "Packet",
+        "Bits",
+        "Segment"
+      ],
+      "answer": "Packet",
+      "topic": "3.6 Data Encapsulation - PDUs",
+      "explanation": "At the Network/Internet layer, the PDU encapsulated with IP addressing is called a Packet."
+    },
+    {
+      "number": 74,
+      "question": "In the TCP/IP protocol suite, what is the specific name of the PDU at the Data Link layer?",
+      "options": [
+        "Frame",
+        "Bits",
+        "Packet",
+        "Segment"
+      ],
+      "answer": "Frame",
+      "topic": "3.6 Data Encapsulation - PDUs",
+      "explanation": "At the Data Link layer, data encapsulated with header and trailer information is called a Frame."
+    },
+    {
+      "number": 75,
+      "question": "At the Physical layer, what is the name of the PDU transmitted across the physical media as electrical, optical, or radio signals?",
+      "options": [
+        "Bits",
+        "Segments",
+        "Packets",
+        "Frames"
+      ],
+      "answer": "Bits",
+      "topic": "3.6 Data Encapsulation - PDUs",
+      "explanation": "At the Physical layer, the PDU consists of raw Bits transmitted over the physical medium."
+    },
+    {
+      "number": 76,
+      "question": "What is the correct top-down sequence of Protocol Data Units (PDUs) as data moves down the TCP/IP stack during encapsulation?",
+      "options": [
+        "Bits \u2192 Frame \u2192 Packet \u2192 Segment \u2192 Data",
+        "Data \u2192 Segment \u2192 Packet \u2192 Frame \u2192 Bits",
+        "Frame \u2192 Packet \u2192 Segment \u2192 Data \u2192 Bits",
+        "Data \u2192 Packet \u2192 Segment \u2192 Frame \u2192 Bits"
+      ],
+      "answer": "Data \u2192 Segment \u2192 Packet \u2192 Frame \u2192 Bits",
+      "topic": "3.6 Data Encapsulation - PDU Order",
+      "explanation": "Data moves top-down: Data (Application) \u2192 Segment (Transport) \u2192 Packet (Internet) \u2192 Frame (Data Link) \u2192 Bits (Physical)."
+    },
+    {
+      "number": 77,
+      "question": "The top-down process where each layer adds its own protocol control header (and trailer) to the data received from the layer above is called ____.",
+      "options": [
+        "demultiplexing",
+        "encapsulation",
+        "decryption",
+        "de-encapsulation"
+      ],
+      "answer": "encapsulation",
+      "topic": "3.6 Data Encapsulation - Process",
+      "explanation": "Encapsulation adds layer-specific protocol headers as data moves down from the application layer to the physical media."
+    },
+    {
+      "number": 78,
+      "question": "The bottom-up process where a receiving host strips off protocol headers at each successive layer to deliver the original data to the application is called ____.",
+      "options": [
+        "fragmentation",
+        "de-encapsulation",
+        "compression",
+        "encapsulation"
+      ],
+      "answer": "de-encapsulation",
+      "topic": "3.6 Data Encapsulation - Process",
+      "explanation": "De-encapsulation occurs at the receiving host, stripping each header as data moves up the protocol stack."
+    },
+    {
+      "number": 79,
+      "question": "In the encapsulation process, what transport layer protocol is specifically responsible for numbering and sequencing data segments?",
+      "options": [
+        "IP",
+        "TCP",
+        "UDP",
+        "ICMP"
+      ],
+      "answer": "TCP",
+      "topic": "3.6 Data Encapsulation - Sequencing",
+      "explanation": "TCP tracks and orders transmitted chunks using sequence numbers to guarantee accurate reassembly."
+    },
+    {
+      "number": 80,
+      "question": "The logical addressing information contained in the Layer 3 IP packet header is responsible for delivering the packet from its original source to its ____.",
+      "options": [
+        "final destination",
+        "next-hop router only",
+        "local switch only",
+        "default gateway MAC"
+      ],
+      "answer": "final destination",
+      "topic": "3.7 Data Access - Layer 3 Addressing",
+      "explanation": "Layer 3 IP addresses deliver the packet from the original sending host to the ultimate final destination host across all networks."
+    },
+    {
+      "number": 81,
+      "question": "The physical addressing information contained in the Layer 2 Data Link frame header is responsible for delivering data from one ____ to another on the same link.",
+      "options": [
+        "NIC (Network Interface Card)",
+        "domain name server",
+        "autonomous system",
+        "web server port"
+      ],
+      "answer": "NIC (Network Interface Card)",
+      "topic": "3.7 Data Access - Layer 2 Addressing",
+      "explanation": "Layer 2 MAC addresses govern delivery from one NIC to the next NIC on the same local network segment."
+    },
+    {
+      "number": 82,
+      "question": "An IPv4 address consists of two functional sections: the host portion and the ____ portion.",
+      "options": [
+        "MAC",
+        "port",
+        "prefix only",
+        "network"
+      ],
+      "answer": "network",
+      "topic": "3.7 Data Access - IP Structure",
+      "explanation": "An IP address is hierarchically divided into a network portion (identifying the subnet) and a host portion (identifying the specific device)."
+    },
+    {
+      "number": 83,
+      "question": "In an IPv6 address, the left-most portion that identifies the network group is called the ____.",
+      "options": [
+        "host portion",
+        "interface ID",
+        "prefix",
+        "socket"
+      ],
+      "answer": "prefix",
+      "topic": "3.7 Data Access - IP Structure",
+      "explanation": "In IPv6, the network part of the address is called the prefix, while the host part is the Interface ID."
+    },
+    {
+      "number": 84,
+      "question": "In an IPv6 address, the right-most 64 bits that uniquely identify a specific host device on the local network are called the ____.",
+      "options": [
+        "Subnet Mask",
+        "MAC Tag",
+        "Interface ID",
+        "Prefix"
+      ],
+      "answer": "Interface ID",
+      "topic": "3.7 Data Access - IP Structure",
+      "explanation": "The Interface ID identifies the individual host interface within an IPv6 network prefix."
+    },
+    {
+      "number": 85,
+      "question": "When two communicating devices reside on the same local IP network, their IP addresses share the exact same ____ portion.",
+      "options": [
+        "network",
+        "host",
+        "interface ID",
+        "port number"
+      ],
+      "answer": "network",
+      "topic": "3.7 Data Access - Same Network",
+      "explanation": "Devices on the same network or subnet share identical network portions in their IP addresses."
+    },
+    {
+      "number": 86,
+      "question": "When sending data to a host located on the exact same Ethernet network, what address is placed in the Destination MAC field of the frame?",
+      "options": [
+        "The broadcast MAC address FF-FF-FF-FF-FF-FF",
+        "The MAC address of the default gateway router",
+        "The source device's own MAC address",
+        "The MAC address of the destination device's NIC"
+      ],
+      "answer": "The MAC address of the destination device's NIC",
+      "topic": "3.7 Data Access - Same Network",
+      "explanation": "When the destination host is on the same local network, the destination MAC address is that host's physical NIC MAC."
+    },
+    {
+      "number": 87,
+      "question": "Physical MAC addresses are permanently burned or embedded into the hardware of a device's ____.",
+      "options": [
+        "NIC (Network Interface Card)",
+        "operating system registry",
+        "hard drive",
+        "RAM cache"
+      ],
+      "answer": "NIC (Network Interface Card)",
+      "topic": "3.7 Data Access - MAC Addressing",
+      "explanation": "MAC addresses are hardware-level addresses burned into the ROM of a network interface card (NIC)."
+    },
+    {
+      "number": 88,
+      "question": "When a host determines that the destination IP address belongs to a remote network, it forwards the packet to the local router interface known as the ____.",
+      "options": [
+        "DNS server",
+        "default gateway",
+        "broadcast address",
+        "loopback address"
+      ],
+      "answer": "default gateway",
+      "topic": "3.7 Data Access - Remote Network",
+      "explanation": "The default gateway is the router interface on the local subnet that acts as the exit door to remote networks."
+    },
+    {
+      "number": 89,
+      "question": "If end devices on a local area network are not configured with an accurate default gateway IP address, their outbound network traffic will be confined strictly to the ____.",
+      "options": [
+        "local LAN",
+        "remote WAN",
+        "Internet",
+        "cloud provider"
+      ],
+      "answer": "local LAN",
+      "topic": "3.7 Data Access - Default Gateway",
+      "explanation": "Without a configured default gateway, hosts can only communicate with other devices on their local LAN."
+    },
+    {
+      "number": 90,
+      "question": "When a source host (PC1) sends a packet to a remote web server across multiple routers, the destination MAC address in the first transmitted frame will be the MAC address of the ____.",
+      "options": [
+        "second router's exit interface",
+        "default gateway (local router interface)",
+        "local host's own loopback",
+        "remote web server NIC"
+      ],
+      "answer": "default gateway (local router interface)",
+      "topic": "3.7 Data Access - Remote Frame Addressing",
+      "explanation": "For remote destinations, the source host addresses the frame's destination MAC to its local default gateway router interface."
+    },
+    {
+      "number": 91,
+      "question": "As an IP packet travels across multiple router hops toward a remote destination, the source and destination IP addresses in the packet header remain ____.",
+      "options": [
+        "swapped at each hop",
+        "unchanged",
+        "incremented at each hop",
+        "replaced by MAC addresses"
+      ],
+      "answer": "unchanged",
+      "topic": "3.7 Data Access - Address Persistence",
+      "explanation": "The original source IP and ultimate destination IP addresses do not change as the packet moves through intermediate routers."
+    },
+    {
+      "number": 92,
+      "question": "Unlike Layer 3 IP addresses which remain constant end-to-end, Layer 2 MAC addresses are stripped and replaced at every router ____.",
+      "options": [
+        "hop (link)",
+        "TCP handshake",
+        "DNS query",
+        "session restart"
+      ],
+      "answer": "hop (link)",
+      "topic": "3.7 Data Access - Address Modification",
+      "explanation": "At each router hop, the old Layer 2 frame is stripped off and a new frame with new source and destination MAC addresses is generated for the next link."
+    },
+    {
+      "number": 93,
+      "question": "When the final router on the path receives a packet destined for a host on its directly connected LAN, it encapsulates the packet in a frame whose destination MAC is the ____.",
+      "options": [
+        "first router's entry interface",
+        "switch management interface",
+        "final destination host NIC",
+        "Internet Service Provider gateway"
+      ],
+      "answer": "final destination host NIC",
+      "topic": "3.7 Data Access - Final Delivery",
+      "explanation": "On the final local subnet, the router frames the packet with the destination host's actual MAC address for final delivery."
+    },
+    {
+      "number": 94,
+      "question": "In network data access, which layer provides local physical addressing that changes from hop to hop?",
+      "options": [
+        "Application Layer (Layer 7)",
+        "Network Layer (Layer 3)",
+        "Transport Layer (Layer 4)",
+        "Data Link Layer (Layer 2)"
+      ],
+      "answer": "Data Link Layer (Layer 2)",
+      "topic": "3.7 Data Access - Summary",
+      "explanation": "The Data Link layer provides local hop-to-hop physical addressing (MAC), whereas the Network layer provides global end-to-end logical addressing (IP)."
+    },
+    {
+      "number": 95,
+      "question": "In network data access, which layer provides global logical addressing that remains constant from the original source to the final destination?",
+      "options": [
+        "Data Link Layer (Layer 2)",
+        "Physical Layer (Layer 1)",
+        "Session Layer (Layer 5)",
+        "Network Layer (Layer 3)"
+      ],
+      "answer": "Network Layer (Layer 3)",
+      "topic": "3.7 Data Access - Summary",
+      "explanation": "The Network layer (Layer 3) provides end-to-end logical addressing that does not change across routers."
+    }
+  ]
+}

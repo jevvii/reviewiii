@@ -978,6 +978,10 @@ const activeSubjects = SUBJECTS.filter((s) => s.status === 'active');
       }
     });
 
+    window.addEventListener('reviewiii:auth_changed', () => {
+      refreshHeroFocus();
+    });
+
     // 2. View Switcher Controller (Segmented Control)
     const viewTabs = document.querySelectorAll<HTMLElement>('.segmented-tab');
     const headerNavBtns = document.querySelectorAll<HTMLElement>('.header-nav-btn');

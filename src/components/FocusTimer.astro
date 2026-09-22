@@ -1424,6 +1424,25 @@ const baseUrl = import.meta.env.BASE_URL;
       renderUI();
     });
 
+    // Re-render when active user session switches
+    window.addEventListener('reviewiii:auth_changed', () => {
+      settings = readSettings();
+      snapshot = readFocusSnapshot() || {
+        v: 1,
+        phase: 'focus',
+        running: false,
+        focusCount: 0,
+        subjectCode: 'General Study',
+        moduleTitle: 'Comprehensive Review',
+        secondsLeft: settings.focusSeconds || DEFAULT_SECONDS.focus,
+        endsAt: null,
+        updatedAt: Date.now()
+      };
+      syncDurationInputs();
+      renderUI();
+      renderStatsAndHistory();
+    });
+
     // Start interval
     tickInterval = setInterval(tick, 1000);
 

@@ -14,6 +14,7 @@ sys.path.insert(0, DATA_DIR)
 # Import data sources from scripts/data
 from module1_data import MODULE_1_ITEMS as NETC_M1_ITEMS
 from module2_data import MODULE_2_ITEMS as NETC_M2_ITEMS
+from module3_data import MODULE_3_ITEMS as NETC_M3_ITEMS
 from hmby311_m1_data import HMBY_MODULE_1_ITEMS
 from hmby311_m4_data import HMBY_MODULE_4_ITEMS
 from hmby311_m5_data import HMBY_MODULE_5_ITEMS
@@ -45,6 +46,12 @@ ALL_COURSES = {
                 "title": "Basic Switch & End Device Configuration",
                 "items": NETC_M2_ITEMS,
                 "html": "module2.html"
+            },
+            {
+                "num": 3,
+                "title": "Protocols & Models",
+                "items": NETC_M3_ITEMS,
+                "html": "module3.html"
             }
         ]
     },
@@ -741,6 +748,7 @@ def generate_header_and_widget_html(course, current_mod):
   </div>
 </div>
 
+<script src="../../scripts/auth-system.js"></script>
 <script src="../../scripts/focus-system.js"></script>
 <script>
   (function initQuizNavAndFocus() {{
@@ -1120,13 +1128,21 @@ def build_quiz_html(course, mod):
     # Inject ReviewIII Session Persistence Script before </head>
     storage_key = f"reviewiii_quiz_{c_code}_{m_num}"
     session_script = f"""
+<script src="../../scripts/auth-system.js"></script>
 <script id="reviewiii-quiz-persistence">
   (function() {{
-    var key = "{storage_key}";
-    window.__quiz_storage_key = key;
+    var baseKey = "{storage_key}";
+    function getActiveKey() {{
+      if (window.ReviewIIIAuth && window.ReviewIIIAuth.getStorageKey) {{
+        return window.ReviewIIIAuth.getStorageKey(baseKey);
+      }}
+      return baseKey;
+    }}
+    window.__quiz_storage_key = getActiveKey();
 
     // 1. Initialize session seed for choice randomization
     try {{
+      var key = getActiveKey();
       var savedRaw = localStorage.getItem(key);
       var saved = savedRaw ? JSON.parse(savedRaw) : null;
       if (saved && typeof saved.sessionSeed === 'number') {{
@@ -1147,6 +1163,7 @@ def build_quiz_html(course, mod):
     // 2. Load state interface (called on init)
     window.__quiz_load_state = function() {{
       try {{
+        var key = getActiveKey();
         var raw = localStorage.getItem(key);
         if (!raw) return null;
         var data = JSON.parse(raw);
@@ -1175,6 +1192,7 @@ def build_quiz_html(course, mod):
     window.__quiz_save_state = function(state) {{
       try {{
         if (!state) return;
+        var key = getActiveKey();
         var toSave = Object.assign({{}}, state, {{
           sessionSeed: window.__quiz_session_seed,
           savedAt: Date.now()
@@ -1204,6 +1222,7 @@ def build_quiz_html(course, mod):
     window.__quiz_restart_session = function() {{
       if (confirm('Restart this quiz session? All saved answers will be cleared and choices will be freshly randomized.')) {{
         try {{
+          var key = getActiveKey();
           localStorage.removeItem(key);
           var freshSeed = Math.floor(Math.random() * 2147483647) + 1;
           localStorage.setItem(key + '_seed', String(freshSeed));
@@ -1218,6 +1237,7 @@ def build_quiz_html(course, mod):
     // 5. Auto-pause quiz timer on exit (beforeunload and pagehide)
     function pauseQuizTimerOnExit() {{
       try {{
+        var key = getActiveKey();
         var raw = localStorage.getItem(key);
         if (!raw) return;
         var data = JSON.parse(raw);
@@ -1236,6 +1256,14 @@ def build_quiz_html(course, mod):
     }}
     window.addEventListener('beforeunload', pauseQuizTimerOnExit);
     window.addEventListener('pagehide', pauseQuizTimerOnExit);
+
+    // 6. Cross-tab account switch sync: automatically reload quiz state for active user
+    window.addEventListener('reviewiii:auth_changed', function() {{
+      if (window.ReviewIIIFocus && window.ReviewIIIFocus.markInternalNav) {{
+        window.ReviewIIIFocus.markInternalNav();
+      }}
+      window.location.reload();
+    }});
   }})();
 </script>
 """

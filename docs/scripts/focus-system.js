@@ -10,6 +10,27 @@
   var TIME_LOGS_STORAGE_KEY = 'reviewiii_timelogs:v1';
   var SETTINGS_STORAGE_KEY = 'reviewiii_settings:v1';
 
+  function getEffectiveFocusKey() {
+    if (typeof window !== 'undefined' && window.ReviewIIIAuth && window.ReviewIIIAuth.getStorageKey) {
+      return window.ReviewIIIAuth.getStorageKey(FOCUS_STORAGE_KEY);
+    }
+    return FOCUS_STORAGE_KEY;
+  }
+
+  function getEffectiveTimeLogsKey() {
+    if (typeof window !== 'undefined' && window.ReviewIIIAuth && window.ReviewIIIAuth.getStorageKey) {
+      return window.ReviewIIIAuth.getStorageKey(TIME_LOGS_STORAGE_KEY);
+    }
+    return TIME_LOGS_STORAGE_KEY;
+  }
+
+  function getEffectiveSettingsKey() {
+    if (typeof window !== 'undefined' && window.ReviewIIIAuth && window.ReviewIIIAuth.getStorageKey) {
+      return window.ReviewIIIAuth.getStorageKey(SETTINGS_STORAGE_KEY);
+    }
+    return SETTINGS_STORAGE_KEY;
+  }
+
   var DEFAULT_SECONDS = {
     focus: 1500, // 25 minutes
     short: 300,  // 5 minutes
@@ -66,7 +87,7 @@
 
   function readSettings() {
     try {
-      var raw = localStorage.getItem(SETTINGS_STORAGE_KEY);
+      var raw = localStorage.getItem(getEffectiveSettingsKey());
       if (!raw) return getDefaultSettings();
       var data = JSON.parse(raw);
       return {
@@ -97,7 +118,7 @@
     try {
       var existing = readSettings();
       var updated = Object.assign({}, existing, settings);
-      localStorage.setItem(SETTINGS_STORAGE_KEY, JSON.stringify(updated));
+      localStorage.setItem(getEffectiveSettingsKey(), JSON.stringify(updated));
       broadcastStorageEvent('settings', updated);
     } catch (err) {
       console.error('Failed to save settings:', err);
@@ -154,7 +175,7 @@
 
   function readTimeLogs() {
     try {
-      var raw = localStorage.getItem(TIME_LOGS_STORAGE_KEY);
+      var raw = localStorage.getItem(getEffectiveTimeLogsKey());
       if (!raw) return [];
       var logs = JSON.parse(raw);
       return Array.isArray(logs) ? logs : [];
@@ -181,7 +202,7 @@
       var current = readTimeLogs();
       current.unshift(entry);
       var trimmed = current.slice(0, 300);
-      localStorage.setItem(TIME_LOGS_STORAGE_KEY, JSON.stringify(trimmed));
+      localStorage.setItem(getEffectiveTimeLogsKey(), JSON.stringify(trimmed));
       broadcastStorageEvent('time_log', entry);
       return entry;
     } catch (err) {
@@ -218,14 +239,14 @@
 
   function clearTimeLogs() {
     try {
-      localStorage.removeItem(TIME_LOGS_STORAGE_KEY);
+      localStorage.removeItem(getEffectiveTimeLogsKey());
       broadcastStorageEvent('time_log', null);
     } catch (e) {}
   }
 
   function readFocusSnapshot() {
     try {
-      var raw = localStorage.getItem(FOCUS_STORAGE_KEY);
+      var raw = localStorage.getItem(getEffectiveFocusKey());
       if (!raw) return null;
       var s = JSON.parse(raw);
       if (s.v !== 1) return null;
@@ -239,7 +260,7 @@
       return {
         v: 1,
         phase: s.phase,
-        running: Boolean(s.running),
+        running: Boolean(snapSafe(s.running)),
         focusCount: Number(s.focusCount) || 0,
         subjectCode: typeof s.subjectCode === 'string' ? s.subjectCode : 'General Study',
         moduleTitle: typeof s.moduleTitle === 'string' ? s.moduleTitle : 'Comprehensive Review',
@@ -252,10 +273,14 @@
     }
   }
 
+  function snapSafe(val) {
+    return Boolean(val);
+  }
+
   function saveFocusSnapshot(snap) {
     try {
       if (!snap) {
-        localStorage.removeItem(FOCUS_STORAGE_KEY);
+        localStorage.removeItem(getEffectiveFocusKey());
         publishFocus(null);
         return;
       }
@@ -270,7 +295,7 @@
         endsAt: snap.running ? snap.endsAt : null,
         updatedAt: Date.now()
       };
-      localStorage.setItem(FOCUS_STORAGE_KEY, JSON.stringify(data));
+      localStorage.setItem(getEffectiveFocusKey(), JSON.stringify(data));
       publishFocus(data);
     } catch (err) {
       console.error('Failed to save focus snapshot:', err);
@@ -313,13 +338,19 @@
   }
 
   window.addEventListener('storage', function (e) {
-    if (e.key === FOCUS_STORAGE_KEY) {
+    if (e.key === getEffectiveFocusKey() || (e.key && e.key.indexOf(FOCUS_STORAGE_KEY) !== -1)) {
       var snap = readFocusSnapshot();
       listeners.forEach(function (cb) {
         try { cb(snap); } catch (err) {}
       });
     }
   });
+
+  if (typeof window !== 'undefined') {
+    window.addEventListener('reviewiii:auth_changed', function () {
+      publishFocus(readFocusSnapshot());
+    });
+  }
 
   var INTERNAL_NAV_KEY = 'reviewiii_nav_internal';
 
@@ -353,7 +384,7 @@
       return; // Do not pause active focus session during internal navigation
     }
     try {
-      var raw = localStorage.getItem(FOCUS_STORAGE_KEY);
+      var raw = localStorage.getItem(getEffectiveFocusKey());
       if (!raw) return;
       var snap = JSON.parse(raw);
       if (snap && snap.running) {
@@ -365,7 +396,7 @@
         snap.secondsLeft = remaining;
         snap.endsAt = null;
         snap.updatedAt = Date.now();
-        localStorage.setItem(FOCUS_STORAGE_KEY, JSON.stringify(snap));
+        localStorage.setItem(getEffectiveFocusKey(), JSON.stringify(snap));
       }
     } catch (e) {}
   }

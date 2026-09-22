@@ -4,9 +4,23 @@
 // Digital Sobriety & Pitch-Black OLED compatible
 // ============================================================================
 
+import { getStorageKey } from './auth-system.js';
+
 export const FOCUS_STORAGE_KEY = 'reviewiii_focus:v1';
 export const TIME_LOGS_STORAGE_KEY = 'reviewiii_timelogs:v1';
 export const SETTINGS_STORAGE_KEY = 'reviewiii_settings:v1';
+
+export function getEffectiveFocusKey() {
+  return getStorageKey(FOCUS_STORAGE_KEY);
+}
+
+export function getEffectiveTimeLogsKey() {
+  return getStorageKey(TIME_LOGS_STORAGE_KEY);
+}
+
+export function getEffectiveSettingsKey() {
+  return getStorageKey(SETTINGS_STORAGE_KEY);
+}
 
 export const DEFAULT_SECONDS = {
   focus: 1500, // 25 minutes
@@ -146,7 +160,7 @@ export function readSettings() {
     };
   }
   try {
-    const raw = localStorage.getItem(SETTINGS_STORAGE_KEY);
+    const raw = localStorage.getItem(getEffectiveSettingsKey());
     if (!raw) {
       return {
         focusSeconds: DEFAULT_SECONDS.focus,
@@ -183,7 +197,7 @@ export function saveSettings(settings) {
   try {
     const existing = readSettings();
     const updated = { ...existing, ...settings };
-    localStorage.setItem(SETTINGS_STORAGE_KEY, JSON.stringify(updated));
+    localStorage.setItem(getEffectiveSettingsKey(), JSON.stringify(updated));
     broadcastStorageEvent('settings', updated);
   } catch (err) {
     console.error('Failed to save settings:', err);
@@ -197,7 +211,7 @@ export function saveSettings(settings) {
 export function readTimeLogs() {
   if (typeof window === 'undefined') return [];
   try {
-    const raw = localStorage.getItem(TIME_LOGS_STORAGE_KEY);
+    const raw = localStorage.getItem(getEffectiveTimeLogsKey());
     if (!raw) return [];
     const logs = JSON.parse(raw);
     return Array.isArray(logs) ? logs : [];
@@ -226,7 +240,7 @@ export function logTime(minutes, subjectCode = 'General Study', moduleTitle = 'S
     current.unshift(entry);
     // Keep last 300 logs
     const trimmed = current.slice(0, 300);
-    localStorage.setItem(TIME_LOGS_STORAGE_KEY, JSON.stringify(trimmed));
+    localStorage.setItem(getEffectiveTimeLogsKey(), JSON.stringify(trimmed));
     broadcastStorageEvent('time_log', entry);
     return entry;
   } catch (err) {
@@ -263,7 +277,7 @@ export function getSubjectStats() {
 export function clearTimeLogs() {
   if (typeof window === 'undefined') return;
   try {
-    localStorage.removeItem(TIME_LOGS_STORAGE_KEY);
+    localStorage.removeItem(getEffectiveTimeLogsKey());
     broadcastStorageEvent('time_log', null);
   } catch {}
 }
@@ -275,7 +289,7 @@ export function clearTimeLogs() {
 export function readFocusSnapshot() {
   if (typeof window === 'undefined') return null;
   try {
-    const raw = localStorage.getItem(FOCUS_STORAGE_KEY);
+    const raw = localStorage.getItem(getEffectiveFocusKey());
     if (!raw) return null;
     const s = JSON.parse(raw);
     if (s.v !== 1) return null;
@@ -306,7 +320,7 @@ export function saveFocusSnapshot(snap) {
   if (typeof window === 'undefined') return;
   try {
     if (!snap) {
-      localStorage.removeItem(FOCUS_STORAGE_KEY);
+      localStorage.removeItem(getEffectiveFocusKey());
       publishFocus(null);
       return;
     }
@@ -321,7 +335,7 @@ export function saveFocusSnapshot(snap) {
       endsAt: snap.running ? snap.endsAt : null,
       updatedAt: Date.now()
     };
-    localStorage.setItem(FOCUS_STORAGE_KEY, JSON.stringify(data));
+    localStorage.setItem(getEffectiveFocusKey(), JSON.stringify(data));
     publishFocus(data);
   } catch (err) {
     console.error('Failed to save focus snapshot:', err);
@@ -406,7 +420,7 @@ export function pauseFocusOnExit() {
     return; // Do not pause focus during internal navigation
   }
   try {
-    const raw = localStorage.getItem(FOCUS_STORAGE_KEY);
+    const raw = localStorage.getItem(getEffectiveFocusKey());
     if (!raw) return;
     const snap = JSON.parse(raw);
     if (snap && snap.running) {
@@ -418,7 +432,7 @@ export function pauseFocusOnExit() {
       snap.secondsLeft = remaining;
       snap.endsAt = null;
       snap.updatedAt = Date.now();
-      localStorage.setItem(FOCUS_STORAGE_KEY, JSON.stringify(snap));
+      localStorage.setItem(getEffectiveFocusKey(), JSON.stringify(snap));
     }
   } catch {}
 }
@@ -442,10 +456,15 @@ if (typeof window !== 'undefined') {
   }, true);
 
   window.addEventListener('storage', (e) => {
-    if (e.key === FOCUS_STORAGE_KEY) {
+    if (e.key === getEffectiveFocusKey() || (e.key && e.key.indexOf(FOCUS_STORAGE_KEY) !== -1)) {
       const snap = readFocusSnapshot();
       for (const cb of listeners) cb(snap);
     }
+  });
+
+  // Re-publish focus state whenever active user changes
+  window.addEventListener('reviewiii:auth_changed', () => {
+    publishFocus(readFocusSnapshot());
   });
 
   window.addEventListener('beforeunload', pauseFocusOnExit);

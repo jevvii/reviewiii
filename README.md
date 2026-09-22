@@ -17,8 +17,9 @@
 [![Bun](https://img.shields.io/badge/Bun-1.1-FBF0DF?style=for-the-badge&logo=bun&logoColor=black)](https://bun.sh/)
 [![OLED Black](https://img.shields.io/badge/Theme-OLED%20Pitch%20Black-000000?style=for-the-badge&logo=target&logoColor=8a9a86)](#-design-system--oled-aesthetic)
 [![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://jevvii.github.io/reviewiii/)
-[![Questions](https://img.shields.io/badge/Questions-579%20Curated-8a9a86?style=for-the-badge)](#-curriculum-matrix--questionnaires)
-[![Offline Vault](https://img.shields.io/badge/Offline%20Vault-36%20Files-a89f91?style=for-the-badge)](#-consolidated-offline-download-vault)
+[![Questions](https://img.shields.io/badge/Questions-830%20Curated-8a9a86?style=for-the-badge)](#-curriculum-matrix--questionnaires)
+[![Offline Vault](https://img.shields.io/badge/Offline%20Vault-48%20Files-a89f91?style=for-the-badge)](#-consolidated-offline-download-vault)
+[![GitHub Auth](https://img.shields.io/badge/Auth-Multi--User%20GitHub-2ea44f?style=for-the-badge&logo=github&logoColor=white)](#-multi-user-github-authentication--isolated-sessions)
 
 ---
 
@@ -33,16 +34,16 @@
 
 ## ✦ Overview
 
-**ReviewIII** is an ultra-fast, static academic study hub and interactive quiz workstation developed for 3rd-year Computer Science students. Engineered with an **OLED pitch-black Digital Sobriety aesthetic**, it unifies rigorous lecture extractions, Google NotebookLM quiz players, an automated Pomodoro focus logger, and a comprehensive 36-file offline document vault into a seamless, distraction-free environment.
+**ReviewIII** is an ultra-fast, static academic study hub and interactive quiz workstation developed for 3rd-year Computer Science students. Engineered with an **OLED pitch-black Digital Sobriety aesthetic**, it unifies rigorous lecture extractions, Google NotebookLM quiz players, an automated Pomodoro focus logger, multi-user GitHub session management, and a comprehensive 48-file offline document vault into a seamless, distraction-free environment.
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                          REVIEWIII ACADEMIC HUB                             │
 ├───────────────────────┬─────────────────────────────┬───────────────────────┤
 │  ⚡ INTERACTIVE QUIZ   │  ⏱️ POMODORO WORKSTATION    │  📥 OFFLINE VAULT     │
-│  • 9 Standalone Apps  │  • 25/5/15 Interval Loops   │  • 36 Total Files     │
-│  • 579 Total Items    │  • Subject Auto-Logging     │  • PDF Questionnaires │
-│  • 48px Mobile Header │  • Auto-Redirect to Quiz    │  • Word DOCX Files    │
+│  • 12 Standalone Apps │  • 25/5/15 Interval Loops   │  • 48 Total Files     │
+│  • 830 Total Items    │  • Multi-User GitHub Auth   │  • PDF Questionnaires │
+│  • 48px Mobile Header │  • Isolated Sessions        │  • Word DOCX Files    │
 │  • Hamburger Drawer   │  • Multi-Tab BroadcastSync  │  • JSON Datasets      │
 │  • Zero-Letter Dupes  │  • Web Audio Chimes         │  • Markdown Keys      │
 └───────────────────────┴─────────────────────────────┴───────────────────────┘
@@ -52,27 +53,33 @@
 
 ## ⚡ Core Features
 
-### 1. 🎯 Interactive NotebookLM Quiz Players
-- **9 Standalone Interactive Engines**: Dedicated offline-first quiz players for each module with progress saving, instant answer feedback, hints, and randomized choices.
+### 1. 🐙 Multi-User GitHub Authentication & Isolated Sessions
+- **Zero-Friction GitHub Login**: Connect instantly via your GitHub username using public API profile synchronization (fetches verified avatar, bio, and repo stats) or optionally enter a GitHub Personal Access Token (PAT).
+- **Multi-Account Switcher**: Connect multiple student accounts on a shared device. Seamlessly switch between accounts or revert to anonymous Guest Mode at any time directly from the glassmorphic header pill.
+- **Isolated User Sessions**: Quiz progress, saved answers, timer state, target subject, and Asia/Manila study logs are completely partitioned into isolated storage namespaces (`reviewiii_u_{userId}_...`).
+- **Reactive Cross-Tab Sync**: Uses `BroadcastChannel('reviewiii_auth_channel')` and custom events to instantly propagate account switches and session states across all open tabs and active quiz players.
+
+### 2. 🎯 Interactive NotebookLM Quiz Players
+- **12 Standalone Interactive Engines**: Dedicated offline-first quiz players for each module with progress saving, instant answer feedback, hints, and randomized choices.
 - **Zero-Letter Duplication**: Strict regex sanitization prevents ugly multiple-choice artifacts (e.g. `A. A.) Answer` &rarr; `A. Answer`).
 - **Compact Mobile UI Header (48px)**: Fixed-height navigation bar locked to `48px` with backdrop blur (`rgba(0, 0, 0, 0.94)`). Questions and choices start directly below the header on small devices, keeping answer cards above the fold.
 - **Slide-Down Mobile Drawer**: Tapping `☰` displays a sleek slide-down drawer showing full course navigation, module switchers with active indicators (`● Current`), and download shortcuts.
 
-### 2. ⏱️ Integrated Pomodoro Focus & Time Tracking
-- **Automated Subject Attribution**: Tracks study sessions directly to specific course codes and modules (e.g. `HMBY311 • Module 4: Chromosomes & Cell Division`).
+### 3. ⏱️ Integrated Pomodoro Focus & Time Tracking
+- **Automated Subject Attribution**: Tracks study sessions directly to specific course codes and modules (e.g. `NETC311 • Module 3: Protocols and Models`).
 - **Auto-Redirect on Start**: Selecting a specific quiz module and starting the timer automatically redirects the browser directly to the quiz player and begins ticking immediately.
-- **Cross-Tab Synchronization**: Uses `BroadcastChannel('reviewiii_focus_bus')` and `localStorage` to keep timer countdowns in sync across multiple browser tabs.
+- **Cross-Tab Synchronization**: Uses `BroadcastChannel('reviewiii_focus_channel')` and `localStorage` to keep timer countdowns in sync across multiple browser tabs.
 - **Zero-Asset Web Audio Synthesizer**: Produces harmonious sine-wave chimes for focus starts, break transitions, and set completions without external MP3 dependencies.
 - **Daily Analytics**: Real-time breakdown chips, session history feed, and quick manual time logger.
 
-### 3. 📥 36-File Consolidated Download Vault
+### 4. 📥 48-File Consolidated Download Vault
 - **100% Offline Parity**: Every module provides 4 file formats:
   - 📄 **Printable PDF**: High-contrast, beautifully formatted for tablet annotations and printouts.
   - 📝 **Word DOCX**: Fully editable questionnaires with formatted tables and answer keys.
   - 📊 **JSON Dataset**: Structured arrays of questions, choices, answers, and explanations.
   - 📑 **Markdown (.md)**: Plaintext documentation optimized for LLMs and Obsidian vaults.
 
-### 4. 🔍 Instant Search & Filter Toolbar
+### 5. 🔍 Instant Search & Filter Toolbar
 - Real-time client-side search across subject titles, course codes, module names, and core topic tags.
 - Quick keyboard shortcut: Press <kbd>/</kbd> anywhere to focus search; press <kbd>Esc</kbd> to clear.
 
@@ -80,23 +87,24 @@
 
 ## 📚 Curriculum Matrix & Questionnaires
 
-ReviewIII features **579 rigorously verified multiple-choice & identification items** across active core subjects:
+ReviewIII features **830 rigorously verified multiple-choice & identification items** across active core subjects:
 
 | Course | Title | Modules | Items | Interactive Quiz | Printable PDF | Word DOCX | Dataset |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **NETC311** | Networking Technologies (CCNA ITN) | 2 | **203** | [Module 1](https://jevvii.github.io/reviewiii/quizzes/netc311/module1.html) &bull; [Module 2](https://jevvii.github.io/reviewiii/quizzes/netc311/module2.html) | [M1](https://jevvii.github.io/reviewiii/downloads/netc311/Module%201%20-%20Networking%20Today%20-%20Questionnaire.pdf) &bull; [M2](https://jevvii.github.io/reviewiii/downloads/netc311/Module%202%20-%20Basic%20Switch%20and%20End%20Device%20Configuration%20-%20Questionnaire.pdf) | [M1](https://jevvii.github.io/reviewiii/downloads/netc311/Module%201%20-%20Networking%20Today%20-%20Questionnaire.docx) &bull; [M2](https://jevvii.github.io/reviewiii/downloads/netc311/Module%202%20-%20Basic%20Switch%20and%20End%20Device%20Configuration%20-%20Questionnaire.docx) | [JSON](https://jevvii.github.io/reviewiii/downloads/netc311/Module_1_NotebookLM_Quiz.json) &bull; [MD](https://jevvii.github.io/reviewiii/downloads/netc311/Module_1_NotebookLM_Quiz.md) |
+| **NETC311** | Networking Technologies (CCNA ITN) | 3 | **298** | [Module 1](https://jevvii.github.io/reviewiii/quizzes/netc311/module1.html) &bull; [Module 2](https://jevvii.github.io/reviewiii/quizzes/netc311/module2.html) &bull; [Module 3](https://jevvii.github.io/reviewiii/quizzes/netc311/module3.html) | [M1](https://jevvii.github.io/reviewiii/downloads/netc311/Module%201%20-%20Networking%20Today%20-%20Questionnaire.pdf) &bull; [M2](https://jevvii.github.io/reviewiii/downloads/netc311/Module%202%20-%20Basic%20Switch%20and%20End%20Device%20Configuration%20-%20Questionnaire.pdf) &bull; [M3](https://jevvii.github.io/reviewiii/downloads/netc311/Module%203%20-%20Protocols%20and%20Models%20-%20Questionnaire.pdf) | [M1](https://jevvii.github.io/reviewiii/downloads/netc311/Module%201%20-%20Networking%20Today%20-%20Questionnaire.docx) &bull; [M2](https://jevvii.github.io/reviewiii/downloads/netc311/Module%202%20-%20Basic%20Switch%20and%20End%20Device%20Configuration%20-%20Questionnaire.docx) &bull; [M3](https://jevvii.github.io/reviewiii/downloads/netc311/Module%203%20-%20Protocols%20and%20Models%20-%20Questionnaire.docx) | [JSON](https://jevvii.github.io/reviewiii/downloads/netc311/Module_1_NotebookLM_Quiz.json) &bull; [MD](https://jevvii.github.io/reviewiii/downloads/netc311/Module_1_NotebookLM_Quiz.md) |
 | **HMBY311** | Human Biology | 3 | **252** | [Module 1](https://jevvii.github.io/reviewiii/quizzes/hmby311/module1.html) &bull; [Module 4](https://jevvii.github.io/reviewiii/quizzes/hmby311/module4.html) &bull; [Module 5](https://jevvii.github.io/reviewiii/quizzes/hmby311/module5.html) | [M1](https://jevvii.github.io/reviewiii/downloads/hmby311/Module%201%20-%20Human%20Biology%20-%20Scientific%20Method%20and%20Basic%20Chemistry.pdf) &bull; [M4](https://jevvii.github.io/reviewiii/downloads/hmby311/Module%204%20-%20Human%20Biology%20-%20Chromosomes%20and%20Cell%20Division.pdf) &bull; [M5](https://jevvii.github.io/reviewiii/downloads/hmby311/Module%205%20-%20Human%20Biology%20-%20Genetics%20Human%20Inheritance%20and%20Cancer.pdf) | [M1](https://jevvii.github.io/reviewiii/downloads/hmby311/Module%201%20-%20Human%20Biology%20-%20Scientific%20Method%20and%20Basic%20Chemistry.docx) &bull; [M4](https://jevvii.github.io/reviewiii/downloads/hmby311/Module%204%20-%20Human%20Biology%20-%20Chromosomes%20and%20Cell%20Division.docx) &bull; [M5](https://jevvii.github.io/reviewiii/downloads/hmby311/Module%205%20-%20Human%20Biology%20-%20Genetics%20Human%20Inheritance%20and%20Cancer.docx) | [JSON](https://jevvii.github.io/reviewiii/downloads/hmby311/HMBY311_Module_1_Quiz.json) &bull; [MD](https://jevvii.github.io/reviewiii/downloads/hmby311/HMBY311_Module_1_Quiz.md) |
 | **ATFL311** | Automata Theory & Formal Languages | 4 | **174** | [Module 1](https://jevvii.github.io/reviewiii/quizzes/atfl311/module1.html) &bull; [Module 2](https://jevvii.github.io/reviewiii/quizzes/atfl311/module2.html) &bull; [Module 3](https://jevvii.github.io/reviewiii/quizzes/atfl311/module3.html) &bull; [Module 4](https://jevvii.github.io/reviewiii/quizzes/atfl311/module4.html) | [M1](https://jevvii.github.io/reviewiii/downloads/atfl311/Module%201%20-%20Introduction%20to%20Automata%20Theory%20-%20Questionnaire.pdf) &bull; [M2](https://jevvii.github.io/reviewiii/downloads/atfl311/Module%202%20-%20Finite%20State%20Machines%20and%20Prerequisites%20-%20Questionnaire.pdf) &bull; [M3](https://jevvii.github.io/reviewiii/downloads/atfl311/Module%203%20-%20Deterministic%20Finite%20Automata%20-%20Questionnaire.pdf) &bull; [M4](https://jevvii.github.io/reviewiii/downloads/atfl311/Module%204%20-%20Non-Deterministic%20Finite%20Automata%20-%20Questionnaire.pdf) | [M1](https://jevvii.github.io/reviewiii/downloads/atfl311/Module%201%20-%20Introduction%20to%20Automata%20Theory%20-%20Questionnaire.docx) &bull; [M2](https://jevvii.github.io/reviewiii/downloads/atfl311/Module%202%20-%20Finite%20State%20Machines%20and%20Prerequisites%20-%20Questionnaire.docx) &bull; [M3](https://jevvii.github.io/reviewiii/downloads/atfl311/Module%203%20-%20Deterministic%20Finite%20Automata%20-%20Questionnaire.docx) &bull; [M4](https://jevvii.github.io/reviewiii/downloads/atfl311/Module%204%20-%20Non-Deterministic%20Finite%20Automata%20-%20Questionnaire.docx) | [JSON](https://jevvii.github.io/reviewiii/downloads/atfl311/ATFL311_Module_1_Quiz.json) &bull; [MD](https://jevvii.github.io/reviewiii/downloads/atfl311/ATFL311_Module_1_Quiz.md) |
 | **SEPC311** | Social & Ethical Issues in Computing | 2 | **106** | [Module 1](https://jevvii.github.io/reviewiii/quizzes/sepc311/module1.html) &bull; [Module 2](https://jevvii.github.io/reviewiii/quizzes/sepc311/module2.html) | [M1](https://jevvii.github.io/reviewiii/downloads/sepc311/Module%201%20-%20Common%20Ethical%20Theories%20-%20Questionnaire.pdf) &bull; [M2](https://jevvii.github.io/reviewiii/downloads/sepc311/Module%202%20-%20Computer%20Ethics%20and%20Professional%20Codes%20-%20Questionnaire.pdf) | [M1](https://jevvii.github.io/reviewiii/downloads/sepc311/Module%201%20-%20Common%20Ethical%20Theories%20-%20Questionnaire.docx) &bull; [M2](https://jevvii.github.io/reviewiii/downloads/sepc311/Module%202%20-%20Computer%20Ethics%20and%20Professional%20Codes%20-%20Questionnaire.docx) | [JSON](https://jevvii.github.io/reviewiii/downloads/sepc311/SEPC311_Module_1_Quiz.json) &bull; [MD](https://jevvii.github.io/reviewiii/downloads/sepc311/SEPC311_Module_1_Quiz.md) |
-| **TOTALS** | *4 Core Academic Courses* | **11** | **735** | *11 Interactive Players* | *11 Formatted PDFs* | *11 Editable DOCXs* | *22 Datasets* |
+| **TOTALS** | *4 Core Academic Courses* | **12** | **830** | *12 Interactive Players* | *12 Formatted PDFs* | *12 Editable DOCXs* | *24 Datasets* |
 
 ### Detailed Course Modules
 
 <details>
-<summary><b>NETC311: Networking Technologies (Cisco CCNA v7.0 ITN)</b> — 203 Items</summary>
+<summary><b>NETC311: Networking Technologies (Cisco CCNA v7.0 ITN)</b> — 298 Items</summary>
 
 - **Module 1 — Networking Today (99 Items)**: Host roles (clients, servers, peers), peer-to-peer architectures, intermediary devices, transmission media representations, network topologies (physical vs logical), LANs vs WANs, internet access technologies (DSL, Cable, Cellular, Satellite), network reliability (Fault Tolerance, Scalability, QoS, Security), trends (BYOD, Cloud, WISP), network security threats, and Cisco CCNA certifications.
 - **Module 2 — Basic Switch and End Device Configuration (104 Items)**: Cisco IOS navigation and modes (User EXEC, Privileged EXEC, Global Configuration, Line Config), CLI syntax structure, context-sensitive help (`?`), command completion (`Tab`), CLI shortcuts, hostname naming conventions, password protection (`secret`, `console`, `vty`), `service password-encryption`, login banners (`banner motd`), configuration files (`running-config` vs `startup-config`), IPv4/IPv6 addressing fundamentals, subnet masks, default gateways, and Switch Virtual Interface (`interface vlan 1`) configuration.
+- **Module 3 — Protocols and Models (95 Items)**: Communication rules (message source/destination, channel, encoding, formatting/encapsulation, size, timing, flow control, timeout, unicast/multicast/broadcast), network protocol suites (TCP/IP protocol stack, OSI reference model, legacy AppleTalk and Novell NetWare), standards organizations (IEEE, IETF, ISO, ITU, TIA/EIA, ICANN, IANA), OSI 7 layers vs TCP/IP 4 layers comparison, data encapsulation/decapsulation workflows, Protocol Data Units (PDUs: Data, Segment, Packet, Frame, Bits), data access & addressing (Source/Destination MAC at Data Link, Source/Destination IP at Network Layer, default gateways, Address Resolution Protocol (ARP) concepts, same-network delivery vs remote-network routing).
 </details>
 
 <details>
@@ -175,6 +183,7 @@ reviewiii/
 │   ├── data/                    # Python item banks & verified questionnaires
 │   │   ├── module1_data.py      # NETC311 Module 1 (99 Items)
 │   │   ├── module2_data.py      # NETC311 Module 2 (104 Items)
+│   │   ├── module3_data.py      # NETC311 Module 3 (95 Items)
 │   │   ├── hmby311_m1_data.py   # HMBY311 Module 1 (152 Items)
 │   │   ├── hmby311_m4_data.py   # HMBY311 Module 4 (40 Items)
 │   │   ├── hmby311_m5_data.py   # HMBY311 Module 5 (60 Items)
@@ -191,13 +200,13 @@ reviewiii/
 │   ├── components/              # Header, SubjectCard, ModuleCard, FocusTimer
 │   ├── data/                    # Structured TypeScript curriculum database
 │   ├── layouts/                 # Root HTML shell & meta configurations
-│   ├── lib/                     # Client-side focus engine & Web Audio synthesizer
+│   ├── lib/                     # Client focus engine, auth engine, Web Audio
 │   └── pages/                   # Hub portal (/) and course detail routes (/courses/*)
 │
 ├── public/                      # Static Assets Served by Vite/Astro
-│   ├── downloads/               # 44 organized offline files (netc311, hmby311, atfl311, sepc311)
-│   ├── quizzes/                 # 11 interactive standalone quiz HTML applications
-│   └── scripts/                 # Client-side focus-system.js script
+│   ├── downloads/               # 48 organized offline files (netc311, hmby311, atfl311, sepc311)
+│   ├── quizzes/                 # 12 interactive standalone quiz HTML applications
+│   └── scripts/                 # Client-side focus-system.js & auth-system.js
 │
 └── docs/                        # Static Build Mirror for GitHub Pages Serving
     ├── courses/                 # Rendered subject pages
