@@ -96,47 +96,58 @@ const baseUrl = import.meta.env.BASE_URL;
               <span>+ Connect GitHub Account</span>
               <span class="auth-toggle-chevron" id="auth-toggle-chevron">▾</span>
             </button>
-            <form class="auth-login-form" id="auth-login-form" style="display: none;">
-              <div class="auth-input-group">
-                <label for="auth-github-username">GitHub Username</label>
-                <div class="auth-input-wrap">
-                  <span class="auth-input-prefix">@</span>
+            <div class="auth-add-panel" id="auth-add-panel" style="display: none;">
+              <button type="button" class="auth-dropdown-oauth-btn" id="auth-dropdown-oauth-btn">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span>Continue with GitHub (OAuth)</span>
+              </button>
+              <div class="auth-dropdown-divider">
+                <span>or via username</span>
+              </div>
+              <form class="auth-login-form" id="auth-login-form">
+                <div class="auth-input-group">
+                  <label for="auth-github-username">GitHub Username</label>
+                  <div class="auth-input-wrap">
+                    <span class="auth-input-prefix">@</span>
+                    <input
+                      type="text"
+                      id="auth-github-username"
+                      name="username"
+                      placeholder="e.g. jevvii"
+                      autocomplete="username"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="auth-input-group auth-token-group" style="display: none;" id="auth-token-group">
+                  <label for="auth-github-token">Personal Access Token (optional)</label>
                   <input
-                    type="text"
-                    id="auth-github-username"
-                    name="username"
-                    placeholder="e.g. jevvii"
-                    autocomplete="username"
-                    required
+                    type="password"
+                    id="auth-github-token"
+                    name="token"
+                    placeholder="ghp_xxxxxxxxxxxx"
+                    autocomplete="current-password"
                   />
                 </div>
-              </div>
-              <div class="auth-input-group auth-token-group" style="display: none;" id="auth-token-group">
-                <label for="auth-github-token">Personal Access Token (optional)</label>
-                <input
-                  type="password"
-                  id="auth-github-token"
-                  name="token"
-                  placeholder="ghp_xxxxxxxxxxxx"
-                  autocomplete="current-password"
-                />
-              </div>
-              <div class="auth-form-footer">
-                <button type="button" class="auth-pat-toggle-link" id="auth-pat-toggle-link">
-                  Use PAT Token
-                </button>
-                <button type="submit" class="auth-submit-btn" id="auth-submit-btn">
-                  Connect & Switch
-                </button>
-              </div>
-              <div class="auth-error-msg" id="auth-error-msg" style="display: none;"></div>
-            </form>
+                <div class="auth-form-footer">
+                  <button type="button" class="auth-pat-toggle-link" id="auth-pat-toggle-link">
+                    Use PAT Token
+                  </button>
+                  <button type="submit" class="auth-submit-btn" id="auth-submit-btn">
+                    Connect & Switch
+                  </button>
+                </div>
+                <div class="auth-error-msg" id="auth-error-msg" style="display: none;"></div>
+              </form>
+            </div>
           </div>
 
           <!-- Dropdown Footer Actions -->
           <div class="auth-dropdown-footer">
-            <button type="button" class="auth-footer-btn" id="auth-guest-mode-btn">
-              <span>Guest Session</span>
+            <button type="button" class="auth-footer-btn auth-signout-btn" id="auth-signout-btn" title="Sign out of active account">
+              <span>Sign Out</span>
             </button>
             <a
               href="https://github.com/jevvii/reviewiii"
@@ -748,6 +759,57 @@ const baseUrl = import.meta.env.BASE_URL;
     border-color: rgba(255, 255, 255, 0.2);
   }
 
+  .auth-signout-btn:hover {
+    color: #f87171 !important;
+    border-color: rgba(248, 113, 113, 0.35) !important;
+  }
+
+  .auth-dropdown-oauth-btn {
+    width: 100%;
+    background: #f0f0f0;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    padding: 7px 10px;
+    font-size: 0.74rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 6px;
+    transition: all 0.15s ease;
+    font-family: inherit;
+  }
+
+  .auth-dropdown-oauth-btn:hover {
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+  }
+
+  .auth-dropdown-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0 8px 0;
+    color: #555;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .auth-dropdown-divider::before,
+  .auth-dropdown-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .auth-dropdown-divider span {
+    padding: 0 6px;
+  }
+
   .auth-repo-link {
     font-size: 0.72rem;
     color: var(--color-accent-primary);
@@ -784,10 +846,12 @@ const baseUrl = import.meta.env.BASE_URL;
     getActiveAccount,
     getAccounts,
     loginWithGitHub,
+    startGitHubOAuth,
     switchAccount,
     removeAccount,
+    logout,
     subscribeAuth,
-    GUEST_USER
+    ensureAuthGate
   } from '../lib/auth-system.js';
 
   (function initHeader() {
@@ -901,6 +965,8 @@ const baseUrl = import.meta.env.BASE_URL;
     const authDropdownHeader = document.getElementById('auth-dropdown-header');
     const authAccountsList = document.getElementById('auth-accounts-list');
     const authAddToggleBtn = document.getElementById('auth-add-toggle-btn');
+    const authAddPanel = document.getElementById('auth-add-panel');
+    const authDropdownOAuthBtn = document.getElementById('auth-dropdown-oauth-btn');
     const authLoginForm = document.getElementById('auth-login-form') as HTMLFormElement;
     const authUsernameInput = document.getElementById('auth-github-username') as HTMLInputElement;
     const authTokenInput = document.getElementById('auth-github-token') as HTMLInputElement;
@@ -908,15 +974,15 @@ const baseUrl = import.meta.env.BASE_URL;
     const authPatToggleLink = document.getElementById('auth-pat-toggle-link');
     const authErrorMsg = document.getElementById('auth-error-msg');
     const authSubmitBtn = document.getElementById('auth-submit-btn');
-    const authGuestModeBtn = document.getElementById('auth-guest-mode-btn');
+    const authSignoutBtn = document.getElementById('auth-signout-btn');
 
     function renderAuthUI(activeUser = getActiveAccount()) {
       if (!authPill || !authPillLabel || !authPillAvatarWrap) return;
 
-      const isGuest = !activeUser || activeUser.isGuest;
+      const isAuthenticated = Boolean(activeUser && activeUser.id);
 
       // Update Pill
-      if (isGuest) {
+      if (!isAuthenticated) {
         authPill.className = 'header-auth-pill';
         authPillLabel.textContent = 'Sign in';
         if (authStatusDot) authStatusDot.style.display = 'none';
@@ -927,36 +993,35 @@ const baseUrl = import.meta.env.BASE_URL;
         `;
       } else {
         authPill.className = 'header-auth-pill logged-in';
-        authPillLabel.textContent = `@${activeUser.username}`;
+        authPillLabel.textContent = `@${activeUser!.username}`;
         if (authStatusDot) authStatusDot.style.display = 'inline-block';
         authPillAvatarWrap.innerHTML = `
-          <img src="${activeUser.avatarUrl}" alt="${activeUser.username}" class="auth-pill-avatar" />
+          <img src="${activeUser!.avatarUrl}" alt="${activeUser!.username}" class="auth-pill-avatar" />
         `;
       }
 
       // Update Dropdown Header
       if (authDropdownHeader) {
-        if (isGuest) {
+        if (!isAuthenticated) {
           authDropdownHeader.innerHTML = `
             <div class="auth-profile-card">
-              <div class="auth-profile-avatar" style="display:flex;align-items:center;justify-content:center;font-size:1.2rem;">
-                👤
+              <div class="auth-profile-avatar" style="display:flex;align-items:center;justify-content:center;font-size:1.1rem;background:#111;">
+                🔒
               </div>
               <div class="auth-profile-info">
-                <div class="auth-profile-name">Guest Student</div>
-                <div class="auth-profile-sub">Anonymous Session</div>
-                <span class="auth-badge-guest">⚡ Local Browser Storage</span>
+                <div class="auth-profile-name">Sign In Required</div>
+                <div class="auth-profile-sub">Zero-guest policy active</div>
               </div>
             </div>
           `;
         } else {
           authDropdownHeader.innerHTML = `
             <div class="auth-profile-card">
-              <img src="${activeUser.avatarUrl}" alt="${activeUser.username}" class="auth-profile-avatar" />
+              <img src="${activeUser!.avatarUrl}" alt="${activeUser!.username}" class="auth-profile-avatar" />
               <div class="auth-profile-info">
-                <div class="auth-profile-name">${activeUser.displayName || activeUser.username}</div>
+                <div class="auth-profile-name">${activeUser!.displayName || activeUser!.username}</div>
                 <div class="auth-profile-sub">
-                  <a href="${activeUser.profileUrl}" target="_blank" rel="noopener noreferrer">@${activeUser.username} &nearr;</a>
+                  <a href="${activeUser!.profileUrl}" target="_blank" rel="noopener noreferrer">@${activeUser!.username} &nearr;</a>
                 </div>
                 <span class="auth-badge-active">● Active GitHub Session</span>
               </div>
@@ -970,35 +1035,25 @@ const baseUrl = import.meta.env.BASE_URL;
         const accounts = getAccounts();
         let html = '';
 
-        // GitHub Accounts
-        accounts.forEach((acc) => {
-          const isActive = !isGuest && acc.id === activeUser.id;
-          html += `
-            <div class="auth-account-item ${isActive ? 'active' : ''}" data-user-id="${acc.id}">
-              <div class="auth-account-item-left">
-                <img src="${acc.avatarUrl}" alt="${acc.username}" class="auth-account-item-avatar" />
-                <span class="auth-account-item-name">@${acc.username}</span>
+        if (accounts.length === 0) {
+          html = '<div style="font-size:0.72rem;color:#777;padding:8px 6px;">No GitHub accounts connected.</div>';
+        } else {
+          accounts.forEach((acc) => {
+            const isActive = isAuthenticated && acc.id === activeUser!.id;
+            html += `
+              <div class="auth-account-item ${isActive ? 'active' : ''}" data-user-id="${acc.id}">
+                <div class="auth-account-item-left">
+                  <img src="${acc.avatarUrl}" alt="${acc.username}" class="auth-account-item-avatar" />
+                  <span class="auth-account-item-name">@${acc.username}</span>
+                </div>
+                <div class="auth-account-item-right">
+                  ${isActive ? '<span class="auth-active-check">Active ✓</span>' : ''}
+                  <button type="button" class="auth-account-remove-btn" data-remove-id="${acc.id}" title="Remove account from device">✕</button>
+                </div>
               </div>
-              <div class="auth-account-item-right">
-                ${isActive ? '<span class="auth-active-check">Active ✓</span>' : ''}
-                <button type="button" class="auth-account-remove-btn" data-remove-id="${acc.id}" title="Remove account from device">✕</button>
-              </div>
-            </div>
-          `;
-        });
-
-        // Guest Session Item
-        html += `
-          <div class="auth-account-item ${isGuest ? 'active' : ''}" data-user-id="guest">
-            <div class="auth-account-item-left">
-              <span style="font-size: 1.1rem; width: 24px; text-align: center;">👤</span>
-              <span class="auth-account-item-name">Guest Session</span>
-            </div>
-            <div class="auth-account-item-right">
-              ${isGuest ? '<span class="auth-active-check">Active ✓</span>' : ''}
-            </div>
-          </div>
-        `;
+            `;
+          });
+        }
 
         authAccountsList.innerHTML = html;
 
@@ -1009,7 +1064,7 @@ const baseUrl = import.meta.env.BASE_URL;
             const target = e.target as HTMLElement;
             if (target && target.classList.contains('auth-account-remove-btn')) return;
             const targetId = item.getAttribute('data-user-id');
-            if (targetId && targetId !== activeUser.id) {
+            if (targetId && (!activeUser || targetId !== activeUser.id)) {
               switchAccount(targetId);
               closeDropdown();
             }
@@ -1030,8 +1085,12 @@ const baseUrl = import.meta.env.BASE_URL;
       }
     }
 
-    // Toggle Dropdown
+    // Toggle Dropdown or open Auth Gate if unauthenticated
     function toggleDropdown() {
+      if (!getActiveAccount()) {
+        ensureAuthGate();
+        return;
+      }
       if (!authDropdown) return;
       const isVisible = authDropdown.style.display !== 'none';
       if (isVisible) {
@@ -1047,7 +1106,7 @@ const baseUrl = import.meta.env.BASE_URL;
       if (!authDropdown) return;
       authDropdown.style.display = 'none';
       authPill?.setAttribute('aria-expanded', 'false');
-      if (authLoginForm) authLoginForm.style.display = 'none';
+      if (authAddPanel) authAddPanel.style.display = 'none';
       if (authErrorMsg) authErrorMsg.style.display = 'none';
     }
 
@@ -1065,15 +1124,20 @@ const baseUrl = import.meta.env.BASE_URL;
       }
     });
 
-    // Toggle Add Account Form
+    // Toggle Add Account Panel
     authAddToggleBtn?.addEventListener('click', (e) => {
       e.stopPropagation();
-      if (!authLoginForm) return;
-      const isHidden = authLoginForm.style.display === 'none';
-      authLoginForm.style.display = isHidden ? 'block' : 'none';
+      if (!authAddPanel) return;
+      const isHidden = authAddPanel.style.display === 'none';
+      authAddPanel.style.display = isHidden ? 'block' : 'none';
       if (isHidden) {
         authUsernameInput?.focus();
       }
+    });
+
+    // OAuth button inside dropdown
+    authDropdownOAuthBtn?.addEventListener('click', () => {
+      startGitHubOAuth();
     });
 
     // Toggle PAT field
@@ -1102,7 +1166,7 @@ const baseUrl = import.meta.env.BASE_URL;
       try {
         await loginWithGitHub(username, token);
         authLoginForm.reset();
-        authLoginForm.style.display = 'none';
+        if (authAddPanel) authAddPanel.style.display = 'none';
         closeDropdown();
       } catch (err: any) {
         if (authErrorMsg) {
@@ -1117,9 +1181,9 @@ const baseUrl = import.meta.env.BASE_URL;
       }
     });
 
-    // Guest Mode button
-    authGuestModeBtn?.addEventListener('click', () => {
-      switchAccount('guest');
+    // Sign Out button
+    authSignoutBtn?.addEventListener('click', () => {
+      logout();
       closeDropdown();
     });
 
